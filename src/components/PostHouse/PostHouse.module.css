@@ -1,0 +1,74 @@
+.post_house {
+    width: 80%;
+    margin: 3rem auto;
+
+
+}
+
+.post_house h1 {
+    text-align: center;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0 2rem 0;
+}
+
+.post_house p {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 25px;
+    color: #979797;
+    text-align: center;
+}
+
+.post_house_flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:6rem ;
+    align-items: center;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.post_house_innerdiv {
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.post_house_innerdiv h3 {
+    width: 13rem;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 0.9rem;
+    line-height: 1, 5rem;
+    color: rgba(53, 53, 53, 0.75);
+    /* margin: 1rem 3rem; */
+    text-align: center;
+}
+
+.img_div {
+    width: 100px;
+    height: 80px;
+    background: rgba(116, 83, 238, 0.75);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+
+.img_div img {
+    width: 100%;
+    height: 100%;
+}
+

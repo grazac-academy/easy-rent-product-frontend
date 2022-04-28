@@ -1,0 +1,61 @@
+.FeaturedApartmentContainer {
+    width: 80%;
+    margin: 3rem auto;
+
+}
+
+.FeaturedApartmentTitle h2 {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+
+}
+
+.FeaturedApartmentTitle p {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 25px;
+    color: #979797;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+
+
+.productGrid {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(auto-fill, 320px); */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    width: 12.75rem;
+    border: none;
+    background-color: #06062A;
+    border-radius: 5px;
+    padding: 1rem 0;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 23px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-align: center;
+}

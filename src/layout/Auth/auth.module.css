@@ -1,0 +1,28 @@
+.main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.logoContainer span {
+    font-size: 24px;
+    padding-left: 9px;
+    font-weight: bolder;
+    color: #191f2b;
+    font-family: var(--gilroy-bold);
+  }
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  .main a{
+    text-decoration: none;
+}
+.AuthBg img{
+ width: 100%;
+}
+.AuthBg{
+    width: 50%;
+}
+.whitePart{
+    padding: 4rem 7.5rem 0 10.3rem;
+}
