@@ -4,7 +4,8 @@
 import classes from './Hero.module.css'
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Search from "../../components/Search/search";
+import Search from "../../components/Search/Search";
+import Verified from "../../components/Verified/Verified";
 
 export default class AutoPlay extends Component {
     render() {
@@ -22,7 +23,7 @@ export default class AutoPlay extends Component {
       return (
         <div className={classes.Hero}>
             <div className={classes.innerHero}>
-                <Slider {...settings}>
+                <Slider {...settings} className={classes.slider}>
                         <div className={classes.Background1}>
                             {/* <img src={Background1} alt="background1" /> */}
                         </div>
@@ -38,6 +39,7 @@ export default class AutoPlay extends Component {
                 <h4>Find your perfect home Without an agent.</h4> 
           </div>
           <Search />
+          <Verified />
         </div>
       );
     }

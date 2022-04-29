@@ -1,0 +1,36 @@
+.verified{
+    margin-top: 300px;
+    background-color: #06062A;
+    width: 100%;
+    padding: 50px 0px
+    /* height: 135px; */
+}
+.verified_inner{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.web{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    padding-right: 12px;
+}
+p{
+    color: white;
+    font-family: 'Circular std book';
+}
+.price{
+    font-size: 23px;
+    line-height: 29.09px;
+    font-weight: 700;
+}
+.details{
+    font-size: 18px;
+    line-height: 20.24px;
+    font-weight: 450;
+}
