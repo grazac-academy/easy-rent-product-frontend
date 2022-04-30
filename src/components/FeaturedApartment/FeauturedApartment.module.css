@@ -59,3 +59,10 @@
     color: #FFFFFF;
     text-align: center;
 }
+
+@media screen and (max-width: 372px) {
+    .productGrid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+}

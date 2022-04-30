@@ -88,7 +88,7 @@
 }
 
 .address {
-    font-family: var(--CircularStd);
+    font-family: var(--CircularStdBook);
     font-style: normal;
     font-weight: 450;
     font-size: 14px;
@@ -113,12 +113,12 @@
 }
 
 .bedbath h5 {
-    font-family: var(--CircularStd);
+    font-family: var(--CircularStdBook);
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-
+    color: #979797;
 }
 
 .bed,
@@ -141,4 +141,10 @@
 .bathIcon img {
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 372px) {
+    .featuredcard {
+        min-width: 10rem;
+    }
 }

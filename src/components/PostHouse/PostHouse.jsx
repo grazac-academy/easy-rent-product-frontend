@@ -4,6 +4,8 @@ import Upload from '../../Assets/Upload.png'
 import takepics from '../../Assets/takepics.png'
 import Createacct from '../../Assets/Createacct.png'
 import Button from '../Button/Button'
+import Arrow from '../../Assets/arrow.png'
+import Arrowdown from '../../Assets/arrowdown.png'
 
 function PostHouse() {
   return (
@@ -29,8 +31,20 @@ function PostHouse() {
           </div>
           <h3>Upload the pictures taken to enable tenants find a home</h3>
         </div>
+        <div className={styles.arrow1}>
+          <img src={Arrow} alt="arrow" />
+        </div>
+        <div className={styles.arrow2}>
+          <img src={Arrow} alt="arrow" />
+        </div>
+        <div className={styles.arrow3}>
+          <img src={Arrowdown} alt="arrow" />
+        </div>
+        <div className={styles.arrow4}>
+          <img src={Arrowdown} alt="arrow" />
+        </div>
       </div>
-      <Button text='Post a House'/>
+      <Button text='Post a House' />
     </div>
   );
 };

@@ -30,14 +30,16 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap:6rem ;
+    gap: 2rem;
     align-items: center;
     margin: 3rem 0;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .post_house_innerdiv {
-    width: 17rem;
+    width: 30%;
+    min-width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +52,7 @@
     font-style: normal;
     font-weight: 450;
     font-size: 0.9rem;
-    line-height: 1, 5rem;
+    line-height: 1.5rem;
     color: rgba(53, 53, 53, 0.75);
     /* margin: 1rem 3rem; */
     text-align: center;
@@ -58,7 +60,9 @@
 
 .img_div {
     width: 100px;
+    min-width: 43px;
     height: 80px;
+    min-height: 37px;
     background: rgba(116, 83, 238, 0.75);
     border-radius: 10px;
     margin-bottom: 2rem;
@@ -72,3 +76,74 @@
     height: 100%;
 }
 
+.arrow1 {
+    width: 8%;
+    position: absolute;
+    bottom: 53%;
+    right: 28%;
+}
+
+.arrow1 img {
+    width: 100%;
+}
+
+.arrow2 {
+    width: 8%;
+    position: absolute;
+    bottom: 53%;
+    left: 28%;
+}
+
+.arrow2 img {
+    width: 100%;
+}
+
+.arrow3,
+.arrow4 {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+
+    .arrow1 {
+        width: 8%;
+        position: absolute;
+        top: 10%;
+        left: 47%;
+    }
+
+
+    .arrow2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .post_house_flex {
+        gap: 5rem;
+    }
+    .arrow1{
+        display: none;
+    }
+
+    .arrow3 {
+        display: block;
+        height: 8%;
+        position: absolute;
+        top: 27%;
+        left: 48%;
+    }
+    .arrow3 img{
+        height: 100%;
+    }
+    .arrow4 {
+        display: block;
+        height: 8%;
+        position: absolute;
+        bottom: 27%;
+        left: 48%;
+    }
+    .arrow4 img{
+        height: 100%;
+    }
+}
