@@ -1,6 +1,6 @@
-import Web from '../../assets/web.svg'
-import Landlord from '../../assets/landlord.svg'
-import House from '../../assets/house.svg'
+import Web from '../../Assets/web.svg'
+import Landlord from '../../Assets/landlord.svg'
+import House from '../../Assets/house.svg'
 import classes from './Verified.module.css'
 
 const Verified = () => {

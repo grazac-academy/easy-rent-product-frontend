@@ -4,10 +4,10 @@
 import classes from './Hero.module.css'
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Search from "../../components/Search/Search";
-import Verified from "../../components/Verified/Verified";
+import Search from "../../Components/Search/Search";
+import Verified from "../../Components/Verified/Verified";
 
-export default class AutoPlay extends Component {
+export default class Hero extends Component {
     render() {
       const settings = {
         dots: false,

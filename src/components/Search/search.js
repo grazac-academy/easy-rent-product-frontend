@@ -1,7 +1,7 @@
-import Location from '../../assets/location.svg';
-import Property from '../../assets/property.svg';
-import Price from '../../assets/price.svg';
-import Bedroom from '../../assets/bedroom.svg';
+import Location from '../../Assets/location.svg';
+import Property from '../../Assets/property.svg';
+import Price from '../../Assets/price.svg';
+import Bedroom from '../../Assets/bedroom.svg';
 import classes from './search.module.css';
 import Dropdown from '../Dropdown/Dropdown';
 
@@ -42,7 +42,9 @@ const Search = () => {
               title="Bedroom" />
             </div>
             <div className={classes.advanced}>
-              <p>hhjkjkllkjhjdkjkjskjksjkhfjehfjwejfkjwkjdkjwhadkjhwasjdhjhwsdj</p>
+              <Dropdown 
+              placeholder={'Advanced Search'}
+              />
             </div>
           </div>
             <div className={classes.btn}>
