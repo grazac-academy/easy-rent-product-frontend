@@ -5,7 +5,12 @@ import Bedroom from '../../Assets/bedroom.svg';
 import classes from './search.module.css';
 import Dropdown from '../Dropdown/Dropdown';
 
-import { bedrooms, locations, prices, propertyTypes } from '../../Constants/index';
+import {
+  bedrooms,
+  locations,
+  prices,
+  propertyTypes,
+} from '../../Constants/index';
 
 const Search = () => {
   return (
@@ -29,27 +34,29 @@ const Search = () => {
                 title="Property Type"
                 src={Property}
               />
-              <Dropdown 
-              options={prices}
-              src={Price} 
-              placeholder={'Choose range'}
-              title="Price Range" 
+              <Dropdown
+                options={prices}
+                src={Price}
+                placeholder={'Choose range'}
+                title="Price Range"
               />
-              <Dropdown 
-              options={bedrooms}
-              src={Bedroom} 
-              placeholder={'Choose number'}
-              title="Bedroom" />
+              <Dropdown
+                options={bedrooms}
+                src={Bedroom}
+                placeholder={'Choose number'}
+                title="Bedroom"
+              />
             </div>
             <div className={classes.advanced}>
-              <Dropdown 
-              placeholder={'Advanced Search'}
-              />
+              {/* <button>
+                <p>Advanced Search</p>
+                <img src=
+             </button> */}
             </div>
           </div>
-            <div className={classes.btn}>
-              <button className={classes.search_button}>Search</button>
-            </div>
+          <div className={classes.btn}>
+            <button className={classes.search_button}>Search</button>
+          </div>
         </div>
       </div>
     </div>

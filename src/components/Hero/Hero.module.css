@@ -4,15 +4,15 @@
 @import url(//db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium);
 @import url(//db.onlinewebfonts.com/c/82e5b6ce5cb6f9942bdd08543ef2c864?family=Circular+Std+Bold+Italic);
 
-.Hero{
+.Hero {
     width: 100%;
-    overflow-x: hidden;
     box-shadow: 0px 4px 40px rgba(6, 6, 42, 0.3);
-}
-.innerhero{
     position: relative;
 }
-.Background1{
+
+.innerhero {}
+
+.Background1 {
     /* width: 50%; */
     /* background-image: url(../../assets/bg1.svg); */
     background-repeat: no-repeat;
@@ -20,7 +20,8 @@
     background-size: cover;
     height: 639px;
 }
-.Background2{
+
+.Background2 {
     /* width: 50%; */
     /* background-image: url(../../assets/bg2.svg); */
     background-repeat: no-repeat;
@@ -28,7 +29,8 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg2.svg);
     height: 639px;
 }
-.Background3{
+
+.Background3 {
     /* width: 50%; */
     /* background-image: url(../../assets/bg3.svg); */
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg3.svg);
@@ -36,13 +38,15 @@
     background-size: cover;
     height: 639px;
 }
-.heroText{
+
+.heroText {
     position: absolute;
     width: 60%;
     top: 70px;
     padding: 100px
 }
-.heroText h4{
+
+.heroText h4 {
     font-size: 54px;
     font-weight: 700;
     color: #fff;

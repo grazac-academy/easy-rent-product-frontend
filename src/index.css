@@ -11,8 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-*{
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+
+.slick-arrow {
+  display: none !important;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* 1024
+
+
+900
+
+
+  768
+
+  425
+
+  375
+*/
