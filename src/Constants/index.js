@@ -36,8 +36,6 @@ export const locations = [
   { value: 'Yobe', label: 'Yobe' },
   { value: 'Zamfara', label: 'Zamfara' },
   { value: 'FCT', label: 'FCT' },
-
-  
 ];
 
 export const propertyTypes = [
@@ -63,7 +61,6 @@ export const prices = [
   { value: '₦1,400,000 - ₦1,600,000', label: '₦1,400,000 - ₦1,600,000' },
   { value: '₦1,600,000 - ₦2,000,000', label: '₦1,600,000 - ₦2,000,000' },
   { value: '₦2,000,000 - ₦5,000,000', label: '₦2,000,000 - ₦5,000,000' },
-
 ];
 
 export const bedrooms = [
@@ -74,35 +71,54 @@ export const bedrooms = [
   { value: '5', label: '5' },
 ];
 export const advancedSearches = [
-  { value: 'Select All', label: 'Select All' },
-  { value: '24/7 Power Supply', label: '24/7 Power Supply' },
-  { value: 'Air Condition', label: 'Air Condition' },
-  { value: 'Generator', label: 'Generator' },
-  { value: 'Big compound', label: 'Big compound' },
-  { value: 'BQ Cottage', label: 'BQ Cottage' },
-  { value: 'Central Heating', label: 'Central Heating' },
-  { value: 'Cleaning Service', label: 'Cleaning Service' },
-  { value: 'Dining Room', label: 'Dining Room' },
-  { value: 'Dryer', label: 'Dryer' },
-  { value: 'Ensuite', label: 'Ensuite' },
-  { value: 'Fire Extinguish', label: 'Fire Extinguish' },
-  { value: 'Furnished', label: 'Furnished' },
-  { value: 'Garden', label: 'Garden' },
-  { value: 'Gate Fenced', label: 'Gate Fenced' },
-  { value: 'Generator House', label: 'Generator House' },
-  { value: 'Gerrad Roof', label: 'Gerrad Roof' },
-  { value: 'Gym', label: 'Gym' },
-  { value: 'Laundry', label: 'Laundry' },
-  { value: 'Lounge', label: 'Lounge' },
-  { value: 'Microwave', label: 'Microwave' },
-  { value: 'Swimming Pool', label: 'Swimming Pool' },
-  { value: 'Parking', label: 'Parking' },
-  { value: 'Refridgerator', label: 'Refridgerator' },
-  { value: 'Sauna', label: 'Sauna' },
-  { value: 'Security', label: 'Security' },
-  { value: 'TV Cable', label: 'TV Cable' },
-  { value: 'Wifi', label: 'Wifi' },
-  { value: 'Pets Allowed', label: 'Pets Allowed' },
-  { value: 'Elevator', label: 'Elevator' },
-  { value: 'Protectors', label: 'Protectors' },
-]
+  {
+    value: '24/7 Power Supply',
+    label: '24/7 Power Supply',
+    checked: false,
+    id: 1,
+  },
+  { value: 'Air Condition', label: 'Air Condition', checked: false, id: 2 },
+  { value: 'Generator', label: 'Generator', checked: false, id: 3 },
+  { value: 'Big compound', label: 'Big compound', checked: false, id: 4 },
+  { value: 'BQ Cottage', label: 'BQ Cottage', checked: false, id: 5 },
+  { value: 'Central Heating', label: 'Central Heating', checked: false, id: 6 },
+  {
+    value: 'Cleaning Service',
+    label: 'Cleaning Service',
+    checked: false,
+    id: 7,
+  },
+  { value: 'Dining Room', label: 'Dining Room', checked: false, id: 8 },
+  { value: 'Dryer', label: 'Dryer', checked: false, id: 9 },
+  { value: 'Ensuite', label: 'Ensuite', checked: false, id: 10 },
+  {
+    value: 'Fire Extinguish',
+    label: 'Fire Extinguish',
+    checked: false,
+    id: 11,
+  },
+  { value: 'Furnished', label: 'Furnished', checked: false, id: 12 },
+  { value: 'Garden', label: 'Garden', checked: false, id: 13 },
+  { value: 'Gate Fenced', label: 'Gate Fenced', checked: false, id: 14 },
+  {
+    value: 'Generator House',
+    label: 'Generator House',
+    checked: false,
+    id: 15,
+  },
+  { value: 'Gerrad Roof', label: 'Gerrad Roof', checked: false, id: 16 },
+  { value: 'Gym', label: 'Gym', checked: false, id: 17 },
+  { value: 'Laundry', label: 'Laundry', checked: false, id: 18 },
+  { value: 'Lounge', label: 'Lounge', checked: false, id: 19 },
+  { value: 'Microwave', label: 'Microwave', checked: false, id: 20 },
+  { value: 'Swimming Pool', label: 'Swimming Pool', checked: false, id: 21 },
+  { value: 'Parking', label: 'Parking', checked: false, id: 22 },
+  { value: 'Refridgerator', label: 'Refridgerator', checked: false, id: 23 },
+  { value: 'Sauna', label: 'Sauna', checked: false, id: 24 },
+  { value: 'Security', label: 'Security', checked: false, id: 25 },
+  { value: 'TV Cable', label: 'TV Cable', checked: false, id: 26 },
+  { value: 'Wifi', label: 'Wifi', checked: false, id: 27 },
+  { value: 'Pets Allowed', label: 'Pets Allowed', checked: false, id: 28 },
+  { value: 'Elevator', label: 'Elevator', checked: false, id: 29 },
+  { value: 'Protectors', label: 'Protectors', checked: false, id: 30 },
+];

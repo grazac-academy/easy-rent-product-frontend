@@ -15,7 +15,6 @@ export default class Hero extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      // speed: 1000,
       fade: true,
       autoplaySpeed: 3000,
       cssEase: 'linear',
