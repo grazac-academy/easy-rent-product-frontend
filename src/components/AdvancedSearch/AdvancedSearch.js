@@ -4,7 +4,7 @@ import Icon from '../../icons/index';
 import SearchItem from '../SearchItem/SearchItem';
 import { advancedSearches } from '../../Constants/index';
 import { useState } from 'react';
-import Button from '../Button/Button';
+import Button from '../Btn/Btn';
 
 // const copiedSearch = advancedSearches;
 const AdvancedSearch = ({ close }) => {

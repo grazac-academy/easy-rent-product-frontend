@@ -6,7 +6,7 @@ import Price from '../../Assets/price.svg';
 import Bedroom from '../../Assets/bedroom.svg';
 import classes from './search.module.css';
 import Dropdown from '../Dropdown/Dropdown';
-import Button from '../Button/Button';
+import Button from '../Btn/Btn';
 import {
   bedrooms,
   locations,
