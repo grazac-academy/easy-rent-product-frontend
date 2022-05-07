@@ -4,8 +4,8 @@
 import classes from './Hero.module.css';
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import Search from '../Search/search';
-import Verified from '../Verified/Verified';
+import Search from 'components/Search/search';
+import Verified from 'components/Verified/Verified';
 
 export default class Hero extends Component {
   render() {

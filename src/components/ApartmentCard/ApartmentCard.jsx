@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './ApartmentCard.module.css';
-import Bedroom from '../../Assets/Bedroom.png';
-import Bathroom from '../../Assets/Bathroom.png';
+import Bedroom from 'assets/Bedroom.png';
+import Bathroom from 'assets/Bathroom.png';
 import { MdLocationOn, MdBookmarkBorder } from 'react-icons/md';
 
-const ApartmentCard= ({ item }) => {
+const ApartmentCard = ({ item }) => {
   return (
     <div className={styles.featuredContainer}>
       <div className={styles.featuredcard}>

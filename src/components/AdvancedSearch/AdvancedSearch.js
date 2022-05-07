@@ -1,10 +1,10 @@
-import './AdvancedSearch.css';
-import Modal from '../Modal/Modal';
-import Icon from '../../icons/index';
-import SearchItem from '../SearchItem/SearchItem';
-import { advancedSearches } from '../../Constants/index';
 import { useState } from 'react';
-import Button from '../Btn/Btn';
+import './AdvancedSearch.css';
+import Modal from 'components/Modal/Modal';
+import Icon from '../../icons/index';
+import SearchItem from 'components/SearchItem/SearchItem';
+import { advancedSearches } from '../../constants/index';
+import Button from 'components/Btn/Btn';
 
 // const copiedSearch = advancedSearches;
 const AdvancedSearch = ({ close }) => {
@@ -22,7 +22,6 @@ const AdvancedSearch = ({ close }) => {
 
   const handleSelectedSearches = () => {
     const selectedSearches = searches.filter((item) => item.checked);
-    console.log(selectedSearches);
     close();
     setSearches(
       searches.map((item) => {
@@ -32,7 +31,6 @@ const AdvancedSearch = ({ close }) => {
     );
     return selectedSearches;
   };
-  console.log(advancedSearches);
   return (
     <Modal>
       <div className="advanced">

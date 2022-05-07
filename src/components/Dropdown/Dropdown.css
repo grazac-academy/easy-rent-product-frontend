@@ -7,11 +7,12 @@
 }
 
 .dropdown-select__indicator {
-    background-image: url('../../Assets/Vector.png');
+    background-image: url('../../assets/Vector.png');
     background-repeat: no-repeat;
     background-position: center;
 }
-.dropdown-select__indicator div{
+
+.dropdown-select__indicator div {
     background-color: red !important;
 }
 
@@ -38,12 +39,12 @@
     text-align: center;
     font-size: 14px;
     font-family: 'circular std book';
-    font-weight: 400; 
+    font-weight: 400;
     height: auto;
     max-height: 200px;
     padding: 0px;
     margin: 0px;
-/* }
+    /* }
     color: rgba(0, 0, 0, 0.5);
     border-radius: 10px !important;
     text-align: center;

@@ -16,7 +16,7 @@
     /* width: 50%; */
     /* background-image: url(../../assets/bg1.svg); */
     background-repeat: no-repeat;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg1.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg1.svg);
     background-size: cover;
     height: 639px;
 }
@@ -26,14 +26,14 @@
     /* background-image: url(../../assets/bg2.svg); */
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg2.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg2.svg);
     height: 639px;
 }
 
 .Background3 {
     /* width: 50%; */
     /* background-image: url(../../assets/bg3.svg); */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg3.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg3.svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 639px;

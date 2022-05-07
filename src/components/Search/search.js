@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import AdvancedSearch from '../AdvancedSearch/AdvancedSearch';
-import Location from '../../Assets/location.svg';
-import Property from '../../Assets/property.svg';
-import Price from '../../Assets/price.svg';
-import Bedroom from '../../Assets/bedroom.svg';
+import AdvancedSearch from 'components/AdvancedSearch/AdvancedSearch';
+import Location from 'assets/location.svg';
+import Property from 'assets/property.svg';
+import Price from 'assets/price.svg';
+import Bedroom from 'assets/bedroom.svg';
 import classes from './search.module.css';
-import Dropdown from '../Dropdown/Dropdown';
-import Button from '../Btn/Btn';
+import Dropdown from 'components/Dropdown/Dropdown';
+import Button from 'components/Btn/Btn';
 import {
   bedrooms,
   locations,
   prices,
   propertyTypes,
-} from '../../Constants/index';
+} from '../../constants/index';
 import Icon from '../../icons';
 
 const Search = () => {

@@ -1,7 +1,7 @@
-import classes from "./auth.module.css";
+import classes from './auth.module.css';
 // import { Link } from "react-router-dom";
-import Logo from '../../Assets/Logo.svg'
-import Auth_Bg from '../../Assets/Auth_img.png'
+import Logo from 'assets/Logo.svg';
+import Auth_Bg from 'assets/Auth_img.png';
 
 const Auth = ({ children }) => {
   return (
@@ -9,9 +9,9 @@ const Auth = ({ children }) => {
       <div className={classes.whitePart}>
         {/* <Link to="/" className={classes.logoContainer}> */}
 
-          <div className={classes.image}>
-            <img src={Logo} alt="Logo" />
-          </div>
+        <div className={classes.image}>
+          <img src={Logo} alt="Logo" />
+        </div>
         {/* </Link> */}
         <div>{children}</div>
       </div>

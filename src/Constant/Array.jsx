@@ -1,9 +1,9 @@
-import House1 from '../Assets/House1.png';
-import House2 from '../Assets/House2.png';
-import House3 from '../Assets/House3.png';
-import House4 from '../Assets/House4.png';
-import House5 from '../Assets/House5.png';
-import House6 from '../Assets/House6.png';
+import House1 from 'assets/House1.png';
+import House2 from 'assets/House2.png';
+import House3 from 'assets/House3.png';
+import House4 from 'assets/House4.png';
+import House5 from 'assets/House5.png';
+import House6 from 'assets/House6.png';
 
 export const Array = [
   {

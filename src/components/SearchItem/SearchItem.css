@@ -28,7 +28,7 @@
 
 
 .selected span {
-    background-image: url("../../Assets/selected.png");
+    background-image: url("../../assets/selected.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
