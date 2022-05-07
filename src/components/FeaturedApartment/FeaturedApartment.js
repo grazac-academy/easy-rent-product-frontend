@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './FeauturedApartment.module.css';
+import styles from './FeauturedApartment.module.css'
 import Array from '../../Constant/Array';
 import ApartmentCard from '../ApartmentCard/ApartmentCard';
-import Button from '../Btn/Btn';
+import Button from './../Button/Button';
 
 export default function FeaturedApartment() {
   return (
@@ -16,7 +16,7 @@ export default function FeaturedApartment() {
           <ApartmentCard key={item.id} item={item} />
         ))}
       </div>
-      <Button text="View All" />
+      <Button text='View All'/>
     </div>
   );
 }
