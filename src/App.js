@@ -1,3 +1,13 @@
+// import './App.css';
+// import Hero from './Components/Hero/Hero';
+
+// function App() {
+//   return (
+//     <div>
+//       <Hero />
+//     </div>
+//   );
+// }
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';

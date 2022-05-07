@@ -13,6 +13,36 @@
   src: url(./Assets/circular-std-medium-500.ttf);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.slick-arrow {
+  display: none !important;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* 1024
+
+
+900
+
+
+  768
+
+  425
+
+  375
+*/
 :root {
   --CircularStd: Circular-Std-500;
   --CircularStdBook: 'Circular Std Book';

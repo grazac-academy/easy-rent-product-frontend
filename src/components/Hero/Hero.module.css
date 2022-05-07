@@ -1,0 +1,55 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/f1a22f6f15d272c7aa56da8b2c91f5e5?family=Circular+Std+Black);
+@import url(//db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium);
+@import url(//db.onlinewebfonts.com/c/82e5b6ce5cb6f9942bdd08543ef2c864?family=Circular+Std+Bold+Italic);
+
+.Hero {
+    width: 100%;
+    box-shadow: 0px 4px 40px rgba(6, 6, 42, 0.3);
+    position: relative;
+}
+
+.innerhero {}
+
+.Background1 {
+    /* width: 50%; */
+    /* background-image: url(../../assets/bg1.svg); */
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg1.svg);
+    background-size: cover;
+    height: 639px;
+}
+
+.Background2 {
+    /* width: 50%; */
+    /* background-image: url(../../assets/bg2.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg2.svg);
+    height: 639px;
+}
+
+.Background3 {
+    /* width: 50%; */
+    /* background-image: url(../../assets/bg3.svg); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../Assets/bg3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 639px;
+}
+
+.heroText {
+    position: absolute;
+    width: 60%;
+    top: 70px;
+    padding: 100px
+}
+
+.heroText h4 {
+    font-size: 54px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Circular Std Book';
+    line-height: 68.31px;
+}
