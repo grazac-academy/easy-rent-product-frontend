@@ -8,7 +8,7 @@
 .featuredcard {
     width: 100%;
     min-width: 18rem;
-    /* height: 24rem; */
+    /* height: 20rem; */
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -23,7 +23,6 @@
 .cardimg img {
     width: 100%;
     height: 100%;
-    /* z-index: -1; */
 }
 
 .cardcontent {
@@ -80,6 +79,10 @@
 .location {
     display: flex;
     justify-content: space-between;
+}
+.bookmarkbtn{
+    border: none;
+    background-color: transparent;
 }
 
 .bookmark {

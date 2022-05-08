@@ -1,0 +1,71 @@
+.form Button {
+    width: 100%;
+}
+
+.title {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #111111;
+
+}
+
+.rent {
+    color: #7453EE;
+}
+
+.p1 {
+    font-family: var(--CircularStdBook);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(17, 17, 17, 0.5);
+    padding: 1rem 0 2rem 0;
+
+}
+.p2 {
+    font-family: var(--CircularStdBook);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(17, 17, 17, 0.5);
+
+}
+
+
+
+.p3 {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.5);
+    padding: 2rem 0;
+
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.checkbox input {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox label {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #111111;
+
+}
