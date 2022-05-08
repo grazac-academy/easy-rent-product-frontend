@@ -9,7 +9,7 @@ const Verified = () => {
       <div className={classes.verified_inner}>
         <div className={classes.web}>
           <div>
-            <img src={Web} alt="web" />
+            <img src={Web} alt="web" className={classes.img} />
           </div>
           <div>
             <p className={classes.price}>+120,000</p>
@@ -18,7 +18,7 @@ const Verified = () => {
         </div>
         <div className={classes.web}>
           <div>
-            <img src={Landlord} alt="landlord" />
+            <img src={Landlord} alt="landlord" className={classes.img} />
           </div>
           <div>
             <p className={classes.price}>+13,000</p>
@@ -27,7 +27,7 @@ const Verified = () => {
         </div>
         <div className={classes.web}>
           <div>
-            <img src={House} alt="house" />
+            <img src={House} alt="house" className={classes.img} />
           </div>
           <div>
             <p className={classes.price}>+110,000</p>
