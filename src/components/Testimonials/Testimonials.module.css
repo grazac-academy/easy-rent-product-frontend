@@ -1,19 +1,19 @@
-.main{
+.main {
     width: 100%;
 }
 
-.inner{
+.inner {
     width: 80%;
     margin: auto;
     margin-top: 40px;
-    background-image: url(../assets/image.svg);
+    background-image: url(../../assets/image.svg);
     display: flex;
     padding: 50px;
     justify-content: space-between;
     gap: 40px;
 }
 
-.card{
+.card {
     background: #fff;
     border-radius: 10px;
     display: flex;
@@ -26,7 +26,7 @@
     margin-top: 55px;
 }
 
-.upper>h2{
+.upper>h2 {
     font-family: 'Circular Std Book';
     font-style: normal;
     font-weight: 500 Bold;
@@ -36,7 +36,7 @@
     color: rgba(0, 0, 0, 0.8);
 }
 
-.upper>p{
+.upper>p {
     font-family: 'Circular Std Book';
     font-style: normal;
     font-weight: 450;
@@ -46,60 +46,44 @@
     color: #979797;
 }
 
-.innerCard{
-    padding-bottom:20px;
+.innerCard {
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.innerCard>p{
+.innerCard>p {
     font-family: 'Circular Std Book';
     font-size: 16px;
 }
 
-.innerCard>img{
+.innerCard>img {
     margin-top: -75px;
     padding-right: 10px;
     margin-left: -15px;
 }
 
-.text2{
+.text2 {
     color: rgba(6, 6, 42, 0.75);
     font-family: 'Circular Std Book';
     font-size: 20px;
 }
 
-.image{
-    padding-bottom:20px;
+.image {
+    padding-bottom: 20px;
     margin: auto;
 }
 
-@media screen and (max-width: 800px){
-    .innerCard>p{
+@media screen and (max-width: 800px) {
+    .innerCard>p {
         font-size: 12px;
     }
 
-    .text2{
+    .text2 {
         font-size: 12px;
     }
 
-    .card{
-        margin: auto;
-        padding: 20px;
-        margin: 10px;
-        margin-top: 25px;
-    }
-}
-@media screen and (max-width: 768px){
-    .innerCard>p{
-        font-size: 12px;
-    }
-
-    .text2{
-        font-size: 12px;
-    }
-
-    .card{
+    .card {
         margin: auto;
         padding: 20px;
         margin: 10px;
@@ -107,51 +91,69 @@
     }
 }
 
-@media screen and (max-width: 600px){
-    .innerCard>p{
+@media screen and (max-width: 768px) {
+    .innerCard>p {
         font-size: 12px;
     }
 
-    .text2{
+    .text2 {
         font-size: 12px;
     }
 
-    .card{
+    .card {
+        margin: auto;
+        padding: 20px;
+        margin: 10px;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .innerCard>p {
+        font-size: 12px;
+    }
+
+    .text2 {
+        font-size: 12px;
+    }
+
+    .card {
         margin: auto;
         padding: 20px;
         margin: 10px;
         margin-top: 25px;
     }
 
-    .innerCard>img{
+    .innerCard>img {
         margin-top: -55px;
         padding-right: 10px;
         margin-left: -5px;
         width: 10%;
     }
 }
-@media screen and (max-width: 425px){
-    .innerCard>p{
+
+@media screen and (max-width: 425px) {
+    .innerCard>p {
         font-size: 12px;
     }
 
-    .text2{
+    .text2 {
         font-size: 12px;
     }
 
-    .inner{
+    .inner {
         width: 100%;
         padding: 20px;
     }
 
-    .card{
+    .card {
         margin: auto;
         padding: 30px;
         margin: 20px;
         margin-top: 25px;
     }
 
-    .innerCard>img{
+    .innerCard>img {
         margin-top: -55px;
         padding-right: 10px;
         margin-left: -5px;

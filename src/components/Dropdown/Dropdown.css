@@ -1,0 +1,84 @@
+.dropdown-select__control {
+    border: none !important;
+}
+
+.dropdown-select__indicator-separator {
+    display: none;
+}
+
+.dropdown-select__indicator {
+    background-image: url('../../assets/Vector.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dropdown-select__indicator div {
+    background-color: red !important;
+}
+
+.dropdown-select__indicator svg {
+    display: none
+}
+
+.dropdown-select__placeholder {
+    color: rgba(0, 0, 0, 0.5) !important;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Circular std book';
+    line-height: 23px;
+}
+
+.dropdown-select__menu {
+    border-radius: 0px 0px 15px 15px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(6, 6, 42, 0.3);
+    border: none;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px !important;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'circular std book';
+    font-weight: 400;
+    height: auto;
+    max-height: 200px;
+    padding: 0px;
+    margin: 0px;
+    /* }
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px !important;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'circular std book';
+    font-weight: 400; */
+}
+
+
+.select_icons {
+    padding-right: 10px;
+    width: 27px;
+    height: 28px;
+}
+
+.select_label {
+    font-family: 'Circular std book';
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 29px;
+    color: rgba(9, 9, 9, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select_location {
+    /* flex-basis: 25%; */
+    display: flex;
+    padding: 0 30px;
+}
+
+
+.select_location:not(:last-child) {
+    border-right: 2px solid #E0DBF1;
+
+}

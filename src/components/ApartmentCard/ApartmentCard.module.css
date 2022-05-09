@@ -1,0 +1,150 @@
+.featuredContainer {
+    width: 100%;
+    /* margin: auto; */
+    margin-bottom: 5rem;
+
+}
+
+.featuredcard {
+    width: 100%;
+    min-width: 18rem;
+    /* height: 24rem; */
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;
+}
+
+.cardimg img {
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+}
+
+.cardcontent {
+    width: 85%;
+    height: auto;
+    position: absolute;
+    bottom: -3rem;
+    left: 3%;
+    transform: translate(5%, 5%);
+
+}
+
+.apartmentprice {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.price {
+    width: 6rem;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+
+
+}
+
+.apartmentdetails {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.1);
+}
+
+.locationwrap {
+    width: 70%;
+    height: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 0.5em;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookmark {
+    color: #7B61FF;
+    font-size: 1.5rem;
+}
+
+.address {
+    font-family: var(--CircularStdBook);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 18px;
+    color: #C4C4C4;
+
+}
+
+.propertytype {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #06062A;
+}
+
+.bedbath {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0 0 0;
+}
+
+.bedbath h5 {
+    font-family: var(--CircularStdBook);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #979797;
+}
+
+.bed,
+.bath {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.bedIcon,
+.bathIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.bedIcon img,
+.bathIcon img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 372px) {
+    .featuredcard {
+        min-width: 10rem;
+    }
+}
