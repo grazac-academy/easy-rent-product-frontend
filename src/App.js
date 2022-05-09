@@ -1,4 +1,15 @@
 // import './App.css';
+// import How from './How-it-works/How';
+// import Testimonials from './Testimonials/Testimonials';
+
+// function App() {
+
+//   return (
+//   <div className="App">
+//     <How />
+//     <Testimonials />
+//   </div>
+// import './App.css';
 // import Hero from './Components/Hero/Hero';
 
 // function App() {
