@@ -1,17 +1,17 @@
 import { createContext, useReducer, useContext } from 'react';
 import { bookmarkReducer } from './Reducer';
-import Array from '../Constant/Array';
+import apartments from '../Constant/';
 
-const Bookmark = createContext();
+const bookmark = createContext();
 
 const Context = ({ children }) => {
   const [state, dispatch] = useReducer(bookmarkReducer, {
-    apartments: Array,
+    apartments: apartments,
     bookmark: [],
   });
-  return <Bookmark.Provider value = {{state, dispatch}}>{children}</Bookmark.Provider>;
+  return <bookmark.Provider value = {{state, dispatch}}>{children}</bookmark.Provider>;
+};
+export const BookmarkState = () => {
+  return useContext(bookmark);
 };
 export default Context;
-export const BookmarkState = () => {
-  return useContext(Bookmark);
-};

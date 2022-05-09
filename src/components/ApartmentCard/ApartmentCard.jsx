@@ -15,7 +15,6 @@ const ApartmentCard = ({ item }) => {
     dispatch,
   } = BookmarkState();
   const add = () => {
-    console.log(bookmark);
     return dispatch({ type: 'ADD_BOOKMARK', payload: item });
   }
   
@@ -27,13 +26,13 @@ const ApartmentCard = ({ item }) => {
         </div>
         <div className={styles.cardcontent}>
           <div className={styles.apartmentprice}>
-            <h1 className={styles.price}>#{item.Price}/mo</h1>
+            <h1 className={styles.price}>#{item.price}/mo</h1>
           </div>
           <div className={styles.apartmentdetails}>
             <div className={styles.location}>
               <div className={styles.locationwrap}>
                 <MdLocationOn className={styles.locationicon} />
-                <h3 className={styles.address}>{item.Location}</h3>
+                <h3 className={styles.address}>{item.location}</h3>
               </div>
               {bookmark.some((p) => p.id === item.id) ? (
                 <button
@@ -50,19 +49,19 @@ const ApartmentCard = ({ item }) => {
                 </button>
               )}
             </div>
-            <h2 className={styles.propertytype}>{item.PropertyType}</h2>
+            <h2 className={styles.propertytype}>{item.propertyType}</h2>
             <div className={styles.bedbath}>
               <div className={styles.bed}>
                 <div className={styles.bedIcon}>
                   <img src={Bedroom} alt="bedicon" />
                 </div>
-                <h5>{item.BedroomNumber} Bedroom</h5>
+                <h5>{item.bedroomNumber} Bedroom</h5>
               </div>
               <div className={styles.bath}>
                 <div className={styles.bathIcon}>
                   <img src={Bathroom} alt="bathicon" />
                 </div>
-                <h5>{item.BathroomNumber} Bathroom</h5>
+                <h5>{item.bathroomNumber} Bathroom</h5>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import styles from './Button.module.css';
 import backarrow from '../../Assets/backarrow.png';
 
-function Button2({ children }) {
+const Button2 = ({ children }) => {
     return (
     <Link to='/'>
         <div className={styles.btn2Div}>
