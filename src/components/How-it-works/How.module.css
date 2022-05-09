@@ -1,0 +1,137 @@
+.main{
+    width: 100%;
+}
+
+.upper{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+}
+
+.card{
+    max-width: 30%;
+    min-width: 15rem;
+    margin: auto;
+}
+
+.image{
+    margin: auto;
+}
+
+.image2{
+    margin: auto;
+}
+
+.image2>img{
+    width: 90%;
+}
+
+.image>img{
+    width: 120%;
+}
+
+.upper>h2{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 500 Bold;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.upper>p{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #979797;
+}
+
+.text{
+    padding: 20px;
+}
+
+.text>h2{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 500 Bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 10px;
+}
+
+.text>p{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #979797;
+}
+
+
+.text1{
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+.text1>h2{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 500 Bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 10px;
+}
+
+.text1>p{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #979797;
+}
+
+
+@media screen and (max-width: 820px){
+
+}
+@media screen and (max-width: 768px){
+   
+}
+
+@media screen and (max-width: 425px){
+    .text1{
+        margin-top: 20px;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+
+    .image2>img{
+        width: 100%;
+    }
+    
+    .image>img{
+        width: 120%;
+    }
+} 
