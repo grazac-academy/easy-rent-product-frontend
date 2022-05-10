@@ -2,22 +2,18 @@ import React from 'react';
 import styles from './ApartmentCard.module.css';
 import Bedroom from '../../Assets/Bedroom.png';
 import Bathroom from '../../Assets/Bathroom.png';
-import {
-  MdLocationOn,
-  MdBookmarkBorder,
-  MdBookmark,
-} from 'react-icons/md';
-import { BookmarkState } from '../../Context/Context';
+import { MdLocationOn, MdBookmarkBorder, MdBookmark } from 'react-icons/md';
+import { useBookmarkState } from '../../context/context';
 
 const ApartmentCard = ({ item }) => {
   const {
     state: { bookmark },
     dispatch,
-  } = BookmarkState();
+  } = useBookmarkState();
   const add = () => {
     return dispatch({ type: 'ADD_BOOKMARK', payload: item });
-  }
-  
+  };
+
   return (
     <div className={styles.featuredContainer}>
       <div className={styles.featuredcard}>
