@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Button.module.css';
-import backarrow from '../../Assets/backarrow.png';
+import backarrow from 'assets/backarrow.png';
 
 const Button2 = ({ children }) => {
   return (

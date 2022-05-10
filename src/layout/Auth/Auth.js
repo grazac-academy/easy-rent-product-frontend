@@ -1,8 +1,8 @@
 import styles from './auth.module.css';
 import { Link } from 'react-router-dom';
-import Logo from '../../Assets/Logo.svg';
-import Auth_Bg from '../../Assets/Auth_img.png';
-import Button from '../../components/Button/Button2';
+import Logo from 'assets/Logo.svg';
+import Auth_Bg from 'assets/Auth_img.png';
+import Button from 'components/Button/Button2';
 
 const Auth = ({ props, children }) => {
   return (

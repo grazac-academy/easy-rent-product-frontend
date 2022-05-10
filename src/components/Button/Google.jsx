@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Button.module.css';
-import google from '../../Assets/google-icon.png'
+import google from 'assets/google-icon.png';
 
 function Google() {
   return (

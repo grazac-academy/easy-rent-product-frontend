@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ApartmentCard.module.css';
-import Bedroom from '../../Assets/Bedroom.png';
-import Bathroom from '../../Assets/Bathroom.png';
+import Bedroom from 'assets/Bedroom.png';
+import Bathroom from 'assets/Bathroom.png';
 import { MdLocationOn, MdBookmarkBorder, MdBookmark } from 'react-icons/md';
 import { useBookmarkState } from '../../context/context';
 
