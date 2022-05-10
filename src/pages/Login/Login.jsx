@@ -6,7 +6,7 @@ import Button from '../../components/Button/Button';
 import styles from './Login.module.css'
 import Google from '../../components/Button/Google'
 
-export default function Login() {
+const Login = () => {
   const[type, setType] = useState(true);
     const [loginForm, setLoginForm] = useState({
       email: '',
@@ -58,3 +58,4 @@ export default function Login() {
     </form>
   );
 }
+export default Login;

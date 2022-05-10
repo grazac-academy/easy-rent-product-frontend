@@ -3,7 +3,7 @@ import FormGroup from './../../components/FormGroup/FormGroup';
 import Button from '../../components/Button/Button';
 import styles from './ResetPassword.module.css';
 
-export default function ResetPassword() {
+const ResetPassword = () => {
   return (
     <form className={styles.form}>
       <h1 className={styles.title}>Input New Password</h1>
@@ -22,3 +22,4 @@ export default function ResetPassword() {
     </form>
   );
 }
+export default ResetPassword;

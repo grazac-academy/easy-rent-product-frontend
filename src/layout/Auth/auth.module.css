@@ -49,3 +49,32 @@
 .whitepart Button2 {
   align-items: center;
 }
+
+@media screen and (max-width: 979px) {
+  .whiteBg {
+    padding: 4rem 3rem 0 3rem;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whiteBg {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .AuthBg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .whiteBg {
+    padding: 4rem 0rem 0 0rem;
+  }
+}
+@media screen and (max-width: 387px) {
+  .whiteBg {
+   width: 90%;
+  }
+}

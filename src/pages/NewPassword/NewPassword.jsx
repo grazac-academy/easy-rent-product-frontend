@@ -4,8 +4,7 @@ import { useState } from 'react';
 import Button from '../../components/Button/Button';
 import styles from './NewPassword.module.css';
 
-
-export default function NewPassword() {
+const NewPassword = () => {
   const [loginForm, setLoginForm] = useState({
     email: '',
     password: '',
@@ -47,3 +46,4 @@ export default function NewPassword() {
     </form>
   );
 }
+export default NewPassword;

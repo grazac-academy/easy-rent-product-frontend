@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button'
 import Google from '../../components/Button/Google';
 import {Link} from 'react-router-dom'
 
-export default function SignUp() {
+const SignUp = () => {
   return (
     <form className={styles.form}>
       <h1 className={styles.title}>
@@ -64,4 +64,5 @@ export default function SignUp() {
     </form>
   );
 }
+export default SignUp;
 
