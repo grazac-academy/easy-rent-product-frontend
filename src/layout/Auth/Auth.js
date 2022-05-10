@@ -1,21 +1,24 @@
-import classes from './auth.module.css';
-// import { Link } from "react-router-dom";
-import Logo from 'assets/Logo.svg';
-import Auth_Bg from 'assets/Auth_img.png';
+import styles from './auth.module.css';
+import { Link } from 'react-router-dom';
+import Logo from '../../Assets/Logo.svg';
+import Auth_Bg from '../../Assets/Auth_img.png';
+import Button from '../../components/Button/Button2';
 
-const Auth = ({ children }) => {
+const Auth = ({ props, children }) => {
   return (
-    <main className={classes.main}>
-      <div className={classes.whitePart}>
-        {/* <Link to="/" className={classes.logoContainer}> */}
-
-        <div className={classes.image}>
-          <img src={Logo} alt="Logo" />
-        </div>
-        {/* </Link> */}
+    <main className={styles.main}>
+      <div className={styles.whiteBg}>
+        <Link to="/">
+          <Button />
+        </Link>
+        <Link to="/" className={styles.logoContainer}>
+          <div className={styles.image}>
+            <img src={Logo} alt="Logo" />
+          </div>
+        </Link>
         <div>{children}</div>
       </div>
-      <div className={classes.AuthBg}>
+      <div className={styles.AuthBg}>
         <img src={Auth_Bg} alt="EasyRent" />
       </div>
     </main>
