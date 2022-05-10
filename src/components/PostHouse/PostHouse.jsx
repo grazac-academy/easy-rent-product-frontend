@@ -1,11 +1,11 @@
-import React from 'react'
-import styles from './PostHouse.module.css'
-import Upload from '../../Assets/Upload.png'
-import takepics from '../../Assets/takepics.png'
-import Createacct from '../../Assets/Createacct.png'
-import Button from '../Button/Button'
-import Arrow from '../../Assets/arrow.png'
-import Arrowdown from '../../Assets/arrowdown.png'
+import React from 'react';
+import styles from './PostHouse.module.css';
+import Upload from 'assets/Upload.png';
+import takepics from 'assets/takepics.png';
+import Createacct from 'assets/Createacct.png';
+import Button from 'components/Button/Button';
+import Arrow from 'assets/arrow.png';
+import Arrowdown from 'assets/arrowdown.png';
 
 function PostHouse() {
   return (
@@ -44,9 +44,9 @@ function PostHouse() {
           <img src={Arrowdown} alt="arrow" />
         </div>
       </div>
-      <Button text='Post a House' />
+      <Button text="Post a House" />
     </div>
   );
-};
+}
 
-export default PostHouse
+export default PostHouse;

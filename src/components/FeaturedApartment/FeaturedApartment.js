@@ -1,13 +1,14 @@
 import React from 'react';
-import styles from './FeauturedApartment.module.css'
+import styles from './FeauturedApartment.module.css';
 import ApartmentCard from '../ApartmentCard/ApartmentCard';
 import Button from './../Button/Button';
 import { useBookmarkState } from '../../context/context';
 import { Link } from 'react-router-dom';
 
-
 const FeaturedApartment = () => {
-  const { state: { apartments } } = useBookmarkState();
+  const {
+    state: { apartments },
+  } = useBookmarkState();
   return (
     <div className={styles.FeaturedApartmentContainer}>
       <div className={styles.FeaturedApartmentTitle}>
@@ -20,9 +21,9 @@ const FeaturedApartment = () => {
         ))}
       </div>
       <Link to="/apartmentlist">
-        <Button text='View All' />
+        <Button text="View All" />
       </Link>
     </div>
   );
-}
-export default FeaturedApartment
+};
+export default FeaturedApartment;

@@ -1,0 +1,13 @@
+
+
+.search_button {
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: #06062A;
+    font-size: 23px;
+    border: none;
+    font-weight: 400;
+    font-family: 'Circular std book';
+    cursor: pointer;
+}
