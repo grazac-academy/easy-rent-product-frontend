@@ -8,7 +8,7 @@ const Dropdown = ({ ...props }) => {
   return (
     <div className="select_location">
       <img className={'select_icons'} src={props.src} alt="location" />
-      <div>
+      <div className={'dropdown'}>
         <label className="select_label">{props.title}</label>
         <Select
           defaultValue={selectedOption}
