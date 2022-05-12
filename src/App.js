@@ -7,6 +7,7 @@ import Auth from './layout/Auth/Auth';
 import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
+import Property from 'pages/propertyDetails/property';
 
 function App() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/property" element={<Property />} />
       </Routes>
       <Footer />
     </>
