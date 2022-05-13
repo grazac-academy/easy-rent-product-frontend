@@ -2,8 +2,8 @@
     background: #FFFFFF;
     border: 1px solid #06062A;
     border-radius: 20px;
-    width: 60%;
     max-width: 100%;
+
 }
 
 .advanced_container {
@@ -44,15 +44,15 @@
     column-gap: 20px;
     justify-content: space-between;
 }
+
 @media screen and (max-width: 1024px) {
     .advanced {
         width: 80%;
     }
 }
-    
+
 /* @media screen and (max-width: 930px) {
     .advanced {
         width: 90%;
     }
 } */
-    
