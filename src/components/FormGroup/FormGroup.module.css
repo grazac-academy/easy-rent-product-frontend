@@ -44,7 +44,21 @@
     line-height: 15px;
     color: rgba(17, 17, 17, 0.5);
     padding-left: 0.5rem;
+}
 
+.error {
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+.formInput:invalid[focused="true"] {
+    border: 1px solid red;
+}
+
+.formInput:invalid[focused="true"]~.error {
+    display: block;
 }
 
 @media screen and (max-width: 768px) {

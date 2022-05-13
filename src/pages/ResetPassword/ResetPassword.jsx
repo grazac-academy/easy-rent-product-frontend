@@ -1,23 +1,51 @@
 import React from 'react';
+import {useState } from 'react';
 import FormGroup from './../../components/FormGroup/FormGroup';
 import Button from '../../components/Button/Button';
 import styles from './ResetPassword.module.css';
 
 const ResetPassword = () => {
+
+const [resetPasswordForm, setResetPasswordForm] = useState({
+  newPassword: '',
+  confirmPassword: '',
+});
+  const inputs = [
+  {
+      id: 2,
+      name: 'email',
+      type: 'email',
+      placeholder: 'Email',
+      errorMessage: 'It should be a valid email address!',
+      label: 'Email',
+      required: true,
+    },
+];
+
+  const onChange = (e) => {
+   setResetPasswordForm({ ...resetPasswordForm, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(resetPasswordForm);
+  };
+ 
+
   return (
-    <form className={styles.form}>
-      <h1 className={styles.title}>Input New Password</h1>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <h1 className={styles.title}>Reset Password</h1>
       <p className={styles.p1}>
-        You are a step closer, input a new password below
+        It’s okay to forget, let’s help you recover your password
       </p>
-      <FormGroup
-        label="Your Email"
-        type="text"
-        placeholder="forexample@gmail.com"
-        name="email"
-        // onChange={(event) => changeHandler(event, 'email')}
-        required={true}
-      />
+      {inputs.map((input) => (
+        <FormGroup
+          key={input.id}
+          {...input}
+          resetPasswordForm={resetPasswordForm[input.name]}
+          onChange={onChange}
+        />
+      ))}
       <Button text="Reset" />
     </form>
   );

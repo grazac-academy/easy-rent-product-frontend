@@ -1,10 +1,12 @@
-import { createContext, useReducer, useContext } from 'react';
+import { createContext, useReducer, useContext, useState } from 'react';
 import { bookmarkReducer } from './reducer';
 import apartments from '../constant';
 
+
 const bookmark = createContext();
 
-const Context = ({ children }) => {
+const Context = ({children}) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [state, dispatch] = useReducer(bookmarkReducer, {
     apartments: apartments,
     bookmark: [],

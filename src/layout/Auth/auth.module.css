@@ -35,7 +35,7 @@
 
 .whiteBg {
   width: 50%;
-  padding: 4rem 3rem 0 7rem;
+  padding: 4rem 3rem 4rem 7rem;
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
