@@ -1,16 +1,16 @@
-import React from "react";
-import classes from "./property.module.css";
-import BigImage from "../../assets/big_img.svg";
-import Image1 from "../../assets/img1.svg";
-import Image2 from "../../assets/img2.svg";
-import Image3 from "../../assets/img3.svg";
-import Image4 from "../../assets/img4.svg";
-import Image5 from "../../assets/img5.svg";
-// import Image6 from "../../assets/img6.svg";
-import vector1 from "../../assets/Vector (1).svg";
-import vector2 from "../../assets/Vector (2).svg";
-import vector3 from "../../assets/Vector(3).svg";
-import location from "../../assets/location.svg";
+import React from 'react';
+import classes from './property.module.css';
+import BigImage from 'assets/big_img.svg';
+import Image1 from 'assets/img1.svg';
+import Image2 from 'assets/img2.svg';
+import Image3 from 'assets/img3.svg';
+import Image4 from 'assets/img4.svg';
+import Image5 from 'assets/img5.svg';
+// import Image6 from "assets/img6.svg";
+import vector1 from 'assets/Vector (1).svg';
+import vector2 from 'assets/Vector (2).svg';
+import vector3 from 'assets/Vector(3).svg';
+import location from 'assets/location.svg';
 
 const property = () => {
   return (

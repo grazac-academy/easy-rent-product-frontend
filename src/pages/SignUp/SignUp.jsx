@@ -1,9 +1,9 @@
-import React from 'react'
-import FormGroup from '../../components/FormGroup/FormGroup'
-import styles from './SignUp.module.css'
-import Button from '../../components/Button/Button'
-import Google from '../../components/Button/Google';
-import {Link} from 'react-router-dom'
+import React from 'react';
+import FormGroup from 'components/FormGroup/FormGroup';
+import styles from './SignUp.module.css';
+import Button from 'components/Button/Button';
+import Google from 'components/Button/Google';
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
   return (
@@ -40,28 +40,26 @@ export default function SignUp() {
         minLength={8}
         maxLength={20}
       />
-      
-        <div className={styles.checkbox}>
-            <input type="checkbox" id="password"/>
-            <label for="password"> Show password</label>
-        </div>
-      
-      
+
+      <div className={styles.checkbox}>
+        <input type="checkbox" id="password" />
+        <label for="password"> Show password</label>
+      </div>
+
       <p className={styles.p2}>
         By signing up, you’re agreeing to our
         <span className={styles.rent}> Terms & Conditions</span> and
         <span className={styles.rent}> Privacy Policy</span>
       </p>
-      <Button text="Create account"/>
-      
-      <Google/>
+      <Button text="Create account" />
+
+      <Google />
       <p className={styles.p3}>
         Already have an account?
-        <Link to='/login'>
-        <span className={styles.rent}> Login</span>
+        <Link to="/login">
+          <span className={styles.rent}> Login</span>
         </Link>
       </p>
     </form>
   );
 }
-

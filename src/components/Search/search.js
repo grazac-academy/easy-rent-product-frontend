@@ -12,7 +12,7 @@ import {
   locations,
   prices,
   propertyTypes,
-} from '../../constants/index';
+} from '../../constant/index';
 import Icon from '../../icons';
 
 const Search = () => {
@@ -39,12 +39,12 @@ const Search = () => {
                 <Dropdown
                   options={propertyTypes}
                   placeholder={'Choose Type'}
-                  className= {classes.dropdown}
+                  className={classes.dropdown}
                   title="Property Type"
                   src={Property}
                 />
 
-                  <span className={classes.dropdown_span}></span>
+                <span className={classes.dropdown_span}></span>
 
                 <Dropdown
                   options={prices}
@@ -53,7 +53,7 @@ const Search = () => {
                   title="Price Range"
                 />
 
-                  <span className={classes.dropdown_span}></span>
+                <span className={classes.dropdown_span}></span>
 
                 <Dropdown
                   options={bedrooms}
@@ -63,7 +63,6 @@ const Search = () => {
                 />
 
                 <span className={classes.dropdown_span}></span>
-
               </div>
               <button className={classes.button} onClick={() => setShow(true)}>
                 <span>More search options</span>

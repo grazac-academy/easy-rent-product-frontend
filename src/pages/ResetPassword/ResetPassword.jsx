@@ -1,6 +1,6 @@
 import React from 'react';
-import FormGroup from './../../components/FormGroup/FormGroup';
-import Button from '../../components/Button/Button';
+import FormGroup from 'components/FormGroup/FormGroup';
+import Button from 'components/Button/Button';
 import styles from './ResetPassword.module.css';
 
 export default function ResetPassword() {

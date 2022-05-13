@@ -1,6 +1,6 @@
 import { createContext, useReducer, useContext } from 'react';
 import { bookmarkReducer } from './reducer';
-import apartments from '../constant';
+import apartments from '../constant/index.jsx';
 
 const bookmark = createContext();
 

@@ -1,9 +1,8 @@
 import React from 'react';
-import FormGroup from './../../components/FormGroup/FormGroup';
+import FormGroup from 'components/FormGroup/FormGroup';
 import { useState } from 'react';
-import Button from '../../components/Button/Button';
+import Button from 'components/Button/Button';
 import styles from './NewPassword.module.css';
-
 
 export default function NewPassword() {
   const [loginForm, setLoginForm] = useState({

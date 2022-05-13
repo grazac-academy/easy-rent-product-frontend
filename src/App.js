@@ -8,8 +8,8 @@ import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
 import Property from 'pages/propertyDetails/property';
-import NewPassword from './pages/NewPassword/NewPassword';
-import Apartmentlist from './pages/Apartmentlist/Apartmentlist';
+import NewPassword from 'pages/NewPassword/NewPassword';
+import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
 
 function App() {
   const location = useLocation();
