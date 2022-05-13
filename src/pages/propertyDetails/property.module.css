@@ -6,10 +6,13 @@
 .details{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .location{
     display: flex;
+    width: 100%;
+    align-items: center;
 }
 .images1>img{
     width: 100%;
@@ -17,12 +20,15 @@
 }
 
 .images1{
-    width: 120%;
+    width: 160%;
     /* height: 80%; */
 }
 
+
+
+
 .images{
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
@@ -33,9 +39,10 @@
 
 .imgContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
+    margin: auto;
    
 }
 
@@ -44,8 +51,92 @@
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     /* grid-template-columns: repeat(auto-fill, 200px); */
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-row-gap: 10px;
     /* margin-top: 5px; */
     /* justify-content: space-evenly; */
+}
+.amount>h3{
+    font-weight : bold !important;
+    font-family: var(--CircularStd);
+    font-size: 20px;
+
+}
+.upperText p{
+    color: #979797;
+    font-size:14px;
+    font-family: var(--CircularStd);
+    margin-bottom:20px;
+    margin-top:10px;
+
+}
+.upperText h3{
+    color: black;
+    font-size:28px;
+    font-family: var(--CircularStd);
+    font-weight:bold;
+}
+.location p{
+    color:#C4C4C4;
+    font-size:14px;
+    font-family: var(--CircularStd);
+    width: 100%;
+}
+.bedrooms{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.bedrooms p{
+    color: #979797;
+    font-size:12px;
+    font-family: var(--CircularStd);
+    
+}
+.bed3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.description h2{
+    font-family: var(--CircularStd);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+
+
+}
+.description p{
+    color: #979797;
+    font-size:16px;
+    font-family: var(--CircularStd)
+
+}
+.houseFeatures li{
+    color: #979797;
+    font-size:16px;
+    font-family: var(--CircularStd)
+}
+.houseFeatures h2{
+    font-family: var(--CircularStd);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.section2{
+    display:flex;
+    margin-top: 25px;
+    gap:20px;
+}
+.sect{
+    width:60%;
+}
+.similarProperties h3{
+    font-family: var(--CircularStd);
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    
+    
+
 }
