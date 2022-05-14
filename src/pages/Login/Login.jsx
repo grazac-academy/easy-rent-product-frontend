@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FormGroup from './../../components/FormGroup/FormGroup';
+import FormGroup from 'components/FormGroup/FormGroup';
 import { useState } from 'react';
-import Button from '../../components/Button/Button';
+import Button from 'components/Button/Button';
 import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 // import axios from 'axios';
