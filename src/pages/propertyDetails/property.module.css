@@ -131,12 +131,25 @@
 .sect{
     width:60%;
 }
-.similarProperties h3{
+.similar{
     font-family: var(--CircularStd);
     font-weight: bold;
     font-size: 20px;
     margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
     
-    
+
+}
+
+.array{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-column-gap: 30px;
 
 }

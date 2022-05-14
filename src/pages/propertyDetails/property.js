@@ -1,20 +1,32 @@
 import React from "react";
 import classes from "./property.module.css";
-import BigImage from "../../assets/big_img.svg";
-import Image1 from "../../assets/img1.svg";
-import Image2 from "../../assets/img2.svg";
-import Image3 from "../../assets/img3.svg";
-import Image4 from "../../assets/img4.svg";
-import Image5 from "../../assets/img5.svg";
-// import Image6 from "../../assets/img6.svg";
-import bathroom from "../../assets/Vector (1).svg";
-import garage from "../../assets/Vector (2).svg";
-import bedroom from "../../assets/Vector(3).svg";
-import location from "../../assets/location.svg";
-import Card from "../../components/contactCard/card";
+import BigImage from "assets/big_img.svg";
+import Image1 from "assets/img1.svg";
+import Image2 from "assets/img2.svg";
+import Image3 from "assets/img3.svg";
+import Image4 from "assets/img4.svg";
+import Image5 from "assets/img5.svg";
+import Image6 from "assets/img5.svg";
+import bathroom from "assets/Vector (1).svg";
+import garage from "assets/Vector (2).svg";
+import bedroom from "assets/Vector(3).svg";
+import location from "assets/location.svg";
+import Card from "components/contactCard/card";
 import ApartmentCard from "components/ApartmentCard/ApartmentCard";
+import Array from "constant/Array";
 
 const property = () => {
+// const array = [
+//   {id: 1,image: Image1}, 
+//   {id: 2, image: Image2}, 
+//   {id: 3, image: Image3}, 
+//   {id: 4,image: Image4}, 
+//   {id: 5, image: Image5}, 
+//   {id: 6, image: Image6}, 
+// ]
+
+
+
   return (
     <div className={classes.main}>
       <div className={classes.innerContainer}>
@@ -37,18 +49,25 @@ const property = () => {
           </div>
 
           <div className={classes.gridimg}>
-            {/* <img src={BigImage} alt="image" /> */}
-            <div className={classes.images}>
+
+          {/* {
+          array.map((item)=>(
+            <div className={classes.images} onClick={()=>handleSelect(item.id)} key={item.id} item={item}>
+            <img src={item.image} alt="image" />
+          </div>
+          ))} */}
+
+            <div className={classes.images} >
               <img src={Image1} alt="image" />
             </div>
             <div className={classes.images}>
               <img src={Image2} alt="image" />
             </div>
             <div className={classes.images}>
-              <img src={Image3} alt="image" />
+              <img src={Image3} alt="image"/>
             </div>
             <div className={classes.images}>
-              <img src={Image4} alt="image" />
+              <img src={Image4} alt="image"/>
             </div>
             <div className={classes.images}>
               <img src={Image5} alt="image" />
@@ -113,9 +132,13 @@ const property = () => {
           <Card />
         </div>
         <div className={classes.similarProperties}>
-          <h3>Similar Properties</h3>
-          <div>
-            {/* <ApartmentCard/> */}
+          <div className={classes.similar}>
+            <h3>Similar Properties</h3>
+          </div>
+          <div className={classes.array}>
+            {Array.slice(0, 2).map((item) => (
+              <ApartmentCard key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </div>
