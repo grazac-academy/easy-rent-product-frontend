@@ -1,0 +1,22 @@
+.propertylist{
+    display: flex;
+    /* width: 80%; */
+    justify-content: space-between;
+    align-items: center;
+}
+.input_email{
+    border: none;
+    /* width: 50%; */
+}
+.inputs {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: 1px solid #06062A;
+    padding: 7px 20px;
+    border-radius: 5px;
+   
+}
+.dropdowns{
+    border: 1px solid #06062A;
+}
