@@ -1,10 +1,10 @@
 import { useState } from "react";
 import styles from './FormGroup.module.css';
 
-const FormGroup = ( props ) => {
+const FormGroup = ({ label, errorMessage, onChange, id, ...inputProps } ) => {
 
   const [focused, setFocused] = useState(false);
-  const { label, errorMessage, onChange, id, ...inputProps } = props;
+  // const { label, errorMessage, onChange, id, ...inputProps } = props;
 
   const handleFocus = (e) => {
     setFocused(true);

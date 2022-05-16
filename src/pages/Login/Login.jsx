@@ -7,14 +7,6 @@ import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 // import axios from 'axios';
 
-const Login = (props) => {
-  const [type, setType] = useState(true);
-   const [loading, setLoading] = useState(false);
-   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loginForm, setLoginForm] = useState({
-    email: '',
-    password: '',
-  });
   const inputs = [
     {
       id: 1,
@@ -37,6 +29,16 @@ const Login = (props) => {
       required: true,
     },
   ];
+
+const Login = (props) => {
+  const [type, setType] = useState(true);
+   const [loading, setLoading] = useState(false);
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginForm, setLoginForm] = useState({
+    email: '',
+    password: '',
+  });
+
 const onChange = (e) => {
   setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
 };
