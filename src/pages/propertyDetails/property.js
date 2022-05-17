@@ -40,7 +40,7 @@ const property = () => {
             <p>Adigbe, Abeokuta</p>
           </div>
           <div className={classes.amount}>
-            <h3>N10,000/mo</h3>
+            <h3>N10,000/<span>mo</span></h3>
           </div>
         </div>
         <div className={classes.imgContainer}>
@@ -112,6 +112,7 @@ const property = () => {
                 <h2>House Features</h2>
                 <li>Spacious Lounge with Wooden Tiles</li>
                 <li>P.O.P Ceiling</li>
+
                 <li>Aluminium Casement Window with Metal</li>
                 <li>Grills</li>
                 <li>Open Dining Area</li>

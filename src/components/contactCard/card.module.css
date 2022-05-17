@@ -5,12 +5,12 @@
     border-radius:8px;
 }
 .innerContainer{
-    width: 80%;
+    max-width: 80%;
     margin: auto;
     justify-content: center;
 }
 .imgContainer{
-    width: 120px;
+    max-width: 120px;
     height: 120px;
     border-radius:100%;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
@@ -26,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 
     
 }
@@ -47,6 +48,8 @@
     border-radius:8px;
     background-color: #7453EE;
     margin-top:50px;
+    margin: auto;
+    
 
     
 }
@@ -63,8 +66,8 @@
     color:white;
 }
 .safetyTips{
-    width: 299px ;
-    height: 110px;
+    max-width: 299px ;
+    /* height: 110px; */
     border-radius:8px;
     background-color: #D3D3F6;
     margin-top:20px;
@@ -99,8 +102,45 @@
 }
 .safety{
     justify-content: center;
-    width: 80%;
+    max-width: 80%;
     margin: auto;
     padding-top: 2px;
+    
+}
+@media screen and (max-width: 445px) {
+    .agentDetails{
+        width: 80%;
+        margin: auto;
+        justify-content:center;
+        display: block;
+        align-items: center;
+        padding-top: 5px;
+    
+        
+    }
+    .agentDetails h1{ 
+        padding-top: 4px;
+    }
+    .agentContact{
+        margin-top: 10px;
+        width: 80%;
+    } 
+    
+}
+@media screen and (max-width: 440px){
+    .main{
+        width:280px;
+        margin:auto;
+    }
+    .agentContact{
+        margin-top: 10px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    } 
+    .imgContainer{
+        margin: 20px 30px;
+
+    }
     
 }
