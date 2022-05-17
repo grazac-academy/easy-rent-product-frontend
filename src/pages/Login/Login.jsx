@@ -7,46 +7,46 @@ import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 // import axios from 'axios';
 
-  const inputs = [
-    {
-      id: 1,
-      name: 'email',
-      type: 'email',
-      placeholder: 'Email',
-      errorMessage: 'It should be a valid email address!',
-      label: 'Email',
-      required: true,
-    },
-    {
-      id: 2,
-      name: 'password',
-      type: 'password',
-      placeholder: 'Password',
-      errorMessage:
-        'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
-      label: 'Password',
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&/.*])[a-zA-Z0-9!@#$%^&/.*]{8,20}$`,
-      required: true,
-    },
-  ];
+const inputs = [
+  {
+    id: 1,
+    name: 'email',
+    type: 'email',
+    placeholder: 'Email',
+    errorMessage: 'It should be a valid email address!',
+    label: 'Email',
+    required: true,
+  },
+  {
+    id: 2,
+    name: 'password',
+    type: 'password',
+    placeholder: 'Password',
+    errorMessage:
+      'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
+    label: 'Password',
+    pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&/.*])[a-zA-Z0-9!@#$%^&/.*]{8,20}$`,
+    required: true,
+  },
+];
 
 const Login = (props) => {
   const [type, setType] = useState(true);
-   const [loading, setLoading] = useState(false);
-   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginForm, setLoginForm] = useState({
     email: '',
     password: '',
   });
 
-const onChange = (e) => {
-  setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
-};
+  const onChange = (e) => {
+    setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
+  };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log(loginForm);
-};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(loginForm);
+  };
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -62,7 +62,7 @@ const handleSubmit = (e) => {
           onChange={onChange}
         />
       ))}
-    
+
       <div className={styles.checkboxDiv}>
         <div className={styles.checkbox}>
           <input
