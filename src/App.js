@@ -8,6 +8,8 @@ import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
 import Property from 'pages/propertyDetails/property';
+import Post from './layout/PostaHouse/auth';
+
 
 function App() {
   const location = useLocation();
@@ -26,6 +28,7 @@ function App() {
         </Routes>
       </Auth>
     );
+  
 
   return (
     <>
@@ -33,6 +36,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
+        <Route path="/auth" element={<Post />} />
+
       </Routes>
       <Footer />
     </>
