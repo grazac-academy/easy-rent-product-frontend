@@ -11,7 +11,7 @@ import { newPasswordData } from 'constant/authData';
 const NewPassword = () => {
   const [showModal, setShowModal] = useState(false);
   const [newPasswordForm, setNewPasswordForm] = useState(newPasswordData);
-  
+
   const onChange = (e, index) => {
     const updatedArr = newPasswordForm.map((item, i) => {
       console.log(item);
@@ -25,17 +25,17 @@ const NewPassword = () => {
   };
 
   useEffect(() => {
-     const updatedArr = newPasswordData.map((item, i) => {
-       if (i === 1) item.pattern = newPasswordForm[0].value;
-       return item;
-     });
-     setNewPasswordForm(updatedArr);
-   });
+    const updatedArr = newPasswordData.map((item, i) => {
+      if (i === 1) item.pattern = newPasswordForm[0].value;
+      return item;
+    });
+    setNewPasswordForm(updatedArr);
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(newPasswordForm);
-   setShowModal(true);
+    setShowModal(true);
   };
   // const close = () => { setShowModal(false)}
   return (
@@ -69,5 +69,5 @@ const NewPassword = () => {
       )}
     </>
   );
-}
+};
 export default NewPassword;

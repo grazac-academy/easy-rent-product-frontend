@@ -30,16 +30,16 @@ const Login = (props) => {
     setLoginForm(updatedArr);
   };
 
-   useEffect(() => {
-     const updatedArr = loginData.map((item, i) => {
-       if (i === 1) {
-         if (type) item.type = 'text';
-         else item.type = 'password';
-       }
-       return item;
-     });
-     setLoginForm(updatedArr);
-   }, [type]);
+  useEffect(() => {
+    const updatedArr = loginData.map((item, i) => {
+      if (i === 1) {
+        if (type) item.type = 'text';
+        else item.type = 'password';
+      }
+      return item;
+    });
+    setLoginForm(updatedArr);
+  }, [type]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

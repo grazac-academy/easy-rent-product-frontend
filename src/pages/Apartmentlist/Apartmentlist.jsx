@@ -1,7 +1,13 @@
 import React from 'react';
 import styles from './Apartmentlist.module.css';
+<<<<<<< HEAD
 import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
 import { useBookmarkState } from 'context/context';
+=======
+// import ApartmentCard from '../ApartmentCard/ApartmentCard';
+import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
+import { useBookmarkState } from '../../context/context';
+>>>>>>> main
 
 const Apartmentlist = () => {
   const {

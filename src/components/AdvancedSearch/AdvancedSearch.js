@@ -3,7 +3,7 @@ import './AdvancedSearch.css';
 import Modal from 'components/Modal/Modal';
 import Icon from '../../icons/index';
 import SearchItem from 'components/SearchItem/SearchItem';
-import { advancedSearches } from '../../constants/index';
+import { advancedSearches } from '../../constant/index';
 import Button from 'components/Btn/Btn';
 
 // const copiedSearch = advancedSearches;

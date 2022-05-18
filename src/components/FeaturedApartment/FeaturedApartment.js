@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FeauturedApartment.module.css';
-import ApartmentCard from '../ApartmentCard/ApartmentCard';
-import Button from './../Button/Button';
+import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
+import Button from 'components/Button/Button';
 import { useBookmarkState } from '../../context/context';
 import { Link } from 'react-router-dom';
 

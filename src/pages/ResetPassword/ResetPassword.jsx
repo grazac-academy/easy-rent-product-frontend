@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState } from 'react';
+import { useState } from 'react';
 import FormGroup from 'components/FormGroup/FormGroup';
 import Button from 'components/Button/Button';
 import styles from './ResetPassword.module.css';
@@ -11,10 +11,12 @@ import { resetPasswordData } from 'constant/authData';
 const ResetPassword = () => {
   const [showModal, setShowModal] = useState(false);
   const [resetPasswordForm, setResetPasswordForm] = useState(resetPasswordData);
-  
 
   const onChange = (e) => {
-   setResetPasswordForm({ ...resetPasswordForm, [e.target.name]: e.target.value });
+    setResetPasswordForm({
+      ...resetPasswordForm,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -64,5 +66,5 @@ const ResetPassword = () => {
       )}
     </>
   );
-}
+};
 export default ResetPassword;
