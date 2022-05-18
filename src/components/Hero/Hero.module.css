@@ -6,43 +6,38 @@
 
 .Hero {
     width: 100%;
-    box-shadow: 0px 4px 40px rgba(6, 6, 42, 0.3);
     position: relative;
 }
 
 
 .Background1 {
-    /* width: 50%; */
-    /* background-image: url(../../assets/bg1.svg); */
     background-repeat: no-repeat;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg1.svg);
     background-size: cover;
-    height: 639px;
+    height: 39.9rem;
 }
 
 .Background2 {
-    /* width: 50%; */
-    /* background-image: url(../../assets/bg2.svg); */
     background-repeat: no-repeat;
     background-size: cover;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg2.svg);
-    height: 639px;
+    height: 39.9rem;
 }
 
 .Background3 {
-    /* width: 50%; */
-    /* background-image: url(../../assets/bg3.svg); */
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg3.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 639px;
+    height: 39.9rem;
 }
 
 .heroText {
     position: absolute;
-    width: 60%;
+    width: 65%;
+    margin: auto;
     top: 70px;
-    padding: 100px
+    /* left: 130px; */
+    padding: 100px 100px 100px 140px;
 }
 
 .heroText h4 {
@@ -51,4 +46,60 @@
     color: #fff;
     font-family: 'Circular Std Book';
     line-height: 68.31px;
+}
+@media screen and (max-width: 1154px) {
+    .heroText{
+        width: 70%;
+        padding: 100px 100px 100px 60px;
+    }
+}
+@media screen and (max-width: 1040px) {
+    .heroText{
+        width: 80%;
+        padding: 100px 100px 100px 60px;
+    }
+}
+@media screen and (max-width: 910px) {
+    .heroText{
+        width: 95%;
+        padding: 100px 100px 100px 60px;
+    }
+}
+@media screen and (max-width: 840px) {
+    .heroText{
+        width: 60%;
+        padding: 100px 0px 50px 35px;
+    }
+    .heroText h4 {
+        font-size: 30px;
+        /* line-height: 22.19px; */
+        line-height: 42px;
+    }
+
+    /* .Background1, .Background2, .Background3 {
+        height: 20rem;
+    } */
+}
+@media screen and (max-width: 590px) {
+    .heroText{
+        width: 80%;
+        padding: 70px 30px 50px 35px;
+    }
+}
+@media screen and (max-width: 475px) {
+    .heroText{
+        width: 60%;
+        padding: 70px 0px 50px 35px;
+    }
+    .heroText h4 {
+        font-size: 18px;
+        line-height: 22.19px;
+        /* line-height: 42px; */
+    }
+}
+@media screen and (max-width: 375px) {
+    .heroText{
+        width: 75%;
+        padding: 70px 0px 50px 35px;
+    }
 }

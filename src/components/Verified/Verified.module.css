@@ -22,21 +22,45 @@
 
 .img {
     padding-right: 12px;
-}
-
-.price {
-    color: white;
-    font-family: 'Circular std book';
+    width: 28px;
+    height: 28px;
 }
 
 .price {
     font-size: 23px;
     line-height: 29.09px;
+    color: white;
     font-weight: 700;
+    font-family: 'Circular std book';
 }
 
 .details {
     font-size: 18px;
+    font-family: 'Circular std book';
+    color: white;
+    font-weight: 400;
     line-height: 20.24px;
-    font-weight: 450;
+    
+}
+@media screen and (max-width: 840px) {
+    .verified {
+        margin-top: 400px;
+    } 
+    .verified_inner {
+        width: 90%;
+    } 
+}
+@media screen and (max-width: 570px) {
+    .verified_inner {
+        width: 95%;
+    } 
+    .price {
+        font-size: 14px;
+        line-height: 17px;     
+    }
+    
+    .details {
+        font-size: 9px;
+        line-height: 12px;  
+    }
 }

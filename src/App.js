@@ -8,6 +8,8 @@ import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
 import Property from 'pages/propertyDetails/property';
+import NewPassword from 'pages/NewPassword/NewPassword';
+import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
 
 function App() {
   const location = useLocation();
@@ -15,7 +17,8 @@ function App() {
   if (
     location.pathname === '/login' ||
     location.pathname === '/signup' ||
-    location.pathname === '/resetpassword'
+    location.pathname === '/resetpassword' ||
+    location.pathname === '/newpassword'
   )
     return (
       <Auth>
@@ -23,6 +26,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
+          <Route path="/newpassword" element={<NewPassword />} />
         </Routes>
       </Auth>
     );
@@ -33,6 +37,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
+        <Route path="/apartmentlist" element={<Apartmentlist />} />
       </Routes>
       <Footer />
     </>

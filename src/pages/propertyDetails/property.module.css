@@ -1,191 +1,52 @@
-.innerContainer{
+.innerContainer {
     width: 80%;
     margin: auto;
 }
 
-.details{
+.details {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-.location{
+.location {
     display: flex;
-    width: 100%;
-    align-items: center;
 }
-.images1>img{
+
+.images1>img {
     width: 100%;
     height: 100%;
 }
 
-.images1{
-    width: 160%;
+.images1 {
+    width: 120%;
     /* height: 80%; */
 }
 
-
-
-
-.images{
-    width: 90%;
+.images {
+    width: 100%;
     height: auto;
 }
 
-.images>img{
+.images>img {
     width: 100%;
     height: 100%;
 }
 
-.imgContainer{
+.imgContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    margin: auto;
-   
+    gap: 25px;
+
 }
 
-.gridimg{
+.gridimg {
     width: 100%;
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     /* grid-template-columns: repeat(auto-fill, 200px); */
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 10px;
     /* margin-top: 5px; */
     /* justify-content: space-evenly; */
-}
-.amount>h3{
-    font-weight : bold !important;
-    font-family: var(--CircularStd);
-    font-size: 20px;
-    padding-right: 20px;
-}
-
-.amount>h3 span{
-    font-size: 14px;
-    font-weight : normal;
-}
-.upperText p{
-    color: #979797;
-    font-size:14px;
-    font-family: var(--CircularStd);
-    margin-bottom:20px;
-    margin-top:10px;
-
-}
-.upperText h3{
-    color: black;
-    font-size:28px;
-    font-family: var(--CircularStd);
-    font-weight:bold;
-}
-.location p{
-    color:#C4C4C4;
-    font-size:14px;
-    font-family: var(--CircularStd);
-    width: 100%;
-}
-.bedrooms{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-.bedrooms p{
-    color: #979797;
-    font-size:12px;
-    font-family: var(--CircularStd);
-    
-}
-.bed3{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.description h2{
-    font-family: var(--CircularStd);
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 30px;
-
-
-}
-.description p{
-    color: #979797;
-    font-size:16px;
-    font-family: var(--CircularStd)
-
-}
-.houseFeatures li{
-    color: #979797;
-    font-size:16px;
-    font-family: var(--CircularStd)
-}
-.houseFeatures h2{
-    font-family: var(--CircularStd);
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-.section2{
-    display:flex;
-    margin-top: 25px;
-    gap:20px;
-}
-.sect{
-    width:60%;
-}
-.similar{
-    font-family: var(--CircularStd);
-    font-weight: bold;
-    font-size: 20px;
-    margin: auto;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    
-
-}
-
-.array{
-    width: 100%;
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    /* grid-template-columns: repeat(auto-fill, 200px); */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-column-gap: 40px;
-
-}
-
-@media screen and (max-width: 1078px){
-    .imgContainer{
-        display: block;
-    }
-    .images1{
-        width: 100%;
-        margin-bottom: 20px;
-        /* height: 80%; */
-    }
-    .gridimg{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 10px;
-        margin-left: 15px;
-    }
-    
-}
-@media screen and (max-width: 903px){
-    .section2{
-        display: block;
-        width: 100%;
-
-    
-    }
-    .sect{
-        width:100%;
-        margin-bottom: 20px;
-    }
 }
