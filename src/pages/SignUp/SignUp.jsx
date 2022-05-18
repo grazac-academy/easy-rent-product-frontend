@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
->>>>>>> main
 import FormGroup from 'components/FormGroup/FormGroup';
 import styles from './SignUp.module.css';
 import Button from 'components/Button/Button';
