@@ -1,8 +1,8 @@
-import React from "react";
-import HeaderLogo from "../assets/headerLogo.svg";
-import login from "../assets/login.svg";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React from 'react';
+import HeaderLogo from '../assets/headerLogo.svg';
+import login from '../assets/login.svg';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Header() {
   const [toggle, setToggle] = useState(true);
@@ -55,7 +55,7 @@ function Header() {
             <nav class="mobile left-0 right-0">
               <ul
                 className={
-                  " lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  "
+                  ' lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  '
                 }
                 g
               >
