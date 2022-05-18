@@ -35,6 +35,7 @@ export const apartments = [
     propertyType: 'Semi Detached Bungalow',
     bedroomNumber: 3,
     bathroomNumber: 2,
+    
   },
   {
     id: 3,
