@@ -1,6 +1,8 @@
 import classes from './Testimonials.module.css';
-import ellipse from 'assets/Ellipse1.svg';
-import ellipse2 from 'assets/Ellipse2.svg';
+import kunle from 'assets/Kunle.png';
+import aisha from 'assets/Aisha.png';
+import tolu from 'assets/Tolu.png';
+import yinka from 'assets/Yinka.png';
 import vector from 'assets/Vector.svg';
 import React, { Component } from 'react';
 import Slider from 'react-slick';
@@ -58,14 +60,14 @@ export default class Testimonials extends Component {
                 <p>
                   Using this platform has been absolute bliss. I've earned extra
                   income by putting my place up each time I go on vacations or
-                  travel for work{' '}
+                  travel for work. I have seen a substantial increase in quality leads for our communities!
                 </p>
               </div>
               <div className={classes.image}>
-                <img src={ellipse} alt="" />
+                <img src={kunle} alt="" />
               </div>
               <div className={classes.text2}>
-                <h3>Kaitlyn Bowie</h3>
+                <h3>Adekunle Awotipe</h3>
               </div>
             </div>
           </div>
@@ -75,16 +77,16 @@ export default class Testimonials extends Component {
               <div className={classes.innerCard}>
                 <img src={vector} alt="" />
                 <p>
-                  Using this platform has been absolute bliss. I've earned extra
-                  income by putting my place up each time I go on vacations or
-                  travel for work{' '}
+                Easy rent has clearly become the best online tool 
+                to help the renter identify and connect with rental apartments in Nigeria. 
+                The website is very intuitive, and provides all the information you need to make an informed decision.
                 </p>
               </div>
               <div className={classes.image}>
-                <img src={ellipse2} alt="" />
+                <img src={aisha} alt="" />
               </div>
               <div className={classes.text2}>
-                <h3>Joseph Davidson</h3>
+                <h3>Aisha Bello</h3>
               </div>
             </div>
           </div>
@@ -94,16 +96,15 @@ export default class Testimonials extends Component {
               <div className={classes.innerCard}>
                 <img src={vector} alt="" />
                 <p>
-                  Using this platform has been absolute bliss. I've earned extra
-                  income by putting my place up each time I go on vacations or
-                  travel for work{' '}
+                Since I began using Easy rent I've seen an increase in leads, traffic and best of all - leases.  
+                Easy rent has become my online apartment rental marketing partner and my first choice lead source for my prospective renters.
                 </p>
               </div>
               <div className={classes.image}>
-                <img src={ellipse} alt="" />
+                <img src={tolu} alt="" />
               </div>
               <div className={classes.text2}>
-                <h3>Kaitlyn Bowie</h3>
+                <h3>Toluwalase Adeosun</h3>
               </div>
             </div>
           </div>
@@ -113,16 +114,16 @@ export default class Testimonials extends Component {
               <div className={classes.innerCard}>
                 <img src={vector} alt="" />
                 <p>
-                  Using this platform has been absolute bliss. I've earned extra
-                  income by putting my place up each time I go on vacations or
-                  travel for work{' '}
+                  This platform has not only helps the prospective renter find me faster, 
+                  but they are in turn more highly qualified as they are fully aware of our exact location, 
+                  availability and up to date pricing before they even call.
                 </p>
               </div>
               <div className={classes.image}>
-                <img src={ellipse2} alt="" />
+                <img src={yinka} alt="" />
               </div>
               <div className={classes.text2}>
-                <h3>Joseph Davidson</h3>
+                <h3>Olayinka Abiodun</h3>
               </div>
             </div>
           </div>
