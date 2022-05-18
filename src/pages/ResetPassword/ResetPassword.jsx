@@ -6,24 +6,12 @@ import styles from './ResetPassword.module.css';
 import Modal from 'components/Modal/Modal';
 import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
+import { resetPasswordData } from 'constant/authData';
 
 const ResetPassword = () => {
   const [showModal, setShowModal] = useState(false);
-  const [resetPasswordForm, setResetPasswordForm] = useState({
-    newPassword: '',
-    confirmPassword: '',
-  });
-  const inputs = [
-  {
-      id: 2,
-      name: 'email',
-      type: 'email',
-      placeholder: 'Email',
-      errorMessage: 'It should be a valid email address!',
-      label: 'Email',
-      required: true,
-    },
-];
+  const [resetPasswordForm, setResetPasswordForm] = useState(resetPasswordData);
+  
 
   const onChange = (e) => {
    setResetPasswordForm({ ...resetPasswordForm, [e.target.name]: e.target.value });
@@ -45,7 +33,7 @@ const ResetPassword = () => {
         <p className={styles.p1}>
           It’s okay to forget, let’s help you recover your password
         </p>
-        {inputs.map((input) => (
+        {resetPasswordData.map((input) => (
           <FormGroup
             key={input.id}
             {...input}

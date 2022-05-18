@@ -1,47 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FormGroup from 'components/FormGroup/FormGroup';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'components/Button/Button';
 import styles from './Login.module.css';
 import Google from 'components/Button/Google';
+import { loginData } from 'constant/authData';
 // import axios from 'axios';
 
-const inputs = [
-  {
-    id: 1,
-    name: 'email',
-    type: 'email',
-    placeholder: 'Email',
-    errorMessage: 'It should be a valid email address!',
-    label: 'Email',
-    required: true,
-  },
-  {
-    id: 2,
-    name: 'password',
-    type: 'password',
-    placeholder: 'Password',
-    errorMessage:
-      'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
-    label: 'Password',
-    pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&/.*])[a-zA-Z0-9!@#$%^&/.*]{8,20}$`,
-    required: true,
-  },
-];
-
 const Login = (props) => {
-  const [type, setType] = useState(true);
+  const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loginForm, setLoginForm] = useState({
-    email: '',
-    password: '',
-  });
+  const [loginForm, setLoginForm] = useState(loginData);
 
-  const onChange = (e) => {
-    setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
+  // const onChange = (e) => {
+  //   setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
+  // };
+
+  const onChange = (e, index) => {
+    const updatedArr = loginForm.map((item, i) => {
+      console.log(item);
+      console.log(index);
+      if (i === index) {
+        item.value = e.target.value;
+      }
+      return item;
+    });
+    setLoginForm(updatedArr);
   };
+
+   useEffect(() => {
+     const updatedArr = loginData.map((item, i) => {
+       if (i === 1) {
+         if (type) item.type = 'text';
+         else item.type = 'password';
+       }
+       return item;
+     });
+     setLoginForm(updatedArr);
+   }, [type]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,12 +52,12 @@ const Login = (props) => {
       <p className={styles.p1}>
         Kindly fill in the details below to log into your account
       </p>
-      {inputs.map((input) => (
+      {loginData.map((input, index) => (
         <FormGroup
           key={input.id}
           {...input}
           loginForm={loginForm[input.name]}
-          onChange={onChange}
+          onChange={(e) => onChange(e, index)}
         />
       ))}
 
