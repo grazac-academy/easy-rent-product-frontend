@@ -7,9 +7,9 @@ import Auth from './layout/Auth/Auth';
 import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
-import Property from 'pages/propertyDetails/property';
+import Property from 'pages/PropertyDetails/Property';
 import Post from './layout/PostaHouse/auth';
-
+import NewPassword from 'pages/NewPassword/NewPassword';
 
 function App() {
   const location = useLocation();
@@ -17,7 +17,8 @@ function App() {
   if (
     location.pathname === '/login' ||
     location.pathname === '/signup' ||
-    location.pathname === '/resetpassword'
+    location.pathname === '/resetpassword' ||
+    location.pathname === '/newpassword'
   )
     return (
       <Auth>
@@ -25,10 +26,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
+          <Route path="/newpassword" element={<NewPassword />} />
         </Routes>
       </Auth>
     );
-  
 
   return (
     <>
@@ -37,7 +38,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/auth" element={<Post />} />
-
       </Routes>
       <Footer />
     </>

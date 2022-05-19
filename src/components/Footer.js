@@ -1,9 +1,9 @@
-import React from "react";
-import TwitterLogo from "../assets/twitter.svg";
-import FacebookLogo from "../assets/facebook.svg";
-import InstagramLogo from "../assets/instagram.svg";
-import footerLogo from "../assets/footerLogo.svg";
-import location from "../assets/location.svg";
+import React from 'react';
+import TwitterLogo from '../assets/twitter.svg';
+import FacebookLogo from '../assets/facebook.svg';
+import InstagramLogo from '../assets/instagram.svg';
+import footerLogo from '../assets/footerLogo.svg';
+import location from '../assets/location.svg';
 
 function Footer() {
   return (
