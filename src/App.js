@@ -7,9 +7,9 @@ import Auth from './layout/Auth/Auth';
 import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
-import Property from 'pages/propertyDetails/property';
+import Property from 'pages/PropertyDetails/Property';
+import Post from './layout/PostaHouse/auth';
 import NewPassword from 'pages/NewPassword/NewPassword';
-import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
 
 function App() {
   const location = useLocation();
@@ -37,7 +37,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
-        <Route path="/apartmentlist" element={<Apartmentlist />} />
+        <Route path="/auth" element={<Post />} />
       </Routes>
       <Footer />
     </>

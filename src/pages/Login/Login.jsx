@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FormGroup from 'components/FormGroup/FormGroup';
+import FormGroup from 'components/Formgroup/FormGroup';
 import { useState, useEffect } from 'react';
 import Button from 'components/Button/Button';
 import styles from './Login.module.css';

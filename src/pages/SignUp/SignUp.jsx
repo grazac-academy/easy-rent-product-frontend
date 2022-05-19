@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import FormGroup from 'components/FormGroup/FormGroup';
+import FormGroup from 'components/Formgroup/FormGroup';
 import styles from './SignUp.module.css';
 import Button from 'components/Button/Button';
 import Google from 'components/Button/Google';
