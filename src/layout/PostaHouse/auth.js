@@ -2,7 +2,7 @@ import Footer from "components/PostaHouseFooter/footer";
 import React from "react";
 import classes from "./auth.module.css";
 import {NavLink} from 'react-router-dom'
-import Address from "pages/PostaHouse/Address/Address";
+// import Address from "pages/PostaHouse/Address/Address";
 function auth() {
   return (
     <div>
@@ -11,8 +11,7 @@ function auth() {
         <div className={classes.innerContainer}>
           <div className={classes.sidebar}>
             <ul>
-              
- <NavLink to="/Address"> 
+              <NavLink to="/Address"> 
                 <div className={classes.activeSidebar}>
                   <li>1. Address</li>
                 </div>
