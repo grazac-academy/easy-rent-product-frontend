@@ -55,11 +55,7 @@ function Header() {
             <nav class="mobile left-0 right-0">
               <ul
                 className={
-<<<<<<< HEAD
                   " lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  "
-=======
-                  ' lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  '
->>>>>>> main
                 }
                 g
               >
