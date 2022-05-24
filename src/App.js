@@ -13,7 +13,8 @@ import Description from "./pages/PostaHouse/Description/Description";
 import Features from "./pages/PostaHouse/Features/Features";
 import Price from "./pages/PostaHouse/Price/Price";
 import Photo from "./pages/PostaHouse/Photo/Photo";
-import auth from "./layout/PostaHouse/auth"
+import Post from "./layout/PostaHouse/auth";
+import Upload from "pages/PostaHouse/uploadPhoto/Upload";
 
 function App() {
   const location = useLocation();
@@ -22,7 +23,7 @@ function App() {
     location.pathname === "/login" ||
     location.pathname === "/signup" ||
     location.pathname === "/resetpassword"
-  )
+  ){
     return (
       <Auth>
         <Routes>
@@ -32,30 +33,38 @@ function App() {
         </Routes>
       </Auth>
     );
-  // else if (location.pathname==="/auth") {
-  //   return (
-  //     <>
-  //       <auth>
-  //         <Header />
-  //         <Routes>
-  //           <Route path="/auth" element={<auth />} />
-  //           <Route path="/Address" element={<Address />} />
-  //           <Route path="/Description" element={<Description />} />
-  //           <Route path="/Features" element={<Features />} />
-  //           <Route path="/Price" element={<Price />} />
-  //           <Route path="/Photo" element={<Photo />} />
-  //         </Routes>
-  //       </auth>
-  //     </>
-  //   );
-  // }
+  } else if (location.pathname.includes('/auth')) {
+    return (
+      <>
+        <Header />
+        <Routes>
+          <Route path="/auth" element={<Post />}>
+              <Route path="Address" element={<Address />} />
+              <Route path="Description" element={<Description />} />
+              <Route path="Features" element={<Features />} />
+              <Route path="Price" element={<Price />} />
+              <Route path="Photo" element={<Photo />} />
+              <Route path="Upload" element={<Upload />} />
+
+            </Route>
+        </Routes>
+     </>
+    );
+  };
+
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
-        <Route path="/auth" element={<auth/>}/>
+        {/* <Route path="/auth" element={<Post />}>
+          <Route path="Address" element={<Address />} />
+          <Route path="Description" element={<Description />} />
+          <Route path="Features" element={<Features />} />
+          <Route path="Price" element={<Price />} />
+          <Route path="Photo" element={<Photo />} />
+        </Route> */}
       </Routes>
       <Footer />
     </>

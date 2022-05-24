@@ -1,44 +1,49 @@
 import Footer from "components/PostaHouseFooter/footer";
 import React from "react";
 import classes from "./auth.module.css";
-import {NavLink} from 'react-router-dom'
-// import Address from "pages/PostaHouse/Address/Address";
+import {NavLink, Outlet} from 'react-router-dom'
+import Address from "pages/PostaHouse/Address/Address";
+import Description from "pages/PostaHouse/Description/Description";
+import Price from "pages/PostaHouse/Price/Price";
+import ProgressBar from 'components/ProgressBar/ProgressBar'
+
 function auth() {
   return (
     <div>
       <div className={classes.main}>
-        <div className={classes.upperDiv}></div>
+        <div className={classes.upperDiv}><ProgressBar /></div>
         <div className={classes.innerContainer}>
           <div className={classes.sidebar}>
             <ul>
-              <NavLink to="/Address"> 
+              <NavLink to="Address"> 
                 <div className={classes.activeSidebar}>
                   <li>1. Address</li>
                 </div>
               </NavLink>
-              <NavLink to="/Description"> 
+              <NavLink to="Description"> 
                 <div className={classes.activeSidebar}>
-                  <li>1. Description</li>
+                  <li>2. Description</li>
                 </div>
               </NavLink>
-              <NavLink to="/Features"> 
+              <NavLink to="Features"> 
                 <div className={classes.activeSidebar}>
-                  <li>1. Features</li>
+                  <li>3. Features</li>
                 </div>
               </NavLink>
-              <NavLink to="/Price"> 
+              <NavLink to="Price"> 
                 <div className={classes.activeSidebar}>
-                  <li>1. Price</li>
+                  <li>4. Price</li>
                 </div>
               </NavLink>
-              <NavLink to="/Photo"> 
+              <NavLink to="Photo"> 
                 <div className={classes.activeSidebar}>
-                  <li>1. Photo</li>
+                  <li>5. Photo</li>
                 </div>
               </NavLink>
             </ul>
             <div className={classes.SidebarBorder}></div>
-            <div className={classes.children}>{}</div>
+           
+            <div className={classes.children}><Outlet/></div>
           </div>
         </div>
       </div>

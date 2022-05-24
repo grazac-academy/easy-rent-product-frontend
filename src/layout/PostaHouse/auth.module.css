@@ -4,9 +4,10 @@
 .upperDiv{
     max-width: 100%;
     height: 128px;
-    background-color: #ebe5ff
+    background-color: #ebe5ff;
 }
 .innerContainer{
+    flex-wrap: wrap;
     width: 80%;
     margin: auto;
     display: flex;
@@ -25,17 +26,30 @@
     margin-bottom: 20px;
     margin-top: 40px ;
 }
+.activeSidebar :active{
+    background-color: #7453EE;
+    box-shadow: #888;
+
+    
+}
 .activeSidebar li{
+    width: 100%;
+    height: 100%;
     font-size: 18px;
     color: #262626;
     font-family:var(--CircularStd);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 25px ;
+    align-items: left;
+    padding-top: 25px ;
 }
 .SidebarBorder{
     width:2px;
     background-color: #ddd;
     margin-top:40px;
+}
+.children{
+    margin-top:60px;
+    max-width: 100%;
 }
