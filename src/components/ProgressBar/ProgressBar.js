@@ -7,7 +7,6 @@ import ChangingProgressProvider from './ChangingProgressProvider';
 
 const ProgressBar = ({ currTab, presentTab, nextTab }) => {
   console.log(presentTab);
-  // const [percent, setPercent] = useState(20);
 
   const percent = useMemo(() => {
     return (presentTab.id + 1) * 20;
@@ -18,13 +17,9 @@ const ProgressBar = ({ currTab, presentTab, nextTab }) => {
       <div className={classes.innerContainer}>
         <div className={classes.innerProgress}>
           <div className={classes.progress}>
-            {/* <ChangingProgressProvider values={[1, 2, 3, 4, 5]}>
-              {(percentage) => ( */}
             <CircularProgressbar
               value={percent}
               text={`${presentTab.id + 1} of 5`}
-              // minValue={1}
-              // maxValue={5}
               styles={buildStyles({
                 textColor: '#1B1B1B',
                 pathColor: '#7453EE',
@@ -33,8 +28,6 @@ const ProgressBar = ({ currTab, presentTab, nextTab }) => {
                 strokeLinecap: 'butt',
               })}
             />
-
-            {/* </ChangingProgressProvider> */}
           </div>
           <div className={classes.address}>
             <h4>
