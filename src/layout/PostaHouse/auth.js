@@ -14,8 +14,10 @@ import { useEffect, useMemo } from 'react';
 function Auth() {
   const location = useLocation();
   const currTab = location.search.substring(5);
+  console.log(currTab === true);
   const navigate = useNavigate();
   useEffect(() => {
+    console.log('no currTab');
     if (!currTab) {
       navigate('/new?tab=address');
     }

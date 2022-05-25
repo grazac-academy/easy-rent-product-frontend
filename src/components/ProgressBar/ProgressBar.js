@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import cancel from '../../assets/cancel.svg';
@@ -6,28 +6,35 @@ import classes from './ProgressBar.module.css';
 import ChangingProgressProvider from './ChangingProgressProvider';
 
 const ProgressBar = ({ currTab, presentTab, nextTab }) => {
+  console.log(presentTab);
+  // const [percent, setPercent] = useState(20);
+
+  const percent = useMemo(() => {
+    return (presentTab.id + 1) * 20;
+  }, [presentTab]);
+
   return (
     <div className={classes.progressContainer}>
       <div className={classes.innerContainer}>
         <div className={classes.innerProgress}>
           <div className={classes.progress}>
-            <ChangingProgressProvider values={[1, 2, 3, 4, 5]}>
-              {(percentage) => (
-                <CircularProgressbar
-                  value={percentage}
-                  text={`${percentage} of 5`}
-                  minValue={1}
-                  maxValue={5}
-                  styles={buildStyles({
-                    textColor: '#1B1B1B',
-                    pathColor: '#7453EE',
-                    textSize: '23px',
-                    trailColor: 'white',
-                    strokeLinecap: 'butt',
-                  })}
-                />
-              )}
-            </ChangingProgressProvider>
+            {/* <ChangingProgressProvider values={[1, 2, 3, 4, 5]}>
+              {(percentage) => ( */}
+            <CircularProgressbar
+              value={percent}
+              text={`${presentTab.id + 1} of 5`}
+              // minValue={1}
+              // maxValue={5}
+              styles={buildStyles({
+                textColor: '#1B1B1B',
+                pathColor: '#7453EE',
+                textSize: '23px',
+                trailColor: 'white',
+                strokeLinecap: 'butt',
+              })}
+            />
+
+            {/* </ChangingProgressProvider> */}
           </div>
           <div className={classes.address}>
             <h4>
