@@ -5,7 +5,7 @@ import cancel from '../../assets/cancel.svg';
 import classes from './ProgressBar.module.css';
 import ChangingProgressProvider from './ChangingProgressProvider';
 
-const ProgressBar = ({ cutout }) => {
+const ProgressBar = ({ currTab, presentTab, nextTab }) => {
   return (
     <div className={classes.progressContainer}>
       <div className={classes.innerContainer}>
@@ -30,8 +30,12 @@ const ProgressBar = ({ cutout }) => {
             </ChangingProgressProvider>
           </div>
           <div className={classes.address}>
-            <h4>1 .{cutout}</h4>
-            <p>Next step: 2. Descriptions</p>
+            <h4>
+              {presentTab.id + 1} .{presentTab.name}
+            </h4>
+            <p>
+              Next step: {nextTab.id + 1}. {nextTab.name}
+            </p>
           </div>
         </div>
         <div className={classes.cancel}>

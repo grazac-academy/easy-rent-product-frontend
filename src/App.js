@@ -34,24 +34,6 @@ function App() {
       </Auth>
     );
   }
-  // else if (location.pathname.includes('/auth')) {
-  //   return (
-  //     <>
-  //       <Header />
-  //       <Routes>
-  //         <Route path="/new" element={<Post />}>
-  //           <Route path="Address" element={<Address />} />
-  //           <Route path="Description" element={<Description />} />
-  //           <Route path="Features" element={<Features />} />
-  //           <Route path="Price" element={<Price />} />
-  //           <Route path="Photo" element={<Photo />} />
-  //           <Route path="Upload" element={<Upload />} />
-  //         </Route>
-  //       </Routes>
-  //     </>
-  //   );
-  // }
-
   return (
     <>
       <Header />

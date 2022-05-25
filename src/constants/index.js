@@ -122,3 +122,31 @@ export const advancedSearches = [
   { value: 'Elevator', label: 'Elevator', checked: false, id: 29 },
   { value: 'Protectors', label: 'Protectors', checked: false, id: 30 },
 ];
+
+export const postHouseRegLinks = [
+  {
+    id: 0,
+    name: 'Address',
+    tab: 'address',
+  },
+  {
+    id: 1,
+    name: 'Descriptions',
+    tab: 'desc',
+  },
+  {
+    id: 2,
+    name: 'Features',
+    tab: 'features',
+  },
+  {
+    id: 3,
+    name: 'Price',
+    tab: 'price',
+  },
+  {
+    id: 4,
+    name: 'Photos',
+    tab: 'photo',
+  },
+];
