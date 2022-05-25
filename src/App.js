@@ -10,6 +10,9 @@ import ResetPassword from 'pages/ResetPassword/ResetPassword';
 import Property from 'pages/propertyDetails/property';
 import NewPassword from 'pages/NewPassword/NewPassword';
 import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
+import House from 'pages/House/House';
+
+
 
 function App() {
   const location = useLocation();
@@ -38,6 +41,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/apartmentlist" element={<Apartmentlist />} />
+        <Route path="/House" element={<House />} />
       </Routes>
       <Footer />
     </>
