@@ -31,7 +31,7 @@
 
 }
 
-.addressFlex1 input{
+.addressFlex1 input, select{
     width: 270px;
     height: 99px;
     background-color:#F1F1F1;
@@ -60,3 +60,39 @@
 
 
 }
+.address-select__input-container{
+    background-color:#F1F1F1!important;
+    color: #ACACAC!important;
+    font-family: var(--CircularStd);
+    font-size: 23px!important;
+    border: none!important;
+    width: 200px !important;
+}
+ .address-select__control {
+    border: none !important;
+}
+
+.address-select__indicator-separator {
+    display: none!important;
+}
+
+.address-select__indicator {
+    background-image: url('../../../assets/Vector.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.address-select__indicator div {
+    background-color: red !important;
+}
+
+.address-select__indicator svg {
+    display: none;
+}
+
+.address-select__placeholder {
+    font-family: 'Circular std book';
+    background-color:#F1F1F1;
+    font-size: 23px;
+    color: #ACACAC!important;
+} 
