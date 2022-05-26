@@ -6,6 +6,7 @@ import Button from 'components/Button/Button';
 import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 import { loginData } from 'constant/authData';
+import {loginUser} from 'services/auth';
 // import axios from 'axios';
 
 const Login = (props) => {
@@ -28,6 +29,7 @@ const Login = (props) => {
       return item;
     });
     setLoginForm(updatedArr);
+  
   };
 
   useEffect(() => {
@@ -41,9 +43,23 @@ const Login = (props) => {
     setLoginForm(updatedArr);
   }, [type]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(loginForm);
+    const data = {};
+    loginForm.forEach((item) => (data[item.name] = item.value));
+    console.log(loginForm)
+    console.log(data);
+    try {
+      setLoading(true);
+      const response = await loginUser(data);
+      console.log(response);
+      setIsLoggedIn(true);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      
+    }
+
   };
 
   return (

@@ -14,6 +14,7 @@ import DashboardLayout from './layout/Dashboard/DashboardLayout';
 import DashboardHome from 'pages/Dashboard/DashboardHome/DashboardHome';
 import DashboardProperties from 'pages/Dashboard/DashboardProperties/DashboardProperties';
 import DashboardProfile from 'pages/Dashboard/DashboardProfile/DashboardProfile';
+import Bookmarks from 'pages/Bookmarks/Bookmarks';
 
 
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/apartmentlist" element={<Apartmentlist />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
       <Footer />
     </>
