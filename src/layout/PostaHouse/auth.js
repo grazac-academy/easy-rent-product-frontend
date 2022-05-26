@@ -9,12 +9,12 @@ import ProgressBar from 'components/ProgressBar/ProgressBar';
 import { postHouseRegLinks } from '../../constants';
 import Photo from 'pages/PostaHouse/Photo/Photo';
 import Features from '../../pages/PostaHouse/Features/Features';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 function Auth() {
   const location = useLocation();
   const currTab = location.search.substring(5);
-  console.log(currTab === true);
+  const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   useEffect(() => {
     console.log('no currTab');
@@ -64,7 +64,7 @@ function Auth() {
 
             <div className={classes.children}>
               {currTab === 'desc' && <Description />}
-              {currTab === 'address' && <Address />}
+              {currTab === 'address' && <Address updateDisable={setDisabled} />}
               {currTab === 'features' && <Features />}
               {currTab === 'photo' && <Photo />}
               {currTab === 'price' && <Price />}
@@ -74,7 +74,10 @@ function Auth() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer
+        disabled={disabled}
+        button={currTab === 'photo' ? 'Ok, I understand' : 'continue'}
+      />
     </div>
   );
 }
