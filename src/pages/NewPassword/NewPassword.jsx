@@ -34,7 +34,9 @@ const NewPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(newPasswordForm);
+    const data = {};
+    newPasswordForm.map((input) => (data[input.name] = input.value));
+    console.log(data);
     setShowModal(true);
   };
   // const close = () => { setShowModal(false)}

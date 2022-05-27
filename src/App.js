@@ -10,6 +10,14 @@ import ResetPassword from 'pages/ResetPassword/ResetPassword';
 import Property from 'pages/PropertyDetails/Property';
 import Post from './layout/PostaHouse/auth';
 import NewPassword from 'pages/NewPassword/NewPassword';
+import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
+import DashboardLayout from './layout/Dashboard/DashboardLayout';
+import DashboardHome from 'pages/Dashboard/DashboardHome/DashboardHome';
+import DashboardProperties from 'pages/Dashboard/DashboardProperties/DashboardProperties';
+import DashboardProfile from 'pages/Dashboard/DashboardProfile/DashboardProfile';
+import Bookmarks from 'pages/Bookmarks/Bookmarks';
+
+
 
 function App() {
   const location = useLocation();
@@ -19,7 +27,7 @@ function App() {
     location.pathname === '/signup' ||
     location.pathname === '/resetpassword' ||
     location.pathname === '/newpassword'
-  )
+  ) {
     return (
       <Auth>
         <Routes>
@@ -30,6 +38,18 @@ function App() {
         </Routes>
       </Auth>
     );
+  } else if (location.pathname.includes('/dashboard')) {
+    return (
+        <Routes>
+          <Route path="/dashboard" element={<DashboardLayout/>}>
+            <Route path="home" element={<DashboardHome />} />
+            <Route path="properties" element={<DashboardProperties />} />
+            <Route path="profile" element={<DashboardProfile />} />
+          </Route>
+        </Routes>
+    );
+  };
+
 
   return (
     <>
@@ -37,7 +57,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
-        <Route path="/auth" element={<Post />} />
+        <Route path="/apartmentlist" element={<Apartmentlist />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
       <Footer />
     </>

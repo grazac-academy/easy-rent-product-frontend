@@ -10,6 +10,7 @@ import Modal from 'components/Modal/Modal';
 import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
 import { registerData } from 'constant/authData';
+import { registerUser } from 'services/auth';
 
 const SignUp = (props) => {
   const [type, setType] = useState(false);
@@ -19,7 +20,7 @@ const SignUp = (props) => {
 
   useEffect(() => {
     const updatedArr = signupForm.map((item, i) => {
-      if (i === 2) {
+      if (i === 4) {
         if (type) item.type = 'text';
         else item.type = 'password';
       }
@@ -40,10 +41,23 @@ const SignUp = (props) => {
     setSignupForm(updatedArr);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(signupForm);
-    setShowModal(true);
+    const data = {};
+    signupForm.map((input) => (data[input.name] = input.value));
+    console.log(data);
+    try {
+      setLoading(true);
+      const response = await registerUser(data);
+      console.log(response);
+      
+      
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      setShowModal(true);
+    }
   };
   const close = () => {
     setShowModal(false);
@@ -80,7 +94,7 @@ const SignUp = (props) => {
           <span className={styles.rent}> Terms & Conditions</span> and
           <span className={styles.rent}> Privacy Policy</span>
         </p>
-        <Button text={loading ? 'Loading' : 'Create Account'} />
+        <Button text={loading ? 'Loading' : 'Create Account'} disabled={loading}/>
 
         <Google />
         <p className={styles.p3}>
