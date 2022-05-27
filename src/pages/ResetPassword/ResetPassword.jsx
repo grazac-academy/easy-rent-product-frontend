@@ -1,14 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import FormGroup from 'components/Formgroup/FormGroup';
+import FormGroup from 'components/FormGroup/FormGroup';
 import Button from 'components/Button/Button';
 import styles from './ResetPassword.module.css';
 import Modal from 'components/Modal/Modal';
 import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
 import { resetPasswordData } from 'constant/authData';
-import {forgetPassword} from 'services/auth';
-
+import { forgetPassword } from 'services/auth';
 
 const ResetPassword = () => {
   const [showModal, setShowModal] = useState(false);
@@ -38,15 +37,14 @@ const ResetPassword = () => {
     console.log(resetPasswordForm);
     const data = {};
     resetPasswordForm.map((input) => (data[input.name] = input.value));
-    console.log(data)
+    console.log(data);
     try {
       const response = await forgetPassword(data);
       console.log(response);
-   } catch (error) {
+    } catch (error) {
       console.log(error);
       setShowModal(true);
     }
-    
   };
   const close = () => {
     setShowModal(false);

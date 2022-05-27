@@ -1,5 +1,5 @@
 import React from 'react';
-import FormGroup from 'components/Formgroup/FormGroup';
+import FormGroup from 'components/FormGroup/FormGroup';
 import { useState, useEffect } from 'react';
 import Button2 from 'components/Button/Button2';
 import Button from 'components/Button/Button';

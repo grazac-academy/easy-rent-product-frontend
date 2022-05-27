@@ -1,10 +1,10 @@
-import Footer from "components/PostaHouseFooter/footer";
-import React from "react";
-import classes from "./auth.module.css";
-import { NavLink, Outlet } from 'react-router-dom'
-import Address from "pages/PostaHouse/Address/Address";
+import Footer from 'components/PostaHouseFooter/footer';
+import React from 'react';
+import classes from './auth.module.css';
+import { NavLink, Outlet } from 'react-router-dom';
+import Address from 'pages/PostaHouse/Address/Address';
 
-function auth(children) {
+function Auth(children) {
   return (
     <div>
       <div className={classes.main}>
@@ -31,8 +31,9 @@ function auth(children) {
               </div>
             </ul>
             <div className={classes.SidebarBorder}></div>
-            <div className={classes.Children}>my name is sola n  <Outlet /> njhbcjbdjhajbjhnsjknasjk</div>
-           
+            <div className={classes.Children}>
+              my name is sola n <Outlet /> njhbcjbdjhajbjhnsjknasjk
+            </div>
           </div>
         </div>
       </div>
@@ -41,4 +42,4 @@ function auth(children) {
   );
 }
 
-export default auth;
+export default Auth;
