@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import FormGroup from 'components/Formgroup/FormGroup';
+import FormGroup from 'components/FormGroup/FormGroup';
 import styles from './SignUp.module.css';
 import Button from 'components/Button/Button';
 import Google from 'components/Button/Google';
@@ -51,8 +51,6 @@ const SignUp = (props) => {
       setLoading(true);
       const response = await registerUser(data);
       console.log(response);
-      
-      
     } catch (error) {
       setLoading(false);
       console.log(error);
@@ -94,7 +92,10 @@ const SignUp = (props) => {
           <span className={styles.rent}> Terms & Conditions</span> and
           <span className={styles.rent}> Privacy Policy</span>
         </p>
-        <Button text={loading ? 'Loading' : 'Create Account'} disabled={loading}/>
+        <Button
+          text={loading ? 'Loading' : 'Create Account'}
+          disabled={loading}
+        />
 
         <Google />
         <p className={styles.p3}>

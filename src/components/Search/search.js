@@ -7,7 +7,7 @@ import Bedroom from 'assets/bedroom.svg';
 import classes from './search.module.css';
 import Dropdown from 'components/Dropdown/Dropdown';
 import Button from 'components/Btn/Btn';
-import { bedrooms, locations, prices, propertyTypes } from '../../constant';
+import { bedrooms, locations, prices, propertyTypes } from 'constant';
 import Icon from '../../icons';
 
 const Search = () => {

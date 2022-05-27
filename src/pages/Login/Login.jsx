@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FormGroup from 'components/Formgroup/FormGroup';
+import FormGroup from 'components/FormGroup/FormGroup';
 import { useState, useEffect } from 'react';
 import Button from 'components/Button/Button';
 import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 import { loginData } from 'constant/authData';
-import {loginUser} from 'services/auth';
+import { loginUser } from 'services/auth';
 // import axios from 'axios';
 
 const Login = (props) => {
@@ -29,7 +29,6 @@ const Login = (props) => {
       return item;
     });
     setLoginForm(updatedArr);
-  
   };
 
   useEffect(() => {
@@ -47,7 +46,7 @@ const Login = (props) => {
     e.preventDefault();
     const data = {};
     loginForm.forEach((item) => (data[item.name] = item.value));
-    console.log(loginForm)
+    console.log(loginForm);
     console.log(data);
     try {
       setLoading(true);
@@ -57,9 +56,7 @@ const Login = (props) => {
     } catch (error) {
       setLoading(false);
       console.log(error);
-      
     }
-
   };
 
   return (
