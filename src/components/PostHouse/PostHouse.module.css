@@ -1,6 +1,6 @@
 .post_house {
     width: 80%;
-    margin: 3rem auto;
+    margin: 5rem auto;
 
 
 }
@@ -29,17 +29,17 @@
 .post_house_flex {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
     align-items: center;
     margin: 3rem 0;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     position: relative;
 }
 
 .post_house_innerdiv {
-    width: 30%;
-    min-width: 15rem;
+    /* width: 30%;
+    min-width: 15rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,7 @@
 }
 
 .post_house_innerdiv h3 {
-    width: 13rem;
+    width: 12rem;
     font-family: var(--CircularStd);
     font-style: normal;
     font-weight: 450;
@@ -77,10 +77,10 @@
 }
 
 .arrow1 {
-    width: 8%;
+    width: 2%;
     position: absolute;
-    bottom: 53%;
-    right: 28%;
+    bottom: 65%;
+    right: 33%;
 }
 
 .arrow1 img {
@@ -88,10 +88,10 @@
 }
 
 .arrow2 {
-    width: 8%;
+    width: 2%;
     position: absolute;
-    bottom: 53%;
-    left: 28%;
+    bottom: 65%;
+    left: 31%;
 }
 
 .arrow2 img {
@@ -103,47 +103,64 @@
     display: none;
 }
 
-@media screen and (max-width: 980px) {
-
-    .arrow1 {
-        width: 8%;
-        position: absolute;
-        top: 10%;
-        left: 47%;
+@media screen and (max-width: 799px) {
+    .post_house_innerdiv h3 {
+        width: 11rem;
+        font-size: 0.8rem;
     }
 
-
-    .arrow2 {
-        display: none;
+    .img_div {
+        width: 70px;
+        min-width: 43px;
+        height: 60px;
     }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 738px) {
     .post_house_flex {
+        flex-direction: column;
         gap: 5rem;
     }
-    .arrow1{
+
+    .img_div {
+        width: 100px;
+        height: 80px;
+    }
+
+    .post_house_innerdiv h3 {
+        width: 13rem;
+        font-size: 1rem;
+    }
+
+    .arrow1 {
+        display: none;
+    }
+
+    .arrow2 {
         display: none;
     }
 
     .arrow3 {
         display: block;
-        height: 8%;
+        height: 3%;
         position: absolute;
-        top: 27%;
+        top: 30%;
         left: 48%;
     }
-    .arrow3 img{
+
+    .arrow3 img {
         height: 100%;
     }
+
     .arrow4 {
         display: block;
-        height: 8%;
+        height: 3%;
         position: absolute;
-        bottom: 27%;
+        bottom: 30%;
         left: 48%;
     }
-    .arrow4 img{
+
+    .arrow4 img {
         height: 100%;
     }
 }

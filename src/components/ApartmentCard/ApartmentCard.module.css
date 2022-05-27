@@ -1,14 +1,14 @@
 .featuredContainer {
-    width: 100%;
-    /* margin: auto; */
+    max-width: 22rem;
+    margin: auto;
     margin-bottom: 5rem;
 
 }
 
 .featuredcard {
-    width: 100%;
+    max-width: 100%;
     min-width: 18rem;
-    /* height: 20rem; */
+    /* height: 18rem; */
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -67,10 +67,9 @@
 }
 
 .locationwrap {
-    width: 70%;
+    width: 90%;
     height: auto;
     display: flex;
-    /* justify-content: space-between; */
     gap: 0.5em;
     align-items: center;
     padding-bottom: 0.5rem;
@@ -101,6 +100,7 @@
 }
 
 .propertytype {
+    width: 100%;
     font-family: var(--CircularStd);
     font-style: normal;
     font-weight: 500;
@@ -145,6 +145,7 @@
     width: 100%;
     height: 100%;
 }
+
 
 @media screen and (max-width: 372px) {
     .featuredcard {

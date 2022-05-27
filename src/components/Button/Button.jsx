@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './Button.module.css'
 
-function Button(props) {
+function Button({disabled, text}) {
   return (
     <div className={styles.btnDiv}>
-          <button className={styles.btn}>{props.text}</button>
+          <button disabled={disabled} className={styles.btn}>{text}</button>
     </div>
   );
 }
