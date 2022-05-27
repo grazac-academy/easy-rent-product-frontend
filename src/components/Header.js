@@ -11,7 +11,7 @@ function Header() {
   };
   return (
     <header class=" bg-white  items-center ">
-      <nav class="md:flex w-11/12 sm-w-7/12  h-20 md:h-20 ml-10 md:ml-28 items-center">
+      <nav class="md:flex w-9/10 sm-w-7/12  h-20 md:h-20 ml-10 md:ml-28 items-center">
         <div className="header-logo lg:mt-2 lg:mr-28 py-5 lg:pr-10">
           <img src={HeaderLogo} alt="logo" />
         </div>

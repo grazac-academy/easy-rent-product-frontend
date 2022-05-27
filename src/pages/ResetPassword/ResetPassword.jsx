@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import FormGroup from 'components/FormGroup/FormGroup';
+import FormGroup from 'components/Formgroup/FormGroup';
 import Button from 'components/Button/Button';
 import styles from './ResetPassword.module.css';
 import Modal from 'components/Modal/Modal';

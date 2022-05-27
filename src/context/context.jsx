@@ -2,7 +2,7 @@ import { createContext, useReducer, useContext, useState } from 'react';
 import { bookmarkReducer } from './reducer';
 import apartments from 'constant';
 
-const bookmark = createContext();
+const Bookmark = createContext();
 
 const Context = ({ children }) => {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -12,12 +12,12 @@ const Context = ({ children }) => {
     isLoggedIn: false,
   });
   return (
-    <bookmark.Provider value={{ state, dispatch }}>
+    <Bookmark.Provider value={{ state, dispatch }}>
       {children}
-    </bookmark.Provider>
+    </Bookmark.Provider>
   );
 };
 export const useBookmarkState = () => {
-  return useContext(bookmark);
+  return useContext(Bookmark);
 };
 export default Context;
