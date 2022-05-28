@@ -63,7 +63,7 @@ function Auth() {
             <div className={classes.SidebarBorder}></div>
 
             <div className={classes.children}>
-              {currTab === 'desc' && <Description />}
+              {currTab === 'desc' && <Description updateDisable={setDisabled}/>}
               {currTab === 'address' && <Address updateDisable={setDisabled} />}
               {currTab === 'features' && <Features />}
               {currTab === 'photo' && <Photo />}
