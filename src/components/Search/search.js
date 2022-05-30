@@ -7,12 +7,7 @@ import Bedroom from 'assets/bedroom.svg';
 import classes from './search.module.css';
 import Dropdown from 'components/Dropdown/Dropdown';
 import Button from 'components/Btn/Btn';
-import {
-  bedrooms,
-  locations,
-  prices,
-  propertyTypes,
-} from '../../constants/index';
+import { bedrooms, locations, prices, propertyTypes } from 'constant';
 import Icon from '../../icons';
 
 const Search = () => {
@@ -20,7 +15,7 @@ const Search = () => {
   return (
     <>
       <div className={classes.search}>
-        <div>
+        <div className={classes.inner_search}>
           <div className={classes.rent}>
             <p>Rent</p>
           </div>
@@ -33,27 +28,39 @@ const Search = () => {
                   src={Location}
                   title="Location"
                 />
+
+                <span className={classes.dropdown_span}></span>
+
                 <Dropdown
                   options={propertyTypes}
                   placeholder={'Choose Type'}
+                  className={classes.dropdown}
                   title="Property Type"
                   src={Property}
                 />
+
+                <span className={classes.dropdown_span}></span>
+
                 <Dropdown
                   options={prices}
                   src={Price}
                   placeholder={'Choose range'}
                   title="Price Range"
                 />
+
+                <span className={classes.dropdown_span}></span>
+
                 <Dropdown
                   options={bedrooms}
                   src={Bedroom}
                   placeholder={'Choose number'}
                   title="Bedroom"
                 />
+
+                <span className={classes.dropdown_span}></span>
               </div>
               <button className={classes.button} onClick={() => setShow(true)}>
-                <span>Advanced Search</span>
+                <span>More search options</span>
                 <Icon type="dropdown" />
               </button>
             </div>

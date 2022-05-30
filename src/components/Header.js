@@ -1,8 +1,8 @@
-import React from "react";
-import HeaderLogo from "../assets/headerLogo.svg";
-import login from "../assets/login.svg";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React from 'react';
+import HeaderLogo from '../assets/headerLogo.svg';
+import login from '../assets/login.svg';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Header() {
   const [toggle, setToggle] = useState(true);
@@ -11,7 +11,7 @@ function Header() {
   };
   return (
     <header class=" bg-white  items-center ">
-      <nav class="md:flex w-11/12 sm-w-7/12  h-20 md:h-20 ml-10 md:ml-28 items-center">
+      <nav class="md:flex w-9/10 sm-w-7/12  h-20 md:h-20 ml-10 md:ml-28 items-center">
         <div className="header-logo lg:mt-2 lg:mr-28 py-5 lg:pr-10">
           <img src={HeaderLogo} alt="logo" />
         </div>
@@ -55,13 +55,15 @@ function Header() {
             <nav class="mobile left-0 right-0">
               <ul
                 className={
-                  " lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  "
+                  ' lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  '
                 }
                 g
               >
-                <li className=" my-8 text-lg font-head hover:border-b-2 border-violet-400 hover:font-bold  ">
-                  Home
-                </li>
+                <Link to="/">
+                  <li className=" my-8 text-lg font-head hover:border-b-2 border-violet-400 hover:font-bold  ">
+                    Home
+                  </li>
+                </Link>
                 <li className=" my-8 text-lg font-head hover:border-b-2 border-violet-400 hover:font-bold ">
                   About Us
                 </li>
@@ -74,13 +76,17 @@ function Header() {
                 <div className="flex  text-button gap-2   lg-hidden text-2xl ">
                   <div>
                     <h3>
-                      <span class="text-2xl font-head hover:border-b-2 border-violet-400 hover:text-black">
-                        login
-                      </span>
+                      <Link to="/login">
+                        <span class="text-2xl font-head hover:border-b-2 border-violet-400 hover:text-black">
+                          login
+                        </span>
+                      </Link>
                       /
-                      <span class="text-2xl  font-head hover:border-b-2 border-violet-400 hover:text-black">
-                        register
-                      </span>
+                      <Link to="/signup">
+                        <span class="text-2xl  font-head hover:border-b-2 border-violet-400 hover:text-black">
+                          register
+                        </span>
+                      </Link>
                     </h3>
                   </div>
                   <div class="pt-2">
@@ -91,27 +97,35 @@ function Header() {
             </nav>
           ) : (
             <ul className="DESKTOP-MENU sm-gap-2 md:gap-4 hidden w-full  md:flex ">
-              <li className=" lg:text-xl font-head hover:border-b-2 border-violet-400 md:text-xl hover:text-button  ">
-                Home
-              </li>
+              <Link to="/">
+                <li className=" lg:text-xl font-head hover:border-b-2 border-violet-400 md:text-xl hover:text-button  ">
+                  Home
+                </li>
+              </Link>
               <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl  border-violet-400 hover:text-button ">
                 About Us
               </li>
-              <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl   border-violet-400 hover:text-button ">
-                Our Service
-              </li>
+              <Link to="/boomarks">
+                <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl   border-violet-400 hover:text-button ">
+                  Our Service
+                </li>
+              </Link>
               <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl  border-violet-400 hover:text-button  ">
                 Post a House
               </li>
               <div className="flex  text-button lg:ml-16 items-center lg-hidden  ">
                 <h3>
-                  <span class="text-xl font-head hover:border-b-2 md:text-lg lg:text-xl  border-violet-400 hover:text-black">
-                    login
-                  </span>
+                  <Link to="/login">
+                    <span class="text-xl font-head hover:border-b-2 md:text-lg lg:text-xl  border-violet-400 hover:text-black">
+                      login
+                    </span>
+                  </Link>
                   /
-                  <span class="text-xl font-head text-bold lg:text-xl hover:border-b-2 border-violet-400 hover:text-black">
-                    register
-                  </span>
+                  <Link to="/signup">
+                    <span class="text-xl font-head text-bold lg:text-xl hover:border-b-2 border-violet-400 hover:text-black">
+                      register
+                    </span>
+                  </Link>
                 </h3>
               </div>
               <div class="pt-2">

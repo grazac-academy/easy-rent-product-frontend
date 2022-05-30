@@ -5,14 +5,14 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Address from 'pages/PostaHouse/Address/Address';
 import Description from 'pages/PostaHouse/Description/Description';
 import Price from 'pages/PostaHouse/Price/Price';
-import UploadPhoto from 'pages/PostaHouse/uploadPhoto/Upload'
+import UploadPhoto from 'pages/PostaHouse/uploadPhoto/Upload';
 import ProgressBar from 'components/ProgressBar/ProgressBar';
-import { postHouseRegLinks } from '../../constants';
+import { postHouseRegLinks } from 'constant';
 import Photo from 'pages/PostaHouse/Photo/Photo';
 import Features from '../../pages/PostaHouse/Features/Features';
 import { useEffect, useMemo, useState } from 'react';
 
-function Auth() {
+const PostAHouse = () => {
   const location = useLocation();
   const currTab = location.search.substring(5);
   const [disabled, setDisabled] = useState(true);
@@ -65,8 +65,12 @@ function Auth() {
 
             <div className={classes.children}>
               {currTab === 'address' && <Address updateDisable={setDisabled} />}
-              {currTab === 'desc' && <Description updateDisable={setDisabled}/>}
-              {currTab === 'features' && <Features updateDisable={setDisabled} />}
+              {currTab === 'desc' && (
+                <Description updateDisable={setDisabled} />
+              )}
+              {currTab === 'features' && (
+                <Features updateDisable={setDisabled} />
+              )}
               {currTab === 'price' && <Price updateDisable={setDisabled} />}
               {currTab === 'photo' && <Photo />}
               {currTab === 'uploadPhoto' && <UploadPhoto />}
@@ -82,6 +86,6 @@ function Auth() {
       />
     </div>
   );
-}
+};
 
-export default Auth;
+export default PostAHouse;

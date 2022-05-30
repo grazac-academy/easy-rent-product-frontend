@@ -2,7 +2,7 @@
 import classes from './Address.module.css';
 import React, { useState } from 'react';
 // import Dropdown from "components/Dropdown/Dropdown";
-import { locations } from 'constants/index';
+import { locations } from 'constant/index';
 // import Select from "react-select";
 import { useEffect } from 'react';
 

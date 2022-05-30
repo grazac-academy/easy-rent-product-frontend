@@ -1,82 +1,96 @@
-.main{
+.main {
     width: 398px;
     height: 433px;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-    border-radius:8px;
+    border-radius: 8px;
 }
-.innerContainer{
-    width: 80%;
+
+.innerContainer {
+    max-width: 80%;
     margin: auto;
     justify-content: center;
 }
-.imgContainer{
-    width: 120px;
+
+.imgContainer {
+    max-width: 120px;
     height: 120px;
-    border-radius:100%;
+    border-radius: 100%;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-    margin-top:50px;
+    margin-top: 50px;
 
 }
-.imgContainer>img{
+
+.imgContainer>img {
     width: 100%;
     height: 100%;
 }
-.agentDetails{
+
+.agentDetails {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 
-    
+
 }
-.agentDetails h1{
+
+.agentDetails h1 {
     font-family: var(--CircularStd);
-    color:#06062a;
+    color: #06062a;
     font-size: 20px;
     padding-top: 40px;
 }
-.agentDetails h1 span{
+
+.agentDetails h1 span {
     font-family: var(--CircularStd);
-    color:#06062a;
+    color: #06062a;
     font-size: 20px;
     font-weight: bold;
 }
-.agentContact{
-    width: 299px ;
-    height: 58px;
-    border-radius:8px;
-    background-color: #7453EE;
-    margin-top:50px;
 
-    
+.agentContact {
+    width: 299px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #7453EE;
+    margin-top: 50px;
+    margin: auto;
+
+
+
 }
-.showContact{
+
+.showContact {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: auto;
     justify-content: center;
 }
-.showContact h2{
+
+.showContact h2 {
     font-size: 18px;
     font-family: var(--CircularStd);
-    color:white;
+    color: white;
 }
-.safetyTips{
-    width: 299px ;
-    height: 110px;
-    border-radius:8px;
+
+.safetyTips {
+    max-width: 299px;
+    /* height: 110px; */
+    border-radius: 8px;
     background-color: #D3D3F6;
-    margin-top:20px;
+    margin-top: 20px;
     margin-bottom: 50px;
 
-    
 
 
-    
+
+
 
 }
-.safetyFlex{
+
+.safetyFlex {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -84,23 +98,69 @@
     margin-top: 10px;
 
 }
-.safetyFlex p{
+
+.safetyFlex p {
     font-family: var(--CircularStd);
-    color:#06062a;
-    font-size:12px;
+    color: #06062a;
+    font-size: 12px;
     font-weight: bold;
 
 }
-.safety li{
+
+.safety li {
     font-size: 12px;
     font-family: var(--CircularStd);
 
 
 }
-.safety{
+
+.safety {
     justify-content: center;
-    width: 80%;
+    max-width: 80%;
     margin: auto;
     padding-top: 2px;
-    
+
+}
+
+@media screen and (max-width: 445px) {
+    .agentDetails {
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        display: block;
+        align-items: center;
+        padding-top: 5px;
+
+
+    }
+
+    .agentDetails h1 {
+        padding-top: 4px;
+    }
+
+    .agentContact {
+        margin-top: 10px;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+    .main {
+        width: 280px;
+        margin: auto;
+    }
+
+    .agentContact {
+        margin-top: 10px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+
+    .imgContainer {
+        margin: 20px 30px;
+
+    }
+
 }

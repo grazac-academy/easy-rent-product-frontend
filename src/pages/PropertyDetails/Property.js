@@ -1,31 +1,29 @@
-import React from "react";
-import classes from "./property.module.css";
-import BigImage from "assets/big_img.svg";
-import Image1 from "assets/img1.svg";
-import Image2 from "assets/img2.svg";
-import Image3 from "assets/img3.svg";
-import Image4 from "assets/img4.svg";
-import Image5 from "assets/img5.svg";
-import Image6 from "assets/img5.svg";
-import bathroom from "assets/Vector (1).svg";
-import garage from "assets/Vector (2).svg";
-import bedroom from "assets/Vector(3).svg";
-import location from "assets/location.svg";
-import Card from "components/contactCard/card";
-import ApartmentCard from "components/ApartmentCard/ApartmentCard";
-import Array from "constant/Array";
+import React from 'react';
+import classes from './Property.module.css';
+import BigImage from 'assets/big_img.svg';
+import Image1 from 'assets/img1.svg';
+import Image2 from 'assets/img2.svg';
+import Image3 from 'assets/img3.svg';
+import Image4 from 'assets/img4.svg';
+import Image5 from 'assets/img5.svg';
+import Image6 from 'assets/img5.svg';
+import bathroom from 'assets/Vector (1).svg';
+import garage from 'assets/Vector (2).svg';
+import bedroom from 'assets/Vector(3).svg';
+import location from 'assets/location.svg';
+import Card from 'components/contactCard/card';
+import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
+import Array from 'constant/Array';
 
-const property = () => {
-// const array = [
-//   {id: 1,image: Image1}, 
-//   {id: 2, image: Image2}, 
-//   {id: 3, image: Image3}, 
-//   {id: 4,image: Image4}, 
-//   {id: 5, image: Image5}, 
-//   {id: 6, image: Image6}, 
-// ]
-
-
+const Property = () => {
+  // const array = [
+  //   {id: 1,image: Image1},
+  //   {id: 2, image: Image2},
+  //   {id: 3, image: Image3},
+  //   {id: 4,image: Image4},
+  //   {id: 5, image: Image5},
+  //   {id: 6, image: Image6},
+  // ]
 
   return (
     <div className={classes.main}>
@@ -40,7 +38,9 @@ const property = () => {
             <p>Adigbe, Abeokuta</p>
           </div>
           <div className={classes.amount}>
-            <h3>N10,000/mo</h3>
+            <h3>
+              N10,000/<span>mo</span>
+            </h3>
           </div>
         </div>
         <div className={classes.imgContainer}>
@@ -49,25 +49,24 @@ const property = () => {
           </div>
 
           <div className={classes.gridimg}>
-
-          {/* {
+            {/* {
           array.map((item)=>(
             <div className={classes.images} onClick={()=>handleSelect(item.id)} key={item.id} item={item}>
             <img src={item.image} alt="image" />
           </div>
           ))} */}
 
-            <div className={classes.images} >
+            <div className={classes.images}>
               <img src={Image1} alt="image" />
             </div>
             <div className={classes.images}>
               <img src={Image2} alt="image" />
             </div>
             <div className={classes.images}>
-              <img src={Image3} alt="image"/>
+              <img src={Image3} alt="image" />
             </div>
             <div className={classes.images}>
-              <img src={Image4} alt="image"/>
+              <img src={Image4} alt="image" />
             </div>
             <div className={classes.images}>
               <img src={Image5} alt="image" />
@@ -112,6 +111,7 @@ const property = () => {
                 <h2>House Features</h2>
                 <li>Spacious Lounge with Wooden Tiles</li>
                 <li>P.O.P Ceiling</li>
+
                 <li>Aluminium Casement Window with Metal</li>
                 <li>Grills</li>
                 <li>Open Dining Area</li>
@@ -146,4 +146,4 @@ const property = () => {
   );
 };
 
-export default property;
+export default Property;

@@ -1,5 +1,6 @@
 .main {
     width: 100%;
+    margin-bottom: 80px;
 }
 
 .inner {
@@ -23,7 +24,7 @@
     margin: auto;
     padding: 40px;
     margin: 20px;
-    margin-top: 55px;
+    margin-top: 35px;
 }
 
 .upper>h2 {
@@ -54,11 +55,11 @@
 
 .innerCard>p {
     font-family: 'Circular Std Book';
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .innerCard>img {
-    margin-top: -75px;
+    margin-top: -95px;
     padding-right: 10px;
     margin-left: -15px;
 }
@@ -71,6 +72,11 @@
 
 .image {
     padding-bottom: 20px;
+    margin: auto;
+}
+
+.image>img{
+    width: 40%;
     margin: auto;
 }
 
