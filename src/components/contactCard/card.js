@@ -3,7 +3,7 @@ import classes from "./card.module.css";
 import tel from "../../assets/tel.svg";
 import safety from "../../assets/safety.svg";
 
-const card = () => {
+const Card = () => {
   return (
     <div className={classes.main}>
       <div className={classes.innerContainer}>
@@ -39,4 +39,4 @@ const card = () => {
   );
 };
 
-export default card;
+export default Card;
