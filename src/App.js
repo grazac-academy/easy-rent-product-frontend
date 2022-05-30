@@ -8,13 +8,13 @@ import Login from 'pages/Login/Login';
 import SignUp from 'pages/SignUp/SignUp';
 import ResetPassword from 'pages/ResetPassword/ResetPassword';
 import Property from 'pages/propertyDetails/property';
-import Address from './pages/PostaHouse/Address/Address';
-import Description from './pages/PostaHouse/Description/Description';
-import Features from './pages/PostaHouse/Features/Features';
-import Price from './pages/PostaHouse/Price/Price';
-import Photo from './pages/PostaHouse/Photo/Photo';
+// import Address from './pages/PostaHouse/Address/Address';
+// import Description from './pages/PostaHouse/Description/Description';
+// import Features from './pages/PostaHouse/Features/Features';
+// import Price from './pages/PostaHouse/Price/Price';
+// import Photo from './pages/PostaHouse/Photo/Photo';
 import Post from './layout/PostaHouse/auth';
-import Upload from 'pages/PostaHouse/uploadPhoto/Upload';
+// import Upload from 'pages/PostaHouse/uploadPhoto/Upload';
 
 function App() {
   const location = useLocation();

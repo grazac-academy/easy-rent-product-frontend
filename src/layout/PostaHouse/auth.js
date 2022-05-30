@@ -5,6 +5,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Address from 'pages/PostaHouse/Address/Address';
 import Description from 'pages/PostaHouse/Description/Description';
 import Price from 'pages/PostaHouse/Price/Price';
+import UploadPhoto from 'pages/PostaHouse/uploadPhoto/Upload'
 import ProgressBar from 'components/ProgressBar/ProgressBar';
 import { postHouseRegLinks } from '../../constants';
 import Photo from 'pages/PostaHouse/Photo/Photo';
@@ -63,11 +64,12 @@ function Auth() {
             <div className={classes.SidebarBorder}></div>
 
             <div className={classes.children}>
-              {currTab === 'desc' && <Description updateDisable={setDisabled}/>}
               {currTab === 'address' && <Address updateDisable={setDisabled} />}
-              {currTab === 'features' && <Features />}
+              {currTab === 'desc' && <Description updateDisable={setDisabled}/>}
+              {currTab === 'features' && <Features updateDisable={setDisabled} />}
+              {currTab === 'price' && <Price updateDisable={setDisabled} />}
               {currTab === 'photo' && <Photo />}
-              {currTab === 'price' && <Price />}
+              {currTab === 'uploadPhoto' && <UploadPhoto />}
               {/* {cutout == "desc" && <Description />}
               {cutout === "photo" && <Price />} */}
             </div>
