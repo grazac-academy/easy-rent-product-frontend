@@ -15,7 +15,7 @@ import Card from 'components/contactCard/card';
 import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
 import Array from 'constant/Array';
 
-const property = () => {
+const Property = () => {
   // const array = [
   //   {id: 1,image: Image1},
   //   {id: 2, image: Image2},
@@ -146,4 +146,4 @@ const property = () => {
   );
 };
 
-export default property;
+export default Property;

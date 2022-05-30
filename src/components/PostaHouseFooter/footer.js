@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./footer.module.css";
 
-function footer() {
+function Footer() {
   return (
     <div className={classes.background}>
       <div className={classes.innerContainer}>
@@ -12,4 +12,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

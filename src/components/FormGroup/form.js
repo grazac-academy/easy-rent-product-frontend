@@ -1,6 +1,6 @@
 import React from 'react'
 
-function form(heading, label) {
+function Form(heading, label) {
   return (
     <div>
       <h3>{heading}</h3>
@@ -11,4 +11,4 @@ function form(heading, label) {
   )
 }
 
-export default form
+export default Form;
