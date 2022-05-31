@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 const Address = ({ updateDisable }) => {
   const [location, setLocation] = useState({
     address: '',
-    code: '',
+    city: '',
     state: '',
   });
 
@@ -40,13 +40,13 @@ const Address = ({ updateDisable }) => {
       </div>
       <div className={classes.addressFlex}>
         <div className={classes.addressFlex1}>
-          <h3>postal code</h3>
+          <h3>City</h3>
           <input
             type="text"
             id="postalCode"
-            placeholder="E.g 100213"
-            value={location.code}
-            onChange={(e) => handleChange(e, 'code')}
+            placeholder="E.g Abeokuta"
+            value={location.city}
+            onChange={(e) => handleChange(e, 'city')}
           />
         </div>
         <div className={classes.addressFlex1}>

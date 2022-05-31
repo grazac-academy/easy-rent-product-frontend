@@ -40,10 +40,6 @@
     color: #ACACAC;
     border: none;
     padding-left: 30px;
-
-
-
-
 }
 .addressFlex1 h3 {
     font-size: 23px;
@@ -60,7 +56,7 @@
 
 
 }
-.address-select__input-container{
+/* .address-select__input-container{
     background-color:#F1F1F1!important;
     color: #ACACAC!important;
     font-family: var(--CircularStd);
@@ -95,4 +91,4 @@
     background-color:#F1F1F1;
     font-size: 23px;
     color: #ACACAC!important;
-} 
+}  */
