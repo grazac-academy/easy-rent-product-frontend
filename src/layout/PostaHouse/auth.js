@@ -16,6 +16,7 @@ const PostAHouse = () => {
   const location = useLocation();
   const currTab = location.search.substring(5);
   const [disabled, setDisabled] = useState(true);
+  const [buttonLinks, setButtonLinks] = useState(postHouseRegLinks);
   const navigate = useNavigate();
   useEffect(() => {
     console.log('no currTab');
@@ -50,7 +51,7 @@ const PostAHouse = () => {
         </div>
         <div className={classes.innerContainer}>
           <div className={classes.sidebar}>
-            {postHouseRegLinks.map((item, index) => (
+            {buttonLinks.map((item, index) => (
               <button
                 onClick={() => navigate(`/new?tab=${item.tab}`)}
                 className={classes.activeSidebar}
