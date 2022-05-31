@@ -147,26 +147,31 @@ export const postHouseRegLinks = [
     id: 0,
     name: 'Address',
     tab: 'address',
+    disabled: false,
   },
   {
     id: 1,
     name: 'Descriptions',
     tab: 'desc',
+    disabled: true,
   },
   {
     id: 2,
     name: 'Features',
     tab: 'features',
+    disabled: true,
   },
   {
     id: 3,
     name: 'Price',
     tab: 'price',
+    disabled: true,
   },
   {
     id: 4,
     name: 'Photos',
     tab: 'photo',
+    disabled: true,
   },
 ];
 export const apartments = [

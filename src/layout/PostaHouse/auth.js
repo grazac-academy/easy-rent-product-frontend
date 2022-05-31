@@ -54,6 +54,7 @@ const PostAHouse = () => {
               <button
                 onClick={() => navigate(`/new?tab=${item.tab}`)}
                 className={classes.activeSidebar}
+                disabled={item.disabled}
               >
                 {index + 1}. {item.name}
               </button>
