@@ -50,33 +50,26 @@ const PostAHouse = () => {
         </div>
         <div className={classes.innerContainer}>
           <div className={classes.sidebar}>
-            <ul>
-              {postHouseRegLinks.map((item, index) => (
-                <NavLink to={`?tab=${item.tab}`}>
-                  <div className={classes.activeSidebar}>
-                    <li>
-                      {index + 1}. {item.name}
-                    </li>
-                  </div>
-                </NavLink>
-              ))}
-            </ul>
-            <div className={classes.SidebarBorder}></div>
+            {postHouseRegLinks.map((item, index) => (
+              <button
+                onClick={() => navigate(`/new?tab=${item.tab}`)}
+                className={classes.activeSidebar}
+              >
+                {index + 1}. {item.name}
+              </button>
+            ))}
+          </div>
+          <div className={classes.SidebarBorder}></div>
 
-            <div className={classes.children}>
-              {currTab === 'address' && <Address updateDisable={setDisabled} />}
-              {currTab === 'desc' && (
-                <Description updateDisable={setDisabled} />
-              )}
-              {currTab === 'features' && (
-                <Features updateDisable={setDisabled} />
-              )}
-              {currTab === 'price' && <Price updateDisable={setDisabled} />}
-              {currTab === 'photo' && <Photo />}
-              {currTab === 'uploadPhoto' && <UploadPhoto />}
-              {/* {cutout == "desc" && <Description />}
+          <div className={classes.children}>
+            {currTab === 'address' && <Address updateDisable={setDisabled} />}
+            {currTab === 'desc' && <Description updateDisable={setDisabled} />}
+            {currTab === 'features' && <Features updateDisable={setDisabled} />}
+            {currTab === 'price' && <Price updateDisable={setDisabled} />}
+            {currTab === 'photo' && <Photo />}
+            {currTab === 'uploadPhoto' && <UploadPhoto />}
+            {/* {cutout == "desc" && <Description />}
               {cutout === "photo" && <Price />} */}
-            </div>
           </div>
         </div>
       </div>
