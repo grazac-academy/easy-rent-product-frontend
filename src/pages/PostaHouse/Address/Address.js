@@ -6,24 +6,24 @@ import { locations } from 'constant/index';
 // import Select from "react-select";
 import { useEffect } from 'react';
 
-const Address = ({ updateDisable }) => {
-  const [location, setLocation] = useState({
-    address: '',
-    city: '',
-    state: '',
-  });
+const Address = ({ updateDisable, details }) => {
+  // const [location, setLocation] = useState({
+  //   address: '',
+  //   city: '',
+  //   state: '',
+  // });
 
-  useEffect(() => {
-    if (location.address && location.city && location.state)
-      updateDisable(false);
-    else updateDisable(true);
-  }, [location]);
-  const handleChange = (e, name) => {
-    setLocation({
-      ...location,
-      [name]: e.target.value,
-    });
-  };
+  // useEffect(() => {
+  //   if (location.address && location.city && location.state)
+  //     updateDisable(false);
+  //   else updateDisable(true);
+  // }, [location]);
+  // const handleChange = (e, name) => {
+  //   setLocation({
+  //     ...location,
+  //     [name]: e.target.value,
+  //   });
+  // };
 
   return (
     <div className={classes.mainContainer}>
@@ -33,8 +33,8 @@ const Address = ({ updateDisable }) => {
           type="text"
           id="address"
           placeholder="Enter full address of the house"
-          onChange={(e) => handleChange(e, 'address')}
-          value={location.address}
+          // onChange={(e) => handleChange(e, 'address')}
+          value={details.street}
         />
         <p>Note: Ensure your adress is as detailed as possible</p>
       </div>
@@ -45,15 +45,15 @@ const Address = ({ updateDisable }) => {
             type="text"
             id="postalCode"
             placeholder="E.g Abeokuta"
-            value={location.city}
-            onChange={(e) => handleChange(e, 'city')}
+            value={details.city}
+            // onChange={(e) => handleChange(e, 'city')}
           />
         </div>
         <div className={classes.addressFlex1}>
           <h3>State</h3>
           <select
-            value={location.state}
-            onChange={(e) => handleChange(e, 'state')}
+            value={details.state}
+            // onChange={(e) => handleChange(e, 'state')}
           >
             {locations.map((item) => (
               <option>{item.label}</option>

@@ -40,6 +40,12 @@
     font-family: var(--CircularStd);
 }
 
+.activeSidebar:disabled {
+    background-color: #ebe5ff;
+    color: #262626;
+    cursor: not-allowed;
+}
+
 .activeSidebar :active {
     background-color: #7453EE;
     box-shadow: #888;

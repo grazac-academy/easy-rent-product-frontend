@@ -18,26 +18,52 @@ const PostAHouse = () => {
   const [disabled, setDisabled] = useState(true);
   const [buttonLinks, setButtonLinks] = useState(postHouseRegLinks);
   const navigate = useNavigate();
+  const [postHouse, setPostHouse] = useState({
+    street: '',
+    city: '',
+    state: '',
+    desc: '',
+    furnished: '',
+    type: '',
+    bedrooms: '',
+    bathroom: '',
+    toilet: '',
+    amount: '',
+    negotiable: '',
+  });
   useEffect(() => {
-    console.log('no currTab');
     if (!currTab) {
       navigate('/new?tab=address');
     }
-  }, []);
+  }, [currTab]);
 
   const presentTab = useMemo(() => {
-    return postHouseRegLinks.find((item) => item.tab === currTab);
+    return buttonLinks.find((item) => item.tab === currTab);
   }, [currTab]);
 
   const nextTab = useMemo(() => {
-    const presentTabIndex = postHouseRegLinks.findIndex(
+    const presentTabIndex = buttonLinks.findIndex(
       (item) => item.tab === currTab
     );
     if (presentTabIndex === 4) {
-      return postHouseRegLinks[presentTabIndex];
+      return buttonLinks[presentTabIndex];
     }
-    return postHouseRegLinks[presentTabIndex + 1];
+    return buttonLinks[presentTabIndex + 1];
   }, [currTab]);
+
+  console.log(nextTab);
+
+  const gotToNextTab = () => {
+    navigate(`/new?tab=${nextTab.tab}`);
+    setButtonLinks(
+      buttonLinks.map((item) => {
+        if (item.tab === nextTab.tab) {
+          item.disabled = false;
+        }
+        return item;
+      })
+    );
+  };
 
   return (
     <div>
@@ -64,7 +90,15 @@ const PostAHouse = () => {
           <div className={classes.SidebarBorder}></div>
 
           <div className={classes.children}>
-            {currTab === 'address' && <Address updateDisable={setDisabled} />}
+            {currTab === 'address' && (
+              <Address
+                details={{
+                  street: postHouse.street,
+                  city: postHouse.city,
+                  state: postHouse.state,
+                }}
+              />
+            )}
             {currTab === 'desc' && <Description updateDisable={setDisabled} />}
             {currTab === 'features' && <Features updateDisable={setDisabled} />}
             {currTab === 'price' && <Price updateDisable={setDisabled} />}
@@ -78,6 +112,7 @@ const PostAHouse = () => {
       <Footer
         disabled={disabled}
         button={currTab === 'photo' ? 'Ok, I understand' : 'continue'}
+        onClick={gotToNextTab}
       />
     </div>
   );
