@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import FormGroup from 'components/FormGroup/FormGroup';
 import { useState, useEffect } from 'react';
 import Button from 'components/Button/Button';
@@ -7,17 +7,18 @@ import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 import { loginData } from 'constant/authData';
 import { loginUser } from 'services/auth';
-// import axios from 'axios';
+import { useBookmarkState } from 'context/context';
+import { ThreeDots } from 'react-loading-icons';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import {toast} from 'react-toastify';
 
 const Login = (props) => {
+  const navigate = useNavigate();
+  const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginForm, setLoginForm] = useState(loginData);
 
-  // const onChange = (e) => {
-  //   setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
-  // };
 
   const onChange = (e, index) => {
     const updatedArr = loginForm.map((item, i) => {
@@ -51,11 +52,16 @@ const Login = (props) => {
     try {
       setLoading(true);
       const response = await loginUser(data);
-      console.log(response);
+      toast.success('Welcome!');
+      console.log(response.data.message);
       setIsLoggedIn(true);
+      console.log(response.data.token);
+      localStorage.setItem('userToken', response.data.token);
+      navigate('/');
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      console.log(error.response.data.message);
+      toast.error(error.response.data.message);
     }
   };
 
@@ -87,7 +93,9 @@ const Login = (props) => {
           <p>Forgot password?</p>
         </Link>
       </div>
-      <Button text={loading ? 'Loading' : 'Login'} />
+      <Button loading = {loading}>
+        Login
+      </Button>
       <Google />
     </form>
   );

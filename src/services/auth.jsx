@@ -10,6 +10,10 @@ export const loginUser = async (payload) => {
     return response;
 };
 export const forgetPassword = async (payload) => {
-    const response= baseUrl.post('//auth/user/password-reset-url', payload);
+    const response= baseUrl.post('/auth/user/password-reset-url', payload);
     return response;
 };
+export const getUserName = async (payload) => {
+    const response= baseUrl.post('/getUserName', payload);
+    return response;
+}

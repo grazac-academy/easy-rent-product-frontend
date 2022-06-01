@@ -13,7 +13,8 @@ import bedroom from 'assets/Vector(3).svg';
 import location from 'assets/location.svg';
 import Card from 'components/contactCard/card';
 import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
-import Array from 'constant/Array';
+// import Array from 'constant/Array';
+import apartments from 'constant';
 
 const property = () => {
   // const array = [
@@ -136,7 +137,7 @@ const property = () => {
             <h3>Similar Properties</h3>
           </div>
           <div className={classes.array}>
-            {Array.slice(0, 2).map((item) => (
+            {apartments.slice(0, 2).map((item) => (
               <ApartmentCard key={item.id} item={item} />
             ))}
           </div>

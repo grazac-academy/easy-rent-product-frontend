@@ -1,14 +1,28 @@
 import React from 'react';
 import HeaderLogo from '../assets/headerLogo.svg';
 import login from '../assets/login.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useBookmarkState } from 'context/context';
 
 function Header() {
+  const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
+  const navigate = useNavigate();
+
+  
+
+  const handleLogOut = () => {
+    sessionStorage.setItem("userToken", '');
+    sessionStorage.clear();
+    setIsLoggedIn(false);
+    navigate('/');
+  }
+
   const [toggle, setToggle] = useState(true);
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
   return (
     <header class=" bg-white  items-center ">
       <nav class="md:flex w-9/10 sm-w-7/12  h-20 md:h-20 ml-10 md:ml-28 items-center">
@@ -70,9 +84,11 @@ function Header() {
                 <li className=" my-8 text-lg font-head  hover:border-b-2 border-violet-400 hover:font-bold ">
                   Our Service
                 </li>
-                <li className=" my-8 text-lg font-head hover:border-b-2 border-violet-400 hover:font-bold  focus:ring-red-300 ">
-                  Post a House
-                </li>
+                <Link to='/house'>
+                  <li className=" my-8 text-lg font-head hover:border-b-2 border-violet-400 hover:font-bold  focus:ring-red-300 ">
+                    Post a House
+                  </li>
+                </Link>
                 <div className="flex  text-button gap-2   lg-hidden text-2xl ">
                   <div>
                     <h3>
@@ -110,22 +126,32 @@ function Header() {
                   Our Service
                 </li>
               </Link>
-              <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl  border-violet-400 hover:text-button  ">
-                Post a House
-              </li>
+              <Link to='/house'>
+                <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl  border-violet-400 hover:text-button  ">
+                  Post a House
+                </li>
+              </Link>
               <div className="flex  text-button lg:ml-16 items-center lg-hidden  ">
                 <h3>
-                  <Link to='/login'>
-                    <span class="text-xl font-head hover:border-b-2 md:text-lg lg:text-xl  border-violet-400 hover:text-black">
-                      login
+                  {!isLoggedIn ? (
+                    <>
+                      <Link to='/login'>
+                        <span class="text-xl font-head hover:border-b-2 md:text-lg lg:text-xl  border-violet-400 hover:text-black">
+                          login
+                        </span>
+                        </Link>
+                        /
+                      <Link to='/signup'>
+                        <span class="text-xl font-head text-bold lg:text-xl hover:border-b-2 border-violet-400 hover:text-black">
+                          register
+                        </span>
+                      </Link>
+                    </>) : (<span class="text-xl font-head text-bold lg:text-xl hover:border-b-2 border-violet-400 hover:text-black">
+                        <button onClick={handleLogOut} >Logout</button>
                     </span>
-                  </Link>
-                  /
-                  <Link to='/signup'>
-                    <span class="text-xl font-head text-bold lg:text-xl hover:border-b-2 border-violet-400 hover:text-black">
-                      register
-                    </span>
-                  </Link>
+                  )}
+                  
+
                 </h3>
               </div>
               <div class="pt-2">

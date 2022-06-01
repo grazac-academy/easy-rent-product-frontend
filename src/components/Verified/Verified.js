@@ -8,16 +8,16 @@ const Verified = () => {
     <div className={classes.verified}>
       <div className={classes.verified_inner}>
         <div className={classes.web}>
-          <div>
+          <div className={classes.img_div}>
             <img src={Web} alt="web" className={classes.img} />
           </div>
           <div>
             <p className={classes.price}>+120,000</p>
-            <p className={classes.details}>fully-online rentals</p>
+            <p className={classes.details}>Fully-online rentals</p>
           </div>
         </div>
         <div className={classes.web}>
-          <div>
+          <div className={classes.img_div}>
             <img src={Landlord} alt="landlord" className={classes.img} />
           </div>
           <div>
@@ -26,7 +26,7 @@ const Verified = () => {
           </div>
         </div>
         <div className={classes.web}>
-          <div>
+          <div className={classes.img_div}>
             <img src={House} alt="house" className={classes.img} />
           </div>
           <div>

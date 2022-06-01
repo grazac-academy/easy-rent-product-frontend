@@ -12,7 +12,7 @@
 
 .Background1 {
     background-repeat: no-repeat;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg1.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/hero-bg/bg1.webp);
     background-size: cover;
     height: 39.9rem;
 }
@@ -20,12 +20,12 @@
 .Background2 {
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg2.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/hero-bg/bg2.webp);
     height: 39.9rem;
 }
 
 .Background3 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/bg3.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/hero-bg/bg3.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 39.9rem;
@@ -35,7 +35,7 @@
     position: absolute;
     width: 65%;
     margin: auto;
-    top: 70px;
+    top: 60px;
     /* left: 130px; */
     padding: 100px 100px 100px 140px;
 }
@@ -47,29 +47,65 @@
     font-family: 'Circular Std Book';
     line-height: 68.31px;
 }
-@media screen and (max-width: 1154px) {
-    .heroText{
-        width: 70%;
+
+.heroText p {
+    padding-top: 1rem;
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.whitepart {
+    height: 300px;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .heroText {
+        width: 75%;
         padding: 100px 100px 100px 60px;
     }
 }
-@media screen and (max-width: 1040px) {
-    .heroText{
+
+@media screen and (max-width: 1154px) {
+    .heroText {
         width: 80%;
         padding: 100px 100px 100px 60px;
     }
 }
-@media screen and (max-width: 910px) {
-    .heroText{
-        width: 95%;
+
+@media screen and (max-width: 1040px) {
+    .heroText {
+        width: 85%;
         padding: 100px 100px 100px 60px;
     }
 }
-@media screen and (max-width: 840px) {
-    .heroText{
+
+@media screen and (max-width: 910px) {
+    .heroText {
+        width: 95%;
+        padding: 100px 100px 100px 60px;
+    }
+
+    .heroText p {
+       font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .whitepart {
+        height: 400px;
+    }
+
+    .heroText {
         width: 60%;
         padding: 100px 0px 50px 35px;
+        top: 10px;
     }
+
     .heroText h4 {
         font-size: 30px;
         /* line-height: 22.19px; */
@@ -80,26 +116,33 @@
         height: 20rem;
     } */
 }
+
 @media screen and (max-width: 590px) {
-    .heroText{
+    .heroText {
         width: 80%;
         padding: 70px 30px 50px 35px;
+        top: 10px;
     }
 }
+
 @media screen and (max-width: 475px) {
-    .heroText{
-        width: 60%;
+    .heroText {
+        width: 70%;
         padding: 70px 0px 50px 35px;
+        top: 10px;
     }
+
     .heroText h4 {
         font-size: 18px;
         line-height: 22.19px;
         /* line-height: 42px; */
     }
 }
+
 @media screen and (max-width: 375px) {
-    .heroText{
-        width: 75%;
+    .heroText {
+        width: 80%;
         padding: 70px 0px 50px 35px;
+        top: 10px;
     }
 }

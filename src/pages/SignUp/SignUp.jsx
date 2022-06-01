@@ -11,6 +11,8 @@ import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
 import { registerData } from 'constant/authData';
 import { registerUser } from 'services/auth';
+import { toast } from 'react-toastify';
+
 
 const SignUp = (props) => {
   const [type, setType] = useState(false);
@@ -50,10 +52,12 @@ const SignUp = (props) => {
     try {
       setLoading(true);
       const response = await registerUser(data);
-      console.log(response);
+      toast.success('Kindly Check your email to verify your account');
+      console.log(response.data.message);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      console.log(error.response.data.message);
+      toast.error(error.response.data.message);
       setShowModal(true);
     }
   };
@@ -92,10 +96,7 @@ const SignUp = (props) => {
           <span className={styles.rent}> Terms & Conditions</span> and
           <span className={styles.rent}> Privacy Policy</span>
         </p>
-        <Button
-          text={loading ? 'Loading' : 'Create Account'}
-          disabled={loading}
-        />
+        <Button loading ={loading}>Create Account</Button>
 
         <Google />
         <p className={styles.p3}>

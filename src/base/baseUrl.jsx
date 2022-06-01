@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-// const url = 'https://murmuring-caverns-19178.herokuapp.com/api/v1';
-const url = 'https://eazy-rent.herokuapp.com/api/v1';
-// const url = 'localhost:4000/api/v1';
+export const url =
+  process.env.NODE_ENV === 'development'
+    ? 'https://eazy-rent.herokuapp.com/api/v1'
+    : 'api.eazy-rent.com/api/v1';
 
 export const baseUrl = axios.create({
   baseURL: `${url}`,

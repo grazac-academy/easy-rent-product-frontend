@@ -2,22 +2,21 @@ import { createContext, useReducer, useContext, useState } from 'react';
 import { bookmarkReducer } from './reducer';
 import apartments from 'constant';
 
-const Bookmark = createContext();
+const UserContext = createContext();
 
 const Context = ({ children }) => {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [state, dispatch] = useReducer(bookmarkReducer, {
     apartments: apartments,
-    bookmark: [],
-    isLoggedIn: false,
+    bookmark: [],   
   });
   return (
-    <Bookmark.Provider value={{ state, dispatch }}>
+    <UserContext.Provider value={{ state, dispatch, isLoggedIn, setIsLoggedIn }}>
       {children}
-    </Bookmark.Provider>
+    </UserContext.Provider>
   );
 };
 export const useBookmarkState = () => {
-  return useContext(Bookmark);
+  return useContext(UserContext);
 };
 export default Context;
