@@ -1,29 +1,29 @@
 import React, { useState,useEffect } from "react";
 import classes from "./Features.module.css";
 
-const Features = ({updateDisable}) => {
-  const [feature, setFeature] = useState({
-    propertyType: '',
-    bedroom: '',
-    bathroom: '',
-    toilet: '',
-    others: '',
-});
+const Features = ({updateDisable, data}) => {
+//   const [feature, setFeature] = useState({
+//     propertyType: '',
+//     bedroom: '',
+//     bathroom: '',
+//     toilet: '',
+//     others: '',
+// });
 
-useEffect(() => {
-  if (feature.propertyType && feature.bedroom && feature.bathroom && feature.toilet && feature.others)   updateDisable(false)
-  else updateDisable(true);
-}, [feature])
+// useEffect(() => {
+//   if (feature.propertyType && feature.bedroom && feature.bathroom && feature.toilet && feature.others)   updateDisable(false)
+//   else updateDisable(true);
+// }, [feature])
 
 
-const handleChange =(e, name) => {
-  setFeature({
-    ...feature,
-    [name]: e.target.value,
-  });
-};
+// const handleChange =(e, name) => {
+//   setFeature({
+//     ...feature,
+//     [name]: e.target.value,
+//   });
+// };
 
-console.log(feature)
+// console.log(feature)
   return (
     <div className={classes.mainContainer}>
       <div className={classes.Features}>
@@ -32,8 +32,8 @@ console.log(feature)
         type="text" 
         id="Features" 
         placeholder="Choose Property Type" 
-        onChange={(e) => handleChange(e, 'propertyType')}
-          value={feature.propertyType}
+        // onChange={(e) => handleChange(e, 'propertyType')}
+          value={data.type}
         />
       </div>
       <div className={classes.FeaturesFlex}>
@@ -43,8 +43,8 @@ console.log(feature)
           type="text" 
           id="postalCode" 
           placeholder="E.g 1" 
-          onChange={(e) => handleChange(e, 'bedroom')}
-          value={feature.bedroom}
+          // onChange={(e) => handleChange(e, 'bedroom')}
+          value={data.bedrooms}
           />
         </div>
         <div className={classes.FeaturesFlex1}>
@@ -53,8 +53,8 @@ console.log(feature)
           type="text" 
           id="postalCode" 
           placeholder="E.g 1" 
-          onChange={(e) => handleChange(e, 'bathroom')}
-          value={feature.bathroom}
+          // onChange={(e) => handleChange(e, 'bathroom')}
+          value={data.bathroom}
           />
         </div>
         <div className={classes.FeaturesFlex1}>
@@ -63,8 +63,8 @@ console.log(feature)
           type="text" 
           id="postalCode" 
           placeholder="E.g 1" 
-          onChange={(e) => handleChange(e, 'toilet')}
-          value={feature.toilet}
+          // onChange={(e) => handleChange(e, 'toilet')}
+          value={data.toilet}
           />
         </div>
       </div>
@@ -75,8 +75,8 @@ console.log(feature)
         type="text" 
         id="Features" 
         placeholder="Choose Property Type" 
-        onChange={(e) => handleChange(e, 'others')}
-          value={feature.others}
+        // onChange={(e) => handleChange(e, 'others')}
+          value={data.others}
         />
       </div>
     </div>

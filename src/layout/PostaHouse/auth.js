@@ -28,6 +28,7 @@ const PostAHouse = () => {
     bedrooms: '',
     bathroom: '',
     toilet: '',
+    others: '',
     amount: '',
     negotiable: '',
   });
@@ -99,9 +100,33 @@ const PostAHouse = () => {
                 }}
               />
             )}
-            {currTab === 'desc' && <Description updateDisable={setDisabled} />}
-            {currTab === 'features' && <Features updateDisable={setDisabled} />}
-            {currTab === 'price' && <Price updateDisable={setDisabled} />}
+            {currTab === 'desc' && (
+            <Description 
+            info={{
+                desc: postHouse.desc,
+                furnished: postHouse.furnished,
+            }} 
+            />
+            )}
+            {currTab === 'features' && (
+            <Features
+            data={{
+              type: postHouse.type,
+              bedrooms: postHouse.bedrooms,
+              bathroom: postHouse.bathroom,
+              toilet: postHouse.toilet,
+              others: postHouse.others,
+            }}
+             />
+             )}
+            {currTab === 'price' && (
+            <Price
+            price={{
+              amount: postHouse.amount,
+              negotiable: postHouse.negotiable,
+            }}
+             />
+             )}
             {currTab === 'photo' && <Photo />}
             {currTab === 'uploadPhoto' && <UploadPhoto />}
             {/* {cutout == "desc" && <Description />}
