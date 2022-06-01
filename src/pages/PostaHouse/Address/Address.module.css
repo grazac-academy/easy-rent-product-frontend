@@ -41,6 +41,15 @@
     border: none;
     padding-left: 30px;
 }
+.addressFlex1 select{
+    appearance: none;
+    background-image: url(../../../assets/Stroke.svg);
+    background-color: #F1F1F1;
+    background-repeat: no-repeat;
+    background-size: auto 10%;
+    padding: 10px 10px;
+    background-position: right 20px center;
+}
 .addressFlex1 h3 {
     font-size: 23px;
     font-family:var(--CircularStd);

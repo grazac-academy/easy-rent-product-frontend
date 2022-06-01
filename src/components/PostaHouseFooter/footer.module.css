@@ -23,7 +23,7 @@
     font-family: var(--CircularStd);
     font-size: 23px;
     color: #2D2D2D;
-
+    cursor: pointer;
 }
 
 .innerContainer button {

@@ -14,7 +14,7 @@ const Address = ({ updateDisable }) => {
   });
 
   useEffect(() => {
-    if (location.address && location.code && location.state)
+    if (location.address && location.city && location.state)
       updateDisable(false);
     else updateDisable(true);
   }, [location]);
