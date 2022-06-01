@@ -32,6 +32,7 @@ const PostAHouse = () => {
     amount: '',
     negotiable: '',
   });
+
   useEffect(() => {
     if (!currTab) {
       navigate('/new?tab=address');
@@ -52,8 +53,6 @@ const PostAHouse = () => {
     return buttonLinks[presentTabIndex + 1];
   }, [currTab]);
 
-  console.log(nextTab);
-
   const gotToNextTab = () => {
     navigate(`/new?tab=${nextTab.tab}`);
     setButtonLinks(
@@ -64,6 +63,14 @@ const PostAHouse = () => {
         return item;
       })
     );
+    setDisabled(true);
+  };
+
+  const handleChange = (e, name) => {
+    setPostHouse({
+      ...postHouse,
+      [name]: e.target.value,
+    });
   };
 
   return (
@@ -98,35 +105,37 @@ const PostAHouse = () => {
                   city: postHouse.city,
                   state: postHouse.state,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
             {currTab === 'desc' && (
-            <Description 
-            info={{
-                desc: postHouse.desc,
-                furnished: postHouse.furnished,
-            }} 
-            />
+              <Description
+                info={{
+                  desc: postHouse.desc,
+                  furnished: postHouse.furnished,
+                }}
+              />
             )}
             {currTab === 'features' && (
-            <Features
-            data={{
-              type: postHouse.type,
-              bedrooms: postHouse.bedrooms,
-              bathroom: postHouse.bathroom,
-              toilet: postHouse.toilet,
-              others: postHouse.others,
-            }}
-             />
-             )}
+              <Features
+                data={{
+                  type: postHouse.type,
+                  bedrooms: postHouse.bedrooms,
+                  bathroom: postHouse.bathroom,
+                  toilet: postHouse.toilet,
+                  others: postHouse.others,
+                }}
+              />
+            )}
             {currTab === 'price' && (
-            <Price
-            price={{
-              amount: postHouse.amount,
-              negotiable: postHouse.negotiable,
-            }}
-             />
-             )}
+              <Price
+                price={{
+                  amount: postHouse.amount,
+                  negotiable: postHouse.negotiable,
+                }}
+              />
+            )}
             {currTab === 'photo' && <Photo />}
             {currTab === 'uploadPhoto' && <UploadPhoto />}
             {/* {cutout == "desc" && <Description />}

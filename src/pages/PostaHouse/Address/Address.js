@@ -6,24 +6,12 @@ import { locations } from 'constant/index';
 // import Select from "react-select";
 import { useEffect } from 'react';
 
-const Address = ({ updateDisable, details }) => {
-  // const [location, setLocation] = useState({
-  //   address: '',
-  //   city: '',
-  //   state: '',
-  // });
-
-  // useEffect(() => {
-  //   if (location.address && location.city && location.state)
-  //     updateDisable(false);
-  //   else updateDisable(true);
-  // }, [location]);
-  // const handleChange = (e, name) => {
-  //   setLocation({
-  //     ...location,
-  //     [name]: e.target.value,
-  //   });
-  // };
+const Address = ({ onchange, details, setDisabled }) => {
+  useEffect(() => {
+    if (details.street && details.city && details.state) {
+      setDisabled(false);
+    } else setDisabled(true);
+  }, [details]);
 
   return (
     <div className={classes.mainContainer}>
@@ -31,9 +19,9 @@ const Address = ({ updateDisable, details }) => {
         <h3>Address</h3>
         <input
           type="text"
-          id="address"
+          id="street"
           placeholder="Enter full address of the house"
-          // onChange={(e) => handleChange(e, 'address')}
+          onChange={(e) => onchange(e, 'street')}
           value={details.street}
         />
         <p>Note: Ensure your adress is as detailed as possible</p>
@@ -46,15 +34,12 @@ const Address = ({ updateDisable, details }) => {
             id="postalCode"
             placeholder="E.g Abeokuta"
             value={details.city}
-            // onChange={(e) => handleChange(e, 'city')}
+            onChange={(e) => onchange(e, 'city')}
           />
         </div>
         <div className={classes.addressFlex1}>
           <h3>State</h3>
-          <select
-            value={details.state}
-            // onChange={(e) => handleChange(e, 'state')}
-          >
+          <select value={details.state} onChange={(e) => onchange(e, 'state')}>
             {locations.map((item) => (
               <option>{item.label}</option>
             ))}
