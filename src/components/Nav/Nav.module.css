@@ -181,57 +181,58 @@
   }
 
   .toggle_div {
-    display: grid;}
+    display: none !important;
+  }
 
-    .navMobile nav a,
-    .navMobile .buttonFlex a {
-      color: #fff;
-      margin: 30px 0;
-      font-size: 19px;
-      line-height: 19px;
-    }
+  .navMobile nav a,
+  .navMobile .buttonFlex a {
+    color: #fff;
+    margin: 30px 0;
+    font-size: 19px;
+    line-height: 19px;
+  }
 
-    .navMobile nav,
-    .navMobile .buttonFlex {
-      align-items: flex-start;
-    }
+  .navMobile nav,
+  .navMobile .buttonFlex {
+    align-items: flex-start;
+  }
 
-    .navMobile .buttonFlex a button {
-      color: #fff;
-      border-color: #fff;
-    }
+  .navMobile .buttonFlex a button {
+    color: #fff;
+    border-color: #fff;
+  }
 
-    .navMobile .buttonFlex div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      margin: 5px auto;
-
-    }
-
-    .navMobile .buttonFlex div .user {
-      color: #fff;
-      width: 75%;
-    }
-
-    .navMobile .buttonFlex div .profile_toggle {
-      width: 25%;
-    }
-
-    .navMobile .buttonFlex div .toggle_div .icon {
-      color: #fff;
-    }
-
-    .dropdownContainer {
-      position: absolute;
-      height: 100px;
-      width: 30%;
-      left: 0;
-      top: 20rem;
-      background: #06062A;
-      z-index: 999;
-      transition: all 3s ease-in-out;
-    }
+  .navMobile .buttonFlex div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px auto;
 
   }
+
+  .navMobile .buttonFlex div .user {
+    color: #fff;
+    width: 75%;
+  }
+
+  .navMobile .buttonFlex div .profile_toggle {
+    width: 25%;
+  }
+
+  .navMobile .buttonFlex div .toggle_div .icon {
+    color: #fff;
+  }
+
+  .dropdownContainer {
+    position: absolute;
+    height: 100px;
+    width: 30%;
+    left: 0;
+    top: 20rem;
+    background: #06062A;
+    z-index: 999;
+    transition: all 3s ease-in-out;
+  }
+
+}

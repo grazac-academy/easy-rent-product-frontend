@@ -64,36 +64,38 @@ const Login = (props) => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <h1 className={styles.title}>Login</h1>
-      <p className={styles.p1}>
-        Kindly fill in the details below to log into your account
-      </p>
-      {loginData.map((input, index) => (
-        <FormGroup
-          key={input.id}
-          {...input}
-          loginForm={loginForm[input.name]}
-          onChange={(e) => onChange(e, index)}
-        />
-      ))}
-
-      <div className={styles.checkboxDiv}>
-        <div className={styles.checkbox}>
-          <input
-            type="checkbox"
-            id="password"
-            onChange={() => setType(!type)}
+    <>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <h1 className={styles.title}>Login</h1>
+        <p className={styles.p1}>
+          Kindly fill in the details below to log into your account
+        </p>
+        {loginData.map((input, index) => (
+          <FormGroup
+            key={input.id}
+            {...input}
+            loginForm={loginForm[input.name]}
+            onChange={(e) => onChange(e, index)}
           />
-          <label for="password"> Show password</label>
+        ))}
+
+        <div className={styles.checkboxDiv}>
+          <div className={styles.checkbox}>
+            <input
+              type="checkbox"
+              id="password"
+              onChange={() => setType(!type)}
+            />
+            <label for="password"> Show password</label>
+          </div>
+          <Link to="/resetpassword">
+            <p>Forgot password?</p>
+          </Link>
         </div>
-        <Link to="/resetpassword">
-          <p>Forgot password?</p>
-        </Link>
-      </div>
-      <Button>{loading ? <Loading /> : 'Login'}</Button>
+        <Button>{loading ? <Loading /> : 'Login'}</Button>
+      </form>
       <Google />
-    </form>
+    </>
   );
 };
 export default Login;

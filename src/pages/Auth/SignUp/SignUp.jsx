@@ -99,6 +99,7 @@ const SignUp = (props) => {
         </p>
         <Button>{loading ? <Loading /> : 'Create Account'}</Button>
 
+      </form>
         <Google />
         <p className={styles.p3}>
           Already have an account?
@@ -106,7 +107,6 @@ const SignUp = (props) => {
             <span className={styles.rent}> Login</span>
           </Link>
         </p>
-      </form>
       {showModal && (
         <Modal>
           <div className={styles.modal}>
