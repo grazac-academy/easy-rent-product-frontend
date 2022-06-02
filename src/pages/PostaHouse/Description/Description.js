@@ -1,24 +1,15 @@
 import React, { useState,useEffect } from 'react';
 import classes from "./Description.module.css";
 
-const Description = ({updateDisable, info}) => {
-  // const [description, setDescription] = useState({
-  //     description: '',
-  //     furnished: '',
-  // });
+const Description = ({onchange, setDisabled, info}) => {
 
-  // useEffect(() => {
-  //   if (description.description && description.furnished)   updateDisable(false)
-  //   else updateDisable(true);
-  // }, [description])
+  useEffect(() => {
+    if (info.desc && info.furnished ) {
+      setDisabled(false);
+    } else setDisabled(true);
+  }, [info]);
 
-  // const handleChange =(e, name) => {
-  //   setDescription({
-  //     ...description,
-  //     [name]: e.target.value,
-  //   });
-  // };
-  // console.log(description)
+
   return (
     <div className={classes.mainContainer}>
       <div className={classes.Description}>
@@ -27,7 +18,7 @@ const Description = ({updateDisable, info}) => {
           type="text"
           id="Description"
           placeholder="E.g  A 3 bedroom flat building beautifully built on a plot of land in a lovely secured <br/> environment of Adigbe, Abeokuta. It consists of</br> 3 Bedrooms, 3 Bathrooms and 1 Garage."
-          // onChange={(e) => handleChange(e, 'description')}
+          onChange={(e) => onchange(e, 'desc')}
           value={info.desc}
         />
         <p>Note: Use the example above as a guide</p>
@@ -39,7 +30,7 @@ const Description = ({updateDisable, info}) => {
           type="radio" 
           name="desc" 
           id="postalCode" 
-          // onChange={(e) => handleChange(e, 'furnished')}
+          onChange={(e) => onchange(e, 'furnished')}
           value={'Yes'}
           />
           <h3>Yes</h3>
@@ -50,7 +41,7 @@ const Description = ({updateDisable, info}) => {
           name="desc" 
           id="postalCode" 
           placeholder="Select State" 
-          // onChange={(e) => handleChange(e, 'furnished')}
+          onChange={(e) => onchange(e, 'furnished')}
           value={'No'}
           />
           <h3>No</h3>

@@ -1,29 +1,15 @@
 import React, { useState,useEffect } from "react";
 import classes from "./Features.module.css";
 
-const Features = ({updateDisable, data}) => {
-//   const [feature, setFeature] = useState({
-//     propertyType: '',
-//     bedroom: '',
-//     bathroom: '',
-//     toilet: '',
-//     others: '',
-// });
+const Features = ({onchange, setDisabled, data}) => {
 
-// useEffect(() => {
-//   if (feature.propertyType && feature.bedroom && feature.bathroom && feature.toilet && feature.others)   updateDisable(false)
-//   else updateDisable(true);
-// }, [feature])
+  useEffect(() => {
+    if (data.type && data.bedrooms && data.bathroom && data.toilet && data.others ) {
+      setDisabled(false);
+    } else setDisabled(true);
+  }, [data]);
 
 
-// const handleChange =(e, name) => {
-//   setFeature({
-//     ...feature,
-//     [name]: e.target.value,
-//   });
-// };
-
-// console.log(feature)
   return (
     <div className={classes.mainContainer}>
       <div className={classes.Features}>
@@ -32,7 +18,7 @@ const Features = ({updateDisable, data}) => {
         type="text" 
         id="Features" 
         placeholder="Choose Property Type" 
-        // onChange={(e) => handleChange(e, 'propertyType')}
+        onChange={(e) => onchange(e, 'type')}
           value={data.type}
         />
       </div>
@@ -43,7 +29,7 @@ const Features = ({updateDisable, data}) => {
           type="text" 
           id="postalCode" 
           placeholder="E.g 1" 
-          // onChange={(e) => handleChange(e, 'bedroom')}
+          onChange={(e) => onchange(e, 'bedrooms')}
           value={data.bedrooms}
           />
         </div>
@@ -53,7 +39,7 @@ const Features = ({updateDisable, data}) => {
           type="text" 
           id="postalCode" 
           placeholder="E.g 1" 
-          // onChange={(e) => handleChange(e, 'bathroom')}
+          onChange={(e) =>onchange(e, 'bathroom')}
           value={data.bathroom}
           />
         </div>
@@ -63,7 +49,7 @@ const Features = ({updateDisable, data}) => {
           type="text" 
           id="postalCode" 
           placeholder="E.g 1" 
-          // onChange={(e) => handleChange(e, 'toilet')}
+          onChange={(e) => onchange(e, 'toilet')}
           value={data.toilet}
           />
         </div>
@@ -75,7 +61,7 @@ const Features = ({updateDisable, data}) => {
         type="text" 
         id="Features" 
         placeholder="Choose Property Type" 
-        // onChange={(e) => handleChange(e, 'others')}
+        onChange={(e) => onchange(e, 'others')}
           value={data.others}
         />
       </div>

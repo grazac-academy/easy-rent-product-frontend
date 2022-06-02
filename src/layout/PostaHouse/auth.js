@@ -115,6 +115,8 @@ const PostAHouse = () => {
                   desc: postHouse.desc,
                   furnished: postHouse.furnished,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
             {currTab === 'features' && (
@@ -126,6 +128,8 @@ const PostAHouse = () => {
                   toilet: postHouse.toilet,
                   others: postHouse.others,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
             {currTab === 'price' && (
@@ -134,6 +138,8 @@ const PostAHouse = () => {
                   amount: postHouse.amount,
                   negotiable: postHouse.negotiable,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
             {currTab === 'photo' && <Photo />}
