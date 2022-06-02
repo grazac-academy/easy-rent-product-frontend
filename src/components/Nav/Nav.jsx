@@ -1,5 +1,5 @@
-import classes from "./Nav.module.css";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import classes from './Nav.module.css';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useBookmarkState } from 'context/context';
 import {
   MdOutlineKeyboardArrowDown,
@@ -24,12 +24,12 @@ const Nav = ({ toggle, handleToggle }) => {
     navigate('/');
   };
 
-
-
   return (
-    <div className={toggle ? classes.navDesktop : classes.navMobile} >
+    <div className={toggle ? classes.navDesktop : classes.navMobile}>
       <nav className={classes.nav}>
-        <NavLink to="/" className={classes.a}>Home</NavLink>
+        <NavLink to="/" className={classes.a}>
+          Home
+        </NavLink>
         <span className={classes.bt_border}></span>
 
         <NavLink to="/apartmentlist">Apartments</NavLink>
@@ -49,36 +49,42 @@ const Nav = ({ toggle, handleToggle }) => {
               <button className={classes.loginBtn}>Signup</button>
             </Link>
             <span className={classes.bt_border}></span>
-          </>)}
+          </>
+        )}
         {isLoggedIn && (
           <>
-          <div className={classes.user_div}>
-            <h3 className={classes.user}>
-              Olayinka Abiodun
-            </h3>
-            
-            <div class={classes.profile_toggle}>
-              <div className={classes.profile_div}>
-                <img src={Profile} alt="profile pic" />
-              </div>
-              <div className={classes.toggle_div}>
-                {click ? (
-                    <MdOutlineKeyboardArrowDown className={classes.icon} onClick={handleClick} />
-                ) : (
-                      <MdOutlineKeyboardArrowUp className={classes.icon} onClick={handleClick} />
-                )}
+            <div className={classes.user_div}>
+              <h3 className={classes.user}>Olayinka Abiodun</h3>
+
+              <div class={classes.profile_toggle}>
+                <div className={classes.profile_div}>
+                  <img src={Profile} alt="profile pic" />
+                </div>
+                <div className={classes.toggle_div}>
+                  {click ? (
+                    <MdOutlineKeyboardArrowDown
+                      className={classes.icon}
+                      onClick={handleClick}
+                    />
+                  ) : (
+                    <MdOutlineKeyboardArrowUp
+                      className={classes.icon}
+                      onClick={handleClick}
+                    />
+                  )}
+                </div>
               </div>
             </div>
-
-          </div>
             <span className={classes.bt_border}></span>
-         </>
+          </>
         )}
       </div>
       {!click ? (
         <nav className={classes.dropdownContainer}>
           <div className={classes.dropdown}>
-            <NavLink to="/" className={classes.a}>Profile</NavLink>
+            <NavLink to="/" className={classes.a}>
+              Profile
+            </NavLink>
             <span className={classes.bt_border}></span>
 
             <NavLink to="/apartmentlist">Dashboard</NavLink>
@@ -87,7 +93,9 @@ const Nav = ({ toggle, handleToggle }) => {
             <NavLink to="/house">Bookmark</NavLink>
             <span className={classes.bt_border}></span>
 
-            <button className={classes.loginBtn} onClick={handleLogout}>Logout</button>
+            <button className={classes.loginBtn} onClick={handleLogout}>
+              Logout
+            </button>
             <span className={classes.bt_border}></span>
           </div>
         </nav>
