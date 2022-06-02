@@ -1,6 +1,5 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-
+import Header from 'components/Header/Header';
+import Footer from './components/Footer'
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
@@ -17,6 +16,7 @@ import DashboardProperties from 'pages/Dashboard/DashboardProperties/DashboardPr
 import DashboardProfile from 'pages/Dashboard/DashboardProfile/DashboardProfile';
 import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
+
 
 function App() {
   const location = useLocation();
@@ -51,12 +51,12 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/apartmentlist" element={<Apartmentlist />} />
-        <Route path="/House" element={<House />} />
+        <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
       <Footer />
