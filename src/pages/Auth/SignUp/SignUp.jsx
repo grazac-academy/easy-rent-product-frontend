@@ -5,13 +5,14 @@ import styles from './SignUp.module.css';
 import Button from 'components/Button/Button';
 import Google from 'components/Button/Google';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import Modal from 'components/Modal/Modal';
 import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
 import { registerData } from 'constant/authData';
 import { registerUser } from 'services/auth';
 import { toast } from 'react-toastify';
+import Loading from 'components/Loading/Loading';
+
 
 
 const SignUp = (props) => {
@@ -29,7 +30,7 @@ const SignUp = (props) => {
       return item;
     });
     setSignupForm(updatedArr);
-  }, [type]);
+  }, [type, signupForm]);
 
   const onChange = (e, index) => {
     const updatedArr = signupForm.map((item, i) => {
@@ -96,7 +97,7 @@ const SignUp = (props) => {
           <span className={styles.rent}> Terms & Conditions</span> and
           <span className={styles.rent}> Privacy Policy</span>
         </p>
-        <Button loading ={loading}>Create Account</Button>
+        <Button>{loading ? <Loading /> : 'Create Account'}</Button>
 
         <Google />
         <p className={styles.p3}>
@@ -119,7 +120,7 @@ const SignUp = (props) => {
                 authenticate your email.
               </p>
               <button onClick={close}>
-                <img src={Close} alt="close" />
+                <img src={Close} alt="close"/>
               </button>
             </div>
           </div>

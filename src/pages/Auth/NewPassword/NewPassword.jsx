@@ -1,16 +1,17 @@
 import React from 'react';
 import FormGroup from 'components/FormGroup/FormGroup';
 import { useState, useEffect } from 'react';
-import Button2 from 'components/Button/Button2';
 import Button from 'components/Button/Button';
 import styles from './NewPassword.module.css';
 import Modal from 'components/Modal/Modal';
 import { Link } from 'react-router-dom';
 import { newPasswordData } from 'constant/authData';
+import Loading from 'components/Loading/Loading';
 
 const NewPassword = () => {
   const [showModal, setShowModal] = useState(false);
   const [newPasswordForm, setNewPasswordForm] = useState(newPasswordData);
+  const [loading, setLoading] = useState(false);
 
   const onChange = (e, index) => {
     const updatedArr = newPasswordForm.map((item, i) => {
@@ -30,14 +31,24 @@ const NewPassword = () => {
       return item;
     });
     setNewPasswordForm(updatedArr);
-  });
+  }, [newPasswordForm]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {};
     newPasswordForm.map((input) => (data[input.name] = input.value));
     console.log(data);
-    setShowModal(true);
+    // try {
+    //   setLoading(true);
+    //   const response = newPassword(data);
+    //   console.log(response);
+    //   setLoading(false);
+    //   setShowModal(true);
+    // } catch (error) {
+    //   console.log(error.response.data.message);
+    //   toast.error(error.response.data.message);
+    //   console.log(error);
+    // }
   };
   // const close = () => { setShowModal(false)}
   return (
@@ -55,7 +66,7 @@ const NewPassword = () => {
             onChange={(e) => onChange(e, index)}
           />
         ))}
-        <Button text="Enter" />
+        <Button>{loading ? <Loading /> : 'Enter'}</Button>
       </form>
       {showModal && (
         <Modal>
@@ -63,7 +74,7 @@ const NewPassword = () => {
             <div className={styles.modalContent}>
               <h1>Your new password has been saved. Return to Log in page</h1>
               <Link to={'/login'}>
-                <Button text="OK" />
+                <Button>OK</Button>
               </Link>
             </div>
           </div>

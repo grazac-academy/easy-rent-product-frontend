@@ -3,12 +3,13 @@ import Footer from './components/Footer'
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
-import Login from 'pages/Login/Login';
-import SignUp from 'pages/SignUp/SignUp';
-import ResetPassword from 'pages/ResetPassword/ResetPassword';
+import Login from 'pages/Auth/Login/Login';
+import SignUp from 'pages/Auth/SignUp/SignUp';
+import ResetPassword from 'pages/Auth/ResetPassword/ResetPassword';
 import Property from 'pages/PropertyDetails/Property';
 import Post from './layout/PostaHouse/auth';
-import NewPassword from 'pages/NewPassword/NewPassword';
+import NewPassword from 'pages/Auth/NewPassword/NewPassword';
+import UpdatePassword from 'pages/Auth/UpdatePassword/UpdatePassword';
 import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
 import DashboardLayout from './layout/Dashboard/DashboardLayout';
 import DashboardHome from 'pages/Dashboard/DashboardHome/DashboardHome';
@@ -25,7 +26,8 @@ function App() {
     location.pathname === '/login' ||
     location.pathname === '/signup' ||
     location.pathname === '/resetpassword' ||
-    location.pathname === '/newpassword'
+    location.pathname === '/newpassword' ||
+    location.pathname === '/updatepassword'
   ) {
     return (
       <Auth>
@@ -34,6 +36,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
+          <Route path="/updatepassword" element={<UpdatePassword />} />
         </Routes>
       </Auth>
     );

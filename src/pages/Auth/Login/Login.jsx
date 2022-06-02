@@ -8,17 +8,15 @@ import Google from 'components/Button/Google';
 import { loginData } from 'constant/authData';
 import { loginUser } from 'services/auth';
 import { useBookmarkState } from 'context/context';
-import { ThreeDots } from 'react-loading-icons';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
+import Loading from 'components/Loading/Loading';
 
 const Login = (props) => {
   const navigate = useNavigate();
-  const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
+  const { setIsLoggedIn } = useBookmarkState();
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loginForm, setLoginForm] = useState(loginData);
-
 
   const onChange = (e, index) => {
     const updatedArr = loginForm.map((item, i) => {
@@ -57,9 +55,9 @@ const Login = (props) => {
       setIsLoggedIn(true);
       console.log(response.data.token);
       localStorage.setItem('userToken', response.data.token);
+      setLoading(false);
       navigate('/');
     } catch (error) {
-      setLoading(false);
       console.log(error.response.data.message);
       toast.error(error.response.data.message);
     }
@@ -93,9 +91,7 @@ const Login = (props) => {
           <p>Forgot password?</p>
         </Link>
       </div>
-      <Button loading = {loading}>
-        Login
-      </Button>
+      <Button>{loading ? <Loading /> : 'Login'}</Button>
       <Google />
     </form>
   );

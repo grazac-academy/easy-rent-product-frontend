@@ -8,10 +8,13 @@ import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
 import { resetPasswordData } from 'constant/authData';
 import { forgetPassword } from 'services/auth';
+import Loading from 'components/Loading/Loading';
+import { toast } from 'react-toastify';
 
 const ResetPassword = () => {
   const [showModal, setShowModal] = useState(false);
   const [resetPasswordForm, setResetPasswordForm] = useState(resetPasswordData);
+  const [loading, setLoading] = useState(false);
 
   // const onChange = (e) => {
   //   setResetPasswordForm({
@@ -39,11 +42,17 @@ const ResetPassword = () => {
     resetPasswordForm.map((input) => (data[input.name] = input.value));
     console.log(data);
     try {
+      setLoading(true);
       const response = await forgetPassword(data);
       console.log(response);
-    } catch (error) {
-      console.log(error);
+      toast.success('Kindly Check your email to verify your account');
+      setLoading(false);
       setShowModal(true);
+
+    } catch (error) {
+      console.log(error.response.data.message);
+      toast.error(error.response.data.message);
+      console.log(error);
     }
   };
   const close = () => {
@@ -65,7 +74,7 @@ const ResetPassword = () => {
             onChange={(e) => onChange(e, index)}
           />
         ))}
-        <Button text="Reset" />
+        <Button>{loading ? <Loading /> : 'Reset'}</Button>
       </form>
       {showModal && (
         <Modal>

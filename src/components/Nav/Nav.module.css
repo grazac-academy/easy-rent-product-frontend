@@ -6,15 +6,11 @@
   position: relative;
 }
 
-/* a {
-  text-decoration: none;
-} */
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 60%;
-  /* margin: 0 auto; */
 
 }
 
@@ -53,13 +49,15 @@
   background-color: #7453EE;
   color: #fff;
 }
-.user_div{
+
+.user_div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   margin-left: 20px;
 }
+
 .user {
   font-family: var(--CircularStd);
   font-style: normal;
@@ -100,7 +98,6 @@
   background: #06062A;
   z-index: 100;
   transition: all 3s ease-in-out;
-  /* box-shadow: 0px 4px 40px #7453; */
 }
 
 .dropdown {
@@ -135,6 +132,10 @@
   margin: 10px 0;
 }
 
+.logout {
+  display: none;
+}
+
 @media screen and (max-width: 910px) {
   .buttonFlex {
     width: 42%;
@@ -144,6 +145,10 @@
 @media screen and (max-width: 768px) {
   .navDesktop {
     display: none;
+  }
+
+  .navMobile .nav .logout {
+    display: block;
   }
 
   .navMobile {
@@ -175,56 +180,58 @@
     margin: 0 auto;
   }
 
-  .navMobile nav a,
-  .navMobile .buttonFlex a {
-    color: #fff;
-    margin: 30px 0;
-    font-size: 19px;
-    line-height: 19px;
+  .toggle_div {
+    display: grid;}
+
+    .navMobile nav a,
+    .navMobile .buttonFlex a {
+      color: #fff;
+      margin: 30px 0;
+      font-size: 19px;
+      line-height: 19px;
+    }
+
+    .navMobile nav,
+    .navMobile .buttonFlex {
+      align-items: flex-start;
+    }
+
+    .navMobile .buttonFlex a button {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .navMobile .buttonFlex div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 5px auto;
+
+    }
+
+    .navMobile .buttonFlex div .user {
+      color: #fff;
+      width: 75%;
+    }
+
+    .navMobile .buttonFlex div .profile_toggle {
+      width: 25%;
+    }
+
+    .navMobile .buttonFlex div .toggle_div .icon {
+      color: #fff;
+    }
+
+    .dropdownContainer {
+      position: absolute;
+      height: 100px;
+      width: 30%;
+      left: 0;
+      top: 20rem;
+      background: #06062A;
+      z-index: 999;
+      transition: all 3s ease-in-out;
+    }
+
   }
-
-  .navMobile nav,
-  .navMobile .buttonFlex {
-    align-items: flex-start;
-  }
-
-  .navMobile .buttonFlex a button {
-    color: #fff;
-    border-color: #fff;
-  }
-
-  .navMobile .buttonFlex div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 5px auto;
-
-  }
-
-  .navMobile .buttonFlex div .user {
-    color: #fff;
-    width: 75%;
-  }
-
-  .navMobile .buttonFlex div .profile_toggle {
-    width: 25%;
-  }
-
-  .navMobile .buttonFlex div .toggle_div .icon {
-    color: #fff;
-  }
-
-  .dropdownContainer {
-    position: absolute;
-    height: 100px;
-    width: 30%;
-    left: 0;
-    top: 20rem ;
-    background: #06062A;
-    z-index: 999;
-    transition: all 3s ease-in-out;
-    /* box-shadow: 0px 4px 40px #7453; */
-  }
-
-}

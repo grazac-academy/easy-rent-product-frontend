@@ -10,6 +10,11 @@ import { useState } from 'react';
 
 const Nav = ({ toggle, handleToggle }) => {
   const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
+  const [close, setClose] = useState(false);
+  const handleClose = () => {
+    setClose(!close);
+  };
+
   const navigate = useNavigate();
 
   const [click, setclick] = useState(true);
@@ -27,9 +32,7 @@ const Nav = ({ toggle, handleToggle }) => {
   return (
     <div className={toggle ? classes.navDesktop : classes.navMobile}>
       <nav className={classes.nav}>
-        <NavLink to="/" className={classes.a}>
-          Home
-        </NavLink>
+        <NavLink to="/">Home</NavLink>
         <span className={classes.bt_border}></span>
 
         <NavLink to="/apartmentlist">Apartments</NavLink>
@@ -37,6 +40,34 @@ const Nav = ({ toggle, handleToggle }) => {
 
         <NavLink to="/house">Post a House</NavLink>
         <span className={classes.bt_border}></span>
+
+        <NavLink to="/profile" className={classes.logout}>
+          Profile
+        </NavLink>
+        <span className={classes.bt_border}></span>
+
+        <NavLink to="/dashboard" className={classes.logout}>
+          Dashboard
+        </NavLink>
+        <span className={classes.bt_border}></span>
+
+        <NavLink to="/bookmark" className={classes.logout}>
+          Bookmark
+        </NavLink>
+        <span className={classes.bt_border}></span>
+
+        {isLoggedIn && (
+          <>
+            <NavLink
+              to="/about"
+              className={classes.logout}
+              onClick={handleLogout}
+            >
+              Logout
+            </NavLink>
+            <span className={classes.bt_border}></span>
+          </>
+        )}
       </nav>
       <div className={classes.buttonFlex}>
         {!isLoggedIn && (
@@ -80,7 +111,7 @@ const Nav = ({ toggle, handleToggle }) => {
         )}
       </div>
       {!click ? (
-        <nav className={classes.dropdownContainer}>
+        <nav className={classes.dropdownContainer} onClick={handleClick}>
           <div className={classes.dropdown}>
             <NavLink to="/" className={classes.a}>
               Profile

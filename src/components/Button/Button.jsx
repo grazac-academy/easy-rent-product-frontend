@@ -1,22 +1,14 @@
 import React from 'react'
 import styles from './Button.module.css'
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
-function Button({disabled, children, loading}) {
+function Button({disabled, children}) {
   return (
     <div className={styles.btnDiv}>
-      <button disabled={disabled} className={styles.btn}>
-        {children}{' '}
-        {loading ? (
-          <span className={styles.loader}>
-            <AiOutlineLoading3Quarters />
-          </span>
-        ) : (
-          ''
-        )}
+      <button disabled={disabled} className={styles.btn} >
+        {children}
       </button>
     </div>
   );
 }
 
-export default Button
+export default Button;
