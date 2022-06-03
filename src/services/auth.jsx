@@ -10,6 +10,17 @@ export const loginUser = async (payload) => {
     return response;
 };
 export const forgetPassword = async (payload) => {
-    const response= baseUrl.post('//auth/user/password-reset-url', payload);
+    const response= baseUrl.post('/auth/user/password-reset-url', payload);
     return response;
 };
+export const getUserName = async (payload) => {
+    const response= baseUrl.post('/getUserName', payload);
+    return response;
+}
+export const updatePassword = async (payload) => {
+    const response = baseUrl.patch(
+      '/auth/user/update-password?email=temilolaadeosun15@gmail.com',
+      payload
+    );
+    return response;
+}

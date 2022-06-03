@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './FeauturedApartment.module.css';
 import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
 import Button from 'components/Button/Button';
-import { useBookmarkState } from '../../context/context';
+import { useBookmarkState } from 'context/context';
 import { Link } from 'react-router-dom';
 
 const FeaturedApartment = () => {
@@ -21,7 +21,7 @@ const FeaturedApartment = () => {
         ))}
       </div>
       <Link to="/apartmentlist">
-        <Button text="View All" />
+        <Button >View All</Button>
       </Link>
     </div>
   );

@@ -1,8 +1,8 @@
-.main{
+.main {
     width: 100%;
 }
 
-.innerContainer{
+.innerContainer {
     width: 80%;
     margin: auto;
     display: flex;
@@ -10,12 +10,12 @@
     margin-bottom: 50px;
 }
 
-.content{
+.content {
     width: 100%;
     padding-top: 80px;
 }
 
-.content h3{
+.content h3 {
     color: #7453EE;
     background-color: #E5DEFF;
     font-family: var(--CircularStd);
@@ -30,7 +30,7 @@
     margin-bottom: 20px;
 }
 
-.content h1{
+.content h1 {
     color: #292929;
     font-family: var(--CircularStd);
     font-style: normal;
@@ -40,7 +40,7 @@
     margin-bottom: 10px;
 }
 
-.content p{
+.content p {
     font-family: var(--CircularStd);
     font-style: normal;
     font-weight: 450;
@@ -51,7 +51,7 @@
     width: 90%;
 }
 
-.btn button{
+.btn button {
     background: #7453EE;
     border-radius: 10px;
     width: 310px;
@@ -65,22 +65,30 @@
     text-align: center;
 }
 
-.image{
+.image {
     width: 100%;
 }
 
-.image>img{
+.image>img {
     max-width: 100%;
 }
 
-@media screen and (max-width: 768px){
-    .innerContainer{
+.PostHouseSteps {
+    width: 80%;
+    margin: auto;
+    padding-top:50px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .innerContainer {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 425px){
-    .innerContainer{
+@media screen and (max-width: 425px) {
+    .innerContainer {
         flex-direction: column;
     }
 }

@@ -121,4 +121,40 @@ export const newPasswordData = [
     value: ''
   },
 ];
- 
+export const updatePasswordData = [
+  {
+    id: 1,
+    name: 'password',
+    type: 'password',
+    placeholder: 'Password',
+    errorMessage:
+      'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
+    label: 'Password',
+    pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&/.*])[a-zA-Z0-9!@#$%^&/.*]{8,20}$`,
+    required: true,
+    value: ''
+  },
+  {
+    id: 2,
+    name: 'password',
+    type: 'password',
+    placeholder: 'Password',
+    errorMessage:
+      'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
+    label: 'New Password',
+    pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&/.*])[a-zA-Z0-9!@#$%^&/.*]{8,20}$`,
+    required: true,
+    value: ''
+  },
+  {
+    id: 3,
+    name: 'confirm password',
+    type: 'password',
+    placeholder: 'Confirm New Password',
+    errorMessage: 'Password does not match',
+    label: 'Confirm Password',
+    required: true,
+    value: ''
+  },
+];
+

@@ -10,6 +10,9 @@ const Dropdown = ({ ...props }) => {
       <img className={'select_icons'} src={props.src} alt="location" />
       <div className={'dropdown'}>
         <label className="select_label">{props.title}</label>
+        {/* <select>
+          <option>{props.placeholder}</option>
+        </select> */}
         <Select
           defaultValue={selectedOption}
           onChange={setSelectedOption}
