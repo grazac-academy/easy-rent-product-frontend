@@ -18,6 +18,7 @@ const PostAHouse = () => {
   const [disabled, setDisabled] = useState(true);
   const [buttonLinks, setButtonLinks] = useState(postHouseRegLinks);
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
   const [postHouse, setPostHouse] = useState({
     street: '',
     city: '',
@@ -53,18 +54,32 @@ const PostAHouse = () => {
     return buttonLinks[presentTabIndex + 1];
   }, [currTab]);
 
+  const getButtonText = useMemo(() => {
+    if (presentTab.id < 4) {
+      return 'Continue';
+    } else if (presentTab.id === 4 && !show) {
+      return 'Ok, I understand';
+    } else {
+      return 'Done';
+    }
+  }, [currTab, show]);
   const gotToNextTab = () => {
     navigate(`/new?tab=${nextTab.tab}`);
     setButtonLinks(
       buttonLinks.map((item) => {
         if (item.tab === nextTab.tab) {
           item.disabled = false;
-        }
+          item.isActive = true;
+        } else item.isActive = false;
         return item;
       })
     );
     setDisabled(true);
   };
+
+  // const gotoHUpload = () => {
+
+  // };
 
   const handleChange = (e, name) => {
     setPostHouse({
@@ -88,7 +103,10 @@ const PostAHouse = () => {
             {buttonLinks.map((item, index) => (
               <button
                 onClick={() => navigate(`/new?tab=${item.tab}`)}
-                className={classes.activeSidebar}
+                className={[
+                  classes.activeSidebar,
+                  item.isActive ? classes.active : '',
+                ].join(' ')}
                 disabled={item.disabled}
               >
                 {index + 1}. {item.name}
@@ -115,6 +133,8 @@ const PostAHouse = () => {
                   desc: postHouse.desc,
                   furnished: postHouse.furnished,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
             {currTab === 'features' && (
@@ -126,6 +146,8 @@ const PostAHouse = () => {
                   toilet: postHouse.toilet,
                   others: postHouse.others,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
             {currTab === 'price' && (
@@ -134,10 +156,14 @@ const PostAHouse = () => {
                   amount: postHouse.amount,
                   negotiable: postHouse.negotiable,
                 }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
               />
             )}
-            {currTab === 'photo' && <Photo />}
-            {currTab === 'uploadPhoto' && <UploadPhoto />}
+            {currTab === 'photo' && !show && (
+              <Photo setDisabled={setDisabled} />
+            )}
+            {currTab === 'photo' && show && <UploadPhoto />}
             {/* {cutout == "desc" && <Description />}
               {cutout === "photo" && <Price />} */}
           </div>
@@ -145,8 +171,8 @@ const PostAHouse = () => {
       </div>
       <Footer
         disabled={disabled}
-        button={currTab === 'photo' ? 'Ok, I understand' : 'continue'}
-        onClick={gotToNextTab}
+        button={getButtonText}
+        onClick={presentTab.id < 4 ? gotToNextTab : () => setShow(true)}
       />
     </div>
   );

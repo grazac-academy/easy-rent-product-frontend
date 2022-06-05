@@ -148,31 +148,42 @@ export const postHouseRegLinks = [
     name: 'Address',
     tab: 'address',
     disabled: false,
+    isActive: true,
   },
   {
     id: 1,
     name: 'Descriptions',
     tab: 'desc',
     disabled: true,
+    isActive: false,
   },
   {
     id: 2,
     name: 'Features',
     tab: 'features',
     disabled: true,
+    isActive: false,
   },
   {
     id: 3,
     name: 'Price',
     tab: 'price',
     disabled: true,
+    isActive: false,
   },
   {
     id: 4,
     name: 'Photos',
     tab: 'photo',
     disabled: true,
+    isActive: false,
   },
+  // {
+  //   id: 5,
+  //   name: 'Upload',
+  //   tab: 'upload',
+  //   disabled: true,
+  // },
 ];
 export const apartments = [
   {
