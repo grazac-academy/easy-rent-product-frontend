@@ -1,0 +1,54 @@
+.propertylist {
+    display: flex;
+    /* width: 80%; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+
+.select {
+    align-self: stretch !important;
+    border: 1px solid #06062A !important;
+    /* border: 1px solid #06062A !important; */
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+
+
+}
+
+.input_email {
+    border: none;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    border: 1px solid #06062A;
+    border-radius: 5px;
+    align-self: stretch;
+
+}
+
+.inputs img {
+    width: 30px !important;
+    height: 30px !important;
+    max-width: 30px !important;
+    margin-left: 10px;
+}
+
+.inputs input {
+    padding: 0 20px;
+
+
+}
+
+.inputs input:focus {
+    outline: none
+}
+
+.dropdowns {
+    align-self: stretch;
+    border: 1px solid #06062A;
+}
