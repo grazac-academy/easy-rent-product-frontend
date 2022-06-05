@@ -14,6 +14,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: initial;
 }
 
 body {
@@ -63,4 +64,3 @@ html {
   --CircularStd: Circular-Std-500;
   --CircularStdBook: 'Circular Std Book';
 }
-
