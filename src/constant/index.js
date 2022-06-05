@@ -1,3 +1,24 @@
+import House1 from 'assets/houses/House1.webp';
+import House2 from 'assets/houses/House2.webp';
+import House3 from 'assets/houses/House3.webp';
+import House4 from 'assets/houses/House4.webp';
+import House5 from 'assets/houses/House5.webp';
+import House6 from 'assets/houses/House6.webp';
+import House7 from 'assets/houses/House7.webp';
+import House8 from 'assets/houses/House8.webp';
+import House9 from 'assets/houses/House9.webp';
+import House10 from 'assets/houses/House10.webp';
+import House11 from 'assets/houses/House11.webp';
+import House12 from 'assets/houses/House12.webp';
+import House13 from 'assets/houses/House13.webp';
+import House14 from 'assets/houses/House14.webp';
+import House15 from 'assets/houses/House15.webp';
+import House16 from 'assets/houses/House16.webp';
+import House17 from 'assets/houses/House17.webp';
+import House18 from 'assets/houses/House18.webp';
+
+
+
 export const locations = [
   { value: 'Abia', label: 'Abia' },
   { value: 'Adamawa', label: 'Adamawa' },
@@ -122,3 +143,170 @@ export const advancedSearches = [
   { value: 'Elevator', label: 'Elevator', checked: false, id: 29 },
   { value: 'Protectors', label: 'Protectors', checked: false, id: 30 },
 ];
+
+export const apartments = [
+  {
+    id: 1,
+    image: House1,
+    price: '10,000',
+    location: 'Adigbe, Abeokuta',
+    propertyType: 'Mini Flat',
+    bedroomNumber: 1,
+    bathroomNumber: 1,
+  },
+  {
+    id: 2,
+    image: House2,
+    price: '15,000',
+    location: 'Lafenwa, Abeokuta',
+    propertyType: 'Semi Detached Bungalow',
+    bedroomNumber: 3,
+    bathroomNumber: 2,
+  },
+  {
+    id: 3,
+    image: House3,
+    price: '10,000',
+    location: 'Adigbe, Abeokuta',
+    propertyType: 'Mini Flat',
+    bedroomNumber: 2,
+    bathroomNumber: 2,
+  },
+  {
+    id: 4,
+    image: House4,
+    price: '10,000',
+    location: 'Adigbe, Abeokuta',
+    propertyType: 'Mini Flat',
+    bedroomNumber: 2,
+    bathroomNumber: 2,
+  },
+  {
+    id: 5,
+    image: House5,
+    price: '10,000',
+    location: 'Adigbe, Abeokuta',
+    propertyType: 'Mini Flat',
+    bedroomNumber: 2,
+    bathroomNumber: 2,
+  },
+
+  {
+    id: 6,
+    image: House6,
+    price: '10,000',
+    location: 'Adigbe, Abeokuta',
+    propertyType: 'Mini Flat',
+    bedroomNumber: 2,
+    bathroomNumber: 2,
+  },
+  {
+    id: 7,
+    image: House7,
+    price: '10,000',
+    location: 'Ikeja, Lagos',
+    propertyType: 'Mini Flat',
+    bedroomNumber: 1,
+    bathroomNumber: 2,
+  },
+  {
+    id: 8,
+    image: House8,
+    price: '12,000',
+    location: 'Lekki, Lagos',
+    propertyType: 'Semi detached duplex',
+    bedroomNumber: 4,
+    bathroomNumber: 5,
+  },
+  {
+    id: 9,
+    image: House9,
+    price: '10,000',
+    location: 'VI, Lagos',
+    propertyType: 'Semi detached duplex',
+    bedroomNumber: 2,
+    bathroomNumber: 3,
+  },
+  {
+    id: 10,
+    image: House10,
+    price: '10,000',
+    location: 'Adigbe, Abeokuta',
+    propertyType: '3 Bedroom bungalow',
+    bedroomNumber: 3,
+    bathroomNumber: 3,
+  },
+  {
+    id: 11,
+    image: House11,
+    price: '12,000',
+    location: 'Camp, Abeokuta',
+    propertyType: '2 Bedroom bungalow',
+    bedroomNumber: 2,
+    bathroomNumber: 1,
+  },
+  {
+    id: 12,
+    image: House12,
+    price: '10,000',
+    location: 'Ikoyi, Lagos',
+    propertyType: 'Semi detached duplex',
+    bedroomNumber: 2,
+    bathroomNumber: 1,
+  },
+  {
+    id: 13,
+    image: House13,
+    price: '10,000',
+    location: 'Egbeda, Lagos',
+    propertyType: '2 Bedroom flat',
+    bedroomNumber: 3,
+    bathroomNumber: 3,
+  },
+  {
+    id: 14,
+    image: House14,
+    price: '12,000',
+    location: 'Ikeja, Lagos',
+    propertyType: '3 Bedroom flat',
+    bedroomNumber: 3,
+    bathroomNumber: 1,
+  },
+  {
+    id: 15,
+    image: House15,
+    price: '10,000',
+    location: 'Ewang Estate, Abeokuta',
+    propertyType: '2 Bedroom flat',
+    bedroomNumber: 2,
+    bathroomNumber: 1,
+  },
+  {
+    id: 16,
+    image: House16,
+    price: '10,000',
+    location: 'Ajah, Lagos',
+    propertyType: '2 Bedroom flat',
+    bedroomNumber: 3,
+    bathroomNumber: 3,
+  },
+  {
+    id: 17,
+    image: House17,
+    price: '12,000',
+    location: 'Mushin, Lagos',
+    propertyType: '3 Bedroom flat',
+    bedroomNumber: 3,
+    bathroomNumber: 1,
+  },
+  {
+    id: 18,
+    image: House18,
+    price: '10,000',
+    location: 'Lafenwa, Abeokuta',
+    propertyType: '2 Bedroom flat',
+    bedroomNumber: 1,
+    bathroomNumber: 1,
+  },
+];
+export default apartments;

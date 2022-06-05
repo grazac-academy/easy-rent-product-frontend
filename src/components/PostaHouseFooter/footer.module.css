@@ -1,0 +1,34 @@
+.background{
+    width:100%;
+    height:128px;
+    background: #EBE5FF;
+
+
+
+}
+.innerContainer{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 35px;
+
+
+
+}
+.innerContainer p{
+    font-family: var(--CircularStd);
+    font-size:23px;
+    color: #2D2D2D;
+
+}
+.innerContainer button{
+    width: 273px;
+    height:63px;
+    border-radius: 10px;
+    background-color: #7453EE;
+    font-family: var(--CircularStd);
+    font-size:23px;
+    color: #2D2D2D;
+}

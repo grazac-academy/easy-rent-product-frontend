@@ -2,12 +2,13 @@
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+    position: relative;
 }
 
 .btn {
     width: 12.75rem;
     border: none;
-    background-color: #06062A;
+    background-color: #7453EE;
     border-radius: 5px;
     padding: 0.5rem 0;
     font-family: var(--CircularStd);
@@ -18,8 +19,6 @@
     color: #FFFFFF;
     text-align: center;
 }
-
-.btn2Div {}
 
 .btn2 {
     border: none;
@@ -87,6 +86,7 @@
     line-height: 20px;
     text-align: center;
     color: #111111;
+    width: 100%;
 }
 
 .googleCont {
@@ -113,4 +113,23 @@
     line-height: 20px;
     color: #111111;
 
+}
+
+.loader {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    animation: rotation 1s linear infinite;
+    /* font-size: 1.2em; */
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
 }

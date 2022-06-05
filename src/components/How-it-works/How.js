@@ -14,20 +14,20 @@ const How = () => {
 
         <div className={classes.blocks}>
           <div className={classes.card}>
-            <div className={classes.image2}>
-              <img src={search} alt="" />
+            <div className={classes.image_div}>
+              <img src={search} alt="image" />
             </div>
             <div className={classes.text}>
               <h2>Search</h2>
               <p>
                 Search through our list of properties for rent shared by other
-                people{' '}
+                people
               </p>
             </div>
           </div>
           <div className={classes.card}>
-            <div className={classes.image2}>
-              <img src={post} alt="" />
+            <div className={classes.image_div}>
+              <img src={post} alt="image" />
             </div>
             <div className={classes.text}>
               <h2>Post</h2>
@@ -38,10 +38,10 @@ const How = () => {
             </div>
           </div>
           <div className={classes.card}>
-            <div className={classes.image}>
-              <img src={connect} alt="" />
+            <div className={classes.image_div}>
+              <img src={connect} alt="image" />
             </div>
-            <div className={classes.text1}>
+            <div className={classes.text}>
               <h2>Connect</h2>
               <p>
                 Connect with preferred house owner and make an offer offline
