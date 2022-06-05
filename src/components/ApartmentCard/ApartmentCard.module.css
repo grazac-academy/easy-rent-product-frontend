@@ -2,7 +2,6 @@
     max-width: 22rem;
     margin: auto;
     margin-bottom: 5rem;
-
 }
 
 .featuredcard {
@@ -18,6 +17,11 @@
 .cardimg {
     width: 100%;
     height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.cardimg:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .cardimg img {
@@ -79,7 +83,8 @@
     display: flex;
     justify-content: space-between;
 }
-.bookmarkbtn{
+
+.bookmarkbtn {
     border: none;
     background-color: transparent;
 }
