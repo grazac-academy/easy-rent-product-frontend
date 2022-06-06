@@ -81,8 +81,8 @@ const Property = () => {
           </div>
           <div className={classes.gridimg}>
             {data.images.map((item, index) => (
-              <div className={classes.images1}>
-                <img src={item} alt="image" key={index} />
+              <div key={index} className={classes.images1}>
+                <img src={item} alt="image" />
               </div>
             ))}
           </div>
