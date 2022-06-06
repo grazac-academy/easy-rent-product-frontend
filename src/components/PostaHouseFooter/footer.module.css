@@ -33,7 +33,7 @@
     background-color: #7453EE;
     font-family: var(--CircularStd);
     font-size: 23px;
-    color: #2D2D2D;
+    color: white;
 }
 
 
@@ -42,3 +42,4 @@
     color: #2D2D2D;
     cursor: not-allowed;
 }
+

@@ -66,3 +66,8 @@
     max-width: 100%;
     flex-grow: 1;
 }
+
+.active {
+    background-color: #7453EE;
+    color: white !important;
+}

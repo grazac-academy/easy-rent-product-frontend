@@ -1,8 +1,11 @@
-import React from "react";
-import classes from "./Photo.module.css";
-import Mark from "../../../assets/mark.svg";
+import classes from './Photo.module.css';
+import Mark from '../../../assets/mark.svg';
+import { useEffect } from 'react';
 
-const Photo = () => {
+const Photo = ({ setDisabled }) => {
+  useEffect(() => {
+    setDisabled(false);
+  }, []);
   return (
     <div className={classes.main}>
       <h1>Before adding photo</h1>
