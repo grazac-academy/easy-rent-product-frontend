@@ -4,6 +4,7 @@ import PostImage from "assets/PostAHouse.svg";
 import Verified from 'components/Verified/Verified';
 import Faq from "components/Faq/Faq";
 import PostHouseSteps from "components/PostHouse/PostHouseSteps";
+import { Link } from "react-router-dom";
 
 
 function House() {
@@ -20,7 +21,8 @@ function House() {
               veniam consequat sunt nostrud amet.
             </p>
             <div className={classes.btn}>
-              <button>Post a house</button>
+              <button>
+                <Link to='/new?tab=address'>Post a house </Link> </button>
             </div>
           </div>
           <div className={classes.image}>
