@@ -24,7 +24,6 @@ const Address = ({ onchange, details, setDisabled }) => {
           onChange={(e) => onchange(e, 'street')}
           value={details.street}
         />
-        <p>This field cant be empty</p>
         <p>Note: Ensure your adress is as detailed as possible</p>
       </div>
       <div className={classes.addressFlex}>

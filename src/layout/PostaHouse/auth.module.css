@@ -10,7 +10,7 @@
 }
 
 .innerContainer {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 80%;
     margin: auto;
     display: flex;
