@@ -1,6 +1,3 @@
-// import Background1 from '../../assets/bg1.svg'
-// import Background2 from '../../assets/bg2.svg'
-// import Background3 from '../../assets/bg3.svg'
 import classes from './Hero.module.css';
 import React, { Component } from 'react';
 import Slider from 'react-slick';
@@ -25,21 +22,24 @@ export default class Hero extends Component {
           <div className={classes.innerHero}>
             <Slider {...settings} className={classes.slider}>
               <div className={classes.Background1}>
-                {/* <img src={Background1} alt="background1" /> */}
               </div>
               <div className={classes.Background2}>
-                {/* <img src={Background2} alt="background2" /> */}
               </div>
               <div className={classes.Background3}>
-                {/* <img src={Background3} alt="background3" /> */}
               </div>
             </Slider>
             <div className={classes.heroText}>
               <h4>Find your perfect home Without an agent.</h4>
+              <p>
+                EasyRent is the best solution to finding an apartment in Nigeria without
+                any middleman or agents involved. By totally removing the middle man
+                from the cycle, the direct implication is a reduced cost in renting your new home. 
+              </p>
             </div>
           </div>
           <Search />
         </div>
+        <div className={classes.whitepart}></div>
         <Verified />
       </>
     );

@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from './Button.module.css'
 
-function Button({disabled, text}) {
+function Button({disabled, children}) {
   return (
     <div className={styles.btnDiv}>
-          <button disabled={disabled} className={styles.btn}>{text}</button>
+      <button disabled={disabled} className={styles.btn} >
+        {children}
+      </button>
     </div>
   );
 }
 
-export default Button
+export default Button;

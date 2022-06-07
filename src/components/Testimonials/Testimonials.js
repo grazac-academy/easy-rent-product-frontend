@@ -1,8 +1,8 @@
 import classes from './Testimonials.module.css';
-import kunle from 'assets/Kunle.png';
-import aisha from 'assets/Aisha.png';
-import tolu from 'assets/Tolu.png';
-import yinka from 'assets/Yinka.png';
+import kunle from 'assets/testimonial/Kunle.webp';
+import aisha from 'assets/testimonial/Aisha.webp';
+import tolu from 'assets/testimonial/Tolu.webp';
+import yinka from 'assets/testimonial/Yinka.webp';
 import vector from 'assets/Vector.svg';
 import React, { Component } from 'react';
 import Slider from 'react-slick';
@@ -10,7 +10,7 @@ import Slider from 'react-slick';
 export default class Testimonials extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 2,
       slidesToScroll: 1,
