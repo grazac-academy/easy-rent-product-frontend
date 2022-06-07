@@ -4,7 +4,7 @@ import FormGroup from 'components/FormGroup/FormGroup';
 import styles from './SignUp.module.css';
 import Button from 'components/Button/Button';
 import Google from 'components/Button/Google';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Modal from 'components/Modal/Modal';
 import openemail from 'assets/open_email.png';
 import Close from 'assets/close.png';
@@ -16,6 +16,7 @@ import Loading from 'components/Loading/Loading';
 
 
 const SignUp = (props) => {
+  const navigate =  useNavigate();
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -55,11 +56,14 @@ const SignUp = (props) => {
       const response = await registerUser(data);
       toast.success('Kindly Check your email to verify your account');
       console.log(response.data.message);
+      setLoading(false);
+      setShowModal(true);
+      navigate('/login'); 
     } catch (error) {
       setLoading(false);
       console.log(error.response.data.message);
       toast.error(error.response.data.message);
-      setShowModal(true);
+      
     }
   };
   const close = () => {

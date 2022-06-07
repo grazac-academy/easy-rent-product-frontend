@@ -50,7 +50,7 @@ const Login = (props) => {
     try {
       setLoading(true);
       const response = await loginUser(data);
-      toast.success('Welcome!');
+      toast.success('Welcome to EasyRent!');
       console.log(response.data.message);
       setIsLoggedIn(true);
       console.log(response.data.token);

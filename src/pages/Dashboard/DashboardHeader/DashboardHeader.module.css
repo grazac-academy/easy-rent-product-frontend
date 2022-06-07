@@ -1,0 +1,101 @@
+.db_headerContainer{
+    width: 100%;
+    height: 70px; 
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.db_header{
+  width: 22rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notification{
+  font-size: 25px;
+  color: #06062A;
+  margin-right: 35px;
+
+}
+.profile{
+  width: 40px;
+  height: 40px;
+}
+.profile img{
+  width: 100%;
+  height: 100%;
+}
+.userName{
+padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .main {
+  width: 100%;
+  display: grid;
+  padding: 1.875rem;
+  place-items: end;
+  position: relative;
+}
+.headerContent p {
+  color: #191f2b;
+  font-family: var(--gilroy-regular);
+  font-size: 16px;
+}
+.innerContent {
+  margin-left: 94px;
+}
+.innerContent div {
+  margin-left: 24px;
+}
+.i {
+  margin-left: 16px;
+  transition: transform 0.2s ease-in-out;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+.rotate {
+  margin-left: 16px;
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-in-out;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.headerContent,
+.innerContent {
+  display: flex;
+  align-items: center;
+}
+.out {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%, -50%);
+} */

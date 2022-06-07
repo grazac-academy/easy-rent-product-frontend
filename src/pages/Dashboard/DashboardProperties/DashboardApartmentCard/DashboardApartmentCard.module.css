@@ -36,9 +36,6 @@
 .cardcontent {
     width: 85%;
     height: auto;
-    position: absolute;
-    bottom: -3rem;
-    left: 3%;
     transform: translate(5%, 5%);
 
 }

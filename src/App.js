@@ -12,14 +12,17 @@ import NewPassword from 'pages/Auth/NewPassword/NewPassword';
 import UpdatePassword from 'pages/Auth/UpdatePassword/UpdatePassword';
 import Apartmentlist from 'pages/Apartmentlist/Apartmentlist';
 import DashboardLayout from './layout/Dashboard/DashboardLayout';
-import DashboardHome from 'pages/Dashboard/DashboardHome/DashboardHome';
+import DashboardOverview from 'pages/Dashboard/DashboardOerview/DashboardOverview';
 import DashboardProperties from 'pages/Dashboard/DashboardProperties/DashboardProperties';
 import DashboardProfile from 'pages/Dashboard/DashboardProfile/DashboardProfile';
 import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
+  AOS.init()
   const location = useLocation();
 
   if (
@@ -44,9 +47,10 @@ function App() {
     return (
       <Routes>
         <Route path="/dashboard" element={<DashboardLayout />}>
-          <Route path="home" element={<DashboardHome />} />
+          <Route path="overview" element={<DashboardOverview />} />
           <Route path="properties" element={<DashboardProperties />} />
           <Route path="profile" element={<DashboardProfile />} />
+          <Route path="posthouse" element={<DashboardProfile />} />
         </Route>
       </Routes>
     );

@@ -28,7 +28,8 @@ export default class Hero extends Component {
               <div className={classes.Background3}>
               </div>
             </Slider>
-            <div className={classes.heroText}>
+            <div className={classes.heroText} data-aos="fade-up"
+              data-aos-duration="3000">
               <h4>Find your perfect home Without an agent.</h4>
               <p>
                 EasyRent is the best solution to finding an apartment in Nigeria without

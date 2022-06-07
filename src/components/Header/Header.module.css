@@ -12,6 +12,21 @@
   width: 80%;
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.image {
+  width: 100px;
+}
+
+.image img {
+  width: 100%;
+}
+
+
 .header a {
   text-decoration: none;
 }
@@ -28,7 +43,7 @@
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:680px) {
   .hamburger {
     display: block;
     border: none;
