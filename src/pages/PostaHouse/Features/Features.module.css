@@ -1,0 +1,63 @@
+.mainContainer {
+    width: 100%;
+
+}
+.Features select, .FeaturesFlex1 select{
+    appearance: none;
+    background-image: url(../../../assets/Stroke.svg);
+    background-color: #F1F1F1;
+    background-repeat: no-repeat;
+    background-size: auto 10%;
+    padding: 10px 10px;
+    background-position: right 20px center;
+}
+.Features h3 {
+    font-size: 23px;
+    font-family:var(--CircularStd);
+    margin-bottom: 10px;
+}
+.Features select{
+    width: 75%;
+    height: 99px;
+    background-color:#F1F1F1;
+    font-family: var(--CircularStd);
+    font-size: 23px;
+    color: #ACACAC;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+.FeaturesFlex1 h3 {
+    font-size: 23px;
+    font-family:var(--CircularStd);
+    margin-bottom: 10px;
+}
+.FeaturesFlex{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 100%;
+    /* gap:20px; */
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.Features button{
+    width: 75%;
+   padding: 30px 20px;
+    background-color:#F1F1F1;
+    font-family: var(--CircularStd);
+    font-size: 23px;
+    color: #ACACAC;
+    border: none;
+    padding-left: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.FeaturesFlex1 {
+    width: 25%;
+}
+.FeaturesFlex1 select {
+    width: 97%;
+}
