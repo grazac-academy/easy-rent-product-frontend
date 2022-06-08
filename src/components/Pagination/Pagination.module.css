@@ -1,0 +1,38 @@
+.paginationContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+
+}
+
+.pageItem {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 19px;
+    line-height: 24px;
+    color: #263238;
+    margin-left: 10px;
+
+}
+
+.pageItem:active {
+    background-color: #7453EE;
+    color: #FFFFFF;
+}
+
+.pageItem:hover {
+    background-color: #7453EE;
+    color: #FFFFFF;
+}   

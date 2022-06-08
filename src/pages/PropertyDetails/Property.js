@@ -15,8 +15,13 @@ import Card from 'components/contactCard/card';
 import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
 // import Array from 'constant/Array';
 import apartments from 'constant';
+import {useEffect} from 'react';
 
 const Property = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // const array = [
   //   {id: 1,image: Image1},
   //   {id: 2, image: Image2},
