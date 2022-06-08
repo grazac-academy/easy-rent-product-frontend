@@ -1,45 +1,181 @@
 import Footer from 'components/PostaHouseFooter/footer';
 import React from 'react';
 import classes from './auth.module.css';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Address from 'pages/PostaHouse/Address/Address';
+import Description from 'pages/PostaHouse/Description/Description';
+import Price from 'pages/PostaHouse/Price/Price';
+import UploadPhoto from 'pages/PostaHouse/uploadPhoto/Upload';
+import ProgressBar from 'components/ProgressBar/ProgressBar';
+import { postHouseRegLinks } from 'constant';
+import Photo from 'pages/PostaHouse/Photo/Photo';
+import Features from '../../pages/PostaHouse/Features/Features';
+import { useEffect, useMemo, useState } from 'react';
 
-function Auth(children) {
+const PostAHouse = () => {
+  const location = useLocation();
+  const currTab = location.search.substring(5);
+  const [disabled, setDisabled] = useState(true);
+  const [buttonLinks, setButtonLinks] = useState(postHouseRegLinks);
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+  const [postHouse, setPostHouse] = useState({
+    street: '',
+    city: '',
+    state: '',
+    desc: '',
+    furnished: '',
+    type: '',
+    bedrooms: '',
+    bathroom: '',
+    toilet: '',
+    others: '',
+    amount: '',
+    negotiable: '',
+  });
+
+  useEffect(() => {
+    if (!currTab) {
+      navigate('/new?tab=address');
+    }
+  }, [currTab]);
+
+  const presentTab = useMemo(() => {
+    return buttonLinks.find((item) => item.tab === currTab);
+  }, [currTab]);
+
+  const nextTab = useMemo(() => {
+    const presentTabIndex = buttonLinks.findIndex(
+      (item) => item.tab === currTab
+    );
+    if (presentTabIndex === 4) {
+      return buttonLinks[presentTabIndex];
+    }
+    return buttonLinks[presentTabIndex + 1];
+  }, [currTab]);
+
+  const getButtonText = useMemo(() => {
+    if (presentTab.id < 4) {
+      return 'Continue';
+    } else if (presentTab.id === 4 && !show) {
+      return 'Ok, I understand';
+    } else {
+      return 'Done';
+    }
+  }, [currTab, show]);
+  const gotToNextTab = () => {
+    navigate(`/new?tab=${nextTab.tab}`);
+    setButtonLinks(
+      buttonLinks.map((item) => {
+        if (item.tab === nextTab.tab) {
+          item.disabled = false;
+          item.isActive = true;
+        } else item.isActive = false;
+        return item;
+      })
+    );
+    setDisabled(true);
+  };
+
+  // const gotoHUpload = () => {
+
+  // };
+
+  const handleChange = (e, name) => {
+    setPostHouse({
+      ...postHouse,
+      [name]: e.target.value,
+    });
+  };
+
   return (
     <div>
       <div className={classes.main}>
-        <div className={classes.upperDiv}></div>
+        <div className={classes.upperDiv}>
+          <ProgressBar
+            currTab={currTab}
+            presentTab={presentTab}
+            nextTab={nextTab}
+          />
+        </div>
         <div className={classes.innerContainer}>
           <div className={classes.sidebar}>
-            <ul>
-              <NavLink to="/Address.">
-                <div className={classes.activeSidebar}>
-                  <li>1. Address</li>
-                </div>
-              </NavLink>
-              <div className={classes.activeSidebar}>
-                <li>2. Description</li>
-              </div>
-              <div className={classes.activeSidebar}>
-                <li>3.Features</li>
-              </div>
-              <div className={classes.activeSidebar}>
-                <li>4. Price</li>
-              </div>
-              <div className={classes.activeSidebar}>
-                <li>5.Photo</li>
-              </div>
-            </ul>
-            <div className={classes.SidebarBorder}></div>
-            <div className={classes.Children}>
-              my name is sola n <Outlet /> njhbcjbdjhajbjhnsjknasjk
-            </div>
+            {buttonLinks.map((item, index) => (
+              <button
+                onClick={() => navigate(`/new?tab=${item.tab}`)}
+                className={[
+                  classes.activeSidebar,
+                  item.isActive ? classes.active : '',
+                ].join(' ')}
+                disabled={item.disabled}
+              >
+                {index + 1}. {item.name}
+              </button>
+            ))}
+          </div>
+          <div className={classes.SidebarBorder}></div>
+
+          <div className={classes.children}>
+            {currTab === 'address' && (
+              <Address
+                details={{
+                  street: postHouse.street,
+                  city: postHouse.city,
+                  state: postHouse.state,
+                }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
+              />
+            )}
+            {currTab === 'desc' && (
+              <Description
+                info={{
+                  desc: postHouse.desc,
+                  furnished: postHouse.furnished,
+                }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
+              />
+            )}
+            {currTab === 'features' && (
+              <Features
+                data={{
+                  type: postHouse.type,
+                  bedrooms: postHouse.bedrooms,
+                  bathroom: postHouse.bathroom,
+                  toilet: postHouse.toilet,
+                  others: postHouse.others,
+                }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
+              />
+            )}
+            {currTab === 'price' && (
+              <Price
+                price={{
+                  amount: postHouse.amount,
+                  negotiable: postHouse.negotiable,
+                }}
+                onchange={handleChange}
+                setDisabled={setDisabled}
+              />
+            )}
+            {currTab === 'photo' && !show && (
+              <Photo setDisabled={setDisabled} />
+            )}
+            {currTab === 'photo' && show && <UploadPhoto />}
+            {/* {cutout == "desc" && <Description />}
+              {cutout === "photo" && <Price />} */}
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer
+        disabled={disabled}
+        button={getButtonText}
+        onClick={presentTab.id < 4 ? gotToNextTab : () => setShow(true)}
+      />
     </div>
   );
-}
+};
 
-export default Auth;
+export default PostAHouse;

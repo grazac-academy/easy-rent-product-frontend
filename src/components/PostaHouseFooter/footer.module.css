@@ -1,12 +1,13 @@
-.background{
-    width:100%;
-    height:128px;
+.background {
+    width: 100%;
+    height: 128px;
     background: #EBE5FF;
 
 
 
 }
-.innerContainer{
+
+.innerContainer {
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -17,18 +18,28 @@
 
 
 }
-.innerContainer p{
-    font-family: var(--CircularStd);
-    font-size:23px;
-    color: #2D2D2D;
 
+.innerContainer p {
+    font-family: var(--CircularStd);
+    font-size: 23px;
+    color: #2D2D2D;
+    cursor: pointer;
 }
-.innerContainer button{
+
+.innerContainer button {
     width: 273px;
-    height:63px;
+    height: 63px;
     border-radius: 10px;
     background-color: #7453EE;
     font-family: var(--CircularStd);
-    font-size:23px;
-    color: #2D2D2D;
+    font-size: 23px;
+    color: white;
 }
+
+
+.innerContainer button:disabled {
+    background-color: #C4C4C4;
+    color: #2D2D2D;
+    cursor: not-allowed;
+}
+

@@ -63,11 +63,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
+        <Route path="/new" element={<Post />} />
+        {/* <Route path="/auth" element={<Post />}>
+          <Route path="Address" element={<Address />} />
+          <Route path="Description" element={<Description />} />
+          <Route path="Features" element={<Features />} />
+          <Route path="Price" element={<Price />} />
+          <Route path="Photo" element={<Photo />} />
+        </Route> */}
         <Route path="/apartmentlist" element={<Apartmentlist />} />
         <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
-      <Footer />
+      {!location.pathname.includes('new') && <Footer />}
     </>
   );
 }
