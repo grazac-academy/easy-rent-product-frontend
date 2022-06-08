@@ -1,15 +1,4 @@
-.CircularProgressbar-path {
-    stroke: red;
-  }
-  .CircularProgressbar-trail {
-    stroke: gray;
-  }
-  .CircularProgressbar-text {
-    fill: yellow;
-  }
-  .CircularProgressbar-background {
-    fill: green;
-  }
+
   .progress{
       width: 100px;
       height: 100px;
@@ -48,4 +37,36 @@
     font-size: 23px;
     line-height: 29px;
     color: #828282;
+  }
+  @media screen and (max-width: 600px) {
+    .progress{
+      width: 70px;
+      height: 70px;
+  }
+  .address{
+    padding-left: 20px;
+}
+  .address h4{
+    font-size: 22px;
+  }
+  .address p{
+    font-size: 18px;
+  }
+  }
+  @media screen and (max-width: 375px) {
+    .address h4{
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .address p{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .address{
+      padding-left: 15px;
+  }
+    .cancel{
+      width: 25px;
+      height: 25px;
+    }
   }

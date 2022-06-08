@@ -1,10 +1,7 @@
 .background {
     width: 100%;
-    height: 128px;
+    padding: 35px 0px;
     background: #EBE5FF;
-
-
-
 }
 
 .innerContainer {
@@ -13,10 +10,7 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    padding-top: 35px;
-
-
-
+    /* padding-top: 35px; */
 }
 
 .innerContainer p {
@@ -27,8 +21,9 @@
 }
 
 .innerContainer button {
-    width: 273px;
-    height: 63px;
+    /* width: 273px;
+    height: 63px; */
+    padding: 20px 50px;
     border-radius: 10px;
     background-color: #7453EE;
     font-family: var(--CircularStd);
@@ -42,4 +37,27 @@
     color: #2D2D2D;
     cursor: not-allowed;
 }
-
+@media screen and (max-width: 768px){
+    .innerContainer {
+        width: 80%;
+    }
+    .innerContainer p {
+        font-size: 18px;
+    }
+    .innerContainer button {
+        font-size: 18px;
+        padding: 15px 40px;
+    }
+}
+@media screen and (max-width: 375px){
+    .innerContainer button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .innerContainer p {
+        font-size: 16px;
+    }
+    .innerContainer {
+        width: 90%;
+    }
+}

@@ -7,7 +7,7 @@ const Footer = ({ disabled, button, onClick }) => {
   return (
     <div className={classes.background}>
       <div className={classes.innerContainer}>
-        <p onClick={() => navigate(-1)}> &#60; back</p>
+        <p onClick={() => navigate(-1)}> &#60; Back</p>
         <button onClick={onClick} disabled={disabled}>
           {button}
         </button>

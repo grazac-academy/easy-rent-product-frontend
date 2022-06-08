@@ -97,6 +97,7 @@ const Features = ({ setDisabled, data, onchange }) => {
         <h3>Amenities</h3>
         <button  onChange={(e) => onchange(e, 'others')}
         value={data.others}
+        className={classes.btn}
         onClick={() => setShow(true)}>
               <span>More search options</span>
                 <img src={Stroke} alt="stroke" />

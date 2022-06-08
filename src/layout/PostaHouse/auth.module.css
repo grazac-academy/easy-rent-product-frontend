@@ -71,3 +71,14 @@
     background-color: #7453EE;
     color: white !important;
 }
+@media screen and (max-width: 1100px) {
+    .sidebar {
+       display: none;
+    }
+    .SidebarBorder{
+        display: none;
+    }
+    .children {
+        margin-top: 0px;
+    }
+}
