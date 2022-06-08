@@ -1,0 +1,182 @@
+.featuredContainer {
+    max-width: 20rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    transition: ease-in-out 0.3s;
+
+
+}
+.featuredContainer:hover {
+    transform: scale(1.03);
+}
+
+
+.featuredcard {
+    max-width: 100%;
+    min-width: 14rem;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cardimg {
+    width: 100%;
+    height: 12rem;
+}
+
+
+.cardimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.cardcontent {
+    width: 100%;
+}
+
+.apartmentprice {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.price {
+    width: 5rem;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    background-color: #EFEFEF;
+    padding: auto;
+    border-radius: 12px;
+
+
+}
+
+.apartmentdetails {
+    width: 100%;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.1);
+}
+
+.locationwrap {
+    height: auto;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.location {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookmarkbtn {
+    border: none;
+    background-color: transparent;
+}
+
+.bookmark {
+    color: #7B61FF;
+    font-size: 1.5rem;
+}
+
+.address {
+    font-family: var(--CircularStdBook);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 11px;
+    line-height: 18px;
+    color: #C4C4C4;
+
+}
+
+.propertytypeDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0 0;
+
+}
+
+.propertytype {
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #06062A;
+    margin-right: 0.7rem;
+}
+
+.approved {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3CE999;
+}
+
+.declined {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E71D36;
+}
+
+.pending {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFF2D8;
+}
+
+.bedbath {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0 0 0;
+}
+
+.bedbath h5 {
+    font-family: var(--CircularStdBook);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #979797;
+}
+
+.bed,
+.bath {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.bedIcon,
+.bathIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.bedIcon img,
+.bathIcon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 372px) {
+    .featuredcard {
+        min-width: 10rem;
+    }
+}

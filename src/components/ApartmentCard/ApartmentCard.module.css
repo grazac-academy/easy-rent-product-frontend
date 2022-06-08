@@ -2,13 +2,12 @@
     max-width: 22rem;
     margin: auto;
     margin-bottom: 5rem;
-
 }
+
 
 .featuredcard {
     max-width: 100%;
     min-width: 18rem;
-    /* height: 18rem; */
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -18,7 +17,14 @@
 .cardimg {
     width: 100%;
     height: 100%;
+    transition: ease-in-out 0.5s;
 }
+
+.cardimg:hover {
+    transform: scale(1.02);
+    transform: translate(0, -0.5rem);
+}
+
 
 .cardimg img {
     width: 100%;
@@ -41,6 +47,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.apartmentprice:hover {
+    transform: scale(1.05);
 }
 
 .price {
@@ -64,6 +75,11 @@
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.1);
+    transition: ease-in-out 0.3s;
+}
+
+.apartmentdetails:hover {
+    transform: scale(1.05);
 }
 
 .locationwrap {
@@ -79,7 +95,8 @@
     display: flex;
     justify-content: space-between;
 }
-.bookmarkbtn{
+
+.bookmarkbtn {
     border: none;
     background-color: transparent;
 }

@@ -55,11 +55,11 @@ function Header() {
             <nav class="mobile left-0 right-0">
               <ul
                 className={
-                  " lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  "
+                  ' lg-w-full p-8  text-black z-10 absolute bg-white   sm:text-lg lg:text-xl  lg-hidden right-0 left-0  '
                 }
                 g
               >
-                <Link to='/'>
+                <Link to="/">
                   <li className=" my-8 text-lg font-head hover:border-b-2 border-violet-400 hover:font-bold  ">
                     Home
                   </li>
@@ -76,13 +76,13 @@ function Header() {
                 <div className="flex  text-button gap-2   lg-hidden text-2xl ">
                   <div>
                     <h3>
-                      <Link to='/login'>
+                      <Link to="/login">
                         <span class="text-2xl font-head hover:border-b-2 border-violet-400 hover:text-black">
                           login
                         </span>
                       </Link>
                       /
-                      <Link to='/signup'>
+                      <Link to="/signup">
                         <span class="text-2xl  font-head hover:border-b-2 border-violet-400 hover:text-black">
                           register
                         </span>
@@ -97,7 +97,7 @@ function Header() {
             </nav>
           ) : (
             <ul className="DESKTOP-MENU sm-gap-2 md:gap-4 hidden w-full  md:flex ">
-              <Link to='/'>
+              <Link to="/">
                 <li className=" lg:text-xl font-head hover:border-b-2 border-violet-400 md:text-xl hover:text-button  ">
                   Home
                 </li>
@@ -105,7 +105,7 @@ function Header() {
               <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl  border-violet-400 hover:text-button ">
                 About Us
               </li>
-              <Link to='/boomarks'>
+              <Link to="/boomarks">
                 <li className=" lg:text-xl font-head hover:border-b-2 md:text-xl   border-violet-400 hover:text-button ">
                   Our Service
                 </li>
@@ -115,13 +115,13 @@ function Header() {
               </li>
               <div className="flex  text-button lg:ml-16 items-center lg-hidden  ">
                 <h3>
-                  <Link to='/login'>
+                  <Link to="/login">
                     <span class="text-xl font-head hover:border-b-2 md:text-lg lg:text-xl  border-violet-400 hover:text-black">
                       login
                     </span>
                   </Link>
                   /
-                  <Link to='/signup'>
+                  <Link to="/signup">
                     <span class="text-xl font-head text-bold lg:text-xl hover:border-b-2 border-violet-400 hover:text-black">
                       register
                     </span>

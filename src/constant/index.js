@@ -1,21 +1,23 @@
-import House1 from 'assets/House1.png';
-import House2 from 'assets/House2.png';
-import House3 from 'assets/House3.png';
-import House4 from 'assets/House4.png';
-import House5 from 'assets/House5.png';
-import House6 from 'assets/House6.png';
-import House7 from 'assets/House7.png';
-import House8 from 'assets/House8.png';
-import House9 from 'assets/House9.png';
-import House10 from 'assets/House10.png';
-import House11 from 'assets/House11.png';
-import House12 from 'assets/House12.png';
-import House13 from 'assets/House13.png';
-import House14 from 'assets/House14.png';
-import House15 from 'assets/House15.png';
-import House16 from 'assets/House16.png';
-import House17 from 'assets/House17.png';
-import House18 from 'assets/House18.png';
+import House1 from 'assets/houses/House1.webp';
+import House2 from 'assets/houses/House2.webp';
+import House3 from 'assets/houses/House3.webp';
+import House4 from 'assets/houses/House4.webp';
+import House5 from 'assets/houses/House5.webp';
+import House6 from 'assets/houses/House6.webp';
+import House7 from 'assets/houses/House7.webp';
+import House8 from 'assets/houses/House8.webp';
+import House9 from 'assets/houses/House9.webp';
+import House10 from 'assets/houses/House10.webp';
+import House11 from 'assets/houses/House11.webp';
+import House12 from 'assets/houses/House12.webp';
+import House13 from 'assets/houses/House13.webp';
+import House14 from 'assets/houses/House14.webp';
+import House15 from 'assets/houses/House15.webp';
+import House16 from 'assets/houses/House16.webp';
+import House17 from 'assets/houses/House17.webp';
+import House18 from 'assets/houses/House18.webp';
+
+
 
 export const locations = [
   { value: 'Abia', label: 'Abia' },
@@ -142,6 +144,49 @@ export const advancedSearches = [
   { value: 'Protectors', label: 'Protectors', checked: false, id: 30 },
 ];
 
+export const postHouseRegLinks = [
+  {
+    id: 0,
+    name: 'Address',
+    tab: 'address',
+    disabled: false,
+    isActive: true,
+  },
+  {
+    id: 1,
+    name: 'Descriptions',
+    tab: 'desc',
+    disabled: true,
+    isActive: false,
+  },
+  {
+    id: 2,
+    name: 'Features',
+    tab: 'features',
+    disabled: true,
+    isActive: false,
+  },
+  {
+    id: 3,
+    name: 'Price',
+    tab: 'price',
+    disabled: true,
+    isActive: false,
+  },
+  {
+    id: 4,
+    name: 'Photos',
+    tab: 'photo',
+    disabled: true,
+    isActive: false,
+  },
+  // {
+  //   id: 5,
+  //   name: 'Upload',
+  //   tab: 'upload',
+  //   disabled: true,
+  // },
+];
 export const apartments = [
   {
     id: 1,
@@ -151,6 +196,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 1,
     bathroomNumber: 1,
+    status: 'approved'
   },
   {
     id: 2,
@@ -160,6 +206,8 @@ export const apartments = [
     propertyType: 'Semi Detached Bungalow',
     bedroomNumber: 3,
     bathroomNumber: 2,
+    status: 'declined'
+
   },
   {
     id: 3,
@@ -169,6 +217,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'pending'
   },
   {
     id: 4,
@@ -178,6 +227,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'approved'
   },
   {
     id: 5,
@@ -187,6 +237,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'approved'
   },
 
   {
@@ -197,6 +248,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'approved'
   },
   {
     id: 7,

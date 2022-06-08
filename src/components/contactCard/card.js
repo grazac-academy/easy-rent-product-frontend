@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from "react";
 import classes from "./card.module.css";
 import tel from "../../assets/tel.svg";
 import safety from "../../assets/safety.svg";
 import Kunle from "assets/Kunle.png";
 
+=======
+import React from 'react';
+import classes from './card.module.css';
+import tel from '../../assets/tel.svg';
+import safety from '../../assets/safety.svg';
+>>>>>>> main
 
 const Card = () => {
   return (

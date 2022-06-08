@@ -134,7 +134,7 @@ const Property = () => {
             <h3>Similar Properties</h3>
           </div>
           <div className={classes.array}>
-            {Array.slice(0, 2).map((item) => (
+            {apartments.slice(0, 2).map((item) => (
               <ApartmentCard key={item.id} item={item} />
             ))}
           </div>

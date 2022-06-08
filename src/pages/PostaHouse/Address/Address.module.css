@@ -1,0 +1,153 @@
+.mainContainer {
+    max-width: 100%;
+}
+.address h3 {
+    font-size: 23px;
+    font-family:var(--CircularStd);
+    margin-bottom: 10px;
+}
+.address input{
+    width: 80%;
+    height: 99px;
+    background-color:#F1F1F1;
+    font-family: var(--CircularStd);
+    font-size: 23px;
+    color: #ACACAC;
+    border-radius: 10px;
+    border: none;
+    padding-left: 30px;
+}
+.address p{
+    font-family: var(--CircularStd);
+    font-size: 1.43rem;
+    color: #ACACAC;
+    margin-bottom: 30px;
+}
+.addressFlex{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    /* justify-content: space-between; */
+}
+.addressFlex1{
+    width: 39%;
+    font-size: 23px;
+    font-family:var(--CircularStd);
+    margin-bottom: 10px;
+}
+.addressFlex1 input, .addressFlex1
+select{
+    width: 100%;
+    height: 99px;
+
+    background-color:#F1F1F1;
+    font-family: var(--CircularStd);
+    font-size: 23px;
+    color: #ACACAC;
+    border-radius: 10px;
+    border: none;
+    padding-left: 30px;
+}
+
+.addressFlex1 select{
+    appearance: none;
+    background-image: url(../../../assets/Stroke.svg);
+    background-color: #F1F1F1;
+    background-repeat: no-repeat;
+    background-size: auto 10%;
+    padding: 10px 10px;
+    background-position: right 20px center;
+}
+.addressFlex1 h3 {
+    font-size: 23px;
+    font-family:var(--CircularStd);
+    margin-bottom: 10px;
+
+}
+.addressFlex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+} 
+ .address-select__input-container{
+    background-color:#F1F1F1!important;
+    color: #ACACAC!important;
+    font-family: var(--CircularStd);
+    font-size: 23px!important;
+    border: none!important;
+    width: 200px !important;
+}
+ .address-select__control {
+    border: none !important;
+}
+
+.address-select__indicator-separator {
+    display: none!important;
+}
+
+.address-select__indicator {
+    background-image: url('../../../assets/Vector.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.address-select__indicator div {
+    background-color: red !important;
+}
+
+.address-select__indicator svg {
+    display: none;
+}
+
+.address-select__placeholder {
+    font-family: 'Circular std book';
+    background-color:#F1F1F1;
+    font-size: 23px;
+    color: #ACACAC!important;
+}  
+@media screen and (max-width: 600px){
+    .address h3 {
+        font-size: 18px;
+    }
+    .address input {
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+    }
+    .address p{
+        font-size: 1.125rem;
+    }
+    .addressFlex{
+        width: 100%;
+     flex-direction: column;
+     align-items: flex-start;
+    }
+    .addressFlex1 h3 {
+        font-size: 18px;
+    }
+    .addressFlex1{
+        width: 100%;
+        font-size: 18px;
+    }
+    .addressFlex1 input, .addressFlex1
+select{
+    height: 60px;
+    font-size: 18px;
+    
+}
+}
+@media screen and (max-width: 375px){
+    .address input {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    .address p{
+        font-size: 0.8rem;
+    }
+    .addressFlex1 input, .addressFlex1
+    select{
+        font-size: 16px;
+        padding-left: 15px;
+    }
+}

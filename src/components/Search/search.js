@@ -15,7 +15,7 @@ const Search = () => {
   return (
     <>
       <div className={classes.search}>
-        <div className={classes.inner_search}>
+        <div className={classes.inner_search} data-aos="flip-right" data-aos-duration='800' data-aos-mirror='true'>
           <div className={classes.rent}>
             <p>Rent</p>
           </div>

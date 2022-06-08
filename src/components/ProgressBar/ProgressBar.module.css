@@ -1,0 +1,72 @@
+
+  .progress{
+      width: 100px;
+      height: 100px;
+  }
+  .progressContainer{
+      background-color: #EBE5FF;
+      padding: 20px 0;  
+  }
+  .innerContainer{
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .innerProgress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .address{
+      padding-left: 30px;
+  }
+  .address h4{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    color: #7453EE;
+  }
+  .address p{
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 23px;
+    line-height: 29px;
+    color: #828282;
+  }
+  @media screen and (max-width: 600px) {
+    .progress{
+      width: 70px;
+      height: 70px;
+  }
+  .address{
+    padding-left: 20px;
+}
+  .address h4{
+    font-size: 22px;
+  }
+  .address p{
+    font-size: 18px;
+  }
+  }
+  @media screen and (max-width: 375px) {
+    .address h4{
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .address p{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .address{
+      padding-left: 15px;
+  }
+    .cancel{
+      width: 25px;
+      height: 25px;
+    }
+  }

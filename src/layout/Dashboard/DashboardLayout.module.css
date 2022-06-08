@@ -1,0 +1,23 @@
+.db_container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: fixed;
+}
+
+.db_content {
+    width: calc(100% - 250px);
+}
+
+.mainOutlet {
+    background-color: #E5E5E5;
+    padding: 1rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 90vh;
+
+}
+
+.mainOutlet::-webkit-scrollbar {
+    display: none;
+}

@@ -5,7 +5,7 @@
       "components/*": ["components/*"],
       "assets/*": ["assets/*"],
       "pages/*": ["pages/*"],
-      "constants/*": ["constants/*"]
+      "constants/*": ["constant/*"]
     }
   },
   "include": ["src"]
