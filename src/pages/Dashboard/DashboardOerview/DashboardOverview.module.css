@@ -4,6 +4,10 @@
     background-color: #FFFFFF;
     border-radius: 8px;
     margin-bottom: 1rem;
+    transition: ease-in-out 0.3s;
+}
+.Container:hover {
+    transform: scale(1.01);
 }
 
 .overviewTop {
@@ -21,7 +25,12 @@
     background: #7453EE;
     border-radius: 5px;
     margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
 
+}
+
+.navItem:hover {
+    transform: scale(1.05);
 }
 
 .portfolio h1 {
@@ -80,7 +89,7 @@
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr; */
     /* grid-template-columns: repeat(auto-fill, 320px); */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     grid-gap: 1rem;
     justify-content: space-between;
     padding: 0 1rem 1rem 1rem;

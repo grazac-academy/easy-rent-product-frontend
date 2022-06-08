@@ -32,7 +32,10 @@ const DashboardApartmentCard = ({ item }) => {
                 <h1 className={styles.price}>#{item.price}/mo</h1>
               </div>
             </div>
-            <h2 className={styles.propertytype}>{item.propertyType}</h2>
+            <div className={styles.propertytypeDiv}>
+              <h2 className={styles.propertytype}>{item.propertyType}</h2>
+              <span className={styles[item.status]}></span>
+            </div>
             <div className={styles.bedbath}>
               <div className={styles.bed}>
                 <div className={styles.bedIcon}>

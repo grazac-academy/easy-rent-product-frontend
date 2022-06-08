@@ -7,6 +7,10 @@
     padding: 1rem;
     display: flex;
     align-items: center;
+    transition: ease-in-out 0.3s;
+}
+.overviewCard:hover {
+    transform: scale(1.03);
 }
 
 .cardIcon {

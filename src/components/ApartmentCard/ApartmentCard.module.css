@@ -10,7 +10,6 @@
 .featuredcard {
     max-width: 100%;
     min-width: 18rem;
-    /* height: 18rem; */
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -25,6 +24,7 @@
 
 .cardimg:hover {
     transform: scale(1.02);
+    transform: translate(0, -0.5rem);
 }
 
 

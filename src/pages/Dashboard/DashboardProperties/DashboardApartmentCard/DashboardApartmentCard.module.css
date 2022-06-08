@@ -1,30 +1,28 @@
 .featuredContainer {
-    max-width: 22rem;
+    max-width: 20rem;
     margin: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    transition: ease-in-out 0.3s;
 
 
+}
+.featuredContainer:hover {
+    transform: scale(1.03);
 }
 
 
 .featuredcard {
     max-width: 100%;
-    min-width: 18rem;
-    /* height: 18rem; */
+    min-width: 14rem;
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    position: relative;
 }
 
 .cardimg {
     width: 100%;
-    height: 100%;
-    transition: ease-in-out 0.5s;
-}
-
-.cardimg:hover {
-    transform: scale(1.02);
+    height: 12rem;
 }
 
 
@@ -34,63 +32,48 @@
 }
 
 .cardcontent {
-    width: 85%;
-    height: auto;
-    transform: translate(5%, 5%);
-
+    width: 100%;
 }
 
 .apartmentprice {
-    width: 100%;
-    margin-bottom: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.apartmentprice:hover {
-    transform: scale(1.05);
-}
+
 
 .price {
-    width: 6rem;
+    width: 5rem;
     font-family: var(--CircularStd);
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 20px;
     color: #000000;
-    background-color: #fff;
-    border-radius: 8px;
     text-align: center;
+    background-color: #EFEFEF;
+    padding: auto;
+    border-radius: 12px;
 
 
 }
 
 .apartmentdetails {
     width: 100%;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 0.5rem;
     box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.1);
-    transition: ease-in-out 0.3s;
-}
-
-.apartmentdetails:hover {
-    transform: scale(1.05);
 }
 
 .locationwrap {
-    width: 90%;
     height: auto;
     display: flex;
     gap: 0.5em;
     align-items: center;
-    padding-bottom: 0.5rem;
 }
 
 .location {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -109,20 +92,49 @@
     font-family: var(--CircularStdBook);
     font-style: normal;
     font-weight: 450;
-    font-size: 14px;
+    font-size: 11px;
     line-height: 18px;
     color: #C4C4C4;
 
 }
 
-.propertytype {
+.propertytypeDiv {
     width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0 0;
+
+}
+
+.propertytype {
     font-family: var(--CircularStd);
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
     color: #06062A;
+    margin-right: 0.7rem;
+}
+
+.approved {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3CE999;
+}
+
+.declined {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E71D36;
+}
+
+.pending {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFF2D8;
 }
 
 .bedbath {

@@ -65,7 +65,7 @@ const DashboardOverview = () => {
           </Link>
         </div>
         <div className={styles.overviewProperties}>
-          {apartments.slice(0, 6).map((item) => (
+          {apartments.slice(0, 4).map((item) => (
             <DashboardApartmentCard key={item.id} item={item} />
           ))}
         </div>
