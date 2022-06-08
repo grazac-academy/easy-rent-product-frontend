@@ -1,14 +1,25 @@
 import React from 'react';
 import styles from './DashboardSidebar.module.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { HiViewGrid } from 'react-icons/hi';
 import { MdDashboard } from 'react-icons/md';
 import { FaUser } from 'react-icons/fa';
 import { MdHouse } from 'react-icons/md';
 import { RiLogoutBoxFill } from 'react-icons/ri';
 import Logo from 'assets/Dashboard/db_logo.png';
+import { useBookmarkState } from 'context/context';
 
 const DashboardSidebar = () => {
+  const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.setItem('userToken', '');
+    sessionStorage.clear();
+    setIsLoggedIn(false);
+    navigate('/');
+  };
+
   return (
     <div className={styles.db_sidebarContainer}>
       <div className={styles.db_sidebar}>
@@ -53,7 +64,7 @@ const DashboardSidebar = () => {
           </NavLink>
         </nav>
 
-        <button className={styles.logout}>
+        <button className={styles.logout} onClick={handleLogout}>
           <div className={styles.logoutIcon}>
             <RiLogoutBoxFill />
           </div>
