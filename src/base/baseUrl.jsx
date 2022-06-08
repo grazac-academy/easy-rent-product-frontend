@@ -9,7 +9,7 @@ export const baseUrl = axios.create({
   baseURL: `${url}`,
   // headers: {
   //   'Content-Type': 'application/json',
-  // },
-  timeout: 100000,
-  timeoutErrorMessage: 'Request timed out, pls try again later',
+  // // },
+  // timeout: 100000,
+  // timeoutErrorMessage: 'Request timed out, pls try again later',
 });

@@ -196,6 +196,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 1,
     bathroomNumber: 1,
+    status: 'approved'
   },
   {
     id: 2,
@@ -205,6 +206,8 @@ export const apartments = [
     propertyType: 'Semi Detached Bungalow',
     bedroomNumber: 3,
     bathroomNumber: 2,
+    status: 'declined'
+
   },
   {
     id: 3,
@@ -214,6 +217,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'pending'
   },
   {
     id: 4,
@@ -223,6 +227,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'approved'
   },
   {
     id: 5,
@@ -232,6 +237,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'approved'
   },
 
   {
@@ -242,6 +248,7 @@ export const apartments = [
     propertyType: 'Mini Flat',
     bedroomNumber: 2,
     bathroomNumber: 2,
+    status: 'approved'
   },
   {
     id: 7,
