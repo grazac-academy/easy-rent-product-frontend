@@ -23,7 +23,7 @@
 .innerContainer button {
     /* width: 273px;
     height: 63px; */
-    padding: 20px 60px;
+    padding: 20px 50px;
     border-radius: 10px;
     background-color: #7453EE;
     font-family: var(--CircularStd);
@@ -37,7 +37,7 @@
     color: #2D2D2D;
     cursor: not-allowed;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
     .innerContainer {
         width: 80%;
     }
@@ -51,9 +51,13 @@
 }
 @media screen and (max-width: 375px){
     .innerContainer button {
-        padding: 10px 30px;
+        padding: 10px 20px;
+        font-size: 14px;
     }
     .innerContainer p {
         font-size: 16px;
+    }
+    .innerContainer {
+        width: 90%;
     }
 }
