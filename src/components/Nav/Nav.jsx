@@ -118,10 +118,10 @@ const Nav = ({ toggle, handleToggle }) => {
             </NavLink>
             <span className={classes.bt_border}></span>
 
-            <NavLink to="/apartmentlist">Dashboard</NavLink>
+            <NavLink to="/dashboard">Dashboard</NavLink>
             <span className={classes.bt_border}></span>
 
-            <NavLink to="/house">Bookmark</NavLink>
+            <NavLink to="/bookmark">Bookmark</NavLink>
             <span className={classes.bt_border}></span>
 
             <button className={classes.loginBtn} onClick={handleLogout}>
