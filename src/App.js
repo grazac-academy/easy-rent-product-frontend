@@ -47,6 +47,7 @@ function App() {
     return (
       <Routes>
         <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route index element={<DashboardOverview />} />
           <Route path="overview" element={<DashboardOverview />} />
           <Route path="properties" element={<DashboardProperties />} />
           <Route path="profile" element={<DashboardProfile />} />
