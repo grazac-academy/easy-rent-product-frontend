@@ -36,7 +36,7 @@ function Footer() {
             <div className=" text-gray-400">
               <img src={location} alt="logo" />
             </div>
-            <h3 className=" text-gray-400 word-break font-primary font-sans w-5/6 text-2xl ">
+            <h3 className=" text-gray-400 word-break font-primary font-sans w-5/6 text-xl ">
               34, Grazac Road Idi-aba, Abeokuta, Ogun
             </h3>
           </div>
@@ -48,8 +48,8 @@ function Footer() {
         </div>
 
         <div>
-          <ul className="no-underline lg:py-4 text-gray-400 text-2xl">
-            <li className="font-primary mb-4 text-white text-3xl">Discover</li>
+          <ul className="no-underline lg:py-4 text-gray-400 text-xl">
+            <li className="font-primary mb-4 text-white text-2xl">Discover</li>
             <li className="mb-4">lagos</li>
             <li className="mb-4">Ogun</li>
             <li className="mb-4">Abuja</li>
@@ -57,8 +57,8 @@ function Footer() {
         </div>
 
         <div>
-          <ul className=" font-primary text-gray-400 text-2xl">
-            <li className="font-head mb-4 md:pt-4  text-white text-3xl">
+          <ul className=" font-primary text-gray-400 text-xl">
+            <li className="font-head mb-4 md:pt-4  text-white text-2xl">
               List of Categories
             </li>
             <li className="mb-4">Apartment</li>
@@ -70,8 +70,8 @@ function Footer() {
         </div>
 
         <div className="">
-          <ul className="no-underline py-4 text-gray-400 text-2xl">
-            <li className="font-primary mb-4 text-white  text-3xl">
+          <ul className="no-underline py-4 text-gray-400 text-xl">
+            <li className="font-primary mb-4 text-white  text-2xl">
               Quick Link
             </li>
 

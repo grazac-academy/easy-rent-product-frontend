@@ -1,5 +1,4 @@
 import classes from "./Property.module.css";
-import Array from "constant/Array";
 import BigImage from "assets/toilet.svg";
 import Image1 from "assets/img1.svg";
 import Image2 from "assets/img2.svg";
@@ -12,12 +11,10 @@ import bedroom from "assets/Vector(3).svg";
 import location from "assets/location.svg";
 import Card from "components/contactCard/card";
 import ApartmentCard from "components/ApartmentCard/ApartmentCard";
-// import Data from "constant/houseDeatailsData";
-// import classes from "./Rooms";
 import { useState } from "react";
+import apartments from "constant/index";
 
 const data = {
-  // id: 1,
   images: [Image1, Image2, Image3, Image4, Image2, Image5],
 
   Location: "Adigbe, Abeokuta",
