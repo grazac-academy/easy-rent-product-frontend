@@ -1,26 +1,21 @@
 .mainContainer {
     width: 100%;
-
 }
 .Description h3 {
     font-size: 23px;
     font-family:var(--CircularStd);
     margin-bottom: 10px;
-
 }
 .Description input{
-    width: 615px;
+    width: 89%;
     height: 99px;
     background-color:#F1F1F1;
     font-family: var(--CircularStd);
-    font-size:18px;
+    font-size:23px;
     color: #ACACAC;
     border-radius: 10px;
     border: none;
     padding-left: 30px;
-
-
-
 }
 .Description p{
     font-family: var(--CircularStd);
@@ -45,7 +40,7 @@
     font-family:var(--CircularStd);
 }
 .DescriptionFlex1{
-    width: 300px;
+    width: 43%;
     height: 99px;
     background-color:#F1F1F1;
     font-family: var(--CircularStd);
@@ -59,8 +54,6 @@
     border-radius: 10px;
     margin-bottom: 30px;
     gap: 10px;
-
-
 }
 .DescriptionFlex{
     display: flex;
@@ -68,11 +61,61 @@
     /* justify-content: space-between; */
     width: 100%;
     gap: 25px;    
-
-
 }
 .h{
     font-size: 23px;
     font-family:var(--CircularStd);
     margin-bottom: 10px;
+}
+@media screen and (max-width: 600px){
+     .DescriptionFlex1{
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+    }
+    .Description h3 {
+        font-size: 18px;
+    }
+    .Description input{
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+    } 
+    .Description p{
+        font-size: 18px;
+    }
+    .DescriptionFlex1 input{
+        font-size: 18px;
+    }
+    .DescriptionFlex1 h3 {
+        font-size: 18px;
+    }
+    .h{
+    font-size: 18px;
+}
+}
+@media screen and (max-width: 375px){
+    .DescriptionFlex1{
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    .Description h3 {
+        font-size: 16px;
+    }
+    .Description input{
+        font-size: 16px;
+        padding-left: 15px;
+    } 
+    .Description p{
+        font-size: 16px;
+    }
+    .DescriptionFlex1 input{
+        font-size: 16px;
+    }
+    .DescriptionFlex1 h3 {
+        font-size: 16px;
+    }
+    .h{
+    font-size: 16px;
+}
 }

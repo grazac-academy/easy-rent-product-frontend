@@ -52,3 +52,31 @@
     font-family:var(--CircularStd);
     color:#ACACAC;
 }
+@media screen and (max-width: 475px){
+    .UploadText h1{
+        font-size: 18px;
+    }
+    .UploadText p{
+        font-size: 16px;
+    }
+    .add1 h3{
+        font-size:14px;
+    }
+    .add1 p{
+        font-size:14px;
+    }
+}
+@media screen and (max-width: 375px){
+    .UploadText h1{
+        font-size: 16px;
+    }
+    .UploadText p{
+        font-size: 12px;
+    }
+    .add1 h3{
+        font-size: 12px;
+    }
+    .add1 p{
+        font-size: 12px;
+    }
+}
