@@ -50,7 +50,6 @@ const Property = () => {
 
   const handleImg = (index) => {
     setImg(data.images[index]);
-    // console.log(index)
   };
 
   return (
