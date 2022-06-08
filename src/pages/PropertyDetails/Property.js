@@ -1,49 +1,49 @@
-import classes from './Property.module.css';
-import Array from 'constant/Array';
-import BigImage from 'assets/big_img.svg';
-import Image1 from 'assets/img1.svg';
-import Image2 from 'assets/img2.svg';
-import Image3 from 'assets/img3.svg';
-import Image4 from 'assets/img4.svg';
-import Image5 from 'assets/img5.svg';
-import bathroom from 'assets/Vector (1).svg';
-import garage from 'assets/Vector (2).svg';
-import bedroom from 'assets/Vector(3).svg';
-import location from 'assets/location.svg';
-import Card from 'components/contactCard/card';
-import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
+import classes from "./Property.module.css";
+import Array from "constant/Array";
+import BigImage from "assets/toilet.svg";
+import Image1 from "assets/img1.svg";
+import Image2 from "assets/img2.svg";
+import Image3 from "assets/img3.svg";
+import Image4 from "assets/img4.svg";
+import Image5 from "assets/img5.svg";
+import bathroom from "assets/Vector (1).svg";
+import garage from "assets/Vector (2).svg";
+import bedroom from "assets/Vector(3).svg";
+import location from "assets/location.svg";
+import Card from "components/contactCard/card";
+import ApartmentCard from "components/ApartmentCard/ApartmentCard";
 // import Data from "constant/houseDeatailsData";
 // import classes from "./Rooms";
-import { useState } from 'react';
+import { useState } from "react";
 
 const data = {
-  id: 1,
-  images: [BigImage, Image1, Image2, Image3, Image4, Image5],
+  // id: 1,
+  images: [Image1, Image2, Image3, Image4, Image2, Image5],
 
-  Location: 'Adigbe, Abeokuta',
-  Price: '10,000',
-  PropertyType: 'Mini Flat',
+  Location: "Adigbe, Abeokuta",
+  Price: "10,000",
+  PropertyType: "Mini Flat",
   BedroomNumber: 3,
   BathroomNumber: 3,
   garage: 1,
   Description:
-    'This 3 Bedroom flat building builtifully built on a plot of land in a lovely secured environment of Adigbe, Abeokuta. It consist of 3 Bedrooms, 3 Bathrooms and 1 Garage.',
+    "This 3 Bedroom flat building builtifully built on a plot of land in a lovely secured environment of Adigbe, Abeokuta. It consist of 3 Bedrooms, 3 Bathrooms and 1 Garage.",
   Amenities: [
-    'Spacious Lounge with Wooden Tiles P.O.P Ceiling',
-    'Aluminium Casement Window with Metal',
-    'Grills',
-    'Open Dining Area',
-    'A bar',
-    'Chandelier Lightning',
-    'All Room En-suits with Full Bath',
-    'Spacious Lounge',
-    'Fully Furnished Kitchen with Store',
-    'Inbuilt Wardrobe',
-    'Ample Parking Space',
-    'Car Port',
-    'Power House',
-    'Electric Fence',
-    'Paved Stones',
+    "Spacious Lounge with Wooden Tiles P.O.P Ceiling",
+    "Aluminium Casement Window with Metal",
+    "Grills",
+    "Open Dining Area",
+    "A bar",
+    "Chandelier Lightning",
+    "All Room En-suits with Full Bath",
+    "Spacious Lounge",
+    "Fully Furnished Kitchen with Store",
+    "Inbuilt Wardrobe",
+    "Ample Parking Space",
+    "Car Port",
+    "Power House",
+    "Electric Fence",
+    "Paved Stones",
   ],
   index: 0,
 };
@@ -51,11 +51,10 @@ const data = {
 const Property = () => {
   const [img, setImg] = useState(data.images[0]);
 
-  // create state to hold the main image
-  // create a function that will be used to update the setImg function
-  // create an onClick handler in imgs
-  // pass an index tro fucntion
-  //
+  const handleImg = (index) => {
+    setImg(data.images[index]);
+    // console.log(index)
+  };
 
   return (
     <div>
@@ -76,13 +75,17 @@ const Property = () => {
           </div>
         </div>
         <div className={classes.imgContainer}>
-          <div className={classes.images1}>
+          <div className={classes.images}>
             <img src={img} alt="image" />
           </div>
           <div className={classes.gridimg}>
             {data.images.map((item, index) => (
-              <div key={index} className={classes.images1}>
-                <img src={item} alt="image" />
+              <div
+                key={index}
+                className={classes.images1}
+                onClick={() => handleImg(index)}
+              >
+                <img src={item} alt="img" />
               </div>
             ))}
           </div>
@@ -116,11 +119,15 @@ const Property = () => {
             <div>
               <ul className={classes.houseFeatures}>
                 <h2>House Features</h2>
-                {data.Amenities}
+                {data.Amenities.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
-          <Card />
+          <div className={classes.card}>
+            <Card />
+          </div>
         </div>
         <div className={classes.similarProperties}>
           <div className={classes.similar}>

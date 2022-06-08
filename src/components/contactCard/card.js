@@ -2,6 +2,8 @@ import React from "react";
 import classes from "./card.module.css";
 import tel from "../../assets/tel.svg";
 import safety from "../../assets/safety.svg";
+import Kunle from "assets/Kunle.png";
+
 
 const Card = () => {
   return (
@@ -9,10 +11,10 @@ const Card = () => {
       <div className={classes.innerContainer}>
         <div className={classes.agentDetails}>
           <div className={classes.imgContainer}>
-            <img src={safety} alt="agent" />
+            <img src={Kunle} alt="agent" />
           </div>
           <h1>
-            Olalekan <span>Aroyehun</span>
+            Adekunle <span>Awotipe</span>
           </h1>
         </div>
         <button className={classes.agentContact}>
