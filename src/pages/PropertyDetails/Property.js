@@ -13,6 +13,8 @@ import Card from "components/contactCard/card";
 import ApartmentCard from "components/ApartmentCard/ApartmentCard";
 import { useState } from "react";
 import apartments from "constant/index";
+import { useEffect } from 'react';
+
 
 const data = {
   images: [Image1, Image2, Image3, Image4, Image2, Image5],
@@ -46,6 +48,11 @@ const data = {
 };
 
 const Property = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [img, setImg] = useState(data.images[0]);
 
   const handleImg = (index) => {
