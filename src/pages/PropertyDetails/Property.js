@@ -1,27 +1,3 @@
-import React from 'react';
-import classes from './Property.module.css';
-import BigImage from 'assets/big_img.svg';
-import Image1 from 'assets/img1.svg';
-import Image2 from 'assets/img2.svg';
-import Image3 from 'assets/img3.svg';
-import Image4 from 'assets/img4.svg';
-import Image5 from 'assets/img5.svg';
-import Image6 from 'assets/img5.svg';
-import bathroom from 'assets/Vector (1).svg';
-import garage from 'assets/Vector (2).svg';
-import bedroom from 'assets/Vector(3).svg';
-import location from 'assets/location.svg';
-import Card from 'components/contactCard/card';
-import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
-// import Array from 'constant/Array';
-import apartments from 'constant';
-import {useEffect} from 'react';
-
-const Property = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
 import classes from "./Property.module.css";
 import BigImage from "assets/toilet.svg";
 import Image1 from "assets/img1.svg";
@@ -37,6 +13,8 @@ import Card from "components/contactCard/card";
 import ApartmentCard from "components/ApartmentCard/ApartmentCard";
 import { useState } from "react";
 import apartments from "constant/index";
+import { useEffect } from 'react';
+
 
 const data = {
   images: [Image1, Image2, Image3, Image4, Image2, Image5],
@@ -70,6 +48,11 @@ const data = {
 };
 
 const Property = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [img, setImg] = useState(data.images[0]);
 
   const handleImg = (index) => {
