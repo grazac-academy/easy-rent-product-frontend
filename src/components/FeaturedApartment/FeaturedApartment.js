@@ -27,3 +27,4 @@ const FeaturedApartment = () => {
   );
 };
 export default FeaturedApartment;
+

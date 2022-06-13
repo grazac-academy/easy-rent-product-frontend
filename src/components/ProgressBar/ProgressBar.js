@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import cancel from '../../assets/cancel.svg';
@@ -12,7 +12,10 @@ const ProgressBar = ({ currTab, presentTab, nextTab }) => {
     return (presentTab.id + 1) * 20;
   }, [presentTab]);
 
+ const [closeBar, setcloseBar] = useState(true); 
+
   return (
+    closeBar&&
     <div className={classes.progressContainer}>
       <div className={classes.innerContainer}>
         <div className={classes.innerProgress}>
@@ -39,7 +42,7 @@ const ProgressBar = ({ currTab, presentTab, nextTab }) => {
           </div>
         </div>
         <div className={classes.cancel}>
-          <img src={cancel} alt="cancel" />
+          { <img src={cancel} alt="cancel"  onClick={ () => setcloseBar(!true)} /> }
         </div>
       </div>
     </div>
