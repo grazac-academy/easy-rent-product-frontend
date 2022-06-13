@@ -81,7 +81,7 @@
     border-radius: 8px;
     background-color: #D3D3F6;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
 
 
@@ -115,10 +115,9 @@
 }
 
 .safety {
+    max-width: 100%;
+    padding: 20px;
     justify-content: center;
-    max-width: 80%;
-    margin: auto;
-    padding-top: 2px;
 
 }
 

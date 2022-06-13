@@ -15,6 +15,7 @@ import DashboardLayout from './layout/Dashboard/DashboardLayout';
 import DashboardOverview from 'pages/Dashboard/DashboardOerview/DashboardOverview';
 import DashboardProperties from 'pages/Dashboard/DashboardProperties/DashboardProperties';
 import DashboardProfile from 'pages/Dashboard/DashboardProfile/DashboardProfile';
+import DashboardPropertiesDetails from 'pages/Dashboard/DashboardPropertiesDetails/DashboardPropertiesDetails'
 import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
 import AOS from 'aos';
@@ -52,6 +53,8 @@ function App() {
           <Route path="properties" element={<DashboardProperties />} />
           <Route path="profile" element={<DashboardProfile />} />
           <Route path="posthouse" element={<DashboardProfile />} />
+          <Route path="dbpropertydetails" element={<DashboardPropertiesDetails/>} />
+          
         </Route>
       </Routes>
     );
