@@ -8,7 +8,7 @@ import ApartmentCard from "components/ApartmentCard/ApartmentCard";
 import { useState } from "react";
 import apartments from "constant/index";
 import data from "constant/Data";
-import {useEffect} from react;
+import {useEffect} from "react";
 
 
 

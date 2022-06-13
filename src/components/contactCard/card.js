@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import classes from "./card.module.css";
 import tel from "../../assets/tel.svg";
 import safety from "../../assets/safety.svg";
