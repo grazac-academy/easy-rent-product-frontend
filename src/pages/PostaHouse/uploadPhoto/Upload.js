@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classes from "./Upload.module.css";
 
 const Upload = () => {
-const [selectedImages, setSelectedImages] = useState[{}];
+// const [selectedImages, setSelectedImages] = useState[{}];
 const onSelectFile = (event) => {
   const selectedFiles = event.target.files; 
   const selectedFilesArray = Array.from(selectedFiles);
@@ -11,7 +11,7 @@ const onSelectFile = (event) => {
     return URL.createObjectURL(file)
   });
 
-setSelectedImages(imagesArray);
+// setSelectedImages(imagesArray);
 
 };
 
