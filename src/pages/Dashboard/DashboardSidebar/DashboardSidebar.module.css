@@ -38,14 +38,14 @@
   background: #06062A;
   border-radius: 10px 0px 0px 10px;
   margin-bottom: 20px;
-
+  color: #717379;
 }
 
 .icon {
   font-size: 25px;
-  color: #f5f5f5;
   margin-right: 10px;
 }
+
 
 .navItemTitle {
   font-family: var(--CircularStd);
@@ -53,7 +53,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
-  color: #f5f5f5;
 }
 
 .active {

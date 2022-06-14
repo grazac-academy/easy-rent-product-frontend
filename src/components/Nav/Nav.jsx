@@ -77,7 +77,7 @@ const Nav = ({ toggle, handleToggle }) => {
             </Link>
             <span className={classes.bt_border}></span>
             <Link to="/signup">
-              <button className={`${classes.loginBtn} ${classes.loginBtn1}`}>Signup</button>
+              <button className={`${classes.loginBtn} ${classes.loginBtn1}`}>Sign Up</button>
             </Link>
             <span className={classes.bt_border}></span>
           </>

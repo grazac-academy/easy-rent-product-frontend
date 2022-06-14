@@ -157,4 +157,30 @@ export const updatePasswordData = [
     value: ''
   },
 ];
+export const updateProfileData = [
+  {
+    id: 1,
+    name: 'Full Name',
+    type: 'text',
+    placeholder: 'Your full name',
+    errorMessage:
+      "Your name is required. It can't be empty and must be at least 3 characters long.",
+    label: 'Last Name',
+    required: true,
+    minLength: { 3: true },
+    value: '',
+  },
+  {
+    id: 2,
+    name: 'phoneNumber',
+    type: 'number',
+    placeholder: 'Enter your 11 digit phone number',
+    errorMessage:
+      "Your number is required. It can't be empty and must be 11 characters long.",
+    label: 'Your Phone Number',
+    required: true,
+    minLength: { 11: true },
+    value: '',
+  },
+]
 
