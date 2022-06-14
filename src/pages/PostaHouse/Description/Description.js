@@ -26,21 +26,25 @@ const Description = ({ setDisabled, info, onchange }) => {
         <div className={classes.DescriptionFlex1}>
           <input
             type="radio"
-            name="desc"
+            name="furnished"
             id="postalCode"
             onChange={(e) => onchange(e, 'furnished')}
-            value={'Yes'}
+            value={"Yes"}
+            checked={info.furnished === 'Yes'}
+            // defaultValue={'Yes'}
           />
           <h3>Yes</h3>
         </div>
         <div className={classes.DescriptionFlex1}>
           <input
             type="radio"
-            name="desc"
+            name="furnished"
             id="postalCode"
             placeholder="Select State"
             onChange={(e) => onchange(e, 'furnished')}
-            value={'No'}
+            value={"No"}
+            checked={info.furnished === 'No'}
+            // defaultValue="No"
           />
           <h3>No</h3>
         </div>
