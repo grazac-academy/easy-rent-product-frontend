@@ -6,7 +6,6 @@ import classes from './ProgressBar.module.css';
 import ChangingProgressProvider from './ChangingProgressProvider';
 
 const ProgressBar = ({ currTab, presentTab, nextTab }) => {
-  console.log(presentTab);
 
   const percent = useMemo(() => {
     return (presentTab.id + 1) * 20;

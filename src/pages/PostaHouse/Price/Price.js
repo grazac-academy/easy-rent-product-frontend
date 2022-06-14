@@ -13,7 +13,7 @@ const Price = ({ setDisabled, price, onchange }) => {
       <div className={classes.Price}>
         <h3>How much do you want to rent out?</h3>
         <input
-          type="text"
+          type="number"
           id="Price"
           placeholder="Input price"
           onChange={(e) => onchange(e, 'amount')}
@@ -29,7 +29,8 @@ const Price = ({ setDisabled, price, onchange }) => {
             id="postalCode"
             name="tag"
             onChange={(e) => onchange(e, 'negotiable')}
-            value={'Yes'}
+                      value={'Yes'}
+            checked={price.negotiable === 'Yes'}
           />
           <h3>Yes</h3>
         </div>
@@ -40,7 +41,8 @@ const Price = ({ setDisabled, price, onchange }) => {
             id="postalCode"
             placeholder="Select State"
             onChange={(e) => onchange(e, 'negotiable')}
-            value={'No'}
+                      value={'No'}
+            checked={price.negotiable === 'No'}
           />
           <h3>No</h3>
         </div>
