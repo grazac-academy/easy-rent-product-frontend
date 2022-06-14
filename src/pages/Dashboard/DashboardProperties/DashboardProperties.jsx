@@ -26,7 +26,7 @@ const DashboardProperties = () => {
     <div className={styles.Container}>
       <div className={styles.overviewTop}>
         <div className={styles.portfolio}>
-          <h1>Welcome, Chris</h1>
+          <h1>My Properties</h1>
           <p>This is your property portfolio report</p>
         </div>
         <form className={styles.searchBar}>
