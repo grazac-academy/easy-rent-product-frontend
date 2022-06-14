@@ -7,7 +7,7 @@ import { advancedSearches } from '../../constant/index.js';
 import Button from 'components/Btn/Btn';
 
 // const copiedSearch = advancedSearches;
-const AdvancedSearch = ({ close }) => {
+const AdvancedSearch = ({ close, getAmenities }) => {
   const [searches, setSearches] = useState([...advancedSearches]);
 
   const handleSelect = (id) => {
@@ -29,6 +29,7 @@ const AdvancedSearch = ({ close }) => {
         return item;
       })
     );
+    getAmenities(selectedSearches);
     return selectedSearches;
   };
   return (
