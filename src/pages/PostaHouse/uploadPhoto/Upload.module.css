@@ -18,6 +18,7 @@
     border: 1px dashed #ACACAC;
     margin:auto;
     padding:auto;
+    
 }
 
 .add1{
@@ -27,6 +28,7 @@
     align-items: center;
     width: 100%;
     margin: 70px auto;
+    cursor: pointer;
 }
 .img{
     width:57px;
@@ -37,6 +39,7 @@
     color: #232323;
     font-weight: bold;
     font-size: 26px;   
+    /* cursor: pointer; */
 }
 .img h1{
     padding: 6px;
@@ -51,6 +54,9 @@
     font-size:16px;
     font-family:var(--CircularStd);
     color:#ACACAC;
+}
+.add1 input {
+    display: none;
 }
 @media screen and (max-width: 475px){
     .UploadText h1{
