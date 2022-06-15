@@ -50,6 +50,7 @@ const Properties = () => {
                   <img src={Toggle} alt="toggle" />
                 )}
               </div>
+            </div>
               {!toggle ? (
                 <div>
                   <div className={classes.dropDown}>
@@ -64,7 +65,6 @@ const Properties = () => {
                   </div>
                 </div>
               ) : null}
-            </div>
           </div>
         </div>
 
