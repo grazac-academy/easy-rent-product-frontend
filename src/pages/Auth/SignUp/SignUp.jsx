@@ -60,7 +60,6 @@ const SignUp = (props) => {
       setShowModal(true);
       navigate('/login'); 
     } catch (error) {
-      setLoading(false);
       console.log(error.response.data.message);
       toast.error(error.response.data.message);
       

@@ -29,7 +29,7 @@ const PostAHouse = () => {
     bedrooms: '',
     bathroom: '',
     toilet: '',
-    others: '',
+    others: [],
     amount: '',
     negotiable: '',
   });
@@ -77,17 +77,20 @@ const PostAHouse = () => {
     setDisabled(true);
   };
 
-  // const gotoHUpload = () => {
-
-  // };
+  const handleAmenities = (amenities) => {
+    setPostHouse({ ...postHouse, others: amenities.map(item => item.value) });
+  };
 
   const handleChange = (e, name) => {
+    console.log(name);
+    console.log(e.target.value);
     setPostHouse({
       ...postHouse,
       [name]: e.target.value,
     });
   };
 
+  console.log(postHouse.others);
   return (
     <div>
       <div className={classes.main}>
@@ -147,6 +150,7 @@ const PostAHouse = () => {
                   others: postHouse.others,
                 }}
                 onchange={handleChange}
+                handleAmenities={handleAmenities}
                 setDisabled={setDisabled}
               />
             )}
