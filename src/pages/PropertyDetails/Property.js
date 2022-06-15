@@ -1,5 +1,4 @@
 import classes from "./Property.module.css";
-
 import bathroom from "assets/Vector (1).svg";
 import garage from "assets/Vector (2).svg";
 import bedroom from "assets/Vector(3).svg";
@@ -10,10 +9,12 @@ import { useState } from "react";
 import apartments from "constant/index";
 import data from "constant/Data";
 
-
-
-
 const Property = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [img, setImg] = useState(data.images[0]);
 
   const handleImg = (index) => {
