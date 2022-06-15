@@ -56,9 +56,6 @@
     background-color: #7453EE;
     margin-top: 50px;
     margin: auto;
-
-
-
 }
 
 .showContact {
@@ -82,12 +79,6 @@
     background-color: #D3D3F6;
     margin-top: 20px;
     margin-bottom: 20px;
-
-
-
-
-
-
 }
 
 .safetyFlex {
@@ -96,7 +87,6 @@
     gap: 5px;
     /* justify-content:center; */
     margin-top: 10px;
-
 }
 
 .safetyFlex p {
@@ -104,14 +94,11 @@
     color: #06062a;
     font-size: 12px;
     font-weight: bold;
-
 }
 
 .safety li {
     font-size: 12px;
     font-family: var(--CircularStd);
-
-
 }
 
 .safety {
@@ -129,8 +116,6 @@
         display: block;
         align-items: center;
         padding-top: 5px;
-
-
     }
 
     .agentDetails h1 {
