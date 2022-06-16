@@ -5,6 +5,7 @@ import Bathroom from 'assets/Bathroom.png';
 import { MdLocationOn, MdBookmarkBorder, MdBookmark } from 'react-icons/md';
 import { useBookmarkState } from 'context/context';
 import { fadeIn } from 'react-animations';
+import { Link } from 'react-router-dom';
 
 const DashboardApartmentCard = ({ item }) => {
   const {
@@ -16,6 +17,7 @@ const DashboardApartmentCard = ({ item }) => {
   };
 
   return (
+    <Link to='/dashboard/dbpropertydetails'>
     <div className={styles.featuredContainer}>
       <div className={styles.featuredcard}>
         <div className={styles.cardimg}>
@@ -54,6 +56,7 @@ const DashboardApartmentCard = ({ item }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
