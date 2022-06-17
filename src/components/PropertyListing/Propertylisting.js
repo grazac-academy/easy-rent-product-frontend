@@ -1,11 +1,12 @@
-import Dropdown from 'components/Dropdown/Dropdown';
+// import Dropdown from 'components/Dropdown/Dropdown';
 import classes from './Propertylisting.module.css';
 import Bedroom from 'assets/bedroom.svg';
 import Bathroom from 'assets/Bathroom.svg';
 import Tag from 'assets/tag.svg';
 import Property from 'assets/property.svg';
 import Button from 'components/Btn/Btn';
-import { bedrooms } from '../../constant/index';
+import { Bedrooms } from '../../constant/index';
+import { Bathrooms } from '../../constant/index';
 
 const propertyListing = (props) => {
   return (
@@ -18,22 +19,22 @@ const propertyListing = (props) => {
           placeholder="Enter an address,neighborhood or city"
         />
       </div>
-      {/* <div className={classes.dropdowns}> */}
-      <Dropdown
-        src={Bedroom}
-        placeholder={'Bedroom'}
-        options={bedrooms}
-        cls={classes.select}
-      />
-      {/* </div> */}
-      {/* <div className={classes.dropdowns}> */}
-      <Dropdown
-        cls={classes.select}
-        src={Bathroom}
-        placeholder={'Bathroom'}
-        options={bedrooms}
-      />
-      {/* </div> */}
+      <div>
+        <img src={Bedroom} alt='bedroom' />
+        <select>
+          {Bedrooms.map((item) => (
+            <option>{item.label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <img src={Bathroom} alt='bathroom' />
+        <select>
+        {Bathrooms.map((item) => (
+          <option>{item.label}</option>
+        ))}
+        </select>
+      </div>
       <div className={classes.inputs}>
         <img src={Tag} />
         <input
