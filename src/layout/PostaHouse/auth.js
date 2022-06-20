@@ -78,7 +78,7 @@ const PostAHouse = () => {
   };
 
   const handleAmenities = (amenities) => {
-    setPostHouse({ ...postHouse, others: amenities.map(item => item.value) });
+    setPostHouse({ ...postHouse, others: amenities.map((item) => item.value) });
   };
 
   const handleChange = (e, name) => {
@@ -116,60 +116,61 @@ const PostAHouse = () => {
               </button>
             ))}
           </div>
-          <div className={classes.SidebarBorder}></div>
 
           <div className={classes.children}>
-            {currTab === 'address' && (
-              <Address
-                details={{
-                  street: postHouse.street,
-                  city: postHouse.city,
-                  state: postHouse.state,
-                }}
-                onchange={handleChange}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'desc' && (
-              <Description
-                info={{
-                  desc: postHouse.desc,
-                  furnished: postHouse.furnished,
-                }}
-                onchange={handleChange}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'features' && (
-              <Features
-                data={{
-                  type: postHouse.type,
-                  bedrooms: postHouse.bedrooms,
-                  bathroom: postHouse.bathroom,
-                  toilet: postHouse.toilet,
-                  others: postHouse.others,
-                }}
-                onchange={handleChange}
-                handleAmenities={handleAmenities}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'price' && (
-              <Price
-                price={{
-                  amount: postHouse.amount,
-                  negotiable: postHouse.negotiable,
-                }}
-                onchange={handleChange}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'photo' && !show && (
-              <Photo setDisabled={setDisabled} />
-            )}
-            {currTab === 'photo' && show && <UploadPhoto />}
-            {/* {cutout == "desc" && <Description />}
+            <div className={classes.children_container}>
+              {currTab === 'address' && (
+                <Address
+                  details={{
+                    street: postHouse.street,
+                    city: postHouse.city,
+                    state: postHouse.state,
+                  }}
+                  onchange={handleChange}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'desc' && (
+                <Description
+                  info={{
+                    desc: postHouse.desc,
+                    furnished: postHouse.furnished,
+                  }}
+                  onchange={handleChange}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'features' && (
+                <Features
+                  data={{
+                    type: postHouse.type,
+                    bedrooms: postHouse.bedrooms,
+                    bathroom: postHouse.bathroom,
+                    toilet: postHouse.toilet,
+                    others: postHouse.others,
+                  }}
+                  onchange={handleChange}
+                  handleAmenities={handleAmenities}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'price' && (
+                <Price
+                  price={{
+                    amount: postHouse.amount,
+                    negotiable: postHouse.negotiable,
+                  }}
+                  onchange={handleChange}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'photo' && !show && (
+                <Photo setDisabled={setDisabled} />
+              )}
+              {currTab === 'photo' && show && <UploadPhoto />}
+              {/* {cutout == "desc" && <Description />}
               {cutout === "photo" && <Price />} */}
+            </div>
           </div>
         </div>
       </div>

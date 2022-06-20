@@ -1,5 +1,5 @@
 .main {
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 .UploadText h1 {
@@ -14,6 +14,7 @@
     color: #ACACAC;
     margin-bottom: 30px;
 }
+
 /* .another {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -46,7 +47,7 @@
     border-radius: 100%;
     color: #232323;
     font-weight: bold;
-    font-size: 26px;   
+    font-size: 26px;
     /* cursor: pointer; */
 }
 
@@ -66,42 +67,50 @@
     font-family: var(--CircularStd);
     color: #ACACAC;
 }
+
 .add1 input {
     display: none;
 }
 
-.position{
+.position {
     margin-bottom: 20px;
     width: 100%;
-    height: auto;
+    /* height: auto; */
     position: relative;
+    flex-grow: 1;
+
 }
+
 .another {
     /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between; */
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 400px;
     gap: 40px;
 }
-.image {
+
+.imagediv {
     width: 100%;
-    margin-right: 10px;
+    /* height: auto;  */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.images{
-    /* display: flex; */
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-    gap: 1rem;
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 100%
 }
-.imagediv{
-    width: 50%;
-}
-.delete{
+
+.delete {
     position: absolute;
-     top: 10px;
-    right: 10px; 
+    top: 10px;
+    right: 10px;
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -109,18 +118,22 @@
     background-color: black;
     font-size: 15px;
     color: white;
-    display:grid;
+    display: grid;
     place-items: center;
 }
-.select{
+
+.select {
     font-size: 18px;
 }
-.error{
+
+.error {
     text-align: center;
 }
-.error span{
+
+.error span {
     color: red;
 }
+
 @media screen and (max-width: 475px) {
     .UploadText h1 {
         font-size: 18px;
