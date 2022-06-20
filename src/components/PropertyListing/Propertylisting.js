@@ -19,7 +19,7 @@ const propertyListing = (props) => {
           placeholder="Enter an address,neighborhood or city"
         />
       </div>
-      <div>
+      <div className={classes.amenities}>
         <img src={Bedroom} alt='bedroom' />
         <select>
           {Bedrooms.map((item) => (
@@ -27,7 +27,7 @@ const propertyListing = (props) => {
           ))}
         </select>
       </div>
-      <div>
+      <div className={classes.amenities}>
         <img src={Bathroom} alt='bathroom' />
         <select>
         {Bathrooms.map((item) => (
