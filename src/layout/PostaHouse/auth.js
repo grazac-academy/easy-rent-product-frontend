@@ -32,6 +32,7 @@ const PostAHouse = () => {
     others: [],
     amount: '',
     negotiable: '',
+    images: [],
   });
 
   useEffect(() => {
@@ -90,7 +91,46 @@ const PostAHouse = () => {
     });
   };
 
-  console.log(postHouse.others);
+  // handle images upload - BEGIN
+  const onSelectFile = (event) => {
+    const selectedFiles = event.target.files;
+    const selectedFilesArray = Array.from(selectedFiles);
+
+    const imagesArray = selectedFilesArray.map((file) => {
+      return { file: file, description: '' };
+    });
+    const updatedHouse = {
+      ...postHouse,
+      images: postHouse.images.concat(imagesArray),
+    };
+    setPostHouse(updatedHouse);
+  };
+
+  const deleteImage = (id) => {
+    const updatedHouse = {
+      ...postHouse,
+      images: postHouse.images.filter((image, index) => index !== id),
+    };
+    setPostHouse(updatedHouse);
+  };
+
+  const handleSelect = (event, id) => {
+    const updatedHouse = {
+      ...postHouse,
+      images: postHouse.images.map((image, index) => {
+        if (index === id) image.description = event.target.value;
+        return image;
+      }),
+    };
+    setPostHouse(updatedHouse);
+  };
+
+  // handle images upload - END
+
+  const handleSubmit = (event) => {
+    alert('API CALL');
+  };
+  console.log(postHouse);
   return (
     <div>
       <div className={classes.main}>
@@ -167,7 +207,14 @@ const PostAHouse = () => {
               {currTab === 'photo' && !show && (
                 <Photo setDisabled={setDisabled} />
               )}
-              {currTab === 'photo' && show && <UploadPhoto />}
+              {currTab === 'photo' && show && (
+                <UploadPhoto
+                  selectedImages={postHouse.images}
+                  handleUpload={onSelectFile}
+                  deleteImage={deleteImage}
+                  handleSelect={handleSelect}
+                />
+              )}
               {/* {cutout == "desc" && <Description />}
               {cutout === "photo" && <Price />} */}
             </div>
@@ -177,7 +224,13 @@ const PostAHouse = () => {
       <Footer
         disabled={disabled}
         button={getButtonText}
-        onClick={presentTab.id < 4 ? gotToNextTab : () => setShow(true)}
+        onClick={
+          presentTab.id < 4
+            ? gotToNextTab
+            : presentTab.id == 4 && show
+            ? handleSubmit
+            : () => setShow(true)
+        }
       />
     </div>
   );
