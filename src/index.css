@@ -61,10 +61,6 @@ nav a.active {
   color: #7453EE !important;
 }
 
-/* .pageItem-active {
-  background-color: #7453EE;
-  color: #FFFFFF;
-} */
 
 .pageItem {
   width: 25px;
@@ -99,4 +95,3 @@ nav a.active {
   background-color: #7453EE;
   color: #FFFFFF;
 }
-
