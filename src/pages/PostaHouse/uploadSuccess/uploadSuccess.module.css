@@ -1,0 +1,9 @@
+.innerSuccess{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.Successimg{
+    margin-bottom: 40px;
+}

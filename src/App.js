@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
 import Login from 'pages/Auth/Login/Login';
+import UploadSuccess from 'pages/PostaHouse/uploadSuccess/uploadSuccess';
 import SignUp from 'pages/Auth/SignUp/SignUp';
 import ResetPassword from 'pages/Auth/ResetPassword/ResetPassword';
 import Property from 'pages/PropertyDetails/Property';
@@ -40,6 +41,8 @@ function App() {
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/updatepassword" element={<UpdatePassword />} />
+          <Route path="/postaHouse/uploadSuccessfully" element={<UploadSuccess />} />
+
         </Routes>
       </Auth>
     );

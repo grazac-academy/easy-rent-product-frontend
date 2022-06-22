@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import classes from './Upload.module.css';
-import Delete from 'assets/delete.svg';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 
 const Upload = ({
@@ -9,29 +8,6 @@ const Upload = ({
   deleteImage,
   handleSelect,
 }) => {
-  // const [selectedImages, setSelectedImages] = useState([]);
-
-  // const onSelectFile = (selectedImages, handleUpload) => {
-  //   const selectedFiles = event.target.files;
-  //   const selectedFilesArray = Array.from(selectedFiles);
-
-  //   const imagesArray = selectedFilesArray.map((file) => {
-  //     return { file: file, description: '' };
-  //   });
-
-  //   setSelectedImages((previousImages) => previousImages.concat(imagesArray));
-  // };
-
-  // console.log(selectedImages);
-
-  // const handleSelect = (event, i) => {
-  //   setSelectedImages(
-  //     selectedImages.map((item, index) => {
-  //       if (index === i) item.description = event.target.value;
-  //       return item;
-  //     })
-  //   );
-  // };
 
   return (
     <div className={classes.main}>
