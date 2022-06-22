@@ -25,9 +25,21 @@
 }
 
 .advanced_icon {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    background-color: rgb(201, 198, 198);
+    color: white;
+    border-radius: 50%;
+   display: flex;
+   font-size: 30px;
+   font-family: 'Circular std book';
+   font-weight: bolder;
+   justify-content: center;
 }
-
+.advanced_icon:hover{
+    background-color: #7453EE;
+}
 .advanced_content {
     margin-top: 30px;
     display: flex;
@@ -47,7 +59,6 @@
     row-gap: 20px;
     column-gap: 20px;
     justify-content: space-between;
-
 }
 
 @media screen and (max-width: 1024px) {

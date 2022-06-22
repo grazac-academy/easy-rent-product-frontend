@@ -1,66 +1,39 @@
 .propertylist {
     display: flex;
-    /* width: 80%; */
     justify-content: space-between;
     align-items: center;
-    gap: 20px
 }
-
-
-.select {
-    align-self: stretch !important;
-    border: 1px solid #06062A !important;
-    /* border: 1px solid #06062A !important; */
-    align-items: center;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.input_email {
-    border: none;
-}
-
-.inputs {
+.inputs, .amenities {
     display: flex;
     align-items: center;
     border: 1px solid #06062A;
     border-radius: 5px;
-    align-self: stretch;
+    justify-content: space-between;
+    padding: 10px 10px;
+    /* align-self: stretch; */
 }
-
-.inputs img {
+.inputs img, .amenities img {
     width: 30px !important;
     height: 30px !important;
     max-width: 30px !important;
     margin-left: 10px;
 }
-
 .inputs input {
-    padding: 0 20px;
+    padding: 0px 40px;
 }
-
 .inputs input:focus {
-    outline: none
-}
-
-.dropdowns {
-    align-self: stretch;
-    border: 1px solid #06062A;
-}
-.amenities{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #06062A;
-    border-radius: 5px;
-    padding: 20px 30px;
-}
+    outline: none;
+    }
 .amenities select{
-        appearance: none;
-        background-image: url(assets/dropdown.svg);
-        background-repeat: no-repeat;
-        background-size: auto 10%;
-        padding: 10px 10px;
-        /* background-position: right 20px center; */
-        background-position: right center;
+    appearance: none;
+    background-image: url(assets/Vector.png);
+    background-repeat: no-repeat;
+    background-size: auto 20%;
+    padding: 0px 30px;
+    font-size: 18px;
+    color: #979797;
+    background-position: right center;
+}
+.amenities select:focus, .amenities input:focus {
+outline: none;
 }

@@ -1,20 +1,23 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import cancel from '../../assets/cancel.svg';
 import classes from './ProgressBar.module.css';
-import ChangingProgressProvider from './ChangingProgressProvider';
+import { useNavigate } from 'react-router-dom';
+// import ChangingProgressProvider from './ChangingProgressProvider';
 
 const ProgressBar = ({ currTab, presentTab, nextTab }) => {
 
   const percent = useMemo(() => {
-    return (presentTab.id + 1) * 20;
+    return (presentTab.id + 1) * 20
   }, [presentTab]);
 
- const [closeBar, setcloseBar] = useState(true); 
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate('/house')
+  }
 
   return (
-    closeBar&&
     <div className={classes.progressContainer}>
       <div className={classes.innerContainer}>
         <div className={classes.innerProgress}>
@@ -41,7 +44,7 @@ const ProgressBar = ({ currTab, presentTab, nextTab }) => {
           </div>
         </div>
         <div className={classes.cancel}>
-          { <img src={cancel} alt="cancel"  onClick={ () => setcloseBar(!true)} /> }
+          { <img src={cancel} alt="cancel"  onClick={handleClick} /> }
         </div>
       </div>
     </div>

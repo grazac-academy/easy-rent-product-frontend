@@ -35,7 +35,7 @@ const propertyListing = (props) => {
         ))}
         </select>
       </div>
-      <div className={classes.inputs}>
+      <div className={classes.amenities}>
         <img src={Tag} />
         <input
           type="text"
