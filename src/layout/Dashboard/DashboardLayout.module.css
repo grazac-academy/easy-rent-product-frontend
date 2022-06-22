@@ -2,11 +2,11 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    position: fixed;
 }
 
 .db_content {
     width: calc(100% - 250px);
+    /* width: 100%; */
 }
 
 .mainOutlet {

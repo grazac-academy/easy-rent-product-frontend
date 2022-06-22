@@ -43,6 +43,7 @@ const DashboardProperties = () => {
         housesPerPage={housesPerPage}
         apartments={apartments.length}
         paginate={paginate}
+        currentPage={currentPage}
       />
     </div>
   );

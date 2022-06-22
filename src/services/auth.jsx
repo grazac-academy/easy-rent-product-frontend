@@ -21,10 +21,11 @@ export const getUserName = async (payload) => {
   const response = baseUrl.post('/getUserName', payload);
   return response;
 };
-export const updatePassword = async (payload) => {
-  const response = baseUrl.patch(
-    '/auth/user/update-password?email=temilolaadeosun15@gmail.com',
-    payload
-  );
+export const updatePassword = async (payload, email) => {
+  const response = baseUrl.patch('/auth/user/update-password', payload);
+  return response;
+};
+export const updateProfile = async (payload, _id) => {
+  const response = baseUrl.patch('/auth/user/update-password', payload);
   return response;
 };

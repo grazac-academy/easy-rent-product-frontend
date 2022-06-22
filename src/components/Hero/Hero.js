@@ -28,10 +28,11 @@ export default class Hero extends Component {
               <div className={classes.Background3}>
               </div>
             </Slider>
-            <div className={classes.heroText} data-aos="fade-up"
-              data-aos-duration="3000">
-              <h4>Find your perfect home Without an agent.</h4>
-              <p>
+            <div className={classes.heroText}>
+              <h4 data-aos="fade-down"
+                data-aos-duration="3000">Find your perfect home Without an agent.</h4>
+              <p data-aos="fade-up"
+                data-aos-duration="3000">
                 EasyRent is the best solution to finding an apartment in Nigeria without
                 any middleman or agents involved. By totally removing the middle man
                 from the cycle, the direct implication is a reduced cost in renting your new home. 

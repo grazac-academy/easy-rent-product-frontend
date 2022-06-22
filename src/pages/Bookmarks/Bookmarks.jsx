@@ -5,17 +5,13 @@ import { useBookmarkState } from 'context/context';
 
 const Bookmarks = () => {
   const {
-    state: { apartments, bookmark },
+    state: { bookmark },
     dispatch,
   } = useBookmarkState();
 
   return (
     <div className={styles.Apartmentlist}>
       <div className={styles.productGrid}>
-        {apartments.slice(0, 6).map((item) => (
-          <ApartmentCard key={item.id} item={item} />
-        ))}
-
         {bookmark.map((item) => (
           <ApartmentCard key={item.id} item={item} />
         ))}

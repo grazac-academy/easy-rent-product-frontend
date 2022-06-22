@@ -123,7 +123,7 @@ export const newPasswordData = [
 ];
 export const updatePasswordData = [
   {
-    id: 1,
+    id: 0,
     name: 'password',
     type: 'password',
     placeholder: 'Password',
@@ -135,8 +135,8 @@ export const updatePasswordData = [
     value: ''
   },
   {
-    id: 2,
-    name: 'password',
+    id: 1,
+    name: 'newPassword',
     type: 'password',
     placeholder: 'Password',
     errorMessage:
@@ -147,8 +147,8 @@ export const updatePasswordData = [
     value: ''
   },
   {
-    id: 3,
-    name: 'confirm password',
+    id: 2,
+    name: 'confirm newPassword',
     type: 'password',
     placeholder: 'Confirm New Password',
     errorMessage: 'Password does not match',
@@ -159,8 +159,20 @@ export const updatePasswordData = [
 ];
 export const updateProfileData = [
   {
+    id: 0,
+    name: 'firstName',
+    type: 'text',
+    placeholder: 'Your full name',
+    errorMessage:
+      "Your name is required. It can't be empty and must be at least 3 characters long.",
+    label: 'Last Name',
+    required: true,
+    minLength: { 3: true },
+    value: '',
+  },
+  {
     id: 1,
-    name: 'Full Name',
+    name: 'lastName',
     type: 'text',
     placeholder: 'Your full name',
     errorMessage:
