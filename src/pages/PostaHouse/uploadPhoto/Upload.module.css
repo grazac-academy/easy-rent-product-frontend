@@ -15,12 +15,6 @@
     margin-bottom: 30px;
 }
 
-/* .another {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 40px;
-} */
-
 .add {
     /* width:611; */
     width: 100%;
@@ -75,37 +69,32 @@
 .position {
     margin-bottom: 20px;
     width: 100%;
-    /* height: auto; */
+    /* margin: auto; */
+    /* height: 100%; */
     position: relative;
     flex-grow: 1;
 
 }
 
 .another {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 400px;
     gap: 40px;
 }
 
 .imagediv {
     width: 100%;
-    /* height: auto;  */
+    /* height: 400px;  */
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 30px;
 }
 
 .image {
     object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-    height: 100%
+    width: 400px;
+    height: 400px;
 }
 
 .delete {
@@ -125,15 +114,10 @@
 
 .select {
     font-size: 18px;
+    margin-bottom: 30px;
+    width: 80%;
 }
 
-.error {
-    text-align: center;
-}
-
-.error span {
-    color: red;
-}
 
 @media screen and (max-width: 475px) {
     .UploadText h1 {

@@ -34,7 +34,7 @@ const Upload = ({
                     <RiDeleteBin6Fill />
                   </div>
                 </div>
-                <select onChange={(event) => handleSelect(event, index)}>
+                <select className={classes.select} onChange={(event) => handleSelect(event, index)}>
                   <option value="">Description</option>
                   <option value="Kitchen"> Kitchen</option>
                   <option value="Bathroom">Bathroom</option>

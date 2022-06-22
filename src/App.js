@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
 import Login from 'pages/Auth/Login/Login';
-import UploadSuccess from 'pages/PostaHouse/uploadSuccess/uploadSuccess';
+import UploadSuccess from 'pages/PostaHouse/UploadSuccess/UploadSuccess';
 import SignUp from 'pages/Auth/SignUp/SignUp';
 import ResetPassword from 'pages/Auth/ResetPassword/ResetPassword';
 import Property from 'pages/PropertyDetails/Property';
@@ -41,8 +41,7 @@ function App() {
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/updatepassword" element={<UpdatePassword />} />
-          <Route path="/postaHouse/uploadSuccessfully" element={<UploadSuccess />} />
-
+          
         </Routes>
       </Auth>
     );
@@ -67,6 +66,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/new" element={<Post />} />
+        <Route path="/uploadSuccess" element={<UploadSuccess />} />
         {/* <Route path="/auth" element={<Post />}>
           <Route path="Address" element={<Address />} />
           <Route path="Description" element={<Description />} />
@@ -78,7 +78,7 @@ function App() {
         <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
-      {!location.pathname.includes('new') && <Footer />}
+      {!location.pathname.includes('new' , 'uploadSuccess')  && <Footer />}
     </>
   );
 }
