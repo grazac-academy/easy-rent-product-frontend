@@ -4,39 +4,42 @@ import styles from './DashboardProfile.module.css';
 import { HiOutlineUserAdd } from 'react-icons/hi';
 import FormGroup from 'components/FormGroup/FormGroup';
 import { updatePasswordData } from 'constant/authData';
-import {updateProfileData } from 'constant/authData';
+import { updateProfileData } from 'constant/authData';
 import Modal from 'components/Modal/Modal';
 import Close from 'assets/close.png';
 import Button from 'components/Button/Button';
 import Loading from 'components/Loading/Loading';
 import { updatePassword } from 'services/auth';
+import { updateProfile } from 'services/auth';
 import { toast } from 'react-toastify';
 
 const DashboardProfile = () => {
   const [updatePasswordForm, setUpdatePasswordForm] =
     useState(updatePasswordData);
   const [updateProfileForm, setUpdateProfileForm] = useState(updateProfileData);
-  
+
   const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [editPassword, setEditPassword] = useState(false);
   const [editProfile, setEditProfile] = useState(false);
   const [uploadPhoto, setUploadPhoto] = useState(false);
 
   const close = () => {
-    setShowModal(false);
+    setEditPassword(false) || setEditProfile(false) || setUploadPhoto(false);
   };
-  const openModal = () => {
-    setShowModal(true);
+
+  const editPasswordHandler = () => {
+    setEditPassword(true);
   };
 
   const editProfileHandler = () => {
     setEditProfile(!editProfile);
   };
+
   const uploadHandler = () => {
     setUploadPhoto(!uploadPhoto);
   };
 
-  const onChange = (e, index) => {
+  const onChangePassword = (e, index) => {
     const updatedArr = updatePasswordForm.map((item, i) => {
       if (i === index) {
         item.value = e.target.value;
@@ -45,8 +48,40 @@ const DashboardProfile = () => {
     });
     setUpdatePasswordForm(updatedArr);
   };
+  const onChangeProfile = (e, index) => {
+    const updatedArr = updateProfileForm.map((item, i) => {
+      if (i === index) {
+        item.value = e.target.value;
+      }
+      return item;
+    });
+    setUpdateProfileForm(updatedArr);
+  };
 
-  const handleSubmit = async (e) => {
+  const handlePhotoUpload = async (e) => {
+    e.preventDefault();
+  };
+  const handleProfileEdit = async (e) => {
+    e.preventDefault();
+    console.log(updatePasswordForm);
+    const data = {};
+    updateProfileForm.map((input) => (data[input.name] = input.value));
+    console.log(data);
+    try {
+      setLoading(true);
+      const response = await updateProfile(data);
+      setLoading(false);
+      // setShowModal(false);
+      toast.success('Profile Updated Successful');
+      console.log(response.data.message);
+    } catch (error) {
+      setLoading(false);
+      // setShowModal(false);
+      toast.error(error.response.data.message);
+    }
+  };
+
+  const handlePasswordChange = async (e) => {
     e.preventDefault();
     console.log(updatePasswordForm);
     const data = {};
@@ -56,10 +91,12 @@ const DashboardProfile = () => {
       setLoading(true);
       const response = await updatePassword(data);
       setLoading(false);
-      setShowModal(false);
-      toast.success('Update Successful');
+      // setShowModal(false);
+      toast.success('Password Successfully Updated');
       console.log(response.data.message);
     } catch (error) {
+      setLoading(false);
+      // setShowModal(false);
       toast.error(error.response.data.message);
     }
   };
@@ -70,6 +107,7 @@ const DashboardProfile = () => {
         <div className={styles.profileFlex}>
           <div className={styles.profileContainer}>
             <div className={styles.profileImage}>
+              {/* <img className={styles.profileImage} src="U" alt></img> */}
               <button className={styles.addImage} onClick={uploadHandler}>
                 <HiOutlineUserAdd />
               </button>
@@ -99,15 +137,15 @@ const DashboardProfile = () => {
             <FormGroup label="Password" placeholder="************" disabled />
           </div>
           <div className={styles.btnDiv}>
-            <button className={styles.btn} onClick={openModal}>
+            <button className={styles.btn} onClick={editPasswordHandler}>
               Edit Password
             </button>
           </div>
         </div>
       </div>
-      {showModal && (
+      {editPassword && (
         <Modal>
-          <form className={styles.modal} onSubmit={handleSubmit}>
+          <form className={styles.modal} onSubmit={handlePasswordChange}>
             <div className={styles.modalContent}>
               <h1 className={styles.title}>Edit Your Password</h1>
               {updatePasswordData.map((input, index) => (
@@ -115,7 +153,7 @@ const DashboardProfile = () => {
                   key={input.id}
                   {...input}
                   updatePasswordForm={updatePasswordForm[input.name]}
-                  onChange={(e) => onChange(e, index)}
+                  onChange={(e) => onChangePassword(e, index)}
                 />
               ))}
               <button onClick={close} className={styles.close}>
@@ -128,7 +166,7 @@ const DashboardProfile = () => {
       )}
       {editProfile && (
         <Modal>
-          <form className={styles.modal} onSubmit={handleSubmit}>
+          <form className={styles.modal} onSubmit={handleProfileEdit}>
             <div className={styles.modalContent}>
               <h1 className={styles.title}>Edit Your Profile</h1>
               {updateProfileData.map((input, index) => (
@@ -136,7 +174,7 @@ const DashboardProfile = () => {
                   key={input.id}
                   {...input}
                   updateProfileForm={updateProfileForm[input.name]}
-                  onChange={(e) => onChange(e, index)}
+                  onChange={(e) => onChangeProfile(e, index)}
                   disabled={input.name === 'email'}
                 />
               ))}
@@ -150,10 +188,20 @@ const DashboardProfile = () => {
       )}
       {uploadPhoto && (
         <Modal>
-          <form className={styles.modal} onSubmit={handleSubmit}>
+          <form className={styles.modal} onSubmit={handlePhotoUpload}>
             <div className={styles.modalContent}>
               <h1 className={styles.title}>Upload Your Profile Picture</h1>
-              <FormGroup placeholder="Drag & drop your file or Browse" type='file' />
+              <div className={styles.profileInputDiv}>
+                <label for="file" className={styles.profileUpload}>
+                  Drag & drop your file or Browse
+                </label>
+                <input
+                  type="file"
+                  id="file"
+                  accept="image/*"
+                  className={styles.input}
+                ></input>
+              </div>
               <button onClick={uploadHandler} className={styles.close}>
                 <img src={Close} alt="close" />
               </button>

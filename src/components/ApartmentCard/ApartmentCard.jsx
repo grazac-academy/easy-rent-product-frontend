@@ -4,25 +4,25 @@ import Bedroom from 'assets/Bedroom.png';
 import Bathroom from 'assets/Bathroom.png';
 import { MdLocationOn, MdBookmarkBorder, MdBookmark } from 'react-icons/md';
 import { useBookmarkState } from '../../context/context';
-import { fadeIn } from 'react-animations';
 import { Link } from 'react-router-dom';
 
 const ApartmentCard = ({ item }) => {
   const {
     state: { bookmark },
     dispatch,
+    isLoggedIn,
   } = useBookmarkState();
+
   const add = () => {
     return dispatch({ type: 'ADD_BOOKMARK', payload: item });
   };
 
   return (
-    <Link to="property">
       <div className={styles.featuredContainer}>
         <div className={styles.featuredcard}>
-          <div className={styles.cardimg}>
+          <Link to='/property' className={styles.cardimg}>
             <img src={item.image} alt="img" />
-          </div>
+          </Link>
           <div className={styles.cardcontent}>
             <div className={styles.apartmentprice}>
               <h1 className={styles.price}>#{item.price}/mo</h1>
@@ -33,7 +33,8 @@ const ApartmentCard = ({ item }) => {
                   <MdLocationOn className={styles.locationicon} />
                   <h3 className={styles.address}>{item.location}</h3>
                 </div>
-                {bookmark.some((p) => p.id === item.id) ? (
+                {isLoggedIn && 
+                (bookmark.some((p) => p.id === item.id) ? (
                   <button
                     className={styles.bookmarkbtn}
                     onClick={() => {
@@ -46,7 +47,7 @@ const ApartmentCard = ({ item }) => {
                   <button className={styles.bookmarkbtn} onClick={add}>
                     <MdBookmarkBorder className={styles.bookmark} />
                   </button>
-                )}
+                ))}
               </div>
               <h2 className={styles.propertytype}>{item.propertyType}</h2>
               <div className={styles.bedbath}>
@@ -67,7 +68,6 @@ const ApartmentCard = ({ item }) => {
           </div>
         </div>
       </div>
-    </Link>
   );
 };
 

@@ -20,6 +20,8 @@ html {
 
 body {
   width: 100%;
+  margin: auto;
+  max-width: 1440px;
   text-decoration: none;
 
 }
@@ -49,19 +51,47 @@ html {
   font-size: 16px;
 }
 
-/* 1024
 
-
-900
-
-
-  768
-
-  425
-
-  375
-*/
 :root {
-  --CircularStd: Circular-Std-500;
+  --CircularStd: 'Circular-Std-500';
   --CircularStdBook: 'Circular Std Book';
+}
+
+nav a.active {
+  color: #7453EE !important;
+}
+
+
+.pageItem {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-family: var(--CircularStd);
+  font-style: normal;
+  font-weight: 450;
+  font-size: 19px;
+  line-height: 24px;
+  color: #263238;
+  margin-left: 10px;
+
+}
+
+.pageItem-active {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-family: var(--CircularStd);
+  font-style: normal;
+  font-weight: 450;
+  font-size: 19px;
+  line-height: 24px;
+  /* color: #263238; */
+  margin-left: 10px;
+  background-color: #7453EE;
+  color: #FFFFFF;
+}
+
+.pageItem:hover {
+  background-color: #7453EE;
+  color: #FFFFFF;
 }

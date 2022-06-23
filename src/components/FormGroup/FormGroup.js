@@ -19,7 +19,8 @@ const FormGroup = ({ label, errorMessage, onChange, id, ...inputProps } ) => {
         onChange={onChange}
         onBlur={handleFocus}
          onFocus={() =>
-        inputProps.name === "password" && setFocused(true)
+           inputProps.name === "password" && setFocused(true)||
+           inputProps.type === "password" && setFocused(true)
         }
         focused={focused.toString()} />
       <span className={styles.error}>{errorMessage}</span>

@@ -51,14 +51,12 @@ const Login = (props) => {
       setLoading(true);
       const response = await loginUser(data);
       toast.success('Welcome to EasyRent!');
-      console.log(response.data.message);
       setIsLoggedIn(true);
-      console.log(response.data.token);
+      console.log(response);
       localStorage.setItem('userToken', response.data.token);
       setLoading(false);
       navigate('/');
     } catch (error) {
-      console.log(error.response.data.message);
       toast.error(error.response.data.message);
     }
   };

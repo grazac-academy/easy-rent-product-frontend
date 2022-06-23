@@ -10,10 +10,6 @@ import { useState } from 'react';
 
 const Nav = ({ toggle, handleToggle }) => {
   const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
-  const [close, setClose] = useState(false);
-  const handleClose = () => {
-    setClose(!close);
-  };
 
   const navigate = useNavigate();
 
@@ -51,7 +47,7 @@ const Nav = ({ toggle, handleToggle }) => {
         </NavLink>
         <span className={classes.bt_border}></span>
 
-        <NavLink to="/bookmark" className={classes.logout}>
+        <NavLink to="/bookmarks" className={classes.logout}>
           Bookmark
         </NavLink>
         <span className={classes.bt_border}></span>
@@ -121,7 +117,7 @@ const Nav = ({ toggle, handleToggle }) => {
             <NavLink to="/dashboard">Dashboard</NavLink>
             <span className={classes.bt_border}></span>
 
-            <NavLink to="/bookmark">Bookmark</NavLink>
+            <NavLink to="/bookmarks">Bookmark</NavLink>
             <span className={classes.bt_border}></span>
 
             <button className={classes.loginBtn} onClick={handleLogout}>
