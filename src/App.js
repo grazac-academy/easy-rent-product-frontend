@@ -1,10 +1,10 @@
 import Header from 'components/Header/Header';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
 import Login from 'pages/Auth/Login/Login';
-import UploadSuccess from 'pages/PostaHouse/UploadSuccess/UploadSuccess';
+import UploadSuccess from 'pages/PostaHouse/uploadSuccess/uploadSuccess';
 import SignUp from 'pages/Auth/SignUp/SignUp';
 import ResetPassword from 'pages/Auth/ResetPassword/ResetPassword';
 import Property from 'pages/PropertyDetails/Property';
@@ -16,15 +16,14 @@ import DashboardLayout from './layout/Dashboard/DashboardLayout';
 import DashboardOverview from 'pages/Dashboard/DashboardOerview/DashboardOverview';
 import DashboardProperties from 'pages/Dashboard/DashboardProperties/DashboardProperties';
 import DashboardProfile from 'pages/Dashboard/DashboardProfile/DashboardProfile';
-import DashboardPropertiesDetails from 'pages/Dashboard/DashboardPropertiesDetails/DashboardPropertiesDetails'
+import DashboardPropertiesDetails from 'pages/Dashboard/DashboardPropertiesDetails/DashboardPropertiesDetails';
 import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 function App() {
-  AOS.init()
+  AOS.init();
   const location = useLocation();
 
   if (
@@ -42,7 +41,6 @@ function App() {
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/updatepassword" element={<UpdatePassword />} />
-          
         </Routes>
       </Auth>
     );
@@ -55,8 +53,10 @@ function App() {
           <Route path="properties" element={<DashboardProperties />} />
           <Route path="profile" element={<DashboardProfile />} />
           <Route path="posthouse" element={<DashboardProfile />} />
-          <Route path="dbpropertydetails" element={<DashboardPropertiesDetails/>} />
-          
+          <Route
+            path="dbpropertydetails"
+            element={<DashboardPropertiesDetails />}
+          />
         </Route>
       </Routes>
     );
@@ -81,7 +81,8 @@ function App() {
         <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
-      {!location.pathname.includes('new') } || {!location.pathname.includes('uploadSuccess') && <Footer />} 
+      {!location.pathname.includes('new')} ||{' '}
+      {!location.pathname.includes('uploadSuccess') && <Footer />}
     </>
   );
 }
