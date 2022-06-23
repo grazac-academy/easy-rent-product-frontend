@@ -78,7 +78,7 @@ function App() {
         <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
-      {!location.pathname.includes('new' , 'uploadSuccess')  && <Footer />}
+      {!location.pathname.includes('new') } || {!location.pathname.includes('uploadSuccess') && <Footer />} 
     </>
   );
 }

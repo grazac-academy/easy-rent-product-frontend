@@ -128,8 +128,10 @@ const PostAHouse = () => {
   // handle images upload - END
 
   const handleSubmit = (event) => {
-    alert('API CALL');
+    navigate('/uploadSuccess')
+    // alert('API CALL') && navigate('/uploadSuccess')
   };
+
   console.log(postHouse);
   return (
     <div>
