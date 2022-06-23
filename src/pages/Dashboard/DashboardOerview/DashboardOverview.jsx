@@ -40,7 +40,7 @@ const DashboardOverview = () => {
             <p>This is your property portfolio report</p>
           </div>
           <div>
-            <Link to='/new?tab=address' className={styles.navItem}>
+            <Link to="/new?tab=address" className={styles.navItem}>
               <div className={styles.icon}>
                 <BiMessageSquareAdd />
               </div>
@@ -57,7 +57,7 @@ const DashboardOverview = () => {
       <div className={styles.Container}>
         <div className={styles.overviewTop}>
           <div className={styles.portfolio}>
-            <h1>Welcome, Chris</h1>
+            <h1>My Properties</h1>
             <p>This is your property portfolio report</p>
           </div>
           <Link to={'/dashboard/properties'} className={styles.viewAll}>

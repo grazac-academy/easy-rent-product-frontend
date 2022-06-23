@@ -1,48 +1,73 @@
-import classes from "./Property.module.css";
+import React from "react";
+import classes from "./DashboardPropertiesDetails.module.css";
 import bathroom from "assets/Vector (1).svg";
 import garage from "assets/Vector (2).svg";
 import bedroom from "assets/Vector(3).svg";
 import location from "assets/location.svg";
-import Card from "components/contactCard/card";
-import ApartmentCard from "components/ApartmentCard/ApartmentCard";
 import { useState } from "react";
-import apartments from "constant/index";
 import data from "constant/Data";
-import {useEffect} from "react";
+import Add from "assets/add.svg";
+import Toggle from "assets/toggle.svg";
 
-
-
-
-const Property = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-
+const Properties = () => {
   const [img, setImg] = useState(data.images[0]);
+  const [toggle, setToggle] = useState(true);
 
   const handleImg = (index) => {
     setImg(data.images[index]);
   };
 
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
-    <div>
+    <div className={classes.main}>
       <div className={classes.innerContainer}>
-        <div className={classes.upperText}>
-          <p>Home/Properties/ BEDROOM FLAT</p>
-          <h3> Bedroom flat</h3>
-        </div>
         <div className={classes.details}>
-          <div className={classes.location}>
-            <img src={location} alt="image" />
-            <p>{data.Location}</p>
+          <div className={classes.upperFlex}>
+            <div className={classes.upperText}>
+              <h3>{data.BedroomNumber} Bedroom flat</h3>
+              <div className={classes[data.css]}>{data.status}</div>
+            </div>
+            <div className={classes.location}>
+              <img src={location} alt="image" />
+              <p>
+                {data.Location}, {data.City}
+              </p>
+            </div>
           </div>
           <div className={classes.amount}>
-            <h3>
-              {data.Price}/<span>mo</span>
-            </h3>
+            <div className={classes.edit}>
+              <div className={classes.editFlex}>
+                <img src={Add} alt="add" />
+                <h3>Edit Property</h3>
+              </div>
+              <div className={classes.toggle} onClick={handleToggle}>
+                {toggle ? (
+                  <img src={Toggle} alt="toggle" />
+                ) : (
+                  <img src={Toggle} alt="toggle" />
+                )}
+              </div>
+            </div>
+              {!toggle ? (
+                <div>
+                  <div className={classes.dropDown}>
+                    <div className={classes.disable}>
+                      <img src={Add} alt="add" />
+                      <h3>Disable</h3>
+                    </div>
+                    <div className={classes.delete}>
+                      <img src={Add} alt="add" />
+                      <h3>Delete</h3>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
           </div>
         </div>
+
         <div className={classes.imgContainer}>
           <div className={classes.images}>
             <img src={img} alt="image" />
@@ -94,18 +119,8 @@ const Property = () => {
               </ul>
             </div>
           </div>
-          <div className={classes.card}>
-            <Card />
-          </div>
-        </div>
-        <div className={classes.similarProperties}>
-          <div className={classes.similar}>
-            <h3>Similar Properties</h3>
-          </div>
-          <div className={classes.array}>
-            {apartments.slice(0, 2).map((item) => (
-              <ApartmentCard key={item.id} item={item} />
-            ))}
+          <div className={classes.Price}>
+            #{data.Price}/<span>mo</span>
           </div>
         </div>
       </div>
@@ -113,4 +128,4 @@ const Property = () => {
   );
 };
 
-export default Property;
+export default Properties;

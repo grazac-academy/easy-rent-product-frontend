@@ -1,3 +1,144 @@
+.main{
+    background-color: #fff;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+    height: 80px;
+    position: relative;
+    margin:auto;
+    background-color: #fff;
+    cursor: pointer;
+}
+.navContainer{
+    display: none;
+    gap: 10px;
+    font-size: 18px;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    height: 100%;
+    cursor:pointer;
+
+}
+.navContainerH{
+    display: flex;
+    gap: 10px;
+    font-size:18px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    cursor:pointer;
+
+}
+.Profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    color: #7453EE;
+    padding-left: 50px;
+
+}
+.dropdownContainer{
+    position: absolute;
+    right:0;
+    top: 5rem;
+    z-index: 1;
+    cursor:pointer;
+    transition: all 3s ease-in-out;
+    box-shadow: 0px 4px 40px #7453;
+
+}
+.mobile{
+    top: 10rem;
+}
+.loginBtn{
+    width:6rem;
+    padding: 10px 15px;
+    border: 2px solid #7453EE;
+    font-size: 18px;
+    font-family: var(--CircularStd);
+    color:black;
+    border-radius:20px;
+    gap: 10px;
+}
+.loginBtn:hover{
+    background-color: #7453EE;
+    color: #fff;
+
+}
+.buttonFlex{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction:row;
+    gap: 10px;
+    margin-left: 20px;
+}
+@media screen and (max-width: 1194px){
+    .Profile{
+        gap: 0px;
+    }
+    .header{
+        width:90%;
+        /* margin:0 50px; */
+    }
+}
+   
+@media screen and (max-width: 1036px){
+    .header{
+        width:90%;
+        margin:auto;
+        gap:40px;
+    }
+   .navContainer{
+       gap: 5px;
+       width:60%;
+   }
+   .navContainer{
+    gap: 5px;
+    width:60%;
+}
+.loginBtn{
+    width:80% ;
+}
+    
+}
+@media screen and (max-width: 884px){
+    .navContainer{
+        /* display:none; */
+        gap: 5px;
+        width: 100%;
+    }
+    .navContainerH{
+        /* display:none; */
+        gap: 5px;
+
+    }
+    .header{
+        width:98%;
+        margin: auto;
+        /* gap:40px; */
+        /* justify-content:center; */
+    }
+
+}
+@media screen and (max-width: 640px){
+    .header{
+        width:80%;
+        margin:auto;
+        
+    }
+    .navContainer{
+       display:none;
+    }
+    .navContainerH{
+        display:none;
+     }
 .main {
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.04);
   position: relative;
@@ -34,7 +175,7 @@
 .hamburger {
   display: none;
 }
-
+}
 
 
 @media screen and (max-width: 1024px) {

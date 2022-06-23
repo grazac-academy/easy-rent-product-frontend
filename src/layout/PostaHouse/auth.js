@@ -79,7 +79,7 @@ const PostAHouse = () => {
   };
 
   const handleAmenities = (amenities) => {
-    setPostHouse({ ...postHouse, others: amenities.map((item) => item.value) });
+    setPostHouse({ ...postHouse, others: amenities.map(item => item.value) });
   };
 
   const handleChange = (e, name) => {

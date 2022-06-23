@@ -1,5 +1,9 @@
 .main {
+<<<<<<< HEAD
     /* max-width: 100%; */
+=======
+    max-width: 100%;
+>>>>>>> main
 }
 
 .UploadText h1 {
@@ -14,6 +18,7 @@
     color: #ACACAC;
     margin-bottom: 30px;
 }
+<<<<<<< HEAD
 
 .add {
     /* width:611; */
@@ -23,6 +28,22 @@
     padding: auto;
 }
 
+=======
+.another {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    gap: 40px;
+}
+
+.add {
+    /* width:611; */
+    width: 100%;
+    border: 1px dashed #ACACAC;
+    margin: auto;
+    padding: auto;
+}
+
+>>>>>>> main
 .add1 {
     display: flex;
     flex-direction: column;
@@ -41,7 +62,11 @@
     border-radius: 100%;
     color: #232323;
     font-weight: bold;
+<<<<<<< HEAD
     font-size: 26px;
+=======
+    font-size: 26px;   
+>>>>>>> main
     /* cursor: pointer; */
 }
 
@@ -61,6 +86,7 @@
     font-family: var(--CircularStd);
     color: #ACACAC;
 }
+<<<<<<< HEAD
 
 .add1 input {
     display: none;
@@ -119,6 +145,11 @@
 }
 
 
+=======
+.add1 input {
+    display: none;
+}
+>>>>>>> main
 @media screen and (max-width: 475px) {
     .UploadText h1 {
         font-size: 18px;
