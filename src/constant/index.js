@@ -187,6 +187,22 @@ export const postHouseRegLinks = [
   //   disabled: true,
   // },
 ];
+export const Bathrooms =[
+  { value: 'Bathrooms', label: 'Bathrooms' },
+  { value: '1', label: '1' },
+  { value: '2', label: '2' },
+  { value: '3', label: '3' },
+  { value: '4', label: '4' },
+  { value: '5', label: '5' },
+]
+export const Bedrooms =[
+  { value: 'Bedrooms', label: 'Bedrooms' },
+  { value: '1', label: '1' },
+  { value: '2', label: '2' },
+  { value: '3', label: '3' },
+  { value: '4', label: '4' },
+  { value: '5', label: '5' },
+]
 export const apartments = [
   {
     id: 1,

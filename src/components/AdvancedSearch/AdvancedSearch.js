@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './AdvancedSearch.css';
 import Modal from 'components/Modal/Modal';
-import Icon from '../../icons/index';
+// import Icon from '../../icons/index';
 import SearchItem from 'components/SearchItem/SearchItem';
 import { advancedSearches } from '../../constant/index.js';
 import Button from 'components/Btn/Btn';
@@ -39,7 +39,7 @@ const AdvancedSearch = ({ close, getAmenities }) => {
           <div className="advanced_header">
             <h5>ADVANCED SEARCH</h5>
             <div className="advanced_icon" onClick={close}>
-              <Icon type="search-cancel" />
+              <p>x</p>
             </div>
           </div>
           <div className="advanced_content">

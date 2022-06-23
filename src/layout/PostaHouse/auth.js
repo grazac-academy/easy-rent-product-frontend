@@ -32,6 +32,7 @@ const PostAHouse = () => {
     others: [],
     amount: '',
     negotiable: '',
+    images: [],
   });
 
   useEffect(() => {
@@ -90,7 +91,48 @@ const PostAHouse = () => {
     });
   };
 
-  console.log(postHouse.others);
+  // handle images upload - BEGIN
+  const onSelectFile = (event) => {
+    const selectedFiles = event.target.files;
+    const selectedFilesArray = Array.from(selectedFiles);
+
+    const imagesArray = selectedFilesArray.map((file) => {
+      return { file: file, description: '' };
+    });
+    const updatedHouse = {
+      ...postHouse,
+      images: postHouse.images.concat(imagesArray),
+    };
+    setPostHouse(updatedHouse);
+  };
+
+  const deleteImage = (id) => {
+    const updatedHouse = {
+      ...postHouse,
+      images: postHouse.images.filter((image, index) => index !== id),
+    };
+    setPostHouse(updatedHouse);
+  };
+
+  const handleSelect = (event, id) => {
+    const updatedHouse = {
+      ...postHouse,
+      images: postHouse.images.map((image, index) => {
+        if (index === id) image.description = event.target.value;
+        return image;
+      }),
+    };
+    setPostHouse(updatedHouse);
+  };
+
+  // handle images upload - END
+
+  const handleSubmit = (event) => {
+    navigate('/uploadSuccess')
+    // alert('API CALL') && navigate('/uploadSuccess')
+  };
+
+  console.log(postHouse);
   return (
     <div>
       <div className={classes.main}>
@@ -116,67 +158,81 @@ const PostAHouse = () => {
               </button>
             ))}
           </div>
-          <div className={classes.SidebarBorder}></div>
 
           <div className={classes.children}>
-            {currTab === 'address' && (
-              <Address
-                details={{
-                  street: postHouse.street,
-                  city: postHouse.city,
-                  state: postHouse.state,
-                }}
-                onchange={handleChange}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'desc' && (
-              <Description
-                info={{
-                  desc: postHouse.desc,
-                  furnished: postHouse.furnished,
-                }}
-                onchange={handleChange}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'features' && (
-              <Features
-                data={{
-                  type: postHouse.type,
-                  bedrooms: postHouse.bedrooms,
-                  bathroom: postHouse.bathroom,
-                  toilet: postHouse.toilet,
-                  others: postHouse.others,
-                }}
-                onchange={handleChange}
-                handleAmenities={handleAmenities}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'price' && (
-              <Price
-                price={{
-                  amount: postHouse.amount,
-                  negotiable: postHouse.negotiable,
-                }}
-                onchange={handleChange}
-                setDisabled={setDisabled}
-              />
-            )}
-            {currTab === 'photo' && !show && (
-              <Photo setDisabled={setDisabled} />
-            )}
-            {currTab === 'photo' && show && <UploadPhoto />}
-            {/* {cutout == "desc" && <Description />}
+            <div className={classes.children_container}>
+              {currTab === 'address' && (
+                <Address
+                  details={{
+                    street: postHouse.street,
+                    city: postHouse.city,
+                    state: postHouse.state,
+                  }}
+                  onchange={handleChange}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'desc' && (
+                <Description
+                  info={{
+                    desc: postHouse.desc,
+                    furnished: postHouse.furnished,
+                  }}
+                  onchange={handleChange}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'features' && (
+                <Features
+                  data={{
+                    type: postHouse.type,
+                    bedrooms: postHouse.bedrooms,
+                    bathroom: postHouse.bathroom,
+                    toilet: postHouse.toilet,
+                    others: postHouse.others,
+                  }}
+                  onchange={handleChange}
+                  handleAmenities={handleAmenities}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'price' && (
+                <Price
+                  price={{
+                    amount: postHouse.amount,
+                    negotiable: postHouse.negotiable,
+                  }}
+                  onchange={handleChange}
+                  setDisabled={setDisabled}
+                />
+              )}
+              {currTab === 'photo' && !show && (
+                <Photo setDisabled={setDisabled} />
+              )}
+              {currTab === 'photo' && show && (
+                <UploadPhoto
+                  selectedImages={postHouse.images}
+                  handleUpload={onSelectFile}
+                  deleteImage={deleteImage}
+                  handleSelect={handleSelect}
+                />
+              )}
+              {/* {cutout == "desc" && <Description />}
               {cutout === "photo" && <Price />} */}
+            </div>
           </div>
         </div>
       </div>
       <Footer
         disabled={disabled}
         button={getButtonText}
-        onClick={presentTab.id < 4 ? gotToNextTab : () => setShow(true)}
+        onClick={
+          presentTab.id < 4
+            ? gotToNextTab
+            : presentTab.id == 4 && show
+            ? handleSubmit
+            : () => setShow(true)
+        }
       />
     </div>
   );

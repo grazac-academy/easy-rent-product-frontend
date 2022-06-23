@@ -1,5 +1,9 @@
 .main {
+<<<<<<< HEAD
+    /* max-width: 100%; */
+=======
     max-width: 100%;
+>>>>>>> main
 }
 
 .UploadText h1 {
@@ -14,6 +18,17 @@
     color: #ACACAC;
     margin-bottom: 30px;
 }
+<<<<<<< HEAD
+
+.add {
+    /* width:611; */
+    width: 100%;
+    border: 1px dashed #ACACAC;
+    margin: auto;
+    padding: auto;
+}
+
+=======
 .another {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
@@ -28,6 +43,7 @@
     padding: auto;
 }
 
+>>>>>>> main
 .add1 {
     display: flex;
     flex-direction: column;
@@ -46,7 +62,11 @@
     border-radius: 100%;
     color: #232323;
     font-weight: bold;
+<<<<<<< HEAD
+    font-size: 26px;
+=======
     font-size: 26px;   
+>>>>>>> main
     /* cursor: pointer; */
 }
 
@@ -66,9 +86,70 @@
     font-family: var(--CircularStd);
     color: #ACACAC;
 }
+<<<<<<< HEAD
+
 .add1 input {
     display: none;
 }
+
+.position {
+    margin-bottom: 20px;
+    width: 100%;
+    /* margin: auto; */
+    /* height: 100%; */
+    position: relative;
+    flex-grow: 1;
+
+}
+
+.another {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.imagediv {
+    width: 100%;
+    /* height: 400px;  */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+.select {
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+
+=======
+.add1 input {
+    display: none;
+}
+>>>>>>> main
 @media screen and (max-width: 475px) {
     .UploadText h1 {
         font-size: 18px;
