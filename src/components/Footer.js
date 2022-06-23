@@ -19,7 +19,7 @@ function Footer() {
               type="text"
               placeholder="Email"
             />
-            <span class="flex items-center bg-white rounded rounded-l-none border-0  font-primary text-grey-100">
+            <span class="flex items-center bg-white rounded rounded-l-none border-0  font-primary p-2 text-grey-100">
               <button class="bg-gredient-dark  bg-button hover:bg-dark text-lg p-2  md:text-lg text-white font-primary md:w-full md:py-3 md:px-6 rounded">
                 Subscribe
               </button>
@@ -27,7 +27,7 @@ function Footer() {
           </form>
         </div>
       </div>
-      <div class="md:flex  flex-cols sm:grid grid-cols-2 gap-10 md:justify-evenly justify-between m-auto md:ml-20 pt-10 md:pb-20 w-4/5  ">
+      <div class="md:flex  flex-cols gap-10 md:justify-evenly justify-between m-auto md:ml-20 pt-10 md:pb-20 w-4/5  ">
         <div class="md:w-1/6">
           <div className="header-logo md:flex flex-cols ">
             <img src={footerLogo} alt="logo" />
@@ -36,7 +36,7 @@ function Footer() {
             <div className=" text-gray-400">
               <img src={location} alt="logo" />
             </div>
-            <h3 className=" text-gray-400 word-break font-primary font-sans  text-xl ">
+            <h3 className=" text-gray-400 word-break font-primary font-sans  text-base ">
               34, Grazac Road Idi-aba, Abeokuta, Ogun
             </h3>
           </div>
@@ -48,8 +48,8 @@ function Footer() {
         </div>
 
         <div>
-          <ul className="cursor-pointer no-underline lg:py-4 text-gray-400 text-xl">
-            <li className="font-primary mb-4 text-white text-2xl">Discover</li>
+          <ul className="cursor-pointer no-underline lg:py-4 text-gray-400 text-base">
+            <li className="font-primary mb-4 text-white text-lg ">Discover</li>
             <li className="mb-4">lagos</li>
             <li className="mb-4">Ogun</li>
             <li className="mb-4">Abuja</li>
@@ -57,8 +57,8 @@ function Footer() {
         </div>
 
         <div>
-          <ul className="cursor-pointer  font-primary text-gray-400 text-xl">
-            <li className="font-head mb-4 md:pt-4  text-white text-2xl">
+          <ul className="cursor-pointer  font-primary text-gray-400 text-base">
+            <li className="font-head mb-4 md:pt-4 text-lg text-white ">
               List of Categories
             </li>
             <li className="mb-4">Apartment</li>
@@ -70,8 +70,8 @@ function Footer() {
         </div>
 
         <div className="">
-          <ul className="cursor-pointer no-underline py-4 text-gray-400 text-xl">
-            <li className="font-primary mb-4 text-white  text-2xl">
+          <ul className="cursor-pointer no-underline py-4 text-gray-400 text-base">
+            <li className="font-primary mb-4 text-white text-lg  ">
               Quick Link
             </li>
 
