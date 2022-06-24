@@ -173,7 +173,7 @@
   height: 60px;
   width: 211px;
   border-radius: 5px;
-  background: #7453ee;
+  background: #E2DAFF;
   justify-items: center;
   font-family: var(--CircularStd);
   color: #fff;
@@ -187,10 +187,10 @@
   height: 60px;
   width: 211px;
   border-radius: 5px;
-  background: #b40606;
+  background: #FFFFCC;
   font-family: var(--CircularStd);
   gap: 10px;
-  color: #fff;
+  color: #F60000;
   font-size: 20px;
   margin-top: 20px;
 }
