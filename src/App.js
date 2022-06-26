@@ -1,5 +1,6 @@
 import Header from 'components/Header/Header';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
@@ -21,10 +22,36 @@ import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useBookmarkState } from 'context/context';
+import { getUserDetails } from 'services/auth'
+import { toast } from 'react-toastify';
+
 
 function App() {
   AOS.init();
   const location = useLocation();
+  const { isLoggedIn, setUser, user } = useBookmarkState();
+  
+  const handleSetUser = async () => {
+    try {
+      const response = await getUserDetails();
+      const loggedUser = response.data.data.loggedUserDetails
+      setUser(response.data.data.loggedUserDetails);
+      console.log (response)
+      // console.log(response.data.data.loggedUserDetails.email);
+      console.log(loggedUser.email)
+    } catch (error) {
+      console.log(error)
+      toast.error('Unable to fetch user details');
+      
+    }
+  };
+
+  useEffect(() => {
+    if (isLoggedIn === true) {
+      handleSetUser();
+    }
+  }, [isLoggedIn])
 
   if (
     location.pathname === '/login' ||

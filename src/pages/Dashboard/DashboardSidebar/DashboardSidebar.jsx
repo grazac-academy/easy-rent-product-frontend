@@ -1,23 +1,34 @@
 import React from 'react';
 import styles from './DashboardSidebar.module.css';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { HiViewGrid } from 'react-icons/hi';
 import { MdDashboard } from 'react-icons/md';
 import { FaUser } from 'react-icons/fa';
 import { MdHouse } from 'react-icons/md';
 import { RiLogoutBoxFill } from 'react-icons/ri';
 import Logo from 'assets/Dashboard/db_logo.png';
 import { useBookmarkState } from 'context/context';
+import { logout } from 'services/auth';
+import { toast } from 'react-toastify';
 
 const DashboardSidebar = () => {
-  const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
+  const {setIsLoggedIn } = useBookmarkState();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    sessionStorage.setItem('userToken', '');
-    sessionStorage.clear();
-    setIsLoggedIn(false);
-    navigate('/');
+  // const handleLogout = () => {
+  //   sessionStorage.setItem('userToken', '');
+  //   sessionStorage.clear();
+  //   setIsLoggedIn(false);
+  //   navigate('/');
+  // };
+  const handleLogout = async () => {
+    try {
+      await logout();
+      setIsLoggedIn(false);
+      navigate('/');
+      toast.success('Logged out successfully');
+    } catch (error) {
+      toast.error("Couldn't logout");
+    }
   };
 
   return (

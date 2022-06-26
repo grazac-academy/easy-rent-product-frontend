@@ -6,12 +6,13 @@ const UserContext = createContext();
 
 const Context = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState('');
   const [state, dispatch] = useReducer(bookmarkReducer, {
     apartments: apartments,
     bookmark: [],   
   });
   return (
-    <UserContext.Provider value={{ state, dispatch, isLoggedIn, setIsLoggedIn }}>
+    <UserContext.Provider value={{ state, dispatch, isLoggedIn, setIsLoggedIn, user, setUser }}>
       {children}
     </UserContext.Provider>
   );

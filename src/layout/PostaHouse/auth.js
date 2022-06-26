@@ -11,8 +11,15 @@ import { postHouseRegLinks } from 'constant';
 import Photo from 'pages/PostaHouse/Photo/Photo';
 import Features from '../../pages/PostaHouse/Features/Features';
 import { useEffect, useMemo, useState } from 'react';
+import { post_House } from 'services/auth';
+import { useBookmarkState } from 'context/context';
+import { toast } from 'react-toastify';
+
+
 
 const PostAHouse = () => {
+    const {user} = useBookmarkState();
+
   const location = useLocation();
   const currTab = location.search.substring(5);
   const [disabled, setDisabled] = useState(true);
@@ -127,8 +134,19 @@ const PostAHouse = () => {
 
   // handle images upload - END
 
-  const handleSubmit = (event) => {
-    navigate('/uploadSuccess')
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await post_House(postHouse, user._id);
+      console.log(response);
+      navigate('/uploadSuccess')
+      toast.success('Apartment added successfully');
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message);
+    }
+    
+    // navigate('/uploadSuccess')
     // alert('API CALL') && navigate('/uploadSuccess')
   };
 

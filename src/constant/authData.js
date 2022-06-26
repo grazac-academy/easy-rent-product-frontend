@@ -100,7 +100,7 @@ export const resetPasswordData = [
 export const newPasswordData = [
   {
     id: 1,
-    name: 'password',
+    name: 'newPassword',
     type: 'password',
     placeholder: 'Password',
     errorMessage:
@@ -112,7 +112,7 @@ export const newPasswordData = [
   },
   {
     id: 2,
-    name: 'confirm password',
+    name: 'confirmPassword',
     type: 'password',
     placeholder: 'Confirm Password',
     errorMessage: 'Password does not match',
@@ -124,7 +124,7 @@ export const newPasswordData = [
 export const updatePasswordData = [
   {
     id: 0,
-    name: 'password',
+    name: 'oldPassword',
     type: 'password',
     placeholder: 'Password',
     errorMessage:
@@ -148,7 +148,7 @@ export const updatePasswordData = [
   },
   {
     id: 2,
-    name: 'confirm newPassword',
+    name: 'confirmPassword',
     type: 'password',
     placeholder: 'Confirm New Password',
     errorMessage: 'Password does not match',
@@ -195,4 +195,3 @@ export const updateProfileData = [
     value: '',
   },
 ]
-

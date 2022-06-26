@@ -13,7 +13,7 @@ import Loading from 'components/Loading/Loading';
 
 const Login = (props) => {
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useBookmarkState();
+  const { setIsLoggedIn} = useBookmarkState();
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loginForm, setLoginForm] = useState(loginData);
@@ -53,10 +53,11 @@ const Login = (props) => {
       toast.success('Welcome to EasyRent!');
       setIsLoggedIn(true);
       console.log(response);
-      localStorage.setItem('userToken', response.data.token);
+      localStorage.setItem('token', response.data.token);
       setLoading(false);
       navigate('/');
     } catch (error) {
+      setLoading(false);
       toast.error(error.response.data.message);
     }
   };
