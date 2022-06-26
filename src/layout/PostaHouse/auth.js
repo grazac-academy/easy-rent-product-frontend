@@ -12,13 +12,13 @@ import Photo from 'pages/PostaHouse/Photo/Photo';
 import Features from '../../pages/PostaHouse/Features/Features';
 import { useEffect, useMemo, useState } from 'react';
 import { post_House } from 'services/auth';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import { toast } from 'react-toastify';
 
 
 
 const PostAHouse = () => {
-    const {user} = useBookmarkState();
+  const { user } = useContextState();
 
   const location = useLocation();
   const currTab = location.search.substring(5);
@@ -145,7 +145,7 @@ const PostAHouse = () => {
       console.log(error.message);
       toast.error(error.message);
     }
-    
+
     // navigate('/uploadSuccess')
     // alert('API CALL') && navigate('/uploadSuccess')
   };
@@ -248,8 +248,8 @@ const PostAHouse = () => {
           presentTab.id < 4
             ? gotToNextTab
             : presentTab.id == 4 && show
-            ? handleSubmit
-            : () => setShow(true)
+              ? handleSubmit
+              : () => setShow(true)
         }
       />
     </div>

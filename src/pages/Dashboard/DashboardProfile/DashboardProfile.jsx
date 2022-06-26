@@ -12,10 +12,10 @@ import Loading from 'components/Loading/Loading';
 import { updatePassword } from 'services/auth';
 import { updateProfile } from 'services/auth';
 import { toast } from 'react-toastify';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 
 const DashboardProfile = () => {
-  const { user } = useBookmarkState();
+  const { user } = useContextState();
   const [updatePasswordForm, setUpdatePasswordForm] =
     useState(updatePasswordData);
   const [updateProfileForm, setUpdateProfileForm] = useState(updateProfileData);

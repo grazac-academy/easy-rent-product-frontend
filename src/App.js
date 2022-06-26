@@ -22,7 +22,7 @@ import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import { getUserDetails } from 'services/auth'
 import { toast } from 'react-toastify';
 
@@ -30,7 +30,7 @@ import { toast } from 'react-toastify';
 function App() {
   AOS.init();
   const location = useLocation();
-  const { isLoggedIn, setUser, user } = useBookmarkState();
+  const { isLoggedIn, setUser, user } = useContextState();
   
   const handleSetUser = async () => {
     try {
@@ -48,7 +48,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (isLoggedIn === true) {
+    if (isLoggedIn) {
       handleSetUser();
     }
   }, [isLoggedIn])

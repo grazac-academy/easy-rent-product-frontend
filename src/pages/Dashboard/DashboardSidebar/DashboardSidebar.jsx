@@ -6,12 +6,12 @@ import { FaUser } from 'react-icons/fa';
 import { MdHouse } from 'react-icons/md';
 import { RiLogoutBoxFill } from 'react-icons/ri';
 import Logo from 'assets/Dashboard/db_logo.png';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import { logout } from 'services/auth';
 import { toast } from 'react-toastify';
 
 const DashboardSidebar = () => {
-  const {setIsLoggedIn } = useBookmarkState();
+  const { setIsLoggedIn } = useContextState();
   const navigate = useNavigate();
 
   // const handleLogout = () => {
@@ -35,8 +35,8 @@ const DashboardSidebar = () => {
     <div className={styles.db_sidebarContainer}>
       <div className={styles.db_sidebar}>
         <Link to="/">
-        <div className={styles.db_sidebarLogo}>
-          <img src={Logo} alt="Logo" />
+          <div className={styles.db_sidebarLogo}>
+            <img src={Logo} alt="Logo" />
           </div>
         </Link>
         <nav className={styles.nav}>

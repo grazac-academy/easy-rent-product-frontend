@@ -7,13 +7,13 @@ import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 import { loginData } from 'constant/authData';
 import { loginUser } from 'services/auth';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import { toast } from 'react-toastify';
 import Loading from 'components/Loading/Loading';
 
 const Login = (props) => {
   const navigate = useNavigate();
-  const { setIsLoggedIn} = useBookmarkState();
+  const { setIsLoggedIn } = useContextState();
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loginForm, setLoginForm] = useState(loginData);

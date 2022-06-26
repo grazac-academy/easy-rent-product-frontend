@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './DashboardOverview.module.css';
-import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { BiMessageSquareAdd } from 'react-icons/bi';
-import { MdHouse } from 'react-icons/md';
 import OverviewCard from './OverviewCard/OverviewCard';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import DashboardApartmentCard from './../DashboardProperties/DashboardApartmentCard/DashboardApartmentCard';
 
 const overviewData = [
@@ -29,7 +27,7 @@ const overviewData = [
 const DashboardOverview = () => {
   const {
     state: { apartments },
-  } = useBookmarkState();
+  } = useContextState();
 
   return (
     <>

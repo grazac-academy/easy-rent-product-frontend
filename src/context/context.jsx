@@ -6,7 +6,7 @@ const UserContext = createContext();
 
 const Context = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState(null);
   const [state, dispatch] = useReducer(bookmarkReducer, {
     apartments: apartments,
     bookmark: [],   
@@ -17,7 +17,7 @@ const Context = ({ children }) => {
     </UserContext.Provider>
   );
 };
-export const useBookmarkState = () => {
+export const useContextState = () => {
   return useContext(UserContext);
 };
 export default Context;

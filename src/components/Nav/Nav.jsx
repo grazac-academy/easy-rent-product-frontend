@@ -1,6 +1,6 @@
 import classes from './Nav.module.css';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
@@ -11,7 +11,7 @@ import { logout } from 'services/auth';
 import { toast } from 'react-toastify';
 
 const Nav = ({ toggle, handleToggle }) => {
-  const { isLoggedIn, setIsLoggedIn, user } = useBookmarkState();
+  const { isLoggedIn, setIsLoggedIn, user } = useContextState();
   const navigate = useNavigate();
   const [click, setclick] = useState(true);
 
@@ -91,7 +91,8 @@ const Nav = ({ toggle, handleToggle }) => {
               {user ? (
                 <h3 className={classes.user}>
                   {user.firstName.charAt(0).toUpperCase() +
-                    user.firstName.slice(1)} {user.lastName.charAt(0).toUpperCase() +
+                    user.firstName.slice(1)}{' '}
+                  {user.lastName.charAt(0).toUpperCase() +
                     user.lastName.slice(1)}
                 </h3>
               ) : (
