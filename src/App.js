@@ -31,19 +31,14 @@ function App() {
   AOS.init();
   const location = useLocation();
   const { isLoggedIn, setUser, user } = useContextState();
-  
+
   const handleSetUser = async () => {
     try {
       const response = await getUserDetails();
       const loggedUser = response.data.data.loggedUserDetails
       setUser(response.data.data.loggedUserDetails);
-      console.log (response)
-      // console.log(response.data.data.loggedUserDetails.email);
-      console.log(loggedUser.email)
     } catch (error) {
-      console.log(error)
       toast.error('Unable to fetch user details');
-      
     }
   };
 

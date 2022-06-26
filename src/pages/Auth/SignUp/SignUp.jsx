@@ -35,8 +35,6 @@ const SignUp = (props) => {
 
   const onChange = (e, index) => {
     const updatedArr = signupForm.map((item, i) => {
-      console.log(item);
-      console.log(index);
       if (i === index) {
         item.value = e.target.value;
       }
@@ -47,21 +45,17 @@ const SignUp = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(signupForm);
     const data = {};
     signupForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
     try {
       setLoading(true);
       const response = await registerUser(data);
       toast.success('Kindly Check your email to verify your account');
-      console.log(response.data.message);
       setLoading(false);
       setShowModal(true);
       navigate('/login'); 
     } catch (error) {
       setLoading(false);
-      console.log(error.response.data.message);
       toast.error(error.response.data.message);
       
     }

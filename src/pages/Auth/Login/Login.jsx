@@ -20,8 +20,6 @@ const Login = (props) => {
 
   const onChange = (e, index) => {
     const updatedArr = loginForm.map((item, i) => {
-      console.log(item);
-      console.log(index);
       if (i === index) {
         item.value = e.target.value;
       }
@@ -45,14 +43,11 @@ const Login = (props) => {
     e.preventDefault();
     const data = {};
     loginForm.forEach((item) => (data[item.name] = item.value));
-    console.log(loginForm);
-    console.log(data);
     try {
       setLoading(true);
       const response = await loginUser(data);
       toast.success('Welcome to EasyRent!');
       setIsLoggedIn(true);
-      console.log(response);
       localStorage.setItem('token', response.data.token);
       setLoading(false);
       navigate('/');

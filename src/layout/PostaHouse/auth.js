@@ -90,8 +90,6 @@ const PostAHouse = () => {
   };
 
   const handleChange = (e, name) => {
-    console.log(name);
-    console.log(e.target.value);
     setPostHouse({
       ...postHouse,
       [name]: e.target.value,
@@ -138,11 +136,9 @@ const PostAHouse = () => {
     event.preventDefault();
     try {
       const response = await post_House(postHouse, user._id);
-      console.log(response);
       navigate('/uploadSuccess')
       toast.success('Apartment added successfully');
     } catch (error) {
-      console.log(error.message);
       toast.error(error.message);
     }
 
@@ -150,7 +146,6 @@ const PostAHouse = () => {
     // alert('API CALL') && navigate('/uploadSuccess')
   };
 
-  console.log(postHouse);
   return (
     <div>
       <div className={classes.main}>

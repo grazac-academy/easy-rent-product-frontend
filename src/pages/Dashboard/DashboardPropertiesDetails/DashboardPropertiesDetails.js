@@ -29,12 +29,10 @@ const Properties = () => {
   const handleDeleteHouse = async () => {
     try {
       const response = await deleteHouse();
-      console.log(response);
       toast.success('House deleted successfully');
       navigate(-1);
-
     } catch (error) {
-      console.log(error);
+      toast.error(error.message);
     }
 
     return (

@@ -25,8 +25,6 @@ const ResetPassword = () => {
 
   const onChange = (e, index) => {
     const updatedArr = resetPasswordForm.map((item, i) => {
-      console.log(item);
-      console.log(index);
       if (i === index) {
         item.value = e.target.value;
       }
@@ -37,22 +35,17 @@ const ResetPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(resetPasswordForm);
     const data = {};
     resetPasswordForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
     try {
       setLoading(true);
       const response = await forgetPassword(data);
-      console.log(response);
       toast.success('Kindly Check your email to verify your account');
       setLoading(false);
       setShowModal(true);
 
     } catch (error) {
-      console.log(error.response.data.message);
       toast.error(error.response.data.message);
-      console.log(error);
     }
   };
   const close = () => {

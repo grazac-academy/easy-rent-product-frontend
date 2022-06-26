@@ -65,31 +65,25 @@ const DashboardProfile = () => {
   };
   const handleProfileEdit = async (e) => {
     e.preventDefault();
-    console.log(updateProfileForm);
     const data = {};
     updateProfileForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
     try {
       setLoading(true);
       const response = await updateProfile(data, user._id);
       setLoading(false);
       setEditProfile(false);
       toast.success('Profile Updated Successful');
-      console.log(response);
     } catch (error) {
       setLoading(false);
       setEditProfile(false);
       toast.error(error.message);
-      console.log(error.message);
     }
   };
 
   const handlePasswordChange = async (e) => {
     e.preventDefault();
-    console.log(updatePasswordForm);
     const data = {};
     updatePasswordForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
     const email = user.email;
 
     try {
@@ -98,11 +92,9 @@ const DashboardProfile = () => {
       setLoading(false);
       setEditPassword(false);
       toast.success('Password Successfully Updated');
-      console.log(response.data.message);
     } catch (error) {
       setLoading(false);
       setEditPassword(false);
-      console.log(error.message);
       toast.error(error.message);
     }
   };
