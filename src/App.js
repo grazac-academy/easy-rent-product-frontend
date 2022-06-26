@@ -92,19 +92,11 @@ function App() {
         <Route path="/property" element={<Property />} />
         <Route path="/new" element={<Post />} />
         <Route path="/uploadSuccess" element={<UploadSuccess />} />
-        {/* <Route path="/auth" element={<Post />}>
-          <Route path="Address" element={<Address />} />
-          <Route path="Description" element={<Description />} />
-          <Route path="Features" element={<Features />} />
-          <Route path="Price" element={<Price />} />
-          <Route path="Photo" element={<Photo />} />
-        </Route> */}
         <Route path="/apartmentlist" element={<Apartmentlist />} />
         <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
-      {!location.pathname.includes('new')} ||{' '}
-      {!location.pathname.includes('uploadSuccess') && <Footer />}
+      {location.pathname.includes('new') || location.pathname.includes('uploadSuccess') ? null : <Footer />}
     </>
   );
 }

@@ -42,7 +42,7 @@ const Nav = ({ toggle, handleToggle }) => {
         <NavLink to="/house">Post a House</NavLink>
         <span className={classes.bt_border}></span>
 
-        <NavLink to="/profile" className={classes.logout}>
+        <NavLink to="/dashboard/profile" className={classes.logout}>
           Profile
         </NavLink>
         <span className={classes.bt_border}></span>
@@ -125,7 +125,7 @@ const Nav = ({ toggle, handleToggle }) => {
       {!click ? (
         <nav className={classes.dropdownContainer} onClick={handleClick}>
           <div className={classes.dropdown}>
-            <NavLink to="/" className={classes.a}>
+            <NavLink to="/dashboard/profile" className={classes.a}>
               Profile
             </NavLink>
             <span className={classes.bt_border}></span>

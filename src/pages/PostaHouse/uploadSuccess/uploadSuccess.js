@@ -12,7 +12,7 @@ const UploadSuccess = () => {
                 <div className={classes.Successimg} >
                     <img src={Success} alt='success' />
                 </div>
-                <Link to='/dashboard'>
+                <Link to='/dashboard' className={classes.btn}>
                     <Btn >Go to Dashboard</Btn>
                 </Link>
             </div>
