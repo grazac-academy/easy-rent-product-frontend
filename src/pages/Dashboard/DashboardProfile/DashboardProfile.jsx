@@ -12,8 +12,10 @@ import Loading from 'components/Loading/Loading';
 import { updatePassword } from 'services/auth';
 import { updateProfile } from 'services/auth';
 import { toast } from 'react-toastify';
+import { useContextState } from 'context/context';
 
 const DashboardProfile = () => {
+  const { user } = useContextState();
   const [updatePasswordForm, setUpdatePasswordForm] =
     useState(updatePasswordData);
   const [updateProfileForm, setUpdateProfileForm] = useState(updateProfileData);
@@ -63,41 +65,37 @@ const DashboardProfile = () => {
   };
   const handleProfileEdit = async (e) => {
     e.preventDefault();
-    console.log(updatePasswordForm);
     const data = {};
     updateProfileForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
     try {
       setLoading(true);
-      const response = await updateProfile(data);
+      const response = await updateProfile(data, user._id);
       setLoading(false);
-      // setShowModal(false);
+      setEditProfile(false);
       toast.success('Profile Updated Successful');
-      console.log(response.data.message);
     } catch (error) {
       setLoading(false);
-      // setShowModal(false);
-      toast.error(error.response.data.message);
+      setEditProfile(false);
+      toast.error(error.message);
     }
   };
 
   const handlePasswordChange = async (e) => {
     e.preventDefault();
-    console.log(updatePasswordForm);
     const data = {};
     updatePasswordForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
+    const email = user.email;
+
     try {
       setLoading(true);
-      const response = await updatePassword(data);
+      const response = await updatePassword(data, email);
       setLoading(false);
-      // setShowModal(false);
+      setEditPassword(false);
       toast.success('Password Successfully Updated');
-      console.log(response.data.message);
     } catch (error) {
       setLoading(false);
-      // setShowModal(false);
-      toast.error(error.response.data.message);
+      setEditPassword(false);
+      toast.error(error.message);
     }
   };
   return (
@@ -113,9 +111,18 @@ const DashboardProfile = () => {
               </button>
             </div>
             <div className={styles.profileInfo}>
-              <h2>John Doe</h2>
-              <p>JohnDoe45@gmail.com</p>
-              <p>+43 673 653 2983</p>
+              {user ? (
+                <h2>
+                  {user.firstName.charAt(0).toUpperCase() +
+                    user.firstName.slice(1)}{' '}
+                  {user.lastName.charAt(0).toUpperCase() +
+                    user.lastName.slice(1)}
+                </h2>
+              ) : (
+                <h2>User Name</h2>
+              )}
+              <p>{user?.email}</p>
+              <p>{user?.phoneNumber}</p>
             </div>
           </div>
           <div className={styles.btnDiv}>

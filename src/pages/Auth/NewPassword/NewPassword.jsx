@@ -15,8 +15,6 @@ const NewPassword = () => {
 
   const onChange = (e, index) => {
     const updatedArr = newPasswordForm.map((item, i) => {
-      console.log(item);
-      console.log(index);
       if (i === index) {
         item.value = e.target.value;
       }
@@ -37,7 +35,6 @@ const NewPassword = () => {
     e.preventDefault();
     const data = {};
     newPasswordForm.map((input) => (data[input.name] = input.value));
-    console.log(data);
     // try {
     //   setLoading(true);
     //   const response = newPassword(data);

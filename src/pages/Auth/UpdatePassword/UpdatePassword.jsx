@@ -21,8 +21,6 @@ const UpdatePassword = () => {
     };
     const onChange = (e, index) => {
         const updatedArr = updatePasswordForm.map((item, i) => {
-            console.log(item);
-            console.log(index);
             if (i === index) {
                 item.value = e.target.value;
             }
@@ -42,17 +40,13 @@ const UpdatePassword = () => {
         e.preventDefault();
         const data = {};
         updatePasswordForm.map((input) => (data[input.name] = input.value));
-        console.log(data);
         try {
             setLoading(true);
             const response = updatePassword(data);
-            console.log(response);
             setLoading(false);
             setShowModal(true);
         } catch (error) {
-            console.log(error.response.data.message);
             toast.error(error.response.data.message);
-            console.log(error);
 
         }
     };

@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './DashboardOverview.module.css';
-import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { BiMessageSquareAdd } from 'react-icons/bi';
-import { MdHouse } from 'react-icons/md';
 import OverviewCard from './OverviewCard/OverviewCard';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import DashboardApartmentCard from './../DashboardProperties/DashboardApartmentCard/DashboardApartmentCard';
 
 const overviewData = [
@@ -28,15 +26,18 @@ const overviewData = [
 
 const DashboardOverview = () => {
   const {
-    state: { apartments },
-  } = useBookmarkState();
+    state: { apartments }, user
+  } = useContextState();
 
   return (
     <>
       <div className={styles.Container}>
         <div className={styles.overviewTop}>
           <div className={styles.portfolio}>
-            <h1>Welcome, Chris</h1>
+            <h1>
+              Welcome,{' '}
+              {user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)}
+            </h1>
             <p>This is your property portfolio report</p>
           </div>
           <div>
