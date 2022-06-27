@@ -4,12 +4,19 @@ import classes from "./card.module.css";
 import tel from "../../assets/tel.svg";
 import safety from "../../assets/safety.svg";
 import Kunle from "assets/testimonial/Kunle.webp";
+import { useContextState } from 'context/context';
+import { useNavigate } from "react-router-dom";
+
 
 const Card = () => {
   const [show, setShow] = useState(true);
   const handleShow = () => {
     setShow(!show);
   };
+
+  const { isLoggedIn } = useContextState();
+  const navigate = useNavigate();
+
 
   return (
     <div className={classes.main}>
@@ -23,16 +30,17 @@ const Card = () => {
           </h1>
         </div>
         <button className={classes.agentContact} onClick={handleShow}>
+
           {show ? (
             <div className={classes.showContact}>
               <img src={tel} alt="tel" />
               <h2>Show Contact</h2>
             </div>
-          ) : (
+          ) : ( isLoggedIn ? (
             <div className={classes.showContact}>
               <img src={tel} alt="tel" />
               <h2>0904456378</h2>
-            </div>
+            </div>) : (navigate("/signup"))
           )}
         </button>
         <div className={classes.safetyTips}>

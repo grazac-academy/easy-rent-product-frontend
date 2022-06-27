@@ -26,7 +26,7 @@ const overviewData = [
 
 const DashboardOverview = () => {
   const {
-    state: { apartments },
+    state: { apartments }, user
   } = useContextState();
 
   return (
@@ -34,7 +34,10 @@ const DashboardOverview = () => {
       <div className={styles.Container}>
         <div className={styles.overviewTop}>
           <div className={styles.portfolio}>
-            <h1>Welcome, Chris</h1>
+            <h1>
+              Welcome,{' '}
+              {user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)}
+            </h1>
             <p>This is your property portfolio report</p>
           </div>
           <div>
