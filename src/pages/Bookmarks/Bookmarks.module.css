@@ -3,6 +3,17 @@
     margin: 3rem auto;
 
 }
+.h1 {
+    text-align: center;
+    font-family: var(--CircularStd);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0 1.5rem 0;
+}
+
 
 .productGrid {
     width: 100%;
