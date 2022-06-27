@@ -84,3 +84,8 @@
     color: #989898;
 
 }
+@media screen and (max-width:760px){
+    .overviewCard{
+        gap:20px;
+    }
+}

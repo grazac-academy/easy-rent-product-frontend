@@ -13,6 +13,7 @@
 .overviewTop {
     padding: 1rem 1rem 0rem 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -20,6 +21,7 @@
 .navItem {
     width: 12rem;
     display: flex;
+    flex-wrap: wrap;
     padding: 14px 25px;
     align-items: center;
     background: #7453EE;
@@ -71,6 +73,7 @@
 .overviewBottom {
     padding: 0 1rem 1rem 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -91,4 +94,9 @@
     grid-gap: 1rem;
     justify-content: space-between;
     padding: 0 1rem 1rem 1rem;
+}
+@media screen and (max-width:760px){
+    .overviewBottom{
+        justify-content: space-evenly;
+    }   
 }

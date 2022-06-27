@@ -1,7 +1,11 @@
 .db_sidebarContainer {
-  width: 250px;
-  height: auto;
+  width: 60%;
+  height: 100vh;
   background: #06062A;
+  left:0;
+  margin-top: 70px;
+  z-index: 100;
+  position: absolute;
 
 }
 
@@ -84,12 +88,6 @@
   font-size: 25px;
   color: #E04646;
   margin-right: 10px;
-}
-@media screen and (max-width:760px) {
-  .db_sidebarContainer {
-    display: none;
-    
-  }
 }
 
 /* .main {
