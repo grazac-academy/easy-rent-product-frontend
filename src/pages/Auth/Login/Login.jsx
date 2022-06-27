@@ -7,21 +7,19 @@ import styles from './Login.module.css';
 import Google from 'components/Button/Google';
 import { loginData } from 'constant/authData';
 import { loginUser } from 'services/auth';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 import { toast } from 'react-toastify';
 import Loading from 'components/Loading/Loading';
 
 const Login = (props) => {
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useBookmarkState();
+  const { setIsLoggedIn } = useContextState();
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loginForm, setLoginForm] = useState(loginData);
 
   const onChange = (e, index) => {
     const updatedArr = loginForm.map((item, i) => {
-      console.log(item);
-      console.log(index);
       if (i === index) {
         item.value = e.target.value;
       }
@@ -45,18 +43,16 @@ const Login = (props) => {
     e.preventDefault();
     const data = {};
     loginForm.forEach((item) => (data[item.name] = item.value));
-    console.log(loginForm);
-    console.log(data);
     try {
       setLoading(true);
       const response = await loginUser(data);
       toast.success('Welcome to EasyRent!');
       setIsLoggedIn(true);
-      console.log(response);
-      localStorage.setItem('userToken', response.data.token);
+      localStorage.setItem('token', response.data.token);
       setLoading(false);
       navigate('/');
     } catch (error) {
+      setLoading(false);
       toast.error(error.response.data.message);
     }
   };

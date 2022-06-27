@@ -5,14 +5,14 @@ import Verified from 'components/Verified/Verified';
 import Faq from "components/Faq/Faq";
 import PostHouseSteps from "components/PostHouse/PostHouseSteps";
 import { Link } from "react-router-dom";
-import { useBookmarkState } from "context/context";
+import { useContextState } from "context/context";
 
 
 
-function House() {  
-  const { isLoggedIn } = useBookmarkState();
+function House() {
+  const { isLoggedIn } = useContextState();
 
-  
+
   return (
     <>
       <div className={classes.main}>

@@ -1,5 +1,6 @@
 import Header from 'components/Header/Header';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from 'pages/Home/Home';
 import Auth from './layout/Auth/Auth';
@@ -21,10 +22,31 @@ import Bookmarks from 'pages/Bookmarks/Bookmarks';
 import House from './pages/House/House';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useContextState } from 'context/context';
+import { getUserDetails } from 'services/auth'
+import { toast } from 'react-toastify';
+
 
 function App() {
   AOS.init();
   const location = useLocation();
+  const { isLoggedIn, setUser, user } = useContextState();
+
+  const handleSetUser = async () => {
+    try {
+      const response = await getUserDetails();
+      const loggedUser = response.data.data.loggedUserDetails
+      setUser(response.data.data.loggedUserDetails);
+    } catch (error) {
+      toast.error('Unable to fetch user details');
+    }
+  };
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      handleSetUser();
+    }
+  }, [isLoggedIn])
 
   if (
     location.pathname === '/login' ||
@@ -70,19 +92,11 @@ function App() {
         <Route path="/property" element={<Property />} />
         <Route path="/new" element={<Post />} />
         <Route path="/uploadSuccess" element={<UploadSuccess />} />
-        {/* <Route path="/auth" element={<Post />}>
-          <Route path="Address" element={<Address />} />
-          <Route path="Description" element={<Description />} />
-          <Route path="Features" element={<Features />} />
-          <Route path="Price" element={<Price />} />
-          <Route path="Photo" element={<Photo />} />
-        </Route> */}
         <Route path="/apartmentlist" element={<Apartmentlist />} />
         <Route path="/house" element={<House />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
-      {!location.pathname.includes('new')} ||{' '}
-      {!location.pathname.includes('uploadSuccess') && <Footer />}
+      {location.pathname.includes('new') || location.pathname.includes('uploadSuccess') ? null : <Footer />}
     </>
   );
 }

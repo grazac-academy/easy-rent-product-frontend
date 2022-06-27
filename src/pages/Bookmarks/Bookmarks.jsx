@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './Bookmarks.module.css';
 import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 
 const Bookmarks = () => {
   const {
-    state: { bookmark },
-    dispatch,
-  } = useBookmarkState();
+    state: { bookmark }
+  } = useContextState();
 
   return (
     <div className={styles.Apartmentlist}>

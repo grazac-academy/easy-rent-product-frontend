@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from './DashboardProperties.module.css'
-import { IoSearchOutline } from 'react-icons/io5'
-import { useBookmarkState } from 'context/context';
+import React from 'react';
+import styles from './DashboardProperties.module.css';
+import { IoSearchOutline } from 'react-icons/io5';
+import { useContextState } from 'context/context';
 import DashboardApartmentCard from './../DashboardProperties/DashboardApartmentCard/DashboardApartmentCard';
 import { useState } from 'react';
 import Pagination from 'components/Pagination/Pagination';
@@ -9,18 +9,17 @@ import Pagination from 'components/Pagination/Pagination';
 const DashboardProperties = () => {
   const {
     state: { apartments },
-  } = useBookmarkState();
+  } = useContextState();
 
   // const [houses, sethouses] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [housesPerPage] = useState(8);
 
+  const indexOfLasthouse = currentPage * housesPerPage;
+  const indexOfFirsthouse = indexOfLasthouse - housesPerPage;
+  const currentHouses = apartments.slice(indexOfFirsthouse, indexOfLasthouse);
 
-   const indexOfLasthouse = currentPage * housesPerPage;
-   const indexOfFirsthouse = indexOfLasthouse - housesPerPage;
-   const currentHouses = apartments.slice(indexOfFirsthouse, indexOfLasthouse);
-
- const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className={styles.Container}>
@@ -47,6 +46,6 @@ const DashboardProperties = () => {
       />
     </div>
   );
-}
+};
 
-export default DashboardProperties
+export default DashboardProperties;
