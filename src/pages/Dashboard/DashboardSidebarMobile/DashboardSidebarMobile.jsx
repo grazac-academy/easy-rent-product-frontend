@@ -7,10 +7,10 @@ import { FaUser } from 'react-icons/fa';
 import { MdHouse } from 'react-icons/md';
 import { RiLogoutBoxFill } from 'react-icons/ri';
 import Logo from 'assets/Dashboard/db_logo.png';
-import { useBookmarkState } from 'context/context';
+import { useContextState } from 'context/context';
 
 const DashboardSidebarMobile = () => {
-  const { isLoggedIn, setIsLoggedIn } = useBookmarkState();
+  const { isLoggedIn, setIsLoggedIn } = useContextState();
   const navigate = useNavigate();
 
   const handleLogout = () => {
