@@ -138,7 +138,9 @@ const PostAHouse = () => {
       const response = await post_House(postHouse, user._id);
       navigate('/uploadSuccess')
       toast.success('Apartment added successfully');
+      console.log(response)
     } catch (error) {
+      console.log(error)
       toast.error(error.message);
     }
 

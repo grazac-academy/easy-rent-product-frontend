@@ -89,6 +89,12 @@ const Login = (props) => {
         <Button>{loading ? <Loading /> : 'Login'}</Button>
       </form>
       <Google />
+      <p className={styles.p3}>
+        You're new here?
+        <Link to="/signup">
+          <span className={styles.rent}> Create Account</span>
+        </Link>
+      </p>
     </>
   );
 };

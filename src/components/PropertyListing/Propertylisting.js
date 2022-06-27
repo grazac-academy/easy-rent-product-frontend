@@ -10,6 +10,7 @@ import { Bathrooms } from '../../constant/index';
 
 const propertyListing = (props) => {
   return (
+    <div className={classes.propertylistDiv}>
     <div className={classes.propertylist}>
       <div className={classes.inputs}>
         <img src={Property} />
@@ -35,7 +36,7 @@ const propertyListing = (props) => {
         ))}
         </select>
       </div>
-      <div className={classes.amenities}>
+      <div className={classes.priceInput}>
         <img src={Tag} />
         <input
           type="text"
@@ -43,8 +44,9 @@ const propertyListing = (props) => {
           placeholder="₦0 - ₦850,000"
         />
       </div>
-      <Button btnType="btn_search">Search</Button>
     </div>
+      <Button btnType="btn_search">Search</Button>
+  </div>
   );
 };
 export default propertyListing;
