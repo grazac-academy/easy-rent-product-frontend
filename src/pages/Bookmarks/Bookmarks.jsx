@@ -11,6 +11,7 @@ const Bookmarks = () => {
 
   return (
     <div className={styles.Apartmentlist}>
+      <h1 className={styles.h1}>Bookmarks</h1>
       <div className={styles.productGrid}>
         {bookmark.map((item) => (
           <ApartmentCard key={item.id} item={item} />
