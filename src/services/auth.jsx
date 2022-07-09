@@ -40,13 +40,18 @@ export const updateProfile = async (payload, id) => {
   return response;
 };
 //Post a house API request
-export const post_House = async (payload, id) => {
-  const response = baseUrl.post(`/addHouse?_id=${id}`, payload);
+export const post_House = async (payload) => {
+  const response = baseUrl.post('/addHouse', payload);
   return response;
 };
 //View all houses API request
-export const viewAllHouses = async (id) => {
-  const response = baseUrl.get(`/viewHouse?_id=${id}`);
+export const viewAllHouses = async () => {
+  const response = baseUrl.get('/view-propertyDetails');
+  return response;
+};
+//View a house detail API request
+export const viewHouseDetail = async () => {
+  const response = baseUrl.get('/viewHouse/');
   return response;
 };
 //Edit house API request

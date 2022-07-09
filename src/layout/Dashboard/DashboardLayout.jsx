@@ -9,25 +9,13 @@ import { FaTimes, FaBars } from "react-icons/fa";
 
 const DashboardLayout = () => {
   const [toggle, setToggle] = useState(true);
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
+ 
 
   return (
     <div className={styles.db_container}>
-      {toggle ? (
-        <button onClick={handleToggle} className={styles.hamburger}>
-          <FaBars />
-        </button>
-      ) : (
-        <button onClick={handleToggle} className={styles.hamburger}>
-          <FaTimes />
-        </button>
-      )}
       {!toggle ? <DashboardSidebarMobile /> : <DashboardSidebar />}
-
       <div className={styles.db_content}>
-        <DashboardHeader />
+        <DashboardHeader  toggle={toggle} setToggle={setToggle} />
         <main className={styles.mainOutlet}>
           <Outlet />
         </main>

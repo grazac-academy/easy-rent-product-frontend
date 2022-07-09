@@ -3,7 +3,7 @@ import styles from './ApartmentCard.module.css';
 import Bedroom from 'assets/Bedroom.png';
 import Bathroom from 'assets/Bathroom.png';
 import { MdLocationOn, MdBookmarkBorder, MdBookmark } from 'react-icons/md';
-import { useContextState } from '../../context/context';
+import { useContextState } from 'context/context';
 import { Link } from 'react-router-dom';
 
 const ApartmentCard = ({ item }) => {
@@ -20,7 +20,7 @@ const ApartmentCard = ({ item }) => {
   return (
     <div className={styles.featuredContainer}>
       <div className={styles.featuredcard}>
-        <Link to="/property" className={styles.cardimg}>
+        <Link to={`/apartmentlist/${item.id}`} className={styles.cardimg}>
           <img src={item.image} alt="img" />
         </Link>
         <div className={styles.cardcontent}>

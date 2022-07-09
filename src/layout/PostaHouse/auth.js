@@ -1,7 +1,7 @@
 import Footer from 'components/PostaHouseFooter/footer';
 import React from 'react';
 import classes from './auth.module.css';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Address from 'pages/PostaHouse/Address/Address';
 import Description from 'pages/PostaHouse/Description/Description';
 import Price from 'pages/PostaHouse/Price/Price';
@@ -12,14 +12,9 @@ import Photo from 'pages/PostaHouse/Photo/Photo';
 import Features from '../../pages/PostaHouse/Features/Features';
 import { useEffect, useMemo, useState } from 'react';
 import { post_House } from 'services/auth';
-import { useContextState } from 'context/context';
 import { toast } from 'react-toastify';
 
-
-
 const PostAHouse = () => {
-  const { user } = useContextState();
-
   const location = useLocation();
   const currTab = location.search.substring(5);
   const [disabled, setDisabled] = useState(true);
@@ -27,30 +22,30 @@ const PostAHouse = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [postHouse, setPostHouse] = useState({
-    street: '',
+    address: '',
     city: '',
     state: '',
-    desc: '',
-    furnished: '',
-    type: '',
-    bedrooms: '',
+    description: '',
+    isItFurnished: '',
+    propertyType: '',
+    bedroom: '',
     bathroom: '',
     toilet: '',
-    others: [],
-    amount: '',
+    amenities: [],
+    price: '',
     negotiable: '',
-    images: [],
+    photos: [],
   });
 
   useEffect(() => {
     if (!currTab) {
       navigate('/new?tab=address');
     }
-  }, [currTab]);
+  }, [currTab, navigate]);
 
   const presentTab = useMemo(() => {
     return buttonLinks.find((item) => item.tab === currTab);
-  }, [currTab]);
+  }, [currTab, buttonLinks]);
 
   const nextTab = useMemo(() => {
     const presentTabIndex = buttonLinks.findIndex(
@@ -60,7 +55,7 @@ const PostAHouse = () => {
       return buttonLinks[presentTabIndex];
     }
     return buttonLinks[presentTabIndex + 1];
-  }, [currTab]);
+  }, [currTab, buttonLinks]);
 
   const getButtonText = useMemo(() => {
     if (presentTab.id < 4) {
@@ -70,7 +65,7 @@ const PostAHouse = () => {
     } else {
       return 'Done';
     }
-  }, [currTab, show]);
+  }, [show, presentTab]);
   const gotToNextTab = () => {
     navigate(`/new?tab=${nextTab.tab}`);
     setButtonLinks(
@@ -86,7 +81,10 @@ const PostAHouse = () => {
   };
 
   const handleAmenities = (amenities) => {
-    setPostHouse({ ...postHouse, others: amenities.map(item => item.value) });
+    setPostHouse({
+      ...postHouse,
+      amenities: amenities.map((item) => item.value),
+    });
   };
 
   const handleChange = (e, name) => {
@@ -106,7 +104,7 @@ const PostAHouse = () => {
     });
     const updatedHouse = {
       ...postHouse,
-      images: postHouse.images.concat(imagesArray),
+      photos: postHouse.photos.concat(imagesArray),
     };
     setPostHouse(updatedHouse);
   };
@@ -114,7 +112,7 @@ const PostAHouse = () => {
   const deleteImage = (id) => {
     const updatedHouse = {
       ...postHouse,
-      images: postHouse.images.filter((image, index) => index !== id),
+      photos: postHouse.photos.filter((image, index) => index !== id),
     };
     setPostHouse(updatedHouse);
   };
@@ -122,7 +120,7 @@ const PostAHouse = () => {
   const handleSelect = (event, id) => {
     const updatedHouse = {
       ...postHouse,
-      images: postHouse.images.map((image, index) => {
+      photos: postHouse.photos.map((image, index) => {
         if (index === id) image.description = event.target.value;
         return image;
       }),
@@ -134,14 +132,20 @@ const PostAHouse = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(postHouse);
     try {
-      const response = await post_House(postHouse, user._id);
-      navigate('/uploadSuccess')
+      const formdata = new FormData();
+      for (let key in postHouse) {
+        formdata.append(key, postHouse[key]);
+      }
+      const response = await post_House(formdata);
+      navigate('/uploadSuccess');
       toast.success('Apartment added successfully');
-      console.log(response)
+      console.log(response);
     } catch (error) {
-      console.log(error)
+      console.log(error);
       toast.error(error.message);
+      // toast.error(error.data.message);
     }
 
     // navigate('/uploadSuccess')
@@ -179,7 +183,7 @@ const PostAHouse = () => {
               {currTab === 'address' && (
                 <Address
                   details={{
-                    street: postHouse.street,
+                    address: postHouse.address,
                     city: postHouse.city,
                     state: postHouse.state,
                   }}
@@ -190,8 +194,8 @@ const PostAHouse = () => {
               {currTab === 'desc' && (
                 <Description
                   info={{
-                    desc: postHouse.desc,
-                    furnished: postHouse.furnished,
+                    description: postHouse.description,
+                    isItFurnished: postHouse.isItFurnished,
                   }}
                   onchange={handleChange}
                   setDisabled={setDisabled}
@@ -200,11 +204,11 @@ const PostAHouse = () => {
               {currTab === 'features' && (
                 <Features
                   data={{
-                    type: postHouse.type,
-                    bedrooms: postHouse.bedrooms,
+                    propertyType: postHouse.propertyType,
+                    bedroom: postHouse.bedroom,
                     bathroom: postHouse.bathroom,
                     toilet: postHouse.toilet,
-                    others: postHouse.others,
+                    others: postHouse.amenities,
                   }}
                   onchange={handleChange}
                   handleAmenities={handleAmenities}
@@ -214,7 +218,7 @@ const PostAHouse = () => {
               {currTab === 'price' && (
                 <Price
                   price={{
-                    amount: postHouse.amount,
+                    price: postHouse.price,
                     negotiable: postHouse.negotiable,
                   }}
                   onchange={handleChange}
@@ -226,7 +230,7 @@ const PostAHouse = () => {
               )}
               {currTab === 'photo' && show && (
                 <UploadPhoto
-                  selectedImages={postHouse.images}
+                  selectedImages={postHouse.photos}
                   handleUpload={onSelectFile}
                   deleteImage={deleteImage}
                   handleSelect={handleSelect}
@@ -244,9 +248,9 @@ const PostAHouse = () => {
         onClick={
           presentTab.id < 4
             ? gotToNextTab
-            : presentTab.id == 4 && show
-              ? handleSubmit
-              : () => setShow(true)
+            : presentTab.id === 4 && show
+            ? handleSubmit
+            : () => setShow(true)
         }
       />
     </div>

@@ -3,7 +3,7 @@ import classes from './Price.module.css';
 
 const Price = ({ setDisabled, price, onchange }) => {
   useEffect(() => {
-    if (price.amount && price.negotiable) {
+    if (price.price && price.negotiable) {
       setDisabled(false);
     } else setDisabled(true);
   }, [price]);
@@ -16,8 +16,8 @@ const Price = ({ setDisabled, price, onchange }) => {
           type="number"
           id="Price"
           placeholder="Input price"
-          onChange={(e) => onchange(e, 'amount')}
-          value={price.amount}
+          onChange={(e) => onchange(e, 'price')}
+          value={price.price}
         />
         <p>Note: Ensure you include your 5% earnings to this cost</p>
       </div>
@@ -29,7 +29,7 @@ const Price = ({ setDisabled, price, onchange }) => {
             id="postalCode"
             name="tag"
             onChange={(e) => onchange(e, 'negotiable')}
-                      value={'Yes'}
+            value={'Yes'}
             checked={price.negotiable === 'Yes'}
           />
           <h3>Yes</h3>
@@ -41,7 +41,7 @@ const Price = ({ setDisabled, price, onchange }) => {
             id="postalCode"
             placeholder="Select State"
             onChange={(e) => onchange(e, 'negotiable')}
-                      value={'No'}
+            value={'No'}
             checked={price.negotiable === 'No'}
           />
           <h3>No</h3>

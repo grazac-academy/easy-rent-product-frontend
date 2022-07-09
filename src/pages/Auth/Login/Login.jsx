@@ -70,6 +70,7 @@ const Login = (props) => {
             {...input}
             loginForm={loginForm[input.name]}
             onChange={(e) => onChange(e, index)}
+            
           />
         ))}
 

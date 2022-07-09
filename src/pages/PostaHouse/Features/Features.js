@@ -7,9 +7,9 @@ import { propertyTypes, bedrooms } from 'constant/index';
 const Features = ({ setDisabled, data, onchange, handleAmenities }) => {
   useEffect(() => {
     if (
-      data.type &&
-      data.bedrooms &&
-      data.bedrooms &&
+      data.propertyType &&
+      data.bedroom &&
+      data.bedroom &&
       data.bathroom &&
       data.toilet &&
       data.others.length > 0
@@ -17,7 +17,7 @@ const Features = ({ setDisabled, data, onchange, handleAmenities }) => {
       setDisabled(false);
     } else setDisabled(true);
     // setDisabled(false);
-  }, [data]);
+  }, [data, setDisabled]);
 
   const [show, setShow] = useState(false);
 
@@ -25,7 +25,10 @@ const Features = ({ setDisabled, data, onchange, handleAmenities }) => {
     <div className={classes.mainContainer}>
       <div className={classes.Features}>
         <h3>Property type</h3>
-        <select onChange={(e) => onchange(e, 'type')} value={data.type}>
+        <select
+          onChange={(e) => onchange(e, 'propertyType')}
+          value={data.propertyType}
+        >
           {propertyTypes.map((item) => (
             <option>{item.label}</option>
           ))}
@@ -34,10 +37,7 @@ const Features = ({ setDisabled, data, onchange, handleAmenities }) => {
       <div className={classes.FeaturesFlex}>
         <div className={classes.FeaturesFlex1}>
           <h3>Bedroom</h3>
-          <select
-            onChange={(e) => onchange(e, 'bedrooms')}
-            value={data.bedrooms}
-          >
+          <select onChange={(e) => onchange(e, 'bedroom')} value={data.bedroom}>
             {bedrooms.map((item) => (
               <option>{item.label}</option>
             ))}

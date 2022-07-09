@@ -23,30 +23,45 @@ import House from './pages/House/House';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useContextState } from 'context/context';
-import { getUserDetails } from 'services/auth'
+import { getUserDetails } from 'services/auth';
 import { toast } from 'react-toastify';
-
+import { viewAllHouses } from 'services/auth';
+import ProtectedRoutes from 'routes/ProtectedRoutes';
 
 function App() {
   AOS.init();
   const location = useLocation();
-  const { isLoggedIn, setUser, user } = useContextState();
+  const { isLoggedIn, setUser, setHouses } = useContextState();
 
   const handleSetUser = async () => {
     try {
       const response = await getUserDetails();
-      const loggedUser = response.data.data.loggedUserDetails
       setUser(response.data.data.loggedUserDetails);
     } catch (error) {
       toast.error('Unable to fetch user details');
     }
   };
 
+  const handleAllHouses = async () => {
+    try {
+      const response = await viewAllHouses();
+      setHouses(response.data.data.propertyDetails);
+      toast.success('Houses fetched successfully');
+    } catch (error) {
+      toast.error('Unable to fetch houses');
+    }
+  };
+
+  // const handleHouseDetails = async () => {
+  //   try {
+  //     const response = await viewAllHouses();
+
   useEffect(() => {
     if (isLoggedIn) {
       handleSetUser();
+      handleAllHouses();
     }
-  }, [isLoggedIn])
+  }, [isLoggedIn]);
 
   if (
     location.pathname === '/login' ||
@@ -69,16 +84,18 @@ function App() {
   } else if (location.pathname.includes('/dashboard')) {
     return (
       <Routes>
-        <Route path="/dashboard" element={<DashboardLayout />}>
-          <Route index element={<DashboardOverview />} />
-          <Route path="overview" element={<DashboardOverview />} />
-          <Route path="properties" element={<DashboardProperties />} />
-          <Route path="profile" element={<DashboardProfile />} />
-          <Route path="posthouse" element={<DashboardProfile />} />
-          <Route
-            path="dbpropertydetails"
-            element={<DashboardPropertiesDetails />}
-          />
+        <Route path="/dashboard" element={<ProtectedRoutes />}>
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<DashboardOverview />} />
+            <Route path="overview" element={<DashboardOverview />} />
+            <Route path="properties" element={<DashboardProperties />} />
+            <Route path="profile" element={<DashboardProfile />} />
+            <Route path="posthouse" element={<DashboardProfile />} />
+            <Route
+              path="dbpropertydetails"
+              element={<DashboardPropertiesDetails />}
+            />
+          </Route>
         </Route>
       </Routes>
     );
@@ -89,14 +106,20 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/property" element={<Property />} />
-        <Route path="/new" element={<Post />} />
-        <Route path="/uploadSuccess" element={<UploadSuccess />} />
+        {/* <Route path="/property" element={<Property />} /> */}
         <Route path="/apartmentlist" element={<Apartmentlist />} />
+        <Route path="/apartmentlist/:userId" element={<Property />} />
         <Route path="/house" element={<House />} />
-        <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="/" element={<ProtectedRoutes />}>
+          <Route path="/new" element={<Post />} />
+          <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route path="/uploadSuccess" element={<UploadSuccess />} />
+        </Route>
       </Routes>
-      {location.pathname.includes('new') || location.pathname.includes('uploadSuccess') ? null : <Footer />}
+      {location.pathname.includes('new') ||
+      location.pathname.includes('uploadSuccess') ? null : (
+        <Footer />
+      )}
     </>
   );
 }

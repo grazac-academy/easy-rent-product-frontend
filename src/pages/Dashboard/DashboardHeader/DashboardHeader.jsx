@@ -3,12 +3,26 @@ import styles from './DashboardHeader.module.css';
 import { IoNotifications } from 'react-icons/io5';
 import profile from 'assets/Dashboard/JohnDoe.png';
 import { useContextState } from 'context/context';
+import { FaTimes, FaBars } from 'react-icons/fa';
 
-const Header = () => {
+
+const Header = ({toggle, setToggle}) => {
   const { user } = useContextState();
+   const handleToggle = () => {
+     setToggle(!toggle);
+   };
 
   return (
     <div className={styles.db_headerContainer}>
+      {toggle ? (
+        <button onClick={handleToggle} className={styles.hamburger}>
+          <FaBars />
+        </button>
+      ) : (
+        <button onClick={handleToggle} className={styles.hamburger}>
+          <FaTimes />
+        </button>
+      )}
       <div className={styles.db_header}>
         <div className={styles.notification}>
           <IoNotifications />

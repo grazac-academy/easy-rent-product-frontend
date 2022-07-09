@@ -1,23 +1,39 @@
-import classes from "./Property.module.css";
-import bathroom from "assets/Vector (1).svg";
-import garage from "assets/Vector (2).svg";
-import bedroom from "assets/Vector(3).svg";
-import location from "assets/location.svg";
-import Card from "components/contactCard/card";
-import ApartmentCard from "components/ApartmentCard/ApartmentCard";
-import { useState } from "react";
-import apartments from "constant/index";
-import data from "constant/Data";
-import {useEffect} from "react";
-
-
-
+import classes from './Property.module.css';
+import bathroom from 'assets/Vector (1).svg';
+import garage from 'assets/Vector (2).svg';
+import bedroom from 'assets/Vector(3).svg';
+import location from 'assets/location.svg';
+import Card from 'components/contactCard/card';
+import ApartmentCard from 'components/ApartmentCard/ApartmentCard';
+import { useState } from 'react';
+import apartments from 'constant/index';
+import data from 'constant/Data';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { viewHouseDetail } from 'services/auth';
 
 const Property = () => {
+  const params = useParams();
+
+  const [houseDetail, setHouseDetail] = useState();
+
+  const handleHouseDetails = async () => {
+    try {
+      const response = await viewHouseDetail();
+      console.log(response);
+      // setHouseDetail(response.data.data.propertyDetails);
+      // toast.success('Houses fetched successfully');
+    } catch (error) {
+      // toast.error('Unable to fetch houses');
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
+    console.log('params', params);
+    handleHouseDetails();
+  }, [params]);
 
   const [img, setImg] = useState(data.images[0]);
 

@@ -1,4 +1,3 @@
-
 import classes from './Address.module.css';
 import React, { useState } from 'react';
 import { locations } from 'constant/index';
@@ -6,7 +5,7 @@ import { useEffect } from 'react';
 
 const Address = ({ onchange, details, setDisabled }) => {
   useEffect(() => {
-    if (details.street && details.city && details.state) {
+    if (details.address && details.city && details.state) {
       setDisabled(false);
     } else setDisabled(true);
   }, [details]);
@@ -17,10 +16,10 @@ const Address = ({ onchange, details, setDisabled }) => {
         <h3>Address</h3>
         <input
           type="text"
-          id="street"
+          id="address"
           placeholder="Enter full address of the house"
-          onChange={(e) => onchange(e, 'street')}
-          value={details.street}
+          onChange={(e) => onchange(e, 'address')}
+          value={details.address}
         />
         <p>Note: Ensure your adress is as detailed as possible</p>
       </div>

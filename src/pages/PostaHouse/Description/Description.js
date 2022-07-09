@@ -3,7 +3,7 @@ import classes from './Description.module.css';
 
 const Description = ({ setDisabled, info, onchange }) => {
   useEffect(() => {
-    if (info.desc && info.furnished) {
+    if (info.description && info.isItFurnished) {
       setDisabled(false);
     } else setDisabled(true);
   }, [info]);
@@ -16,8 +16,8 @@ const Description = ({ setDisabled, info, onchange }) => {
           type="text"
           id="Description"
           placeholder="E.g  A 3 bedroom flat building beautifully built on a plot of land in a lovely secured <br/> environment of Adigbe, Abeokuta. It consists of</br> 3 Bedrooms, 3 Bathrooms and 1 Garage."
-          onChange={(e) => onchange(e, 'desc')}
-          value={info.desc}
+          onChange={(e) => onchange(e, 'description')}
+          value={info.description}
         />
         <p>Note: Use the example above as a guide</p>
       </div>
@@ -28,9 +28,9 @@ const Description = ({ setDisabled, info, onchange }) => {
             type="radio"
             name="furnished"
             id="postalCode"
-            onChange={(e) => onchange(e, 'furnished')}
-            value={"Yes"}
-            checked={info.furnished === 'Yes'}
+            onChange={(e) => onchange(e, 'isItFurnished')}
+            value={'Yes'}
+            checked={info.isItFurnished === 'Yes'}
             // defaultValue={'Yes'}
           />
           <h3>Yes</h3>
@@ -41,9 +41,9 @@ const Description = ({ setDisabled, info, onchange }) => {
             name="furnished"
             id="postalCode"
             placeholder="Select State"
-            onChange={(e) => onchange(e, 'furnished')}
-            value={"No"}
-            checked={info.furnished === 'No'}
+            onChange={(e) => onchange(e, 'isItFurnished')}
+            value={'No'}
+            checked={info.isItFurnished === 'No'}
             // defaultValue="No"
           />
           <h3>No</h3>

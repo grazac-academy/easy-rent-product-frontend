@@ -26,24 +26,15 @@
     display: none;
 }
 @media screen and (max-width:760px) {
-    .hamburger {
-      display: block;
-      border: none;
-      background-color: #FFFFFF;
-      color: #06062A;
-      font-size: 30px;
-      margin-left: 2rem;
-    }
+   
     .db_container {
         width: 100%;
         min-height: 100vh;
         display: flex;
-        align-items:baseline;
+        /* align-items:baseline; */
         z-index: 100;
     }
     .db_content {
         width: 100%;
-        /* width: 100%; */
     }
-
   }

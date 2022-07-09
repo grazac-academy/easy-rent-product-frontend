@@ -36,7 +36,7 @@ const DashboardOverview = () => {
           <div className={styles.portfolio}>
             <h1>
               Welcome,{' '}
-              {user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)}
+              {user?.firstName?.charAt(0).toUpperCase() + user?.firstName?.slice(1)}
             </h1>
             <p>This is your property portfolio report</p>
           </div>
